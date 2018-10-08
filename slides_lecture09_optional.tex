@@ -1,0 +1,256 @@
+
+\begin{frame}[plain,c]
+\begin{center}
+{\Huge \bf Optional reading for Lecture \thislecture}
+\end{center}
+\end{frame}
+
+%
+%
+%
+%
+
+\begin{frame}{Energy carried by electromagnetic waves}
+
+We will see that the  {\em energy carried away from the volume $\tau$ by an e/m wave
+through the surface S} is given by:
+\begin{equation*}
+     \oint_{S} d\vec{S} \frac{1}{\mu_0} \Big( \vec{E} \times \vec{B} \Big)
+\end{equation*}
+
+\vspace{0.3cm}
+
+Let's assume that I have an electric field $\vec{E}$ and a magnetic field $\vec{B}$ within some volume $\tau$.
+A charge q moves within that volume with velocity $\vec{u}$ and it is displaced by a short distance $d\vec{\ell}$.
+\begin{itemize}
+   \item There is work done by the e/m force.
+   \item The energy has to come from somewhere.
+       \begin{itemize}
+            \item Where from? Well, there is the energy
+                      $\displaystyle \frac{1}{2} \int_{\tau} d\tau \Big( \epsilon_0 |\vec{E}|^2 + \frac{1}{\mu_0} |\vec{B}|^2 \Big)$
+                      stored in the e/m field.
+             \item So, if there is work done on the charge, the energy stored in the e/m field must be decreased.
+       \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+%
+%
+%
+%
+
+\begin{frame}{Energy carried by electromagnetic waves}
+
+The work done by the Lorentz force is:
+\begin{equation*}
+  dW = \vec{F} \cdot d\vec{\ell} = q \Big( \vec{E} + \vec{u} \times \vec{B} \Big) \cdot \vec{u} dt
+\end{equation*}
+
+We have already seen that magnetic forces do no work:
+The $\vec{u} \times \vec{B}$ vector is parallel to $\vec{u}$ so the dot product
+$\Big( \vec{u} \times \vec{B} \Big) \cdot \vec{u}$ is 0.
+
+So the work done can be written just as
+\begin{equation*}
+  dW = \vec{F} \cdot d\vec{\ell} = q \vec{E} \cdot \vec{u} dt
+\end{equation*}
+
+To move from the discrete to the continuous case, take q to be the amount of charge contained
+within a volume $d\tau$ within a region characterised by charge density $\rho$.
+Then
+\begin{equation*}
+  dW = q \vec{E} \cdot \vec{u} dt \rightarrow \Big( \rho d\tau \Big) \vec{E} \cdot \vec{u} dt =
+           dt d\tau \vec{E} \cdot \Big( \rho \vec{u} \Big)
+\end{equation*}
+
+
+\end{frame}
+
+
+%
+%
+%
+%
+
+\begin{frame}{Energy carried by electromagnetic waves}
+
+The work done per unit time, in the infinitesimal volume $d\tau$ is:
+\begin{equation*}
+  \frac{dW}{dt} =  d\tau \vec{E}  \cdot \Big( \rho \vec{u} \Big)
+\end{equation*}
+
+As we have seen, the product $\rho \vec{u}$ is the current density $\vec{j}$. Therefore, the work done per unit time and per unit volume can be written as:
+\begin{equation*}
+  \frac{dW}{dt} =  d\tau \vec{E}  \cdot \vec{j}
+\end{equation*}
+
+The total work (integrated over all space) per unit time is:
+\begin{equation*}
+  \frac{dW}{dt} =  \int_{\tau} d\tau \vec{E} \cdot \vec{j}
+\end{equation*}
+
+To proceed, we need to examine the dot product $\vec{E} \cdot \vec{j}$ of the electric field $\vec{E}$ and the current density $\vec{j}$.
+
+\end{frame}
+
+%
+%
+%
+%
+
+\begin{frame}{Energy carried by electromagnetic waves}
+
+Starting from Ampere's law, we can write $\vec{j}$ in terms of
+$\vec{\nabla} \times \vec{B}$ and $\frac{\partial \vec{E}}{\partial t}$:
+\begin{equation*}
+  \vec{\nabla} \times \vec{B} = \mu_0 \Big( \vec{j} + \epsilon_0 \frac{\partial \vec{E}}{\partial t} \Big) \Rightarrow
+  \vec{j} = \frac{1}{\mu_0}  \vec{\nabla} \times \vec{B} - \epsilon_0 \frac{\partial \vec{E}}{\partial t}
+\end{equation*}
+
+Therefore:
+\begin{equation*}
+ \vec{E} \cdot \vec{j} =
+   \vec{E} \cdot \Big( \frac{1}{\mu_0}  \vec{\nabla} \times \vec{B} - \epsilon_0 \frac{\partial \vec{E}}{\partial t} \Big) =
+   \frac{1}{\mu_0}  \vec{E} \cdot \Big( \vec{\nabla} \times \vec{B} \Big) - \epsilon_0 \vec{E} \cdot \frac{\partial \vec{E}}{\partial t}
+\end{equation*}
+
+The cross-product term can be written as:
+\begin{equation*}
+ \vec{E} \cdot \Big( \vec{\nabla} \times \vec{B} \Big) =
+ - \vec{\nabla} \Big( \vec{E} \times \vec{B} \Big) - \vec{B} \cdot \frac{\partial \vec{B}}{\partial t}
+\end{equation*}
+Try to prove it at home! (Details on the next slide.)
+
+\end{frame}
+
+%
+%
+%
+%
+
+\begin{frame}{Further details (skip on a first read)}
+
+Starting from $\vec{\nabla} \Big( \vec{E} \times \vec{B} \Big)$, we can write using the {\em CAB-BAC} identity:
+\begin{equation*}
+ \vec{\nabla} \Big( \vec{E} \times \vec{B} \Big) = \vec{B} \Big( \vec{\nabla} \times \vec{E} \Big) - \vec{E}  \Big( \vec{\nabla} \times \vec{B} \Big)
+\end{equation*}
+
+The $\vec{E}  \Big( \vec{\nabla} \times \vec{B} \Big)$ term is what appears in the $\vec{E} \vec{j}$ dot product. Solving for it:
+\begin{equation*}
+ \vec{E}  \Big( \vec{\nabla} \times \vec{B} \Big) = - \vec{\nabla} \Big( \vec{E} \times \vec{B} \Big) + \vec{B} \Big( \vec{\nabla} \times \vec{E} \Big)
+\end{equation*}
+
+From Faraday's law:
+\begin{equation*}
+  \vec{\nabla} \times \vec{E} = - \frac{\partial \vec{B}}{\partial t}
+\end{equation*}
+
+Therefore:
+\begin{equation*}
+ \vec{E}  \Big( \vec{\nabla} \times \vec{B} \Big) = - \vec{\nabla} \Big( \vec{E} \times \vec{B} \Big) - \vec{B} \frac{\partial \vec{B}}{\partial t}
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+%
+
+\begin{frame}{Energy carried by electromagnetic waves}
+
+
+\begin{equation*}
+ \vec{E} \cdot \vec{j} =
+    - \frac{1}{\mu_0} \vec{\nabla} \Big( \vec{E} \times \vec{B} \Big)
+    - \frac{1}{\mu_0} \vec{B} \cdot \frac{\partial \vec{B}}{\partial t} - \epsilon_0 \vec{E} \cdot \frac{\partial \vec{E}}{\partial t}
+\end{equation*}
+
+For a vector field $\vec{F}$, we can easily see that:
+\begin{equation*}
+  \vec{F} \cdot \frac{\partial \vec{F}}{\partial t} = \frac{1}{2} \frac{\partial \vec{F}^2}{\partial t}
+\end{equation*}
+
+and, therefore:
+\begin{equation*}
+ \vec{E} \cdot \vec{j} =
+    - \frac{1}{\mu_0} \vec{\nabla} \Big( \vec{E} \times \vec{B} \Big)
+    - \frac{1}{2\mu_0} \frac{\partial \vec{B}^2}{\partial t} - \frac{\epsilon_0}{2} \frac{\partial \vec{E}^2}{\partial t} \Rightarrow
+\end{equation*}
+
+\begin{equation*}
+ \vec{E} \cdot \vec{j} =
+    - \frac{1}{\mu_0} \vec{\nabla} \Big( \vec{E} \times \vec{B} \Big)
+    - \frac{\partial}{\partial t} \Big( \frac{1}{2\mu_0} \vec{B}^2 + \frac{\epsilon_0}{2} \vec{E}^2 \Big)
+\end{equation*}
+
+\end{frame}
+
+
+%
+%
+%
+%
+
+\begin{frame}{Energy carried by electromagnetic waves}
+
+The total work done per unit time is given, as we have seen, by integrating
+$\vec{E} \cdot \vec{j}$ over the whole volume $\tau$:
+\begin{equation*}
+  \frac{dW}{dt} =  \int_{\tau} d\tau \vec{E} \cdot \vec{j} =
+     - \int_{\tau} d\tau \frac{1}{\mu_0} \vec{\nabla} \Big( \vec{E} \times \vec{B} \Big)
+     - \frac{\partial}{\partial t} \int_{\tau} d\tau  \Big( \frac{1}{2\mu_0} \vec{B}^2 + \frac{\epsilon_0}{2} \vec{E}^2 \Big)
+\end{equation*}
+
+\vspace{0.2cm}
+
+Using Gauss' theorem, the volume integral of the divergence of a vector field can be replaced by the
+surface integral of that field:
+\begin{equation*}
+  \frac{dW}{dt} =
+     - \oint_{S} d\vec{S} \frac{1}{\mu_0} \Big( \vec{E} \times \vec{B} \Big)
+     - \frac{\partial}{\partial t} \int_{\tau} d\tau  \Big( \frac{1}{2\mu_0} \vec{B}^2 + \frac{\epsilon_0}{2} \vec{E}^2 \Big)
+\end{equation*}
+
+As anticipated, the above tells you that the {\bf work done on the charge q} is, indeed, related with the
+{\bf decrease of the energy stored in the e/m field} (2nd term on right-hand side).
+
+\end{frame}
+
+
+%
+%
+%
+%
+
+\begin{frame}{Energy carried by electromagnetic waves}
+
+But there is another term on the right-hand side of:
+\begin{equation*}
+  \frac{dW}{dt} =
+     - \oint_{S} d\vec{S} \frac{1}{\mu_0} \Big( \vec{E} \times \vec{B} \Big)
+     - \frac{\partial}{\partial t} \int_{\tau} d\tau  \Big( \frac{1}{2\mu_0} \vec{B}^2 + \frac{\epsilon_0}{2} \vec{E}^2 \Big)
+\end{equation*}
+
+It is the surface term:
+\begin{equation*}
+     \oint_{S} d\vec{S} \frac{1}{\mu_0} \Big( \vec{E} \times \vec{B} \Big)
+\end{equation*}
+What does that term correspond to?\\
+
+\vspace{0.2cm}
+
+This term describes the {\em energy carried away from the volume $\tau$,
+through its surface S, by the electromagnetic fields}.\\
+
+\vspace{0.2cm}
+
+So the energy stored in the e/m field in volume $\tau$ is decreased, because of the
+work done on the charge, but also because energy is flowing out.\\
+
+\vspace{0.2cm}
+
+This is the {\bf Poynting theorem}.
+
+\end{frame}

@@ -1,0 +1,1777 @@
+\renewcommand{\prevlecture}{4 }
+\renewcommand{\thislecture}{5 }
+\renewcommand{\nextlecture}{6 }
+
+%
+% Cover page
+%
+
+\title[PHYS 201 / Lecture \thislecture]
+{
+  PHYS 201 / Lecture \thislecture\\
+  {\it Electric current / connection with magnetic phenomena;\\
+        Magnetic field, Lorentz force; Cyclotron motion;\\
+        Biot-Savart law and applications}\\
+}
+
+\input{slides_author.tex}
+
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+
+%
+% Revision of previous lecture
+%
+
+\renewcommand{\lecturesummarytitle}{Revision }
+\input{slides_lecture04_summary.tex}
+
+%
+% Plan for this lecture
+%
+
+\begin{frame}{Plan for Lecture \thislecture}
+
+\begin{itemize}
+   \item Electric current
+      \begin{itemize}
+           \item The {\em microscopic} view
+      \end{itemize}
+   \item Magnetic phenomena
+      \begin{itemize}
+           \item Connection with the electric current
+      \end{itemize}
+   \item The magnetic field
+   \item Magnetic force on a charge
+      \begin{itemize}
+           \item Cyclotron motion and cyclotrons
+      \end{itemize}
+   \item Magnetic force on a current
+   \item Magnetic forces do no work
+   \item Calculating magnetic fields: The Biot-Savart law
+     \begin{itemize}
+           \item Magnetic field around a straight wire
+      \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+
+%
+%
+%
+
+\begin{frame}{Electric current}
+
+An {\bf electric current is a flow of electric charge.}\\
+\vspace{0.2cm}
+It is represented by the amount of charge passing through per unit time.
+\begin{equation*}
+  I = \frac{dQ}{dt}
+\end{equation*}
+
+In SI, the unit of the electric current is the {\bf Ampere (A)}.
+One Ampere is a charge change of 1 C over a period of 1 s.
+\begin{itemize}
+{\scriptsize
+   \item Actually, this is how we define the Coulomb!
+             We will see the actual definition of the Ampere once we have studied the magnetic force
+              between two parallel conductors.\\
+}
+\end{itemize}
+
+\vspace{0.1cm}
+
+\begin{columns}
+  \begin{column}{0.45\textwidth}
+   \begin{center}
+    \includegraphics[width=0.78\textwidth]{./images/schematics/current_direction_convention.png}
+   \end{center}
+  \end{column}
+  \begin{column}{0.55\textwidth}
+     Note that, {\em by convention}, the current direction is {\bf the direction of flow of positive charges}.
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Electric current: The {\em microscopic} view }
+
+Consider a ``tube'' within a conducting material:\\
+\vspace{0.2cm}
+
+\begin{columns}
+  \begin{column}{0.67\textwidth}
+    \includegraphics[width=0.98\textwidth]{./images/schematics/current_microscopic_view.png}
+  \end{column}
+  \begin{column}{0.33\textwidth}
+      Let
+      \begin{itemize}
+           \item n be the carrier density,
+           \item q be the charge of each carrier, and
+           \item $\vec{u}_{d}$ be the average carrier velocity
+      \end{itemize}
+  \end{column}
+\end{columns}
+
+\vspace{0.4cm}
+
+The amount of charge passing through a cross-section of area dS is:
+\begin{equation*}
+  dQ = n q d\vec{x} \cdot d\vec{S}
+        = n q \Big( \vec{u}_{d} dt \Big) \cdot d\vec{S}
+\end{equation*}
+
+\end{frame}
+
+
+%
+%
+%
+
+\begin{frame}{Electric current: The {\em microscopic} view }
+
+Therefore, the current I through the area dS is given by:
+\begin{equation*}
+  I = \frac{dQ}{dt} = \frac{n q \Big( \vec{u}_{d} dt \Big)
+    d\vec{S}}{dt} = n q \vec{u}_{d} \cdot d\vec{S}
+\end{equation*}
+
+The total amount of current flowing through the entire surface S
+is given by integrating the above result over S:
+\begin{equation*}
+  I = \int_{S} n q \vec{u}_{d} \cdot d\vec{S}
+\end{equation*}
+
+We can define a {\bf current density} $\vec{j}$ as follows:
+\begin{equation*}
+  I = \int_{S} \vec{j} d\vec{S}
+\end{equation*}
+The  current density is the {\bf current per unit area  of cross-section}.\\
+
+You can easily see from the above that:
+\begin{equation*}
+  \vec{j} = n q \vec{u}_{d}
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Electric current: The {\em microscopic} view }
+
+In general
+\begin{equation*}
+  \vec{j} = \sigma \vec{E}
+\end{equation*}
+where $\sigma$ is the {\bf conductivity} of the material.
+It is an intrinsic property of a material and
+ a {\bf measure of its ability to conduct an electric current.}
+\begin{itemize}
+   \item for a perfect insulator: $\sigma$=0, whereas
+             for a perfect conductor: $\sigma$=$\infty$
+\end{itemize}
+In SI, the unit of conductivity is $1/(\Omega \cdot m)$ (= $S/m$).\\
+
+\vspace{0.2cm}
+
+The inverse of conductivity is called, {\bf resistivity} ($\rho$):
+\begin{equation*}
+  \rho = \frac{1}{\sigma}
+\end{equation*}
+
+Typical values:\\
+\begin{center}
+{\scriptsize
+    \begin{table}
+    \begin{tabular}{|c|c|c|}
+      \hline
+        Material &
+        $\rho$  $(\Omega \cdot m)$ at $20^{o}$C &
+        $\sigma$  $({\Omega}^{-1} \cdot m^{-1})$ at $20^{o}$C \\
+      \hline
+        Graphene &  1.00$\times$10$^{-8}$ & 1.00$\times$10$^{8}$ \\
+        Copper   &  1.68$\times$10$^{-8}$ & 5.96$\times$10$^{7}$ \\
+        Glass    &  10$^{11}$-10$^{15}$ & 10$^{-15}$-10$^{-11}$ \\
+      \hline
+    \end{tabular}
+    \end{table}
+}
+\end{center}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Electric current: The {\em microscopic} view }
+
+Assume that a current I is {\bf flowing out of a volume $\tau$}
+through its surrounding closed surface S.
+The current flowing through the surface S is given by the negative (*)
+rate of change of the charge contained in the volume $\tau$:
+\begin{equation*}
+   I = - \frac{dQ}{dt}
+\end{equation*}
+where Q is the volume integral of the charge density $\rho$:
+\begin{equation*}
+   Q = \int_{\tau} \rho d\tau
+\end{equation*}
+Therefore
+\begin{equation*}
+   I = - \frac{d}{dt} \int_{\tau} \rho d\tau = - \int_{\tau} \frac{d\rho}{dt} d\tau
+\end{equation*}
+\begin{equation*}
+   I = \oint_{S} \vec{j} d\vec{S}
+     \xRightarrow{\oint_{S} \vec{F} d\vec{S} = \int_{\tau} \vec{\nabla} \vec{F} d\tau}
+   I = \int_{\tau} \vec{\nabla} \vec{j} d\tau
+\end{equation*}
+
+\noindent\rule{2cm}{0.4pt}\\
+{\scriptsize
+ (*) Current flows out, so the amount of charge in {\bf decreases}.\\
+}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Electric current: The {\em microscopic} view }
+
+Equating the right-hand sides of the previous two equations, we have:
+\begin{equation*}
+  \int_{\tau} \vec{\nabla} \vec{j} d\tau = - \int_{\tau} \frac{d\rho}{dt} d\tau \Rightarrow
+  \int_{\tau} \Big( \vec{\nabla} \vec{j} +\frac{d\rho}{dt} \Big) d\tau = 0
+\end{equation*}
+
+\begin{equation*}
+    \vec{\nabla} \vec{j} +\frac{d\rho}{dt} = 0
+\end{equation*}
+
+\vspace{0.2cm}
+
+The divergence of the current density is zero except for points where the
+net charge is introduced to or removed from the system.\\
+
+\vspace{0.2cm}
+
+This result is known as the {\bf continuity equation}.\\
+
+\vspace{0.2cm}
+
+{\bf Charge conservation leads to current conservation.}\\
+
+\end{frame}
+
+
+%
+% Worked example
+%
+
+{
+\setbeamercolor {frametitle} {bg=eBG1}
+\setbeamercolor {author in head/foot} {bg=eBG1}
+\setbeamercolor {title in head/foot} {bg=eBG2}
+\setbeamercolor {date in head/foot} {bg=eBG3}
+\setbeamercolor {date in head/foot} {fg=eFG3}
+
+%
+%
+%
+
+\begin{frame}{Worked example}
+
+\begin{blockexmplque}{Question}
+Near Earth, the density of protons in the solar wind (a stream of particles from the Sun)
+is 8.70 $cm^{-3}$, and their speed is 470 km/s.
+\begin{itemize}
+ \item Find the current density of these protons.
+ \item If the Earth magnetic field did not deflect the protons, what total current would Earth
+           receive?
+\end{itemize}
+The radius of the Earth is 6.37 $\times$ 10$^6$ m.
+\end{blockexmplque}
+\vspace{0.4cm}
+
+The magnitude of the current density vector $\vec{j}$ is:
+\begin{equation*}
+    |\vec{j}| = n q |\vec{u}| \Rightarrow
+\end{equation*}
+\begin{equation*}
+    |\vec{j}| =
+     \Big( \frac{8.70}{10^{-6} \; m^3} \Big)
+     \Big( 1.60 \times 10^{-19}\; C \Big)
+     \Big( 470 \times 10^{3} \; m/s \Big) = 6.54 \times 10^{-7} A/m^2
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example}
+
+Although the total surface area of Earth is $4\pi R_{Earth}^2$ (that of a sphere), the area to be used
+in a computation of how many protons in an approximately unidirectional beam (the solar wind)
+will be captured by Earth is its projected area. In other words, for the beam, the encounter is with
+a ``target'' of circular area $\pi R_{Earth}^2$ . \\
+\vspace{0.3cm}
+
+The rate of charge transport implied by the influx of protons is:
+\begin{equation*}
+    I = \Big( \pi R_{Earth}^2 \Big) |\vec{j}| \Rightarrow
+\end{equation*}
+\begin{equation*}
+    I = \pi \Big( 6.37 \times 10^{6}\; m \Big)^2
+               \Big( 6.54 \times 10^{-7}\; A/m^2 \Big) = 8.34 \times 10^{7} A
+\end{equation*}
+
+
+\end{frame}
+
+
+} % Worked example
+
+
+
+%
+%
+%
+
+\begin{frame}{Magnetic phenomena}
+
+As we have seen,
+magnetic phenomena (as well as electric ones), were known from the antiquity. \\
+\vspace{0.3cm}
+
+\begin{columns}
+  \begin{column}{0.50\textwidth}
+    \includegraphics[width=0.99\textwidth]{./images/photos/lodestone_1.jpg}
+  \end{column}
+  \begin{column}{0.50\textwidth}
+     {\bf Lodestones} (naturally magnetised pieces of the mineral {\em magnetite}, first found in Magnesia, Asia Minor)
+     were known to be {\bf attracted to iron and other lodestones}.\\
+     \vspace{0.3cm}
+     Early application: The {\bf magnetic compass} (12th century AD).\\
+  \end{column}
+\end{columns}
+
+\vspace{0.3cm}
+{\bf Magnetic phenomena, were seemingly unrelated to electric ones}.\\
+
+\end{frame}
+
+
+%
+%
+%
+
+\begin{frame}{Magnetic phenomena and electric current}
+
+A {\bf compass is deflected in the presence of a current}
+(but not in presence of stationary charges):
+ {\bf A current generates a magnetic field!}\\
+
+\begin{columns}
+  \begin{column}{0.40\textwidth}
+    \begin{center}
+      {\small
+        First observed by Oersted\\ in the early 1800's.\\
+       \includegraphics[width=0.60\textwidth]{./images/people/orsted.jpg}\\
+        Hans Christian Oersted\\ (1777-1851)\\Danish physicist\\
+      }
+    \end{center}
+  \end{column}
+  \begin{column}{0.60\textwidth}
+    \begin{center}
+      \includegraphics[width=0.85\textwidth]{./images/photos/compass_deflection_wire_current_up.jpg}\\
+    \end{center}
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Magnetic phenomena and electric current}
+
+{\bf A current generates a magnetic field!}\\
+
+\begin{columns}
+  \begin{column}{0.50\textwidth}
+    \begin{center}
+      \includegraphics[width=0.90\textwidth]{./images/photos/compass_deflection_wire_current_up.jpg}\\
+    \end{center}
+  \end{column}
+  \begin{column}{0.50\textwidth}
+    \begin{center}
+      \includegraphics[width=0.90\textwidth]{./images/schematics/magnetic_field_around_wire_01.png}\\
+    \end{center}
+  \end{column}
+\end{columns}
+
+\vspace{0.1cm}
+Interestingly, the field doesn't point towards to (or away from) the wire:\\
+{\bf It circles around it}. {\it (We will calculate this field later in this lecture.)}\\
+
+\end{frame}
+
+
+%
+%
+%
+
+\begin{frame}{Magnetic phenomena and electric current}
+
+Not only a compass would be deflected in the presence of a current,
+but the opposite seems to be happening as well:\\
+\vspace{0.3cm}
+{\bf The motion of a magnet near a conducting loop induces a current in the loop}
+(but there is no current if the magnet is stationary)!
+
+\begin{center}
+ \includegraphics[width=0.99\textwidth]{./images/schematics/magnetic_field_induces_current_in_conducting_loop.png}
+\end{center}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Magnetic phenomena and electric current}
+
+As result of the fact that a current generates a magnetic field,
+{\bf a magnetic force is exerted between two wires!}\\
+
+\begin{columns}
+  \begin{column}{0.60\textwidth}
+    \begin{center}
+      \includegraphics[width=0.90\textwidth]{./images/schematics/magnetic_force_between_wires_01.png}\\
+    \end{center}
+  \end{column}
+  \begin{column}{0.30\textwidth}
+    \begin{center}
+      \includegraphics[width=0.90\textwidth]{./images/schematics/magnetic_force_between_wires.png}\\
+      \vspace{0.2cm}
+      {\small \it (We will calculate this force later in this lecture series.)}\\
+    \end{center}
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Magnetic phenomena and electric current}
+
+Let's reflect on the astonishing early observations:
+
+\begin{itemize}
+    \item
+       {\bf Moving charges (electric currents) generate magnetic fields!}
+    \vspace{0.2cm}
+    \item
+       {\bf Moving magnetic fields generate electric currents!}
+    \vspace{0.2cm}
+    \item
+       {\bf There are magnetic forces between electric currents!}
+    \vspace{0.2cm}
+\end{itemize}
+
+\vspace{0.4cm}
+
+Contrary to earlier beliefs, {\bf magnetic and electric phenomena
+have a common origin: the electric charge!}\\
+
+\vspace{0.2cm}
+
+They are not different phenomena, but {\bf different manifestations of a
+single interaction!}\\
+
+\end{frame}
+
+
+%
+%
+%
+
+\begin{frame}{The magnetic field}
+
+The {\bf magnetic field is the magnetic effect of electric currents and magnetic materials}.
+\begin{itemize}
+   \item It is a {\bf vector field}: It permeates all space and associates a vector with each point.
+\end{itemize}
+
+\vspace{0.2cm}
+
+In SI, the unit of the magnetic field is the {\bf Tesla (T)}.
+\begin{itemize}
+  \item Named in honour of Nikola Tesla (1856-1943), a
+            Serbian-American physicist, engineer and inventor.
+   \item The Tesla is a derived unit
+       \begin{itemize}
+            \item A charge of 1 C with a velocity of 1 m/s perpendicular to a
+                     magnetic field of 1 T, experiences a magnetic force of 1 N ($T = N \cdot s \cdot C^{-1} \cdot m^{-1}$)\\
+            \item Other common (equivalent) definitions:
+                      $T = V \cdot s \cdot m^{-2} = N \cdot A \cdot m^{-1} = J \cdot A \cdot m^{-2} = Wb \cdot m^{-2}$
+       \end{itemize}
+   \item Another commonly used unit is the CGS one: the {\bf Gauss (G)}
+       \begin{itemize}
+             \item 1 G = $10^{-4}$ T
+             \item Earth's magnetic field is around 1 G.
+       \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Typical magnetic fields}
+
+\begin{columns}
+  \begin{column}{0.40\textwidth}
+  {
+   \begin{center}
+    \includegraphics[width=0.88\textwidth]{./images/photos/levitating_frog_01.jpg}\\
+    \vspace{0.1cm}
+    \includegraphics[width=0.88\textwidth]{./images/misc/neutron_star.png}\\
+   \end{center}
+  }
+  \end{column}
+  \begin{column}{0.60\textwidth}
+   \begin{itemize}
+     \item {\bf Human brain}:\\
+          {\color{blue}1 pT ($10^{-12}$ T)} / {\color{magenta}10 nG = ($10^{-8}$ G)}
+     \item {\bf Earth's} magnetic field:\\
+          Somewhat less than {\color{blue} $10^{-4}$ T} / {\color{magenta} 1 G }
+     \item {\bf Refrigerator} magnet:\\
+           {\color{blue} 5 mT (5 $10^{-3}$ T)} /  {\color{magenta} 50 G}
+     \item {\bf LHC} dipole magnet:\\
+           {\color{blue} 10 T} / {\color{magenta} $10^{5}$ G}
+     \item Field that you need to {\bf levitate a frog}:
+           {\color{blue} 16 T} / {\color{magenta} 1.6 $\times$ $10^{5}$ G}
+     \item {\bf Neutron stars} (magnetar):\\
+            {\color{blue} 1 MT ($10^{6}$ T) - 100 GT ($10^{11}$ T)} / \\
+            {\color{magenta} 10 GG ($10^{10}$ G) - 1 PG ($10^{15}$ G)}
+   \end{itemize}
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{``Magnetic charges''}
+
+There are several similarities between electrostatics and magnetostatics:\\
+
+\begin{columns}
+  \begin{column}{0.40\textwidth}
+    \begin{center}
+      \includegraphics[width=0.90\textwidth]{./images/schematics/magnetic_field_lines_01.png}\\
+    \end{center}
+  \end{column}
+  \begin{column}{0.60\textwidth}
+
+\begin{itemize}
+   \item We have two ``types of magnetic charges''
+             (we call them {\bf North} and {\bf South} {\em poles})
+   \item Same poles repel each other, while opposite poles attract each other.
+   \item Magnetic field lines always start from a North pole and end in a South pole.
+\end{itemize}
+
+  \end{column}
+\end{columns}
+
+\vspace{0.3cm}
+
+However, {\bf there is one striking difference}:
+\vspace{0.1cm}
+Whereas single positive or a single negative charges (electric monopoles) exist in isolation,
+{\bf magnetic monopoles do not exist} (or they have not been found yet (*)).\\
+
+\noindent\rule{2cm}{0.4pt}\\
+{\scriptsize
+ (*) Or, maybe we have: Google ``Blas Cabrera, Valentine's day magnetic monopole''\\
+}
+
+\end{frame}
+
+
+%
+%
+%
+
+\begin{frame}{Magnetic force on an electric charge}
+
+{\bf What is the force that a magnetic field exerts on a moving charge?}\\
+\vspace{0.2cm}
+It was observed experimentally that the force $\vec{F}$ exerted by a magnetic field $\vec{B}$,
+on a charge q moving with velocity $\vec{u}$ has a magnitude $|\vec{F}|$  that is proportional to all q,
+$|\vec{u}|$ and $|\vec{B}|$:
+\begin{equation*}
+  |\vec{F}| \propto q |\vec{u}| |\vec{B}|
+\end{equation*}
+
+It was observed that:
+\begin{itemize}
+{\small
+  \item magnetic force vanishes if $\vec{u}$ and $\vec{B}$ are parallel
+  \item force is increasing as the angle between $\vec{u}$ and $\vec{B}$ increases
+  \item the maximum force is exerted when $\vec{u}$ and $\vec{B}$ are perpendicular to each other
+  \item F is not on the same plane as $\vec{u}$ and $\vec{B}$,
+            but perpendicular to the plane defined by $\vec{u}$ and $\vec{B}$
+}
+\end{itemize}
+
+All the above can be summarised as:
+\begin{equation*}
+  \vec{F} = q \vec{u} \times \vec{B}
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Magnetic force on an electric charge}
+
+\begin{columns}
+  \begin{column}{0.27\textwidth}
+    \begin{center}
+      \includegraphics[width=0.90\textwidth]{./images/schematics/right_hand_rule_fbi.png}\\
+    \end{center}
+  \end{column}
+  \begin{column}{0.73\textwidth}
+      The magnetic force is given by:
+      \begin{equation*}
+          \vec{F} = q \vec{u} \times \vec{B}
+      \end{equation*}
+       Use the {\bf right-hand rule} to find the direction of $\vec{F}$.
+  \end{column}
+\end{columns}
+
+\begin{columns}
+  \begin{column}{0.30\textwidth}
+    \begin{center}
+      \includegraphics[width=0.99\textwidth]{./images/misc/atlas_event.jpg}\\
+    \end{center}
+  \end{column}
+  \begin{column}{0.30\textwidth}
+    \begin{center}
+      \includegraphics[width=0.70\textwidth]{./images/misc/em_particle_shower.jpg}\\
+    \end{center}
+  \end{column}
+  \begin{column}{0.40\textwidth}
+     The {\bf magnetic force} exerted on a moving charge is
+     {\bf  always perpendicular to its velocity} and acts as a {\bf centripetal force}.\\
+     \vspace{0.1cm}
+     Charges within magnetic fields tend to {\bf follow curved trajectories}.
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+
+
+%
+% Worked example
+%
+
+{
+\setbeamercolor {frametitle} {bg=eBG1}
+\setbeamercolor {author in head/foot} {bg=eBG1}
+\setbeamercolor {title in head/foot} {bg=eBG2}
+\setbeamercolor {date in head/foot} {bg=eBG3}
+\setbeamercolor {date in head/foot} {fg=eFG3}
+
+%
+%
+%
+
+\begin{frame}{Worked example}
+
+\begin{blockexmplque}{Question}
+A particle with charge q = -1.24 $\times 10^{-8}$ C is moving
+in a magnetic field $\vec{B} = (1.4 \; T) \hat{x}$
+with velocity $\vec{u} =$ $(4.19 \times 10^{4} \; m/s) \hat{x} + (-3.85 \times 10^{4} \; m/s) \hat{y}$.
+Calculate in vector form the force exerted on the particle by the field.
+\end{blockexmplque}
+\vspace{0.4cm}
+
+The magnetic force $\vec{F}$ exerted on the charged particle is:
+\begin{equation*}
+   \vec{F} = q \vec{u} \times \vec{B} \Rightarrow
+\end{equation*}
+\begin{equation*}
+   \vec{F} = (-1.24 \times 10^{-8} C )
+                  \Big\{ (4.19 \times 10^{4} \; m/s) \hat{x} + (-3.85 \times 10^{4} \; m/s) \hat{y} \Big\}
+                  \times \Big\{(1.4 \; T) \hat{x} \Big\}
+\end{equation*}
+
+Notice that
+$\hat{x} \times \hat{x} = 0$ and $\hat{y} \times \hat{x} = -\hat{z}$, and therefore:
+\begin{equation*}
+   \vec{F} = \Big(-1.24 \times 10^{-8} C \Big)
+                  \Big(-3.85 \times 10^{4} \; m/s \Big)
+                  \Big(1.4 \; T \Big) \Big(-\hat{z}\Big) \Rightarrow
+\end{equation*}
+\begin{equation*}
+   \vec{F} = \Big( (-1.24)  (-3.85) 1.4 \times 10^{-4} N \Big) \Big(- \hat{z}\Big) \Rightarrow
+   \vec{F} = - \Big( 6.6836 \times 10^{-4} N \Big)  \hat{z}
+\end{equation*}
+
+\end{frame}
+
+} % Worked example
+
+%
+%
+%
+
+\begin{frame}{Lorentz force}
+
+The total force felt by a charged body in the presence of
+both electric and magnetic fields is called the {\bf Lorentz force}.
+
+\begin{equation*}
+  \vec{F} = q \Big( \vec{E} + \vec{u} \times \vec{B} \Big)
+\end{equation*}
+
+\vspace{0.3cm}
+
+It was first derived by Oliver Heaviside or James Maxwell.
+Hendrik Lorentz derived it a few years later.\\
+
+\vspace{0.3cm}
+
+The {\bf magnetic force is much smaller than the electric force}
+unless the particle is moving at a velocity that is a significant fraction of the speed of light.
+
+\end{frame}
+
+
+%
+% Worked example
+%
+
+{
+\setbeamercolor {frametitle} {bg=eBG1}
+\setbeamercolor {author in head/foot} {bg=eBG1}
+\setbeamercolor {title in head/foot} {bg=eBG2}
+\setbeamercolor {date in head/foot} {bg=eBG3}
+\setbeamercolor {date in head/foot} {fg=eFG3}
+
+%
+%
+%
+
+\begin{frame}{Worked example}
+
+\begin{blockexmplque}{Question}
+
+\begin{columns}
+  \begin{column}{0.38\textwidth}
+    \begin{center}
+      \includegraphics[width=0.98\textwidth]{./images/problems/lect4_crossed_E_B_fields.png}\\
+    \end{center}
+  \end{column}
+  \begin{column}{0.62\textwidth}
+A beam of particles with charge q enters
+a region where there is a uniform electric field $\vec{E}$, of
+magnitude 80 kV/m, directed downwards.
+In the same region, perpendicular
+  \end{column}
+\end{columns}
+to  $\vec{E}$ and directed into the page is a magnetic
+field  $|\vec{B}|$ = 0.4T.
+As the particles enter that region their
+velocity is perpendicular to $\vec{E}$ and $\vec{B}$.\\
+\begin{enumerate}
+\item
+ If the speed of the particles is properly chosen, the particles will
+not be deflected by these crossed electric and magnetic fields.
+What speed is selected in this case?
+\item
+If the electric field is cut off and the same magnetic field is maintained, the charged
+particles move in the magnetic field in a circular path of radius 1.14 cm. Determine the
+ratio of the electric charge to the mass of the particles.
+\end{enumerate}
+\end{blockexmplque}
+\vspace{0.4cm}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example}
+
+The magnetic force is: $\displaystyle   F_m = q u B $,
+and the electric force is:  $\displaystyle  F_e = q E $\\
+\vspace{0.2cm}
+
+For no deflection:
+\begin{equation*}
+   F_m = F_e  \Rightarrow
+   quB = qE  \Rightarrow
+    u = \frac{E}{B} =
+      \frac{80 \times 10^3 \; V/m}{0.4 \; T} = 2 \times 10^5 m/s
+\end{equation*}
+
+Once the electric field is cut off,
+the particle moves in a circular path with
+the magnetic force acting as the centripetal force.
+\begin{equation*}
+   \frac{mu^2}{r} = quB  \Rightarrow
+    \frac{q}{m} = \frac{u}{Br} = \frac{E}{B^2 r}  \Rightarrow
+\end{equation*}
+
+\begin{equation*}
+   \frac{q}{m} =
+       \frac{80 \times 10^3 \; V/m}{\Big( 0.4 \; T\Big)^2 \Big( 1.14 \times 10^{-2} m\Big)} =
+       4.38 \times 10^{7} C/kg
+\end{equation*}
+
+\end{frame}
+
+
+} % Worked example
+
+
+
+%
+%
+%
+
+\begin{frame}{Cyclotron motion}
+
+Let's study the {\bf simple trajectory} of a particle moving with a
+{\bf constant velocity} u in a {\bf constant magnetic field} B.\\
+\vspace{0.2cm}
+\begin{columns}
+  \begin{column}{0.40\textwidth}
+    \begin{center}
+      \includegraphics[width=0.90\textwidth]{./images/schematics/cyclotron_motion_01.png}\\
+    \end{center}
+  \end{column}
+  \begin{column}{0.60\textwidth}
+     Assume that a positive charge enters the magnetic field B with a velocity u
+     that is perpendicular to the magnetic field which points inwards (see on the left).\\
+     \vspace{0.1cm}
+     The direction of the magnetic force, found using the right-hand rule,
+     is also shown.
+  \end{column}
+\end{columns}
+\vspace{0.2cm}
+The magnetic force provides {\bf centripetal acceleration} and the charge will start moving
+counter-clockwise, along a circle (of radius r), with a velocity that is constant in magnitude.\\
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Cyclotron motion}
+
+The magnetic force for a charge q with velocity u perpendicular to B is:
+\begin{equation*}
+  F = q u B
+\end{equation*}
+The centripetal force (mass times centripetal acceleration) is:
+\begin{equation*}
+  F = m \frac{u^2}{r}
+\end{equation*}
+Therefore:
+\begin{equation*}
+  m \frac{u^2}{r} = q u B \Rightarrow
+  m \frac{u}{r} = q B \Rightarrow
+  m u = q B r \Rightarrow
+  {\bf p = qBr}
+\end{equation*}
+where p is the particle momentum.
+This is known as the {\bf cyclotron formula} and describes the motion of a charged particle in a cyclotron.\\
+\vspace{0.2cm}
+The period T (time for one revolution)
+is independent of the particle velocity and it depends only on the
+particle type and the magnetic field:
+
+\begin{equation*}
+  T = \frac{2\pi r}{u} \xRightarrow{m u = q B r}
+  T = \frac{2\pi m}{q B}
+\end{equation*}
+
+
+\end{frame}
+
+
+%
+%
+%
+
+\begin{frame}{Cyclotron}
+
+\begin{columns}
+  \begin{column}{0.20\textwidth}
+     \begin{center}
+       \includegraphics[width=0.99\textwidth]{./images/photos/cyclotron.jpg}\\
+     \end{center}
+  \end{column}
+  \begin{column}{0.70\textwidth}
+          {\bf A cyclotron is a type of particle accelerator}.\\
+          It was invented by Ernest Lawrence in 1932 and it was the most powerful
+          type of accelerator till it was superseded by the synchrotron in the 1950's.
+  \end{column}
+\end{columns}
+
+\begin{center}
+    \includegraphics[width=0.85\textwidth]{./images/schematics/cyclotron_diagram.png}\\
+\end{center}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{The Liverpool Cyclotron}
+
+\begin{columns}
+  \begin{column}{0.25\textwidth}
+     \begin{center}
+       \includegraphics[width=0.80\textwidth]{./images/people/chadwick.jpg}\\
+       {\scriptsize  James Chadwick\\ (1891-1974)}\\
+       \vspace{0.2cm}
+       \includegraphics[width=0.80\textwidth]{./images/photos/met_cathedral.jpg}\\
+       {\scriptsize  Liverpool Metropolitan Cathedral}\\
+     \end{center}
+  \end{column}
+  \begin{column}{0.75\textwidth}
+     \begin{itemize}
+          \item When {\bf Chadwick} (who discovered the neutron, Nobel Prize in Physics 1935)
+                    was the Head of the Physics Department at the University of Liverpool,
+                    (some time before the WW2) this was the home of a very large cyclotron.
+            \vspace{0.1cm}
+            \begin{itemize}
+                 \item You can see pieces of the D's in the VGM.
+            \end{itemize}
+          \vspace{0.3cm}
+          \item And, in the 50's the University of Liverpool had a new synchrocyclotron, somewhere in the grounds of the
+                   Metropolitan Cathedral, that was the most powerful accelerator in Europe at the time.\\
+     \end{itemize}
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+
+%
+%
+%
+
+\begin{frame}{Cyclotron motion}
+
+If the charged particle was entering the magnetic field at an angle with the field lines then it would do {\bf two motions}:\\
+\vspace{0.2cm}
+
+\begin{columns}
+  \begin{column}{0.50\textwidth}
+    \begin{center}
+      \includegraphics[width=0.99\textwidth]{./images/schematics/cyclotron_motion_02.png}\\
+    \end{center}
+  \end{column}
+  \begin{column}{0.50\textwidth}
+      \begin{itemize}
+      {\small
+         \item On the plane perpendicular to the field, it would move in a {\bf circular trajectory}
+                   with constant velocity $u_{\perp}$ (velocity component perpendicular to the field).\\
+                   Note: $F_{\perp} = q \vec{u}_{\perp} \times \vec{B} = q {u}_{\perp} B$
+         \item It would also move along a {\bf straight line} in the direction of the field with constant
+                   velocity $u_{\parallel}$  (component parallel to the field).\\
+                   Note: $F_{\parallel} = q \vec{u}_{\parallel} \times \vec{B} = 0$
+      }
+      \end{itemize}
+  \end{column}
+\end{columns}
+
+\vspace{0.2cm}
+The combination of the two motions causes a {\bf helical trajectory}.\\
+
+\end{frame}
+
+%
+% Worked example
+%
+
+{
+\setbeamercolor {frametitle} {bg=eBG1}
+\setbeamercolor {author in head/foot} {bg=eBG1}
+\setbeamercolor {title in head/foot} {bg=eBG2}
+\setbeamercolor {date in head/foot} {bg=eBG3}
+\setbeamercolor {date in head/foot} {fg=eFG3}
+
+%
+%
+%
+
+\begin{frame}{Worked example}
+
+\begin{blockexmplque}{Question}
+The pole pieces (the ``dees'') of a cyclotron are 50 cm in diameter, in a uniform magnetic field of 15,000 G.
+\begin{enumerate}
+  \item Find approximate values for the kinetic energies up to which
+            (a) protons and (b) $\alpha$-particles ($He^{4}$ nuclei) could be accelerated.
+  \item What oscillator frequency would be required in each case?
+\end{enumerate}
+The charge of the proton is $q_p = 1.6 \times 10^{-19} C$ and the mass of the proton is $m_p = 1.67 \times 10^{-27} kg$.
+\end{blockexmplque}
+\vspace{0.4cm}
+
+The cyclotron formula is:
+\begin{equation*}
+  m u = q B r
+\end{equation*}
+where m is the particle mass, q its charge, u its velocity, r the radius of curvature and B the magnetic field.
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example}
+
+Hence the velocity of the particle is:
+\begin{equation*}
+  u = \frac{q B r}{m}
+\end{equation*}
+
+The kinetic energy of the accelerated particle is:
+\begin{equation*}
+  K = \frac{1}{2} m u^2 = \frac{1}{2} m \Big( \frac{q B r}{m} \Big)^2 =  \frac{q^2 B^2 r^2}{2m}
+\end{equation*}
+
+The kinetic energy K is maximal when the particle moves in a trajectory where the radius of curvature r
+has the largest possible value. \\
+\vspace{0.2cm}
+
+The maximum value of r is the radius (call it R) of the dees:
+\begin{equation*}
+  r = R = \frac{50\;cm}{2} = 25 cm
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example}
+
+Thefore, the maximum kinetic energy for protons is given by:
+\begin{equation*}
+  K_{max;p}  = \frac{q_{p}^2 B^2 R^2}{2m_p}
+                 = \frac{(1.6 \times 10^{-19} C)^2 (1.5T)^2 (0.25m)^2}{2(1.67 \times 10^{-27} kg)}
+                     \xRightarrow{T = kg/(C s),\; J = kg \cdot m^2 / s^2}
+\end{equation*}
+\begin{equation*}
+  K_{max;p} = 1.08 \times 10^{-12} J
+\end{equation*}
+
+An $\alpha$ particle is about 4 times heavier than a proton ($m_{\alpha} = 4 m_{p}$) and it has twice the charge ($q_{\alpha} = 2 q_{p}$).
+Thefore, the maximum kinetic energy for $\alpha$'s is given by:
+\begin{equation*}
+  K_{max;\alpha}  = \frac{q_{\alpha}^2 B^2 R^2}{2m_{\alpha}} = \frac{\Big(2q_{p}\Big)^2 B^2 R^2}{2\Big(4m_p\Big)} =
+       \frac{\cancel{4}q_{p}^2 B^2 R^2}{2 \cdot \cancel{4} m_p} = \frac{q_{p}^2 B^2 R^2}{2m_p} \Rightarrow
+\end{equation*}
+\begin{equation*}
+  K_{max;\alpha}  =  K_{max;p}
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example}
+
+The oscillator frequency f is given by:
+\begin{equation*}
+  u = \Big( 2\pi f\Big) r \Rightarrow f = \frac{u}{2\pi r}
+\end{equation*}
+Substituting the previous expression for u ($u = q B r/m$), we have:
+\begin{equation*}
+ f = \frac{u}{2\pi r} = \frac{q B r }{2\pi r m} \Rightarrow
+ f = \frac{q B}{2\pi m}
+\end{equation*}
+
+For protons:
+\begin{equation*}
+ f_{p} = \frac{q_p B}{2\pi m_p}
+        = \frac{(1.6 \times 10^{-19} C)  (1.5 T)}{2\pi (1.67 \times 10^{-27} kg)}
+        = \frac{1.6 \cdot 1.5}{2\pi \cdot 1.67}  \times 10^{8} \frac{C \cdot T}{kg} \xRightarrow{T = kg/(C s)}
+\end{equation*}
+\begin{equation*}
+ f_{p} =  0.22  \times 10^{8} \frac{C}{kg}\frac{kg}{Cs} = 0.22  \times 10^{8} Hz = 22 MHz
+\end{equation*}
+
+For $\alpha$'s, the corresponding frequency is:
+\begin{equation*}
+ f_{\alpha} = \frac{q_{\alpha} B}{2\pi m_{\alpha}} = \frac{2q_p B}{2\pi \cdot 4m_{p}} =  \frac{1}{2}  \frac{q_p B}{2\pi m_p}  =
+   \frac{1}{2} f_{p} =  \frac{1}{2}  22 MHz = 11 MHz
+\end{equation*}
+
+\end{frame}
+
+
+} % Worked example
+
+
+
+%
+%
+%
+
+\begin{frame}{Magnetic force on current}
+
+As we have seen, the force on a single moving charge q is:
+\begin{equation*}
+  \vec{F} = q \vec{u} \times \vec{B}
+\end{equation*}
+
+How about the {\bf force on a current} that consists of several moving charges?
+
+\begin{equation*}
+  q ...  \rightarrow \int_{V} \rho ... d\tau
+\end{equation*}
+
+\begin{equation*}
+  \vec{F} = q \vec{u} \times \vec{B} \rightarrow \int_{\tau} \rho \vec{u} \times \vec{B} d\tau
+                 \xRightarrow {\vec{j} = \rho \vec{u}}
+  \vec{F} = \int_{\tau} \vec{j} \times \vec{B} d\tau
+\end{equation*}
+
+For a current through a conducting wire
+\begin{equation*}
+  \vec{F} = I \int_{L} d\vec{\ell} \times \vec{B}
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Magnetic forces do no work}
+
+{\bf Magnetic forces do no work on electric charges}.
+
+\vspace{0.2cm}
+
+Recall that a force $\vec{F}$ is said to do work dW if, when it is acting on a body, there is a displacement $d\vec{\ell}$
+of the point of application in the direction of the force. The total work done is defined as:
+\begin{equation*}
+  W = \int dW = \int \vec{F} \cdot d\vec{\ell}
+\end{equation*}
+
+\vspace{0.1cm}
+
+The magnetic force is  $\vec{F} = q \vec{u} \times \vec{B}$
+and therefore, it is always perpendicular to the velocity.
+Substituting the magnetic force, and expressing the displacement  $d\vec{\ell}$
+in terms of the velocity $\vec{u}$ ($d\vec{\ell} = \vec{u} dt$) we have:
+\begin{equation*}
+  W = \int \vec{F} \cdot d\vec{\ell} = q \int \Big( \vec{u} \times \vec{B} \Big) \cdot \vec{u} dt
+\end{equation*}
+
+That quantity is obviously 0! The cross product $\vec{u} \times \vec{B}$ is perpendicular to $\vec{u}$ and,
+thus, its dot product with $\vec{u}$ yields $W = 0$.
+\end{frame}
+
+
+%
+%
+%
+
+\begin{frame}{Generation of magnetic fields}
+
+We have talked extensively about the magnetic field $\vec{B}$,
+but {\bf we do not know how to calculate it yet}...\\
+\vspace{0.2cm}
+In electrostatics we several examples of how to calculate the
+electric field $\vec{E}$ produced by a collection of charges.
+For example, the electric field $\vec{E}(\vec{r})$ at position $\vec{r}$,
+produced by a continuous distribution of charge, characterised by a charge density $\rho$
+was given by:
+\begin{equation*}
+  \vec{E}(\vec{r}) = \frac{1}{4\pi\epsilon_0} \int \frac{\rho(\vec{r^{\prime}})}{|\vec{r}-\pvec{r}'|^{3}} (\vec{r}-\pvec{r}') d\tau^{\prime}
+\end{equation*}
+This is just an appropriate generalisation of Coulomb's law.\\
+\vspace{0.2cm}
+As discussed, the above integral is difficult to evaluate and, in fact, we developed machinery to avoid it.
+But, {\em in principle}, this above integral tells us all that we need to know:\\
+\vspace{0.2cm}
+{\bf How to relate constant electric charges to constant electric fields.}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{The Biot-Savart law}
+
+It there a similar expression in magnetostatics? \\
+
+\vspace{0.3cm}
+
+\begin{columns}
+  \begin{column}{0.40\textwidth}
+     \includegraphics[width=0.99\textwidth]{./images/people/biot_and_savart.jpg}\\
+     {\scriptsize
+        Left: Jean Baptiste Biot (1774-1862)\\
+        Right: Felix Savart (1791-1841)\\
+     }
+  \end{column}
+  \begin{column}{0.60\textwidth}
+      We seek an expression that {\bf relates steady currents (*) to constant magnetic fields.}\\
+      \vspace{0.3cm}
+      Such a relationship was discovered in 1820 by Biot and Savart.\\
+      \vspace{0.3cm}
+      It is now known as the {\bf Biot-Savart law}\\
+       (pronounced: {\it bee-oh-suh-vahr}).\\
+  \end{column}
+\end{columns}
+
+\vspace{0.4cm}
+
+\noindent\rule{2cm}{0.4pt}\\
+{\scriptsize
+  (*) Notice that:
+   \begin{itemize}
+      \item There is no {\em true} steady current. It is a suitable approximation when changes are slow.
+      \item A moving point charge does not constitute a steady current!
+      \item A steady current {\em does not pile up}. Therefore $\partial \rho / \partial t = 0$ everywhere in space and hence,
+                recalling the continuity equation, $\vec{\nabla} \vec{j} = 0$.
+   \end{itemize}
+}
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{The Biot-Savart law}
+
+\begin{columns}
+  \begin{column}{0.40\textwidth}
+     Assume a current I flowing along a conducting wire
+     as shown below.\\
+     \vspace{0.2cm}
+     \begin{center}
+       \includegraphics[width=0.99\textwidth]{./images/schematics/biot_savart.jpg}\\
+      \end{center}
+  \end{column}
+  \begin{column}{0.60\textwidth}
+     The magnetic field $d\vec{B}$ because of the current flowing through the infinitesimal
+     conducting wire element $d\vec{\ell}$ is given by:
+     \begin{equation*}
+       d\vec{B} = \frac{\mu_0I}{4\pi} \frac{d\vec{\ell} \times \hat{r}}{r^2}
+                = \frac{\mu_0I}{4\pi} \frac{d\vec{\ell} \times \vec{r}}{r^3}
+     \end{equation*}
+     where:
+     \begin{itemize}
+         \item $\vec{r}$ is the distance from $d\vec{\ell}$ to the point where we want to know the field, and\\
+         \item $\mu_0$ is a constant (4$\pi\;\times\;10^{-7}$ $N/A^2$) called the {\bf permeability of free space}\\
+     \end{itemize}
+     \vspace{0.1cm}
+     Notice the {\bf $1/r^2$ dependence} of the magnetic field (similar to the electric field).\\
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{The Biot-Savart law}
+
+Notice that the direction of $d\vec{B}$ is determined by the cross-product $d\vec{\ell} \times \vec{r}$.
+
+\begin{columns}
+  \begin{column}{0.50\textwidth}
+     \begin{center}
+        \includegraphics[width=0.60\textwidth]{./images/schematics/biot_savart_with_dB_direction.jpg}\\
+      \end{center}
+  \end{column}
+  \begin{column}{0.50\textwidth}
+     \begin{center}
+        \includegraphics[width=0.60\textwidth]{./images/schematics/biot_savart_right_hand_rule.png}\\
+      \end{center}
+  \end{column}
+\end{columns}
+
+The {\bf superposition principle is valid for magnetostatics}.\\
+The magnetic field $\vec{B}$ produced by the current flowing across the {\em entire} length L
+of the conducting wire is the vector sum of the fields due to each
+infinitesimal element $d\vec{\ell}$:
+\begin{equation*}
+       \vec{B} = \int_{L} d\vec{B} = \int_{L} \frac{\mu_0I}{4\pi} \frac{d\vec{\ell} \times \vec{r}}{r^3}
+\end{equation*}
+
+\end{frame}
+
+
+%
+%
+%
+
+\begin{frame}{Magnetic field around a straight wire}
+
+\begin{columns}
+  \begin{column}{0.50\textwidth}
+    \includegraphics[width=0.98\textwidth]{./images/schematics/magnetic_field_around_wire_01.png}
+  \end{column}
+  \begin{column}{0.50\textwidth}
+    We will use the Biot-Savart law:
+    \begin{equation*}
+       \vec{B} = \int_{L} \frac{\mu_0I}{4\pi} \frac{d\vec{\ell} \times \vec{r}}{r^3}
+      \end{equation*}
+      to calculate the magnetic field $\vec{B}$
+      generated by a {\em simple} (*) current configuration:
+      {\bf A single straight conducting wire}.
+  \end{column}
+\end{columns}
+
+ \noindent\rule{2cm}{0.4pt}\\
+ {\scriptsize
+   (*) unfortunatelly, even for a simple configuration the magnetic field is not all the simple to calculate analytically.\\
+ }
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Magnetic field around a straight wire}
+
+\begin{columns}
+  \begin{column}{0.40\textwidth}
+    \includegraphics[width=0.98\textwidth]{./images/schematics/magnetic_field_around_wire_calc_01.png}
+  \end{column}
+  \begin{column}{0.60\textwidth}
+  {\small
+   Assume that:
+   \begin{itemize}
+   {\small
+      \item there is current I flowing along a wire in the positive z direction, and
+      \item the conductor has a finite length extending from z=a to z=b
+        \begin{itemize}
+        {\small
+             \item later, I will consider a wire of infinite length
+                       ($a \rightarrow -\infty$ and $b \rightarrow +\infty$)
+        }
+        \end{itemize}
+   }
+  \end{itemize}
+  For convenience, without loss of generality,
+  assume that the wire has x=0, y=0.\\
+  \vspace{0.2cm}
+  I will try to {\bf calculate the magnetic field at all points on the plane z=0}.
+  \begin{itemize}
+  {\small
+      \item since, eventually, I will consider a wire with infinite length,
+                this choice is as good as any.
+  }
+  \end{itemize}
+
+  }
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+
+%
+%
+%
+
+\begin{frame}{Magnetic field around a straight wire}
+
+The Biot-Savart law states that the magnetic field $\vec{B}$ at a point $\vec{r}$ is:
+\begin{equation*}
+  \vec{B}(\vec{r}) = \frac{\mu_0I}{4\pi} \int_{a}^{b} \frac{d\vec{\ell} \times \vec{r}}{r^3}
+\end{equation*}
+
+The element $d\vec{\ell}$ is along the positive z axis, so I can write it as:
+\begin{equation*}
+  d\vec{\ell} = dz \hat{z} = \Big( 0, 0, dz \Big)
+\end{equation*}
+
+The vector $\vec{r}$ points from the element $d\vec{\ell}$, which is somewhere on the z axis
+(between z=a and z=b) to a point on the plane z=0. So:
+\begin{equation*}
+  \vec{r} = \Big( x, y, 0 \Big) - \Big( 0, 0, z \Big) = \Big( x, y, -z \Big)
+\end{equation*}
+
+The magnitude of $\vec{r}$ is:
+\begin{equation*}
+  r = |\vec{r}| = \Big( x^2 + y^2 + (-z)^2 \Big)^{1/2} = \Big( x^2 + y^2 + z^2 \Big)^{1/2}
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Magnetic field around a straight wire}
+
+We can now evaluate the $d\vec{\ell} \times \vec{r}$ cross product appearing in the Biot-Savart law:\\
+\begin{equation*}
+  d\vec{\ell} \times \vec{r} =
+   \left|
+    \begin{array}{ccc}
+      \hat{x} & \hat{y} & \hat{z} \\
+            0 &       0 &      dz \\
+            x &       y &      -z \\
+    \end{array}
+   \right|
+   =
+   \left|
+    \begin{array}{cc}
+            0 &  dz \\
+            y &  -z \\
+    \end{array}
+   \right|
+   \hat{x} -
+   \left|
+    \begin{array}{cc}
+            0 &  dz \\
+            x &  -z \\
+    \end{array}
+   \right|
+   \hat{y} +
+   \left|
+    \begin{array}{cc}
+            0 &  0 \\
+            x &  y \\
+    \end{array}
+   \right|
+   \hat{z} =
+\end{equation*}
+
+\begin{equation*}
+  = \Big( -y dz \Big) \hat{x} - \Big( -x dz \Big) \hat{y} + 0 \hat{z} \Rightarrow
+  d\vec{\ell} \times \vec{r} = \Big(-y, x, 0 \Big) dz
+\end{equation*}
+
+So, substituting everything back into the Biot-Savart law:
+\begin{equation*}
+  \vec{B}(\vec{r}) =
+     \frac{\mu_0I}{4\pi} \int_{a}^{b} \frac{d\vec{\ell} \times \vec{r}}{r^3} =
+     \frac{\mu_0I}{4\pi} \int_{a}^{b} \frac{\Big(-y, x, 0 \Big)}{(x^2+y^2+z^2)^{3/2}} dz
+\end{equation*}
+
+In principle we are done, but we now have to evaluate the integrals above.
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Magnetic field around a straight wire}
+
+First, some observations. The equation:
+\begin{equation*}
+  \vec{B}(\vec{r}) =
+     \frac{\mu_0I}{4\pi} \int_{a}^{b} \frac{\Big(-y, x, 0 \Big)}{(x^2+y^2+z^2)^{3/2}} dz
+\end{equation*}
+
+gives us all 3 components $B_{x}$, $B_{y}$ and $B_{z}$ of the $\vec{B}$ vector.
+We notice that the magnetic field has no z component.
+The field vectors lie on (x,y) plane with components:
+\begin{equation*}
+  B_{x}(\vec{r}) =
+     \frac{\mu_0I}{4\pi} \int_{a}^{b} \frac{-y}{(x^2+y^2+z^2)^{3/2}} dz =
+     -y \frac{\mu_0I}{4\pi} \int_{a}^{b} \frac{dz}{({\rho}^2+z^2)^{3/2}}
+\end{equation*}
+\begin{equation*}
+  B_{y}(\vec{r}) =
+     \frac{\mu_0I}{4\pi} \int_{a}^{b} \frac{x}{(x^2+y^2+z^2)^{3/2}} dz =
+     x \frac{\mu_0I}{4\pi} \int_{a}^{b} \frac{dz}{({\rho}^2+z^2)^{3/2}}
+\end{equation*}
+where ${\rho}^2 = x^2+y^2$ is a {\em constant} for the integration over dz.
+
+\end{frame}
+
+
+%
+%
+%
+
+\begin{frame}{Magnetic field around a straight wire}
+
+Using the result we obtained for the integral $\int_{a}^{b}
+\frac{dz}{({\rho}^2+z^2)^{3/2}}$ (see Optional reading),
+we can now calculate the components of $\vec{B}$
+\begin{equation*}
+  B_{x}(\vec{r}) =
+     -y \frac{\mu_0I}{4\pi} \int_{a}^{b} \frac{dz}{({\rho}^2+z^2)^{3/2}} =
+     \frac{\mu_0I}{4\pi} \cdot \frac{-y}{{\rho}^{2}} \Big[ \frac{z}{({\rho}^{2}+z^{2})^{1/2}} \Big] \biggr\rvert_{z=a}^{z=b}
+\end{equation*}
+\begin{equation*}
+  B_{y}(\vec{r}) =
+     x \frac{\mu_0I}{4\pi} \int_{a}^{b} \frac{dz}{({\rho}^2+z^2)^{3/2}} =
+     \frac{\mu_0I}{4\pi} \cdot \frac{x}{{\rho}^{2}} \Big[ \frac{z}{({\rho}^{2}+z^{2})^{1/2}} \Big] \biggr\rvert_{z=a}^{z=b}
+\end{equation*}
+and
+\begin{equation*}
+  B_{z}(\vec{r}) = 0
+\end{equation*}
+
+Putting it all together, we have:
+\begin{equation*}
+  \vec{B}(\vec{r}) = \frac{\mu_0I}{4\pi} \frac{1}{{\rho}^{2}}
+    \Big[ \frac{b}{({\rho}^{2}+b^{2})^{1/2}} - \frac{a}{({\rho}^{2}+a^{2})^{1/2}}\Big] \Big( -y, x, 0 \Big)
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Magnetic field around a straight wire}
+
+We will now obtain an approximation of the following equation
+\begin{equation*}
+  \vec{B}(\vec{r}) = \frac{\mu_0I}{4\pi} \frac{1}{{\rho}^{2}}
+    \Big[ \frac{b}{({\rho}^{2}+b^{2})^{1/2}} - \frac{a}{({\rho}^{2}+a^{2})^{1/2}}\Big] \Big( -y, x, 0 \Big)
+\end{equation*}
+as $a \rightarrow -\infty$ and $b \rightarrow +\infty$.
+Setting a = -b:
+\begin{equation*}
+  \vec{B}(\vec{r}) = \frac{\mu_0I}{4\pi} \frac{1}{{\rho}^{2}} \frac{2b}{({\rho}^{2}+b^{2})^{1/2}} \Big( -y, x, 0 \Big)
+\end{equation*}
+If we allow b to become infinite, then:
+\begin{equation*}
+\displaystyle
+  \lim_{b\to\infty} \frac{2b}{({\rho}^{2}+b^{2})^{1/2}}
+     \stackrel{b >> {\rho}}{\approx} \lim_{x\to\infty} \frac{2b}{(b^{2})^{1/2}} =
+     \lim_{x\to\infty} \frac{2b}{b} = 2
+\end{equation*}
+and, therefore, the magnetic field $\vec{B}(\vec{r})$ becomes:
+\begin{equation*}
+  \vec{B}(\vec{r}) = \frac{\mu_0I}{2\pi {\rho}^{2}} \Big( -y, x, 0 \Big)
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Magnetic field around a straight wire}
+
+The previous result can be rewritten as:
+\begin{equation*}
+  \vec{B}(\vec{r}) = \frac{\mu_0I}{2\pi {\rho}} \Big( -\frac{y}{{\rho}}, \frac{x}{{\rho}}, 0 \Big)
+\end{equation*}
+
+Let's call:
+\begin{equation*}
+  \hat\phi =  \Big( -\frac{y}{{\rho}}, \frac{x}{{\rho}}, 0 \Big)
+\end{equation*}
+
+It can be easily seen that $\hat\phi$ is the azimuthal unit vector:
+\begin{equation*}
+  \hat\phi \cdot \hat\phi = 1 \;\;\;\; and \;\;\;\; \hat{\rho} \cdot \hat\phi = 0
+\end{equation*}
+
+Our result can be summarised as:
+\begin{equation*}
+  \vec{B}(\vec{r}) = \frac{\mu_0I}{2\pi {\rho}} \hat\phi
+\end{equation*}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+
+%
+% Programming
+%
+
+{
+\programmingslide
+
+%
+%
+%
+
+\begin{frame}{PHYS201 scientific programming task for Lecture \thislecture}
+
+  Background information: {\bf Making a (conventional) neutrino beam}\\
+
+  \begin{columns}
+    \begin{column}{0.78\textwidth}
+      \centering
+      \includegraphics[width=0.95\textwidth]{./images/schematics/numi.png}\\
+      \vspace{0.2cm}
+      \includegraphics[width=0.32\textwidth]{./images/photos/beam_horn_old_1.jpg}
+      \hfill
+      \includegraphics[width=0.66\textwidth]{./images/photos/beam_horn_old_3.jpg}
+    \end{column}
+    \begin{column}{0.22\textwidth}
+     \begin{block}{}
+     {\scriptsize
+      Where do our $\nu$'s come from?\\
+      \vspace{0.3cm}
+      $\pi^{+} \rightarrow {\color{red}\nu_{\mu}} + \mu^{+}$\\
+      $\pi^{-} \rightarrow {\color{magenta}\bar{\nu}_{\mu}} + \mu^{-}$\\
+      $\mu^{+} \rightarrow {\color{magenta}\bar{\nu}_{\mu}} + {\color{blue}\nu_{e}} + e^{+}$\\
+      $\mu^{-} \rightarrow {\color{green}\bar{\nu}_{e}} + {\color{red}\nu_{\mu}} + e^{-}$\\
+      $K^{+} \rightarrow {\color{red}\nu_{\mu}} + \mu^{+}$\\
+      $K^{+} \rightarrow {\color{blue}\nu_{e}} + \pi^{0} + e^{+}$\\
+      $K^{+} \rightarrow {\color{red}\nu_{\mu}} + \pi^{0} + \mu^{+}$\\
+      $K^{-} \rightarrow {\color{magenta}\bar{\nu}_{\mu}} + \mu^{-}$\\
+      $K^{-} \rightarrow {\color{green}\bar{\nu}_{e}} + \pi^{0} + e^{-}$\\
+      $K^{-} \rightarrow {\color{magenta}\bar{\nu}_{\mu}} + \pi^{0} + \mu^{-}$\\
+      $K_{L}^{0} \rightarrow {\color{magenta}\bar{\nu}_{\mu}} + \pi^{+} + \mu^{-}$\\
+      $K_{L}^{0} \rightarrow {\color{red}\nu_{\mu}} + \pi^{-} + \mu^{+}$\\
+      $K_{L}^{0} \rightarrow {\color{green}\bar{\nu}_{e}} + \pi^{+} + e^{-}$\\
+      $K_{L}^{0} \rightarrow {\color{blue}\nu_{e}} + \pi^{-} + e^{+}$\\
+    }
+    \end{block}
+    \end{column}
+  \end{columns}
+
+\end{frame}
+
+
+%
+%
+%
+
+\begin{frame}{PHYS201 scientific programming task for Lecture \thislecture}
+
+  Background information: {\bf The hadron hose}\\
+  \vspace{0.3cm}
+  {\small
+  This is an additional {\bf focusing element}.
+  It is a wire located in the decay pipe, downstream of the target and
+  focussing horns. The wire is pulsed with current creating a toroidal
+  magnetic field within the decay volume.\\
+  See {\tt \color{blue} J.Hylen et al., https://arxiv.org/pdf/hep-ex/0210051.pdf}\\
+  }
+  \vspace{0.3cm}
+  \begin{center}
+    \includegraphics[width=0.75\textwidth]{./images/schematics/hadron_hose_trajectories.png}\\
+    {\scriptsize Sample orbit for a 10 GeV $\pi^{+}$.}
+  \end{center}
+\end{frame}
+
+
+%
+%
+%
+
+\begin{frame}{PHYS201 scientific programming task for Lecture \thislecture}
+
+\begin{itemize}
+  \item Write a program to {\bf visualise trajectories of charged particles}
+        moving in the magnetic field produced by the hadron hose.
+  \vspace{0.3cm}
+  \item In this lecture, we studied the two main elements for this calculation.
+        \begin{itemize}
+          \item The magnetic field produced by a long wire.
+          \item The magnetic force on a moving electric charge.
+        \end{itemize}
+  \item The Runge-Kutta method (look it up) can be used for solving the equation
+        of motion numerically and calculating the trajectories.
+  \vspace{0.3cm}
+  \item Assume that the decay pipe has a diameter of 2 m and a length of 700 m.
+        Positively-charged pions, with a lifetime of 2.6 $\times$ 10$^{-8}$ $\mu$s
+        enter the decay pipe from the centre of its upstream face.\\
+        The pions have energies which are uniformly distributed in the 1-5 GeV range,
+        and their direction is isotropic in the $\theta$ = $\pm$10$^{o}$ range,
+        where $\theta$ is the angle between the hose and the pion direction.\\
+        {\bf Optimize the hose current}, so as to maximize the number of pion decays
+        within the decay volume and, hence, the neutrino flux.
+\end{itemize}
+
+\end{frame}
+
+
+} % programming
+
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+
+%
+% What to remember
+%
+
+\renewcommand{\lecturesummarytitle}{Main points to remember }
+\input{slides_lecture05_summary.tex}
+
+%
+% Plan for the next lecture
+%
+
+\begin{frame}{At the next lecture (Lecture \nextlecture)}
+
+We will continue studying {\bf magnetostatics}
+
+\begin{itemize}
+  \item Magnetic force between  two parallel conductors
+  \item Magnetic dipole moments
+  \item Principles of DC motors
+  \item The curl and divergence of the magnetic field
+  \item The vector potential
+\end{itemize}
+
+\end{frame}
+
+%
+% Optional reading
+%
+
+\input{slides_lecture05_optional.tex}
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------

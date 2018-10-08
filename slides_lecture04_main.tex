@@ -1,0 +1,2153 @@
+\renewcommand{\prevlecture}{3 }
+\renewcommand{\thislecture}{4 }
+\renewcommand{\nextlecture}{5 }
+
+%
+% Cover page
+%
+
+\title[PHYS 201 / Lecture \thislecture]
+{
+  PHYS 201 / Lecture \thislecture\\
+  {\it Conductors; Capacitance; Dielectrics; Dipoles; Polarization}\\
+}
+
+\input{slides_author.tex}
+
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+
+%
+% Revision of previous lecture
+%
+
+\renewcommand{\lecturesummarytitle}{Revision }
+\input{slides_lecture03_summary.tex}
+
+%
+% Plan for this lecture
+%
+
+\begin{frame}{Plan for Lecture \thislecture}
+
+\begin{itemize}
+  \item So far we studied electrostatics in the {\em vacuum}.
+  \item In this lecture we will discuss {\bf what happens when materials are placed within an electric field}.
+
+  \item With regards to their electrical properties, there are 2 main types of materials
+   \begin{itemize}
+     \item materials that conduct electricity: {\bf conductors}
+     \item materials that do not conduct electricity: {\bf insulators (dielectrics)}
+   \end{itemize}
+
+   \item We will start by discussing what happens when we place a conductor in an electrostatic field
+
+   \item We will discuss the concept of capacitance, and
+         study in more detail a simple capacitor: Parallel plate capacitor.
+
+   \item Then, we also see what happens when we place a dielectric inside an electrostatic field
+         and we will discuss electrical dipoles and the concept of polarisation.
+\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+
+%
+%
+%
+
+\begin{frame}{Conductors}
+
+\begin{columns}
+  \begin{column}{0.70\textwidth}
+    A {\bf {\em conductor}} is an object or type of material
+    which {\bf contains electric charges that are relatively free to move} through that object or material.\\
+  \end{column}
+  \begin{column}{0.30\textwidth}
+     \includegraphics[width=0.95\textwidth]{./images/photos/power_cable_01.jpg}\\
+  \end{column}
+\end{columns}
+
+\vspace{0.3cm}
+
+Free electric charges:
+\begin{itemize}
+  \item In most case, these are {\bf electrons} (e.g. in metals).
+  \item But in some cases the positive charges may also be able to move (e.g. in electrolytes such as as salt water).
+\end{itemize}
+
+\vspace{0.3cm}
+A {\em \bf perfect conductor} has an {\bf unlimited supply of free charges}.
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Supply of free charges}
+
+What provides that {\em unlimited supply} of free charges?\\
+We will examine the most typical conducting substance: {\bf Metals}.\\
+
+\begin{center}
+   \includegraphics[width=0.70\textwidth]{./images/photos/gallium_crystals.jpg}
+\end{center}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Crystal structure of metals}
+
+In a metallic substance, the {\bf atoms are usually closed packed and neatly arranged
+in symmetrical structures we call {\em crystals}}.\\
+\vspace{0.2cm}
+\begin{itemize}
+  \item Think how grocers pack oranges: Nature does something very similar when it organizes
+        atoms in crystals.
+  \item Atoms in crystals typically have 12 or 8 touching neighbours.
+\end{itemize}
+
+\begin{columns}
+  \begin{column}{0.50\textwidth}
+      \begin{center}
+         {\bf 12 neighbours} \\
+         \vspace{0.23cm}
+         \includegraphics[width=0.80\textwidth]{./images/schematics/crystals_12_touching_neighbours.png}
+      \end{center}
+      {\scriptsize
+        6 neighbours on each plane + 3 on each of the two neighbouring planes.\\
+      }
+  \end{column}
+  \begin{column}{0.50\textwidth}
+      \begin{center}
+         {\bf 8 neighbours} (less efficient packing) \\
+         \includegraphics[width=0.80\textwidth]{./images/schematics/crystals_8_touching_neighbours.png}
+      \end{center}
+      {\scriptsize
+        No touching neighbour on same plane, but 4 from each of the planes below and above.\\
+      }
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Supply of free charges}
+
+{\bf Atoms lose one or more electrons from their outer shells and these electrons are free to move}.
+In the case of metals the positive charges are packed together and can not move.\\
+
+\begin{columns}
+  \begin{column}{0.50\textwidth}
+      \begin{center}
+        \includegraphics[width=0.98\textwidth]{./images/schematics/conduction_band.png}\\
+      \end{center}
+  \end{column}
+  \begin{column}{0.50\textwidth}
+    \begin{itemize}
+    {\scriptsize
+      \item Energy levels quantized.
+      \item Closely spaced levels: Energy "bands".
+      \item Nature seeks to minimize the total energy but not all electrons in the lowest state (Pauli exclusion principle).
+      \item Levels up to the Fermi level are filled.
+      \item Metals have many energy levels close to the Fermi level: Electrons can jump between states.\\
+    }
+    \end{itemize}
+  \end{column}
+\end{columns}
+
+\vspace{0.3cm}
+
+A {\em \bf perfect conductor} has an {\bf unlimited supply of free charges}.
+\begin{itemize}
+  \item There are no perfect conductors, but many substances come close!
+  \item For example, in copper, the free charge density is 1.8 $\times$ 10$^{10}$ C/m$^3$.
+\end{itemize}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Placing a conductor within an electric field}
+
+{\bf What happens if we place a conductor} (e.g. a chunk of metal)
+{\bf within an external electric field?}\\
+\vspace{0.3cm}
+
+\begin{itemize}
+  \item The electric field vanishes everywhere inside a conductor.
+  \item The potential in constant inside a conductor.
+  \item Charge accumulates in the surface.
+  \item The electric field on the surface of a conductor has no tangential component.
+\end{itemize}
+
+\vspace{0.2cm}
+How do these effects come about?
+
+\end{frame}
+
+
+%
+%
+%
+
+\begin{frame}{The effect of the external electric field}
+
+Assume that our conductor is uncharged, so it is neutral (*).
+Of course, it is made up from positive and negative charges.
+Within an external field:
+\begin{itemize}
+{\small
+ \item The free negative charges will move opposite to the field.
+ \item The positive charges feel a force but are pinned and can not move.
+}
+\end{itemize}
+
+\begin{columns}
+  \begin{column}{0.50\textwidth}
+      \begin{center}
+        \includegraphics[width=0.75\textwidth]{./images/schematics/metal_in_electric_field_1.png}\\
+      \end{center}
+  \end{column}
+  \begin{column}{0.50\textwidth}
+      \begin{center}
+        \includegraphics[width=0.80\textwidth]{./images/schematics/metal_in_electric_field_2.png}\\
+      \end{center}
+  \end{column}
+\end{columns}
+
+\noindent\rule{2cm}{0.4pt}\\
+{\scriptsize
+ (*) It is neutral on average: i.e. in {\em macroscopic} volumes that contain few $\times$ $\sim$100 atoms.
+ Obviously much smaller volumes can have net charge:
+ For example, a volume that includes only an atomic nucleus will be positively charged.\\
+}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{The electric field inside a conductor}
+
+The motion of charges creates a {\bf macroscopic accumulation of charge}:
+\begin{itemize}
+{\small
+  \item An excess of negative charge on the side opposite to the
+        direction of $\vec{E}$.
+  \item A deficit of negative charge (i.e. an excess of positive charge)
+        on the side pointed to by $\vec{E}$.
+}
+\end{itemize}
+
+\begin{columns}
+  \begin{column}{0.45\textwidth}
+      \begin{center}
+        \includegraphics[width=0.98\textwidth]{./images/schematics/metal_in_electric_field_3.png}\\
+      \end{center}
+  \end{column}
+  \begin{column}{0.55\textwidth}
+  \begin{itemize}
+   {\small
+   \item {\bf The induced charges create an electric field of their own}.
+   \item The electric field within the conductor is the vector sum of the the external and induced fields.
+   \item The induced electric field {\bf opposes the external field}.
+   }
+  \end{itemize}
+  \end{column}
+\end{columns}
+
+\vspace{0.2cm}
+Eventually {\bf the electric field vanishes {\em everywhere} inside the conductor.}\\
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{The electric potential inside a conductor}
+
+Recall that the electric field $\vec{E}$ and electric potential V are related as follows:
+\begin{equation*}
+  \vec{E} =
+     - \vec{\nabla} V =
+     - \Big(
+          \frac{\partial V}{\partial x},
+          \frac{\partial V}{\partial y},
+          \frac{\partial V}{\partial z}
+       \Big)
+\end{equation*}
+
+\vspace{0.3cm}
+
+The electric field vanishes everywhere inside a conductor.\\
+\vspace{0.3cm}
+
+Therefore, {\textbf{the potential in constant inside a conductor.}}\\
+\vspace{0.2cm}
+We say that the conductor is an {\bf equipotential}.\\
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Induced charge inside a conductor}
+
+As we have seen, charges are free to move. Where to?\\
+\vspace{0.3cm}
+{\bf The surface} is the only place where induced charges could be!
+\begin{itemize}
+  \item It follows from Gauss's law:
+    \begin{equation*}
+       \vec{\nabla} \vec{E} = {\rho}/\epsilon_0
+    \end{equation*}
+  \item If $\vec{E}=0$ inside a conductor, then $\rho(r)$=0 too.
+  \item The induced charges can not live in the volume of the conductor, so they have to be on its surface.
+\end{itemize}
+
+
+\end{frame}
+
+
+%
+%
+%
+
+\begin{frame}{Field on the surface of the conductor}
+
+\begin{columns}
+  \begin{column}{0.40\textwidth}
+      \begin{center}
+        \includegraphics[width=0.85\textwidth]{./images/schematics/conductor_irregular_shape_surface_field.jpg}\\
+      \end{center}
+  \end{column}
+  \begin{column}{0.60\textwidth}
+    For the same reasons that the electric field is cancelled off within the conductor,
+    {\bf it is perpendicular to the surface just outside the conductor}.\\
+    \vspace{0.3cm}
+    If there was a tangential component on the surface,
+    charge would move so as to cancel off that component!\\
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+
+%
+%
+%
+
+\begin{frame}{Field on the surface of the conductor}
+
+To be convinced, consider a charge Q moving on the surface of the conductor:\\
+\vspace{0.3cm}
+\begin{itemize}
+  \item The electric field exerts a force upon Q.
+  \item The surface of the conductor is at the same potential V.
+  \item Therefore, as long as Q stays on the surface, the electric force acting on Q does no work.
+\end{itemize}
+
+\vspace{0.3cm}
+
+Recall that $W = \int \vec{F} \cdot d\vec{\ell}$.\\
+
+\vspace{0.3cm}
+
+If the electric force does no work, it is because {\bf it has no tangential
+component on the surface of the conductor}, i.e. it is always perpendicular to the surface.
+
+\end{frame}
+
+
+%
+%
+%
+
+\begin{frame}{Field on the surface of the conductor}
+
+Another easy way to see that the electric field just outside the surface
+of a conductor has no tangential component
+is by a straightforward application of the circuital law.\\
+
+\vspace{0.3cm}
+
+\begin{columns}
+  \begin{column}{0.30\textwidth}
+   \begin{center}
+     \includegraphics[width=0.99\textwidth]{./images/schematics/conductor_no_tangential_component_circuital_law.png}\\
+   \end{center}
+  \end{column}
+  \begin{column}{0.70\textwidth}
+     We know that the circulation of the electric field $\vec{E}$ along a closed trajectory is 0:
+     \begin{equation*}
+       \oint \vec{E} d\vec{\ell} = 0.
+     \end{equation*}
+     Applying the circuital law for the closed trajectory shown on the left, we have:
+     \begin{equation*}
+       \oint \vec{E} d\vec{\ell} =
+        \int_{a} \vec{E} d\vec{\ell} + \int_{b} \vec{E} d\vec{\ell} + \int_{c} \vec{E} d\vec{\ell} + \int_{d} \vec{E} d\vec{\ell} = 0.
+     \end{equation*}
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Field on the surface of the conductor}
+
+\begin{columns}
+  \begin{column}{0.30\textwidth}
+   \begin{center}
+     \includegraphics[width=0.99\textwidth]{./images/schematics/conductor_no_tangential_component_circuital_law.png}\\
+   \end{center}
+  \end{column}
+  \begin{column}{0.70\textwidth}
+     \begin{itemize}
+       \item $\vec{E}=0$ in the conductor so the segment `a' does not contribute
+             to the integral ($\int_{a} \vec{E} d\vec{\ell} = 0$).
+       \item The segments exiting the conductor (`b' and `d') can be made infinitesimally small,
+             so they do not contribute to the integral either\\
+             ($\int_{b} \vec{E} d\vec{\ell} = \int_{d} \vec{E} d\vec{\ell} = 0$).
+       \item Therefore $\oint \vec{E} d\vec{\ell} = 0$ implies that $\int_{c} \vec{E} d\vec{\ell} = 0$
+     \end{itemize}
+  \end{column}
+\end{columns}
+
+\begin{itemize}
+  \item The segment `c' can be anywhere just outside the surface of the conductor and, since the segments `b' and `d' are
+        infinitesimally small, `c' is parallel to the surface of the conductor.
+  \item Therefore, the only way that $\int_{c} \vec{E} d\vec{\ell}$ to be always 0 is for $\vec{E}$ to be
+        always perpendicular to the surface of the conductor.
+\end{itemize}
+
+\end{frame}
+
+
+
+%
+%
+%
+
+\begin{frame}{Distribution of charge over the surface of a conductor}
+
+{\bf In general}, the induced charges are {\bf not uniformly distributed}.\\
+\vspace{0.4cm}
+
+Consider two conducting spheres with different radii.\\
+\vspace{0.2cm}
+
+\begin{columns}
+  \begin{column}{0.33\textwidth}
+  {\small
+      \begin{center}
+        \includegraphics[width=0.90\textwidth]{./images/schematics/two_electrically_connected_spheres.png}
+      \end{center}
+  }
+  \end{column}
+  \begin{column}{0.67\textwidth}
+  {\small
+    The sphere with radius $r_1$ has charge $Q_1$, while the sphere with radius $r_2$ has charge $Q_2$.
+    The spheres are brought into electrical contact and then separated.
+  }
+  \end{column}
+\end{columns}
+
+\vspace{0.3cm}
+
+{\bf What is the charge density after separation?}\\
+
+\vspace{0.3cm}
+
+After the separation the two spheres have charge $Q_1^{\prime}$, $Q_2^{\prime}$
+and they are at the same potential V:
+\begin{equation*}
+   V = \frac{Q_1^{\prime}}{4\pi \epsilon_0 r_1} = \frac{Q_2^{\prime}}{4\pi \epsilon_0 r_2}
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Distribution of charge over the surface of a conductor}
+
+Therefore the surface charge densities are:
+\begin{equation*}
+   \sigma_1^{\prime} =
+       \frac{Q_1^{\prime}}{4\pi r_1^2} =
+       \frac{4 \pi \epsilon_0 r_1 V}{4\pi r_1^2} =
+       \frac{\epsilon_0 V}{r_1}
+    \;\;\;\; and \;\;\;\;
+   \sigma_2^{\prime} = \frac{\epsilon_0 V}{r_2}
+\end{equation*}
+
+\vspace{0.2cm}
+
+Thus {\bf $\sigma^{\prime} \propto \frac{1}{r}$}.\\
+\vspace{0.2cm}
+
+This is a more general conclusion.\\
+\vspace{0.2cm}
+
+\begin{columns}
+  \begin{column}{0.50\textwidth}
+      \begin{center}
+        \includegraphics[width=0.90\textwidth]{./images/schematics/distribution_of_charge_over_surface_of_conductor.png}\\
+      \end{center}
+  \end{column}
+  \begin{column}{0.40\textwidth}
+    {\bf The surface charge density is smaller in the areas where curvature is smaller.}\\
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Summary: Placing a conductor within an electric field}
+
+\begin{itemize}
+  \item The electric field vanishes everywhere inside a conductor.
+  \item The potential in constant inside a conductor.
+  \item Charge accumulates in the surface.
+  \item The electric field on the surface of a conductor has no tangential component.
+\end{itemize}
+
+
+\end{frame}
+
+
+%
+% Quiz
+%
+
+
+{
+\problemslide
+
+%
+%
+%
+
+\begin{frame}{Quiz}
+
+\begin{blockexmplque}{Question}
+ An uncharged spherical conductor entered at the origin has a cavity with an
+ arbitrary shape carved  out of it. Somewhere within the cavity is a charge q.
+ What is the field outside the sphere?\\
+ \begin{center}
+     \includegraphics[width=0.47\textwidth]{./images/problems/lect3_conductor_cavity.png}
+ \end{center}
+\end{blockexmplque}
+
+\vspace{0.1cm}
+
+{\small
+\it Will discuss in the lecture. For a detailed written answer see Griffiths.
+}
+
+\end{frame}
+
+
+} % Worked example
+
+
+
+%
+%
+%
+
+\begin{frame}{Capacitance}
+
+{\bf Capacitance denotes the ability of a body to store electric charge.}\\
+\vspace{0.4cm}
+A system that has capacitance is called a {\bf capacitor}.\\
+\vspace{0.2cm}
+As we shall see, capacitors store energy (in their electric field).\\
+\begin{columns}
+  \begin{column}{0.50\textwidth}
+   \begin{center}
+     \includegraphics[width=0.95\textwidth]{./images/photos/capacitor_1.jpg}\\
+   \end{center}
+  \end{column}
+  \begin{column}{0.50\textwidth}
+   \begin{center}
+     \includegraphics[width=0.95\textwidth]{./images/photos/capacitor_interior_1.jpg}\\
+   \end{center}
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+
+%
+%
+%
+
+\begin{frame}{Capacitance of an isolated conductor}
+
+At first, let's consider an {\bf isolated conductor} with {\bf net charge} Q in it.
+\begin{itemize}
+  \item If Q is positive that means that we took away electrons or,
+  \item if Q is negative that means that we gave it an excess of electrons.
+\end{itemize}
+
+\vspace{0.3cm}
+
+The charge Q distributes itself in the conductor.
+\begin{itemize}
+  \item That charge distribution is expressed with the charge density $\rho$.
+  \item We don't know what that charge density is:
+        The charge will not be uniformly distributed, unless the conductor is a uniform sphere.
+\end{itemize}
+
+\vspace{0.3cm}
+
+The one thing we do know for sure is that the integral of $\rho$ over the volume of the conductor is Q
+\begin{equation*}
+  Q = \int_{\tau} \rho(\vec{r})d\tau
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Capacitance of isolated conductor}
+
+As we saw earlier, the electric field is 0 within the conductor, therefore
+the conductor is an {\bf equipotential}. The potential is:
+\begin{equation*}
+  V = \frac{1}{4\pi\epsilon_0} \int_{\tau} \frac{\rho(\vec{r})}{r} d\tau
+\end{equation*}
+
+Let's tweak the amount of charge by a factor k (e.g. let's double it (k=2)):
+\begin{equation*}
+  Q \rightarrow Q^{\prime} = k Q \Rightarrow
+  \rho(\vec{r}) \rightarrow \rho^{\prime}(\vec{r}) = k \rho(\vec{r})
+\end{equation*}
+
+The potential changes by the same amount:
+\begin{equation*}
+  V \rightarrow V^{\prime} =
+    \frac{1}{4\pi\epsilon_0} \int_{\tau} \frac{\rho^{\prime}(\vec{r})}{r} d\tau =
+    \frac{1}{4\pi\epsilon_0} \int_{\tau} \frac{k \rho(\vec{r})}{r} d\tau =
+    k \frac{1}{4\pi\epsilon_0} \int_{\tau} \frac{\rho(\vec{r})}{r} d\tau =
+    k V
+\end{equation*}
+
+Therefore, {\bf the ratio Q/V remains constant}.\\
+{\bf Capacitance} is the constant of proportionality (Q/V).
+
+\end{frame}
+
+
+%
+%
+%
+
+\begin{frame}{Capacitance}
+
+{\bf Capacitance} is the constant ratio Q/V.\\
+
+\begin{itemize}
+  \item In SI, capacitance has units of Coulomb/Volt (= Farad, F)\\
+  \begin{itemize}
+     \item So, a 1 F capacitor can store charge of 1 C at 1 V.
+  \end{itemize}
+\end{itemize}
+
+The Farad is a \underline{very large unit} of capacitance.
+\begin{itemize}
+  \item The Earth has a capacitance of ...0.0007 F!
+  \item In common electrical circuits,
+        capacitors of the order of pF ($10^{-12}$F) - $\mu$F ($10^{-6}$F) are used.
+\end{itemize}
+
+\noindent\rule{2cm}{0.4pt}\\
+{\scriptsize
+  Consider a common AAA battery:
+  \begin{itemize}
+  {\small
+    \item produces a nominal voltage of 1.5 V, and
+    \item has a lifetime of $\sim$1 A*h = 1 C/s * 3600 s = 3600 C
+  }
+  \end{itemize}
+  You would need a $\sim$2000 F capacitor to store
+  the same amount of charge in the same potential difference!
+  {\bf Impractical to use capacitors "as batteries"}.\\
+  But an advantage of a capacitor is that it can discharge very very quickly,
+  whereas a battery takes a long time.\\
+}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Capacitance of a system of two conductors}
+
+Consider an {\bf isolated system of 2 conductors}.\\
+
+\vspace{0.2cm}
+If I move charge from one to another,
+the two conductors become oppositely charged.
+\begin{itemize}
+{\small
+  \item the one that loses e- becomes positively charged (+Q) and is held at potential $V_{+}$, while
+  \item the one that gains e- becomes negatively charged (-Q) and is held at potential $V_{-}$
+}
+\end{itemize}
+
+\vspace{0.2cm}
+
+I can define the {\bf capacitance of the system of two conductors} as
+the ratio of charge Q stored in each of the conductors over the potential difference between the two conductors:
+\begin{equation*}
+  C = \frac{Q}{V_{+}-V_{-}}
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Capacitance}
+
+Capacitance is really always defined for a system of two conductors.
+\begin{equation*}
+  C = \frac{Q}{V_{+}-V_{-}}
+\end{equation*}
+
+What about the capacitance of the {\em single} conductor we saw earlier?\\
+One can always assume that there is a second conductor at infinity held at zero potential.\\
+
+\vspace{0.2cm}
+
+The capacitance is an {\bf intrinsically positive quantity}.
+\begin{itemize}
+  \item Q is the charge of the positive conductor.
+  \item $V_{+}-V_{-}$ is the positive potential difference between the positively and negatively charged conductors
+     %(+ charge -> + potential; - charge -> - potential).
+\end{itemize}
+
+
+\end{frame}
+
+
+%
+%
+%
+
+\begin{frame}{Calculating the capacitance}
+
+It is {\bf easy to calculate the capacitance for simple geometries}.\\
+\vspace{0.2cm}
+For example:
+\begin{itemize}
+  \item for a system of parallel plates, or
+  \item systems with cylindrical or spherical symmetry
+\end{itemize}
+
+\begin{columns}
+  \begin{column}{0.33\textwidth}
+   \begin{center}
+     \includegraphics[width=0.75\textwidth]{./images/schematics/capacitors_parallel_plate_1.png}\\
+   \end{center}
+  \end{column}
+  \begin{column}{0.33\textwidth}
+   \begin{center}
+     \includegraphics[width=0.75\textwidth]{./images/schematics/capacitors_cylindrical_1.png}\\
+   \end{center}
+  \end{column}
+  \begin{column}{0.33\textwidth}
+   \begin{center}
+     \includegraphics[width=0.75\textwidth]{./images/schematics/capacitors_spherical_1.png}\\
+   \end{center}
+  \end{column}
+\end{columns}
+
+\vspace{0.2cm}
+In this lecture we will study the parallel plate capacitor in some detail.\\
+
+\vspace{0.2cm}
+But, first, we will discuss how we can go about calculating the capacitance in all cases.\\
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Calculating the capacitance}
+
+For system that exhibits some spatial symmetry,
+Gauss' law in integral form provides an easy way to calculate the electric field $\vec{E}$
+and express it in terms of the charge Q stored in one of the conductors
+(by using an appropriate Gaussian surface):
+\begin{equation*}
+  \oint_{S} \vec{E} d\vec{S} = \frac{Q}{\epsilon_0}
+\end{equation*}
+
+If $\vec{E}$ is known, one can calculate the potential difference V between the two conductors as:
+\begin{equation*}
+  V := {\Delta}V = V_{+} - V_{-} = - \int_{-}^{+} \vec{E} d\vec{\ell}
+\end{equation*}
+
+Knowing the charge Q in each conductor and
+the potential difference V between the two conductors,
+we calculate the capacitance C:
+\begin{equation*}
+  C = \frac{Q}{V}
+\end{equation*}
+
+\end{frame}
+
+
+%
+%
+%
+
+\begin{frame}{A simple system: Parallel plate capacitor}
+
+We will study a simple system: The {\bf parallel plate capacitor}.\\
+It consists of two planar conductors with infinitesimally small thickness.\\
+
+\vspace{0.2cm}
+
+\begin{columns}
+  \begin{column}{0.40\textwidth}
+   \begin{center}
+     \includegraphics[width=0.94\textwidth]{./images/schematics/parallel_plate_capacitor.png}\\
+   \end{center}
+  \end{column}
+  \begin{column}{0.60\textwidth}
+  {\small
+    Assume that:
+    \begin{itemize}
+    {\small
+       \item Each plate has an area A.
+       \item The two plates are at a distance d apart.
+       \item The plates have a surface charge density $\sigma$ and they are oppositely charged:
+         \begin{itemize}
+            \item one plate has a charge $Q = \sigma A$, while
+            \item the other has charge $-Q = -\sigma A$
+         \end{itemize}
+       \item The +Q plate is at x=0, while the -Q plate is at x=d.
+       \item For now, let's consider that the two plates are separated by vacuum.
+     }
+     \end{itemize}
+  }
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{A simple system: Parallel plate capacitor}
+
+We {\bf consider ideal systems} (*):
+They produce symmetric field with no fringe effects (see Fig. (a)) at the edges.\\
+\vspace{0.1cm}
+The field produced by the parallel plate capacitor is shown in Fig. (b).\\
+
+\begin{center}
+   \includegraphics[width=0.70\textwidth]{./images/schematics/parallel_plate_capacitor_field.png}\\
+\end{center}
+
+\noindent\rule{2cm}{0.4pt}\\
+{\scriptsize
+ (*) Our main emphasis is on the concepts.
+}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Capacitance of parallel plate capacitor}
+
+Consider the Gaussian surface shown below (dashed lines) around the plate with positive charge Q = $\sigma$A.\\
+\vspace{0.1cm}
+
+Gauss's law gives us the electric field $\vec{E}$ between the two plates.\\
+\vspace{0.2cm}
+
+\begin{columns}
+  \begin{column}{0.30\textwidth}
+   \begin{center}
+     \includegraphics[width=0.99\textwidth]{./images/schematics/parallel_plate_capacitor_gaussian_surface.png}\\
+   \end{center}
+  \end{column}
+  \begin{column}{0.70\textwidth}
+     \begin{equation*}
+       \oint_{A} \vec{E} d\vec{S} = \frac{Q_{enc}}{\epsilon_0} \Rightarrow
+       \oint_{A} \big( E \hat{x} \big) \big( dS \hat{x} \big) = \frac{\sigma A}{\epsilon_0} \Rightarrow
+     \end{equation*}
+
+     \begin{equation*}
+       E (\hat{x} \cdot \hat{x}) \oint_{A} dS = \frac{\sigma A}{\epsilon_0} \xRightarrow{\hat{x}\cdot\hat{x}=1}
+       E A = \frac{\sigma A}{\epsilon_0} \Rightarrow
+     \end{equation*}
+
+     \begin{equation*}
+        {\color{magenta} \vec{E} = \frac{\sigma}{\epsilon_0} \hat{x} }
+     \end{equation*}
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Capacitance of parallel plate capacitor}
+
+The potential difference V between the two plates is given by the following path
+integral of the electric field (notice the sign conventions):
+\begin{equation*}
+   V = V_{+} - V_{-} = - \int_{-}^{+} \vec{E} d\vec{\ell}
+\end{equation*}
+
+Since V is path-independent, I will choose a path (from the negative to the positive plate)
+that simplies the calculation (shown in blue below).
+
+\begin{columns}
+  \begin{column}{0.25\textwidth}
+   \begin{center}
+     \includegraphics[width=0.99\textwidth]{./images/schematics/parallel_plate_capacitor_path_integral.png}\\
+   \end{center}
+  \end{column}
+  \begin{column}{0.75\textwidth}
+    \begin{equation*}
+       V = - \int_{d}^{0} \big( E \hat{x} \big) \Big( dx \hat{x} \Big) \Rightarrow
+    \end{equation*}
+    \begin{equation*}
+      V = - E (\hat{x} \cdot \hat{x}) \int_{d}^{0} dx \Rightarrow
+      V =  E d \xRightarrow{E = \frac{\sigma}{\epsilon_0}}
+    \end{equation*}
+    \begin{equation*}
+       {\color{magenta} V =  \frac{\sigma d}{\epsilon_0} }
+    \end{equation*}
+
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Capacitance of parallel plate capacitor}
+
+\begin{columns}
+  \begin{column}{0.30\textwidth}
+   \begin{center}
+     \includegraphics[width=0.80\textwidth]{./images/schematics/parallel_plate_capacitor.png}\\
+     \vspace{0.2cm}
+     {\scriptsize
+       Capacitance (example):\\
+       A parallel plate capacitor with plates of area A = 100 mm$^2$ separated by a distance d = 10 mm
+       has a capacitance of 0.0885 pF.\\
+       If the potential difference between the two plates is 1 V
+       this capacitor can hold charge of 0.0885 pC.\\
+     }
+   \end{center}
+  \end{column}
+  \begin{column}{0.70\textwidth}
+     Using Gauss' law we calculated the field between the two plates:
+     \begin{equation*}
+         \vec{E} = \frac{\sigma}{\epsilon_0} \hat{x}
+     \end{equation*}
+     This allowed us to calculate the potential difference between the two plates:
+     \begin{equation*}
+         V =  \frac{\sigma d}{\epsilon_0}
+     \end{equation*}
+     Therefore, the capacitance is:
+     \begin{equation*}
+        C = \frac{Q}{{\Delta}V} = \frac{\sigma A}{\sigma d / \epsilon_0} \Rightarrow {\color{magenta} C = \epsilon_0 \frac{A}{d}}
+     \end{equation*}
+     Notice that it depends only on the geometrical characteristics of the capacitor (and $\epsilon_0$).
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+
+
+%
+% Example
+%
+
+{
+\problemslide
+
+%
+%
+%
+
+\begin{frame}{Homework}
+
+Repeat the capacitance calculation for systems with cylindrical
+and spherical symmetry, and confirm the answers given below.
+
+\begin{columns}
+  \begin{column}{0.60\textwidth}
+   \begin{center}
+     \includegraphics[width=0.75\textwidth]{./images/schematics/capacitors_cylindrical_1.png}\\
+     \begin{equation*}
+         C = \frac{2 \pi \epsilon L}{ln(R_2/R_1)}
+     \end{equation*}
+   \end{center}
+  \end{column}
+  \begin{column}{0.40\textwidth}
+   \begin{center}
+     \includegraphics[width=0.75\textwidth]{./images/schematics/capacitors_spherical_1.png}\\
+     \begin{equation*}
+         C = \frac{4 \pi \epsilon}{\frac{1}{R_1}-\frac{1}{R_2}}
+     \end{equation*}
+   \end{center}
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+} % Example
+
+
+
+%
+%
+%
+
+\begin{frame}{Energy stored in a capacitor}
+
+The electric field between the two plates of the parallel plate capacitor is
+\begin{equation*}
+   {\bf E = \frac{\sigma}{\epsilon_0}}
+\end{equation*}
+
+We know there is (electric potential) {\bf energy stored in the electric field}.
+
+\vspace{0.2cm}
+
+It is not difficult to realize that it
+{\bf required work to charge the two plates of the capacitor}.
+\begin{itemize}
+  \item This work became the energy now stored in the electric field.
+\end{itemize}
+
+\vspace{0.2cm}
+
+I will {\bf calculate the energy stored in the capacitor}.
+
+\begin{itemize}
+{\small
+ \item
+  This exercise is not very different from the one we did in a previous lecture,
+  when we calculated the work done to assemble systems of 2, 3 and N charges, as well as
+  continuous distributions of charge.
+}
+\end{itemize}
+
+\end{frame}
+
+
+%
+%
+%
+
+\begin{frame}{Energy stored in a capacitor}
+
+To charge one plate with positive charge and the other with negative charge,
+I need to move electrons from one to another.\\
+
+\begin{columns}
+  \begin{column}{0.35\textwidth}
+   \begin{center}
+     \includegraphics[width=0.99\textwidth]{./images/schematics/parallel_plate_capacitor_work.png}\\
+   \end{center}
+  \end{column}
+  \begin{column}{0.65\textwidth}
+  {\small
+     Consider I am already some way though that process and that I need to move yet another electron:
+      \begin{itemize}
+      {\small
+         \item There is already some charge on both plates and an electric field is formed between them.
+         \item It becomes difficult to move an electron away from the positive (+) and towards the negative (-) plate:
+               The electric field exerts a force ($\vec{F}$) on the opposite direction.
+         \item I need to exert an equal opposite force ($\vec{F}_{prof}$) to overcome the action of the field.
+      }
+      \end{itemize}
+  }
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+
+%
+%
+%
+
+\begin{frame}{Energy stored in a capacitor}
+
+Assume that I want to move an infinitesimal amount of negative charge -$|{\delta}q|$
+from the positive (+) plate at x=0 to the negative (-) plate at x=d.\\
+
+\vspace{0.2cm}
+
+The work I do (against the action of the field) is:
+\begin{equation*}
+  {\delta}W_{prof} = \int_{+}^{-} \vec{F}_{prof} d\vec{\ell} = - \int_{+}^{-} \vec{F} d\vec{\ell}
+\end{equation*}
+where $\vec{F}$ is the field force and $\vec{F}_{prof}$ is the force that I apply ($\vec{F}_{prof} = - \vec{F}$).\\
+
+\vspace{0.2cm}
+
+The force $\vec{F}$ exerted on the negative charge -$|{\delta}q|$ is given by:
+\begin{equation*}
+  \vec{F} = -|{\delta}q| \vec{E}
+\end{equation*}
+Note: $\vec{F}$ and $\vec{E}$ have different directions because the charge is negative.
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Energy stored in a capacitor}
+
+Therefore, the work I do can be written as:
+\begin{equation*}
+  {\delta}W_{prof} =
+    |{\delta}q| \int_{+}^{-} \vec{E} d\vec{\ell} =
+    |{\delta}q| \Big( - \int_{-}^{+} \vec{E} d\vec{\ell} \Big) =
+    |{\delta}q| \Big(V_{+} - V_{-} \Big) =
+    |{\delta}q| V
+\end{equation*}
+where V is the difference between the potential of the positive ($V_{+}$) and the negative ($V_{-}$) plate.
+
+The work done move charge Q from one plate to another, is calculate by integrating over $|{\delta}q|$:
+\begin{equation*}
+  W_{prof} =
+     \int {\delta}W_{prof} =
+     \int_{0}^{Q}  |{\delta}q| V
+\end{equation*}
+
+From the definition of capacitance:
+\begin{equation*}
+  C = \frac{|q|}{V_{+} - V_{-}} = \frac{|q|}{V} \Rightarrow V = \frac{1}{C} |q|
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Energy stored in a capacitor}
+
+The work done is:
+
+\begin{equation*}
+  W_{prof} = \int_{0}^{Q}  |{\delta}q| V \xRightarrow{V = \frac{1}{C} |q|}
+  W_{prof} = \int_{0}^{Q}  \frac{1}{C} |q| |{\delta}q| \Rightarrow
+  {\bf W_{prof} = \frac{Q^2}{2C} }
+\end{equation*}
+
+Since $C=Q/V$, we can also write the above as:
+\begin{equation*}
+  W_{prof} = \frac{Q^2}{2C} = \frac{\Big( C V \Big)^2 }{2C} \Rightarrow
+  {\bf W_{prof} = \frac{1}{2} C V^2}
+\end{equation*}
+
+or, equivalently, as:
+\begin{equation*}
+  W_{prof} = \frac{Q^2}{2C} = \frac{Q^2}{2\frac{Q}{V}} \Rightarrow
+  {\bf W_{prof} = \frac{1}{2} Q V}
+\end{equation*}
+
+Again, I note that the work I did ($W_{prof}$) becomes
+the {\bf electric potential energy} (U) of the parallel plate capacitor.
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Energy stored in a capacitor}
+
+In the previous lecture, we said that the energy stored in the
+electric field $\vec{E}$ is the integral, over all space, of $|\vec{E}|^2$.\\
+\begin{equation*}
+   U = \frac{\epsilon_0}{2} \int_{all\;space} |\vec{E}(\vec{r})|^2  d\tau
+\end{equation*}
+\vspace{0.1cm}
+
+{\bf Can we show that for the parallel plate capacitor}?\\
+
+\vspace{0.2cm}
+
+{\small
+Recall that,
+on the previous slide
+we calculated that the potential energy U stored in the parallel plate capacitor
+(using $W_{prof}$ and U interchangeably):
+\begin{equation*}
+  U = \frac{1}{2} C V^2
+\end{equation*}
+
+And, earlier in the lecture, we calculated
+the capacitance C of the parallel plate capacitor, as well as the
+potential difference V between its two plates:
+\begin{equation*}
+  C = \epsilon_0 \frac{A}{d} \;\;\;\;\;\;
+  V = \frac{\sigma d}{\epsilon_0}
+\end{equation*}
+}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Energy stored in a capacitor}
+
+Therefore:
+
+\begin{equation*}
+  U = \frac{1}{2} C V^2 \xRightarrow{C = \epsilon_0 \frac{A}{d} \;\;\; V = \frac{\sigma d}{\epsilon_0}}
+  U = \frac{1}{2} \Big( \epsilon_0 \frac{A}{d} \Big) \Big( \frac{\sigma d}{\epsilon_0} \Big)^2 \Rightarrow
+  U = \frac{\epsilon_0}{2} \Big( A d \Big) \Big( \frac{\sigma}{\epsilon_0} \Big)^2
+\end{equation*}
+
+Notice that:
+\begin{itemize}
+   \item $A{\cdot}d$ is the volume between the two conducting plates
+     \begin{itemize}
+        \item This is the only volume where $|\vec{E}| \ne 0$
+     \end{itemize}
+   \item $\sigma/\epsilon_0$ is the electric field between the plates
+\end{itemize}
+
+\vspace{0.1cm}
+
+Therefore, the above expression for U can be written as
+\begin{equation*}
+  U = \frac{\epsilon_0}{2} \Big( Volume \Big) |\vec{E}|^2
+\end{equation*}
+
+which is what we sought to show.\\
+
+\end{frame}
+
+
+%
+% Worked example
+%
+
+{
+\problemslide
+
+%
+%
+%
+
+\begin{frame}{Worked example}
+
+\begin{blockexmplque}{Question}
+The charge centre of a thundercloud, 3 km above ground, carries a charge of 20 C.
+Assume the charge centre to be a circle of radius 1 km and model the cloud/ground
+system as a parallel plate capacitor. \\
+Find:
+\begin{enumerate}
+   \item The capacitance of the system.
+   \item The potential difference between the charge centre and the ground.
+   \item The average electric field strength between the cloud and the ground.
+   \item The electrical energy stored in the system.
+\end{enumerate}
+\end{blockexmplque}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example}
+
+
+\begin{equation*}
+   C = \frac{\epsilon_0 A}{d}
+      = \frac{(8.854 \times 10^{-12} \; \frac{C^2}{N \cdot m^2}) \cdot \Big( \pi \cdot (1.0 \times 10^3 \; m)^2 \Big)}{3 \times 10^3 \; m}
+      = 9.3 \times 10^{-9} \; F
+\end{equation*}
+
+\begin{equation*}
+   V = \frac{Q}{C}
+      = \frac{20 \; C}{9.3 \times 10^{-9} \; F} = 2.2 \times 10^{9} \; V
+\end{equation*}
+
+\begin{equation*}
+   E = \frac{V}{d}
+      = \frac{2.2 \times 10^{9} \; V}{3 \times 10^3 \; m} = 7.3 \times 10^{5} \; V/m
+\end{equation*}
+
+\begin{equation*}
+   U = \frac{1}{2} Q V
+      = \frac{1}{2} (20\; C) (2.2 \times 10^{9} \; V) = 2.2 \times 10^{10} \; J
+\end{equation*}
+
+\end{frame}
+
+
+} % Worked example
+
+%
+%
+%
+
+\begin{frame}{Dielectrics}
+
+{\bf Another class of materials exists that}, unlike conducting materials, {\bf does not conduct electricity}
+(they do not contain free-moving charges).\\
+\vspace{0.2cm}
+They are called {\bf insulators} or {\bf dielectrics}.\\
+\vspace{0.2cm}
+Are they {\em "blind"} to the existence of an external electric field?\\
+\vspace{0.3cm}
+
+Will see that {\bf this is not the case.}\\
+
+\begin{columns}
+  \begin{column}{0.40\textwidth}
+   \begin{center}
+     \includegraphics[width=0.95\textwidth]{./images/schematics/parallel_plate_capacitor_with_and_without_dielectric_1.jpg}\\
+   \end{center}
+  \end{column}
+  \begin{column}{0.60\textwidth}
+  {\small
+    Even from the early days in the development of electromagnetism,
+    it was noticed (by Faraday) that {\bf if you insert a dielectric material within a parallel plate capacitor
+    its capacitance increases substantially!}\\
+    \vspace{0.2cm}
+    This means that by inserting a dielectric between the plates
+    one {\bf can store the same amount of charge at a much smaller potential difference}.
+  }
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Dielectrics}
+
+Recall that the potential difference V between the two plates is given by
+\begin{equation*}
+  V = V_{+} - V_{-} = - \int_{-}^{+} \vec{E} d\vec{\ell}
+\end{equation*}
+
+\vspace{0.1cm}
+
+So, by inserting dielectric material within a parallel plate capacitor,
+the electric field between the two plates (i.e. within the dielectric) is now much smaller!\\
+
+\vspace{0.2cm}
+
+How is this possible?
+\begin{itemize}
+{\small
+  \item Unlike conductors, the dielectric has no free charges whose redistribution within the
+        volume of the material creates an opposing field.
+  \item What is the physics mechanism that is responsible for the reduction of the strength
+        of the electric field?
+}
+\end{itemize}
+
+\vspace{0.2cm}
+
+Before we answer the above question, let's examine the {\bf electric dipole}.\\
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Electric dipoles and electric dipole moment}
+
+\begin{columns}
+  \begin{column}{0.25\textwidth}
+   \begin{center}
+     \includegraphics[width=0.95\textwidth]{./images/schematics/electric_dipole_1.png}\\
+   \end{center}
+  \end{column}
+  \begin{column}{0.75\textwidth}
+     Let's consider two point charges +q and -q separated by a {\em small distance} d:
+     This is an {\bf electric dipole}.\\
+     \vspace{0.3cm}
+     How small is a "{\em small distance}"? 1 mile? 1 m? 1 mm?
+     \begin{itemize}
+        \item Small compared with the distances
+                 where we are interested to know the field.\\
+     \end{itemize}
+  \end{column}
+\end{columns}
+
+\vspace{0.2cm}
+{\bf Dipoles are a very common} configuration in nature.\\
+
+\vspace{0.2cm}
+An electric dipole its described by its {\bf electric dipole moment} $\vec{p} = q \vec{d}$\\
+\begin{itemize}
+  \item The dipole moment is a vector quantity.
+  \item Its direction is from the negative to the positive charge.\\
+\end{itemize}
+
+The potential field $V(\vec{r})$ due to an {\bf electric dipole} is
+\begin{equation*}
+   V \approx \frac{1}{4\pi\epsilon_0} \frac{\vec{p} \cdot \hat{r}}{r^2}
+\end{equation*}
+
+\end{frame}
+
+
+%
+%
+%
+
+\begin{frame}{Examples of electric dipoles in nature (1)}
+
+Consider an unpolarised atom within an external electric field.\\
+\begin{itemize}
+  \item Initially the centres of gravity of the negative and positive charge distributions coincide.
+  \item But, in the presence of an external electric field, the electron cloud and the nucleus are {\em pulled apart}.
+\end{itemize}
+In the presence of a field, the atom {\bf becomes an electric dipole}.\\
+\vspace{0.2cm}
+\begin{center}
+  \includegraphics[width=0.75\textwidth]{./images/schematics/dipole_atom_1.jpg}\\
+\end{center}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Examples of electric dipoles in nature (2)}
+
+{\bf Complex molecules can be polarised even in the absence of an external electric field}.\\
+\vspace{0.1cm}
+Perhaps the most common example is the water molecule.\\
+\vspace{0.2cm}
+
+\begin{columns}
+  \begin{column}{0.50\textwidth}
+   \begin{center}
+     \includegraphics[width=0.98\textwidth]{./images/schematics/dipole_H2O_1.png}\\
+   \end{center}
+  \end{column}
+  \begin{column}{0.50\textwidth}
+    \begin{itemize}
+    {\small
+      \item The 2 H atoms form an angle of 105$^o$ with the O atom.
+      \item There is a net negative charge around the O atom.
+        \begin{itemize}
+        {\scriptsize
+            \item Electrons spend more time around the O atom than around the H atoms.
+        }
+        \end{itemize}
+      \item Consequently, there is net positive charge around the two H atoms.\\
+    }
+    \end{itemize}
+  \end{column}
+\end{columns}
+
+\vspace{0.4cm}
+
+Although this is more complex configuration than a simple dipole,
+when viewed from a distance it is very similar to a dipole.\\
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Polar molecules in the presence of an electric field}
+
+In substances with polar molecules, the {\bf electric dipole moments
+of the polar molecules are randomly oriented}.\\
+
+\vspace{0.3cm}
+
+\begin{columns}
+  \begin{column}{0.40\textwidth}
+   \begin{center}
+     \includegraphics[width=0.80\textwidth]{./images/schematics/electric_dipole_torque_0.png}\\
+   \end{center}
+  \end{column}
+  \begin{column}{0.60\textwidth}
+      An external electric field produces a {\bf torque $\vec{T}$ on
+      an electric dipole $\vec{p}$}:
+      \begin{equation*}
+          \vec{T} = \vec{p} \times \vec{E}
+      \end{equation*}
+  \end{column}
+\end{columns}
+
+\vspace{0.3cm}
+
+Therefore, in the presence of an external electric field,
+{\bf polar molecules will tend to get aligned along the direction of the field}.
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Macroscopic electric polarisation of dielectrics}
+
+The key observations:
+\begin{itemize}
+ \item An electric field can induce an electric dipole moment in previously unpolarised atoms.
+       The dipole moments are aligned with the electric field.
+ \item An electric field exerts a torque on polar molecules (molecules with permanent electric
+       dipole moment) aligning the previously randomised dipole moment vectors along the
+       direction of the field.
+\end{itemize}
+
+\vspace{0.2cm}
+
+The dielectric becomes {\bf macroscopically polarised}.\\
+
+\vspace{0.2cm}
+
+The {\bf polarisation} $\vec{P}$ is defined as the
+{\bf amount of electric dipole moment per unit volume}.\\
+
+\begin{itemize}
+  \item The polarised material creates a field of its own.
+  \item This polarisation field opposes the external field that created the polarisation in the first place.
+  \item Unlike in conductors, the field cancelation is not complete.
+\end{itemize}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Polarization charges}
+
+Let's consider what would happen if the microscopic dipoles were all
+perfectly aligned along a direction.
+
+\begin{center}
+  \includegraphics[width=0.80\textwidth]{./images/schematics/polarization_charges.png}\\
+\end{center}
+
+The positive charge at the "head" of a dipole cancels the negative charge at the "tail"
+of the neighbouring dipole. At the end, the only unbalanced charges appear on the surface.
+
+\vspace{0.2cm}
+
+{\bf A polarised material has a surface charge density} due to unbalanced polarisation charges.\\
+
+\end{frame}
+
+
+%
+%
+%
+
+\begin{frame}{Surface density of polarization charge}
+
+{\bf What is the surface charge density} due to polarisation charges?\\
+
+\begin{columns}
+  \begin{column}{0.35\textwidth}
+   \begin{center}
+     \includegraphics[width=0.85\textwidth]{./images/schematics/polarisation_surface_charge_density_1.png}\\
+   \end{center}
+  \end{column}
+  \begin{column}{0.65\textwidth}
+      Consider a cylindrical dielectric, with cross-section A,
+      whose axis runs parallel to an external electric field.
+      Take a slide of length d: polarisation charge $\pm$q is
+      accumulated on the cross-sectional areas.\\
+  \end{column}
+\end{columns}
+
+Let P be the polarisation. The total electric dipole moment of the slice is:
+\begin{equation*}
+  P \Big( A \cdot d \Big) = q \cdot d \Rightarrow q = A \cdot P
+\end{equation*}
+
+If the surface charge density is ${\sigma}_P$ (charge per area) then:
+\begin{equation*}
+  q = {\sigma}_P \cdot A
+\end{equation*}
+
+Therefore, the charge density is:
+\begin{equation*}
+  {\color{magenta} {\sigma}_P = P}
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Surface density of polarization charge}
+
+\begin{columns}
+  \begin{column}{0.35\textwidth}
+   \begin{center}
+     \includegraphics[width=0.95\textwidth]{./images/schematics/polarisation_surface_charge_density_2.png}\\
+   \end{center}
+  \end{column}
+  \begin{column}{0.65\textwidth}
+    If the end cap was at an angle $\theta$ with respect to the polarisation vector,
+    it would still contain the same amount of charge Q, but the area of the endcap would be larger ($A / cos\theta$)
+  \end{column}
+\end{columns}
+
+\vspace{0.2cm}
+
+In that case, the charge density would have been
+\begin{equation*}
+  {\sigma}_P = P cos\theta
+\end{equation*}
+
+So the surface density of polarisation charges can be expressed
+as the dot product of the polarisation vector $\vec{P}$ with a unit vector $\hat{n}$ normal to the surface
+\begin{equation*}
+ {\color{magenta} {\sigma}_P = \vec{P} \cdot \hat{n}}
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Volume density of polarization charge}
+
+{\bf Are the polarisation charges always on the surface?}\\
+\vspace{0.1cm}
+
+The answer to this question depends on the alignment of the microscopic dipole moments.
+Consider a case where the polarisation field diverges:
+\begin{itemize}
+{\small
+  \item At a point of positive divergence, I have accumulation of negative volume
+        (not surface) polarisation charge.
+  \item Similarly, negative divergence causes the accumulation of positive polarisation charge.
+}
+\end{itemize}
+
+\begin{columns}
+  \begin{column}{0.35\textwidth}
+   \begin{center}
+     \includegraphics[width=0.95\textwidth]{./images/schematics/divergent_polarization.png}\\
+   \end{center}
+  \end{column}
+  \begin{column}{0.65\textwidth}
+     The volume density of polarisation charges can be written as
+     \begin{equation*}
+       {\color{magenta} {\rho}_P = - \vec{\nabla} \vec{P}}
+     \end{equation*}
+     So charge can also accumulate in the volume of an insulator,
+     as long as the polarisation field diverges.
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Electric field produced by a polarized dielectric}
+
+An external electric field $\vec{E}_{0}$
+{\bf induces both surface and volume charges} (polarization charges) to a dielectric.\\
+\vspace{0.2cm}
+
+The dielectric becomes the {\bf source of a new electric field $\vec{E}_{P}$}.\\
+\vspace{0.2cm}
+
+$\vec{E}_{P}$ is the field produced by a surface charge density
+$\sigma_P = \vec{P} \cdot \hat{n}$ and a volume charge density $\rho_P = - \vec{\nabla} \vec{P}$:
+\begin{equation*}
+ V_P(\vec{r}) = \frac{1}{4\pi\epsilon_0} \oint \frac{1}{r} {\sigma}_P(\vec{r^{\prime}}) dS^{\prime} +
+                \frac{1}{4\pi\epsilon_0} \oint \frac{1}{r} {\rho}_P(\vec{r^{\prime}}) d\tau^{\prime}
+\end{equation*}
+\begin{equation*}
+ \vec{E}_{P}(\vec{r}) = - \vec{\nabla} V_P(\vec{r})
+\end{equation*}
+
+The total field in the presence of the dielectric is:
+\begin{equation*}
+ \vec{E}(\vec{r}) = \vec{E}_{0}(\vec{r}) + \vec{E}_{P}(\vec{r})
+\end{equation*}
+
+As we mentioned already, $\vec{E}_{P}$ opposes $\vec{E}_{0}$.
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Electric field produced by a polarized dielectric}
+
+In order to calculate the total electric field $\vec{E}$,
+we need to calculate the field due to induced charges $\vec{E}_P$ and add it to the external field $\vec{E}_0$.\\
+
+To calculate $\vec{E}_P$, we need the surface and volume charge densities:
+\begin{equation*}
+   {\sigma}_P = \vec{P} \cdot \hat{n} \;\;\;\; and \;\;\;\;
+   {\rho}_P = - \vec{\nabla} \vec{P}
+\end{equation*}
+
+Both ${\sigma}_P$ and ${\rho}_P$ depend on the polarisation field $\vec{P}$.
+How is it calculated?\\
+
+\begin{columns}
+  \begin{column}{0.25\textwidth}
+   \begin{center}
+     \includegraphics[width=0.90\textwidth]{./images/misc/dog_chasing_tail.jpg}\\
+   \end{center}
+  \end{column}
+  \begin{column}{0.75\textwidth}
+    For many materials (called {\bf linear dielectrics}) the polarisation is
+    proportional to the total electric field $\vec{E}$ (assuming that $\vec{E}$ is not strong enough)
+    \begin{equation*}
+       \vec{P} = \chi_{e} \epsilon_0 \vec{E}
+    \end{equation*}
+  \end{column}
+\end{columns}
+
+The factor {\bf $\chi_{e}$ is the electric susceptibility} and depends on the material.\\
+The factor $\epsilon_0$ is there mainly so that $\chi_{e}$ becomes dimensionless.\\
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Gauss's law in dielectrics}
+
+We will {\bf generalise Gauss's law in the presence of dielectrics}
+(where besides free charges we also have induced polarisation charges).\\
+
+\vspace{0.2cm}
+
+Recall Gauss' law (in differential form) in vacuum:
+\begin{equation*}
+   \vec{\nabla} \vec{E} = \frac{\rho}{\epsilon_0}
+\end{equation*}
+where $\rho$ is the total charge density and, now, includes both free ($\rho_f$) and polarisation charges ($\rho_P$):
+\begin{equation*}
+   \vec{\nabla} \vec{E} = \frac{\rho_f + \rho_P}{\epsilon_0}
+\end{equation*}
+
+The density of polarisation charges can be expressed in terms of the polarisation vector, therefore:
+\begin{equation*}
+   \vec{\nabla} \vec{E} = \frac{\rho_f - \vec{\nabla}\vec{P}}{\epsilon_0}
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Gauss's law in dielectrics}
+
+
+Collecting the divergences together:
+
+\begin{equation*}
+   \vec{\nabla} \vec{E} = \frac{\rho_f - \vec{\nabla}\vec{P}}{\epsilon_0} \Rightarrow
+   \epsilon_0 \vec{\nabla} \vec{E} = \rho_f - \vec{\nabla}\vec{P} \Rightarrow
+   \epsilon_0 \vec{\nabla} \vec{E} + \vec{\nabla}\vec{P} = \rho_f \Rightarrow
+\end{equation*}
+
+\begin{equation*}
+   \vec{\nabla} \Big( \epsilon_0 \vec{E} + \vec{P} \Big) = \rho_f
+\end{equation*}
+
+We define the {\bf electric displacement $\vec{D}$} as:
+\begin{equation*}
+   \vec{D} = \epsilon_0 \vec{E} + \vec{P}
+\end{equation*}
+
+In SI, the electric displacement $\vec{D}$ has {\bf units of $C/m^2$}.
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Gauss's law in dielectrics}
+
+The electric displacement vector $\vec{D}$ satisfies the differential equation:
+\begin{equation*}
+   \vec{\nabla} \vec{D} = \rho_f
+\end{equation*}
+Notice that $\rho_f$ is the density of {\bf free charges}.\\
+
+\vspace{0.3cm}
+
+This is {\bf Gauss' law}, in differential form, in the presence of dielectrics.\\
+
+\vspace{0.2cm}
+
+We have generalised Gauss's law, taking into account {\bf both free and polarisation charges}.\\
+
+\vspace{0.2cm}
+
+The equivalent integral form can be obtained using Gauss's theorem:
+\begin{equation*}
+   \oint \vec{D} d\vec{S} = Q_f
+\end{equation*}
+
+Notice that $Q_f$ is the {\bf free charge}.
+
+\end{frame}
+
+
+%
+%
+%
+
+\begin{frame}{Gauss's law in dielectrics}
+
+As we have seen, we can then write the
+polarization $\vec{P}$ in terms of $\vec{E}$:
+\begin{equation*}
+  \vec{P} = \chi_{e} \epsilon_0 \vec{E}
+\end{equation*}
+
+\vspace{0.3cm}
+
+Now, let's focus on dielectric materials which are:
+\begin{itemize}
+{\small
+  \item {\bf Linear}: $\chi_{e}$ independent of the magnitude of $\vec{E}$
+  \item {\bf Isotropic}: $\chi_{e}$ independent of the direction of $\vec{E}$.
+  \item {\bf Homogeneous}: $\chi_{e}$ independent of the position.
+}
+\end{itemize}
+
+Therefore, the electric displacement becomes:
+\begin{equation*}
+   \vec{D} = \epsilon_0 \vec{E} + \vec{P}
+           = \epsilon_0 \vec{E} + \chi_{e} \epsilon_0 \vec{E}
+           = \Big( 1 + \chi_{e} \Big) \epsilon_0 \vec{E}
+           = \epsilon_{r} \epsilon_0 \vec{E}
+\end{equation*}
+
+where $\epsilon_{r} = 1 + \chi_{e}$ is the {\bf relative permittivity} of the dielectric material
+(sometimes also called {\bf dielectric constant}).
+
+\end{frame}
+
+
+%
+%
+%
+
+\begin{frame}{Gauss's law in dielectrics}
+
+{\small
+
+You probably think that $\vec{D}$ is much like $\vec{E}$: They both obey Gauss's law. \\
+\vspace{0.1cm}
+
+{\bf Notice that this is not quite true}.\\
+\vspace{0.1cm}
+
+In the previous lecture, we stressed that the divergence of a vector field
+is not sufficient to uniquely determine all components of the field.
+One also needs the curl of the field.\\
+\vspace{0.2cm}
+
+We used that freedom provided by $\vec{\nabla} \times \vec{E} = 0$
+to express $\vec{E}$ as the gradient of a scalar field (the potential V).\\
+\vspace{0.2cm}
+
+{\bf What is the rotation of $\vec{D}$}?\\
+\begin{equation*}
+   \vec{\nabla} \times \vec{D} =
+   \vec{\nabla} \times \Big( \epsilon_0 \vec{E} + \vec{P} \Big) =
+   \epsilon_0  \vec{\nabla} \times \vec{E} + \vec{\nabla} \times \vec{P} \Rightarrow
+   \vec{\nabla} \times \vec{D} = \vec{\nabla} \times \vec{P}
+\end{equation*}
+
+So, in principle, the curl of $\vec{D}$ is not always 0.
+\begin{itemize}
+   \item There is no scalar function (potential) whose gradient is $\vec{D}$.
+\end{itemize}
+
+Notice that for linear materials:
+\begin{equation*}
+  \vec{\nabla} \times \vec{P} =
+  \vec{\nabla} \times \Big( \chi_{e} \epsilon_0 \vec{E} \Big) =
+  \epsilon_{r} \epsilon_0 \vec{\nabla} \times \vec{E} = 0
+\end{equation*}
+
+}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Parallel plate capacitor {\em with dielectric}}
+
+Let's consider again the parallel plate capacitor we studied before.\\
+
+\vspace{0.4cm}
+
+\begin{columns}
+  \begin{column}{0.45\textwidth}
+   \begin{center}
+     \includegraphics[width=0.95\textwidth]{./images/schematics/parallel_plate_capacitor_dielectric.png}\\
+   \end{center}
+  \end{column}
+  \begin{column}{0.55\textwidth}
+    This time, we will examine what happens to its capacity if we {\bf insert a dielectric
+    (insulator) within its two oppositely charged plates}.\\
+    \vspace{0.2cm}
+    We will follow the exact same procedure we followed earlier in this lecture,
+    but now we will {\bf use Gauss's law in the presence of dielectrics}.\\
+    \begin{equation*}
+       \oint \vec{D} d\vec{S} = Q_f
+    \end{equation*}
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Parallel plate capacitor {\em with dielectric}}
+
+I will use the same Gaussian surface as before and apply Gauss's law in integral form.
+Both $\vec{D}$ and $d\vec{S}$ point along $\hat{x}$,
+and there is flux only through the right side of the Gaussian surface.
+
+\begin{equation*}
+   \oint \vec{D} d\vec{S} = Q_{f} \Rightarrow D A = Q_{f} \Rightarrow \vec{D} = \frac{Q_{f}}{A} \hat{x}
+\end{equation*}
+
+As we have seen the electric displacement $\vec{D}$ is:
+\begin{equation*}
+   \vec{D} = \epsilon_{r} \epsilon_{0} \vec{E}
+\end{equation*}
+
+Therefore the total electric field $\vec{E}$ is:
+\begin{equation*}
+   \vec{E} = \frac{Q_{f}}{\epsilon_{r} \epsilon_{0} A} \hat{x}
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Parallel plate capacitor {\em with dielectric}}
+
+The potential difference between the two charged plates is
+\begin{equation*}
+    V = - \int_{-}^{+} \vec{E} d\vec{\ell} =  - \int_{d}^{0} \vec{E} d\vec{\ell}
+      = - \int_{d}^{0} \Big( \frac{Q_{f}}{\epsilon_{r} \epsilon_{0} A} \hat{x} \Big) dl \hat{x} \Rightarrow
+      = - \frac{Q_{f}}{\epsilon_{r} \epsilon_{0} A} \int_{d}^{0} dl \Rightarrow
+\end{equation*}
+\begin{equation*}
+    V = \frac{Q_{f} d}{\epsilon_{r} \epsilon_{0} A}
+\end{equation*}
+
+Therefore, the capacitance is
+\begin{equation*}
+       C = \frac{Q_{f}}{{\Delta}V} = \frac{Q_{f}}{\frac{Q_{f} d}{\epsilon_{r} \epsilon_{0} A}} \Rightarrow
+  {\bf C = \frac{\epsilon_{r} \epsilon_{0} A}{d} } \Rightarrow
+  {\bf C = \epsilon_{r} C_{0}}
+\end{equation*}
+
+{\bf In the presence of a dielectric,
+the capacitance is multiplied by the relative permittivity $\epsilon_{r}$}.\\
+
+\end{frame}
+
+
+%
+% Worked example
+%
+
+{
+\problemslide
+
+%
+%
+%
+
+\begin{frame}{Worked example}
+
+\begin{blockexmplque}{Question}
+
+A parallel plate capacitor with a given charge $Q_0$ has an electric field of
+$3.2 \times 10^5 \; V/m$ in vacuum and
+$2.5 \times 10^5 \; V/m$ when filled with a dielectric.
+Find:
+\begin{enumerate}
+   \item The relative permittivity of the dielectric.
+   \item the charge density on the surface of the dielectric.
+\end{enumerate}
+
+\end{blockexmplque}
+
+\begin{equation*}
+  C_{diel} = \epsilon_r C_0 \xRightarrow{C=Q/V}
+ \frac{\cancel{Q_0}}{V_{diel}} = \epsilon_r \frac{\cancel{Q_0}}{V_{0}} \Rightarrow
+ \epsilon_r = \frac{V_{0}}{V_{diel}}  \xRightarrow{V = -\int \vec{E} d\vec{\ell}}
+\end{equation*}
+\begin{equation*}
+  \epsilon_r = \frac{E_{0} \cancel{d}}{E_{diel}\cancel{d}} =
+                       \frac{3.2 \times 10^5 \; V/m}{2.5 \times 10^5 \; V/m}
+  \Rightarrow
+  \epsilon_r = 1.28
+\end{equation*}
+\begin{equation*}
+  \chi_e = \epsilon_r - 1 = 1.28 - 1 \Rightarrow \chi_e = 0.28
+\end{equation*}
+\begin{equation*}
+  \sigma_P = P = \chi_e \epsilon_0 E =
+      0.28 \cdot (8.854 \times 10^{-12}) \cdot (2.5 \times 10^5) \; C/m^2 = 6.2 \times 10^{-7} C/m^2
+\end{equation*}
+
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example}
+
+\begin{blockexmplque}{Question}
+A parallel plate capacitor filled with air (for which vacuum is a good approximation in our problem)
+has a capacitance of 12.5 $\mu$F and is connected to a power supply which keeps it at constant
+potential difference of 24 V. A piece of material with a relative permittivity of 3.75 is placed
+between the plates completely filling the space between them.
+How much energy is stored in the capacitor before and after the dielectric is inserted?
+\end{blockexmplque}
+\vspace{0.2cm}
+
+In air (treated as vacuum): $\displaystyle U_0 = \frac{1}{2} C_0 V^2 = 3.6 \; mJ$\\
+\vspace{0.2cm}
+
+In dielectric: $\displaystyle U = \frac{1}{2} C V^2 = \frac{1}{2} \epsilon_r C_0 V^2 = 13.5 \; mJ$\\
+\vspace{0.2cm}
+
+Therefore: $\displaystyle  {\Delta}U = U - U_0 = 9.9 \; mJ$\\
+\vspace{0.4cm}
+
+The energy stored in the capacitor is increased.
+
+\end{frame}
+
+
+} % Worked example
+
+
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+
+%
+% What to remember
+%
+
+\renewcommand{\lecturesummarytitle}{Main points to remember }
+\input{slides_lecture04_summary.tex}
+
+%
+% Plan for the next lecture
+%
+
+\begin{frame}{At the next lecture (Lecture \nextlecture)}
+
+\begin{itemize}
+\item Electric current.
+\item Magnetic phenomena.
+\item Electric charge inside a magnetic field.
+\item Cyclotron motion.
+\item Magnetic force on an electric current.
+\item The Biot-Savart law.
+\item Magnetic field around a straight wire.
+\end{itemize}
+
+\end{frame}
+
+%
+% Optional reading
+%
+
+\input{slides_lecture04_optional.tex}
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------

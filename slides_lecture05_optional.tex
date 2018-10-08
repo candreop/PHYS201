@@ -1,0 +1,115 @@
+
+
+
+\begin{frame}[plain,c]
+\begin{center}
+{\Huge \bf Optional reading for Lecture \thislecture}
+\end{center}
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Estimating $\int_{a}^{b} \frac{dz}{({\rho}^2+z^2)^{3/2}}$}
+
+We can prove that:
+\begin{equation*}
+  \int_{a}^{b} \frac{dz}{({\rho}^2+z^2)^{3/2}} = \frac{z}{{\rho}^{2}(z^{2}+{\rho}^{2})^{1/2}} \biggr\rvert_{a}^{b}
+\end{equation*}
+
+\vspace{0.2cm}
+
+{\small
+One way to calculate this integral is to change variables ($z \rightarrow u$) and perform an integration over the variable u.
+A clever variable transformation will leave us with a much simpler integral to calculate.\\
+
+Let's try the following variable transformation:
+\begin{equation*}
+  z \rightarrow u = tan^{-1}\Big(\frac{z}{{\rho}})\Big)
+\end{equation*}
+
+Therefore:
+\begin{equation*}
+   z = {\rho} tan(u) \;\;\;\; and \;\;\;\;
+  dz = {\rho} \Big( tan(u) \Big) du \Rightarrow dz = \frac{{\rho}}{cos^{2}(u)} du
+\end{equation*}
+}
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Estimating $\int_{a}^{b} \frac{dz}{({\rho}^2+z^2)^{3/2}}$}
+
+{\small
+With that variable transformation, the integrand becomes:
+\begin{equation*}
+   \frac{1}{({\rho}^2+z^2)^{3/2}} \rightarrow
+     \frac{1}{({\rho}^{2}tan^{2}(u)+{\rho}^{2})^{3/2}} =
+     \frac{1}{{\rho}^{3}(tan^{2}(u)+1)^{3/2}} =
+     \frac{1}{{\rho}^{3}( \frac{sin^{2}(u)}{cos^{2}(u)}+1)^{3/2}} =
+\end{equation*}
+\begin{equation*}
+   = \frac{1}{{\rho}^{3}( \frac{sin^{2}(u)+cos^{2}(u)}{cos^{2}(u)})^{3/2}} =
+     \frac{1}{{\rho}^{3}( \frac{1}{cos^{2}(u)})^{3/2}} =
+     \frac{cos^{3}(u)}{{\rho}^{3}}
+\end{equation*}
+
+Therefore:
+\begin{equation*}
+  \int_{a}^{b} \frac{dz}{({\rho}^2+z^2)^{3/2}} =
+    \int_{u(a)}^{u(b)} \Big( \frac{cos^{3}(u)}{{\rho}^{3}} \Big) \Big( \frac{{\rho}}{cos^{2}(u)} du \Big) =
+    \frac{1}{{\rho}^2} \int_{u(a)}^{u(b)} cos(u) du =
+\end{equation*}
+\begin{equation*}
+   = \frac{1}{{\rho}^2} sin(u) \biggr\rvert_{u(a)}^{u(b)}
+   = \frac{1}{{\rho}^2} sin\Big[ tan^{-1}\Big((\frac{z}{{\rho}})\Big) \Big]  \biggr\rvert_{a}^{b}
+\end{equation*}
+}
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Estimating $\int_{a}^{b} \frac{dz}{({\rho}^2+z^2)^{3/2}}$}
+
+\begin{columns}
+  \begin{column}{0.30\textwidth}
+    {\small
+     In order to evaluate the term
+     \begin{equation*}
+       sin\Big[ tan^{-1}\Big(\frac{z}{\rho}\Big) \Big] \biggr\rvert_{a}^{b}
+     \end{equation*}
+     appearing in the previous expression,
+     consider the triangle below.\\
+    }
+    \includegraphics[width=0.85\textwidth]{./images/schematics/triangle_for_integral_in_wire_magnetic_field_calc.png}
+  \end{column}
+  \begin{column}{0.70\textwidth}
+  {\small
+    We have:
+    \begin{equation*}
+      tan(\theta) = \frac{z}{{\rho}} \Rightarrow
+      \theta = tan^{-1}\Big( \frac{z}{{\rho}} \Big)  \Rightarrow
+      sin(\theta) = sin\Big[ tan^{-1}\Big( \frac{z}{{\rho}} \Big) \Big]
+    \end{equation*}
+    But:
+    \begin{equation*}
+      sin(\theta) = \frac{z}{(z^2+{\rho}^2)^{1/2}}
+    \end{equation*}
+    Therefore:
+    \begin{equation*}
+       sin\Big[ tan^{-1}\Big( \frac{z}{{\rho}} \Big) \Big] = \frac{z}{(z^2+{\rho}^2)^{1/2}}
+    \end{equation*}
+    So, indeed, we showed that:
+    \begin{equation*}
+      \int_{a}^{b} \frac{dz}{({\rho}^2+z^2)^{3/2}} = \frac{z}{{\rho}^{2}(z^{2}+{{\rho}^{2}})^{1/2}} \biggr\rvert_{a}^{b}
+    \end{equation*}
+  }
+  \end{column}
+\end{columns}
+
+\end{frame}

@@ -1,0 +1,265 @@
+
+\renewcommand{\summarizedlecture}{4 }
+
+%
+%
+%
+
+\begin{frame}{Lecture \summarizedlecture - \lecturesummarytitle}
+
+\begin{itemize}
+
+  \item With regards to electrical properties, there are 2 types of materials
+   \begin{itemize}
+     \item materials that conduct electricity: {\bf conductors}
+     \item materials that do not conduct electricity: {\bf insulators (dielectrics)}
+   \end{itemize}
+
+   \vspace{0.2cm}
+
+   \item A conductor is an object or type of material
+         which {\bf contains electric charges that are relatively free to move}
+  \begin{itemize}
+     \item A {\em \bf perfect conductor} has an {\bf unlimited supply of free charges}.
+     \item There are no perfect conductors, but many substances come close!
+      \begin{itemize}
+           \item e.g. the free charge density in copper is 1.8 $\times$ 10$^{10}$ C/$m^3$.
+      \end{itemize}
+   \end{itemize}
+
+   \vspace{0.2cm}
+
+   \item If we place a {\bf conductor within an external electric field}:
+     \begin{itemize}
+       \item The electric field vanishes everywhere inside a conductor.
+       \item The potential is constant inside a conductor.
+       \item Charge accumulates in the surface.
+       \item The field on the surface of a conductor has no tangential component.
+     \end{itemize}
+
+\end{itemize}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Lecture \summarizedlecture - \lecturesummarytitle (cont'd)}
+
+\begin{itemize}
+
+   \item Capacitance (C) denotes the ability of a body to store electric charge.
+             For a system of two conductors, one with charge +Q held at
+             potential $V_{+}$ and one with charge -Q held at potential $V_{-}$,
+             the capacitance is a positive
+             quantity defined as:
+      \begin{equation*}
+          C = \frac{Q}{V_{+} - V_{-}}
+      \end{equation*}
+      Its SI unit is the {\bf Farad (F)} defined as one Coulomb per Volt.
+
+   \vspace{0.1cm}
+
+   \item Calculating the capacitance for simple systems:
+
+        \begin{itemize}
+         {\small
+              \item Use Gauss' law to calculate the electric field $\vec{E}$
+                        in terms of the charge Q stored in one of the conductors:
+                       $\oint_{S} \vec{E} d\vec{S} = Q/\epsilon_0$
+
+              \item Once $\vec{E}$ is known, calculate the potential
+                        difference V between the two conductors as:
+                        $V := {\Delta}V = V_{+} - V_{-} = - \int_{-}^{+} \vec{E} d\vec{\ell}$
+
+               \item From the known charge Q in the positive conductor and
+                         the potential difference V between the conductors,
+                         calculate $C = Q/V$
+        }
+        \end{itemize}
+
+\end{itemize}
+
+\end{frame}
+
+
+%
+%
+%
+
+\begin{frame}{Lecture \summarizedlecture - \lecturesummarytitle (cont'd)}
+
+\begin{itemize}
+
+   \item We studied a simple system: The {\bf parallel plate capacitor}
+
+   \item The electric field between the plates was found to be:
+      \begin{equation*}
+        E = \frac{\sigma}{\epsilon_0}
+      \end{equation*}
+
+   \item The parallel plate capacitor has capacitance:
+      \begin{equation*}
+          C = \epsilon_0 \frac{A}{d}
+      \end{equation*}
+      It depends only on the geometrical characteristics of the capacitor.
+
+   \item Energy stored in the parallel plate capacitor:
+      \begin{equation*}
+          U = \frac{Q^2}{2C} \;\;\;\; or \;\;\;\;
+          U = \frac{1}{2} C V^2 \;\;\;\; or \;\;\;\;
+          U = \frac{1}{2} Q V
+      \end{equation*}
+      and confirmed that:
+      \begin{equation*}
+          U = \frac{\epsilon_0}{2} \int_{all\;space} |\vec{E}(\vec{r})|^2  d\tau
+      \end{equation*}
+
+\end{itemize}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Lecture \summarizedlecture - \lecturesummarytitle (cont'd)}
+
+\begin{itemize}
+
+   \item  {\bf Electric dipole}:
+          Point charges +q and -q at a {\em small distance} d.\\
+
+          \vspace{0.1cm}
+
+   \item  An electric dipole its described by its {\bf electric dipole moment} $\vec{p} = q \vec{d}$\\
+          \begin{itemize}
+                 \item A vector pointing from the negative to the positive charge
+           \end{itemize}
+
+          \vspace{0.1cm}
+
+   \item  An electric dipole creates a potential field V given by
+          \begin{equation*}
+            V \approx \frac{1}{4\pi\epsilon_0} \frac{\vec{p} \cdot \hat{r}}{r^2}
+          \end{equation*}
+
+   \item  An electric field $\vec{E}$ exerts to an electric dipole with moment $\vec{p}$
+          a torque $\vec{T} = \vec{p} \times \vec{E}$
+
+          \vspace{0.1cm}
+
+   \item  Electric fields induce dipole moments in the direction of the field (or align
+              towards the direction of the field polar molecules with permanent dipole moments)
+              and generate macroscopic polarisation.
+
+          \vspace{0.1cm}
+
+   \item  The {\bf polarisation} $\vec{P}$ of a material is defined as the
+          {\bf amount of electric dipole moment per unit volume}.\\
+
+\end{itemize}
+
+\end{frame}
+
+
+%
+%
+%
+
+\begin{frame}{Lecture \summarizedlecture - \lecturesummarytitle (cont'd)}
+
+\begin{itemize}
+
+   \item  The polarisation induces surface and volume polarisation charges.
+          The corresponding densities are
+          $\sigma_P = \vec{P} \cdot \hat{n}$ and $\rho_P = - \vec{\nabla} \vec{P}$
+
+          \vspace{0.1cm}
+
+    \item In the presence of dielectrics,  Gauss's law need to be generalised
+          to include both free charges we also have induced polarisation charges:
+          \begin{equation*}
+             \vec{\nabla} \Big( \epsilon_0 \vec{E} + \vec{P} \Big) = \rho_f
+              \;\;\;\; and \;\;\;\;
+              \oint  \Big( \epsilon_0 \vec{E} + \vec{P} \Big) d\vec{S} = Q_f
+          \end{equation*}
+          where $\rho_f$ is the free charge density and $Q_f$ the amount of free charge.
+
+          \vspace{0.1cm}
+
+    \item The vector
+           $\vec{D} = \epsilon_0 \vec{E} + \vec{P}$ is the electric displacement vector
+          \begin{itemize}
+             \item In SI, the electric displacement unit is $C/m^2$.
+          \end{itemize}
+
+          \vspace{0.1cm}
+
+    \item For {\bf linear dielectrics},
+              $\vec{P} = \chi_{e} \epsilon_0 \vec{E}$ and, therefore,
+              $\vec{D} = \epsilon_r \epsilon_0 \vec{E}$,
+              where
+              $\chi_{e}$ is the electric susceptibility of the material and
+              $\epsilon_r = 1 + \chi_e$ is the relative permittivity (dielectric constant).
+
+ \item A dielectric with relative permittivity $\epsilon_r$ inserted
+         between the plates of a parallel plate capacitor, increases
+         its capacitance by a factor of $\epsilon_r$.
+
+\end{itemize}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Maxwell's equation we know so far}
+
+In vacuum (static case):
+
+\begin{center}
+ {
+  \begin{table}[H]
+    \begin{tabular}{|l|c|c|}
+      \hline
+          & {\it Integral form} & {\it Differential form} \\
+      \hline
+      {\bf Gauss's law} &
+        $\oint \vec{E} d\vec{S} = Q_{enclosed} / \epsilon_0$ &
+        $\vec{\nabla} \cdot \vec{E} = \rho / \epsilon_0$ \\
+
+      {\bf Circuital law} &
+        $\oint \vec{E} d\vec{\ell} = 0$ &
+        $\vec{\nabla} \times \vec{E} = 0$ \\
+      \hline
+    \end{tabular}
+  \end{table}
+ }
+\end{center}
+
+In the presence of materials (static case):
+
+\begin{center}
+ {
+  \begin{table}[H]
+    \begin{tabular}{|l|c|c|}
+      \hline
+          & {\it Integral form} & {\it Differential form} \\
+      \hline
+      {\bf Gauss's law} &
+        $\oint \vec{D} d\vec{S} = Q_{enclosed; free}$ &
+        $\vec{\nabla} \cdot \vec{D} = \rho_{free}$ \\
+
+      {\bf Circuital law} &
+        $\oint \vec{E} d\vec{\ell} = 0$ &
+        $\vec{\nabla} \times \vec{E} = 0$ \\
+      \hline
+    \end{tabular}
+  \end{table}
+ }
+\end{center}
+
+\end{frame}

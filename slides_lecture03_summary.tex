@@ -1,0 +1,177 @@
+
+\renewcommand{\summarizedlecture}{3 }
+
+%
+%
+%
+
+\begin{frame}{Lecture \summarizedlecture - \lecturesummarytitle}
+
+\begin{itemize}
+\item {\bf To bring together a collection of charges I need to do work}
+      (for example, In case of two like-sign charges I need to exert a force against the action of the field)
+      \begin{equation*}
+        W = \int \vec{F} d\vec{\ell}
+      \end{equation*}
+\item The work done can be positive or negative.
+\item The work done is {\bf path-independent}
+  \begin{itemize}
+     \item I do the same work regardless of the path followed to bring the charges in their positions.
+     \item We say that the electric force is {\bf conservative}.
+  \end{itemize}
+\item The work done is converted to {\bf electric potential energy}
+\item We calculated the  potential energy for systems of 2, 3 and N charges as well as continuous distributions of charge.
+
+\end{itemize}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Lecture \summarizedlecture - \lecturesummarytitle (cont'd)}
+
+For a
+\begin{itemize}
+\item system of 2 charges:
+ \begin{equation*}
+      U = \frac{q_1 q_2}{4\pi\epsilon_0} \frac{1}{|\vec{r}_{12}|}
+ \end{equation*}
+
+\item system of 3 charges:
+ \begin{equation*}
+   U = \frac{q_1 q_2}{4\pi\epsilon_0} \frac{1}{|\vec{r}_{12}|} +
+       \frac{q_1 q_3}{4\pi\epsilon_0} \frac{1}{|\vec{r}_{13}|} +
+       \frac{q_2 q_3}{4\pi\epsilon_0} \frac{1}{|\vec{r}_{23}|}
+ \end{equation*}
+
+\item system of N charges:
+ \begin{equation*}
+   U = \frac{1}{2} \sum_{i,j=1;i{\ne}j}^{N} \frac{q_i q_j}{4\pi\epsilon_0|\vec{r}_{ij}|}
+ \end{equation*}
+
+\item continuous charge distribution (with density $\rho$ over a volume $\tau$):
+ \begin{equation*}
+    U = \frac{1}{2} \int_{\tau} d\tau \int_{\tau^{\prime}} d\tau^{\prime}
+        \frac{\rho(\vec{r}) \rho(\vec{r^{\prime}})}{4\pi\epsilon_0|\vec{r} - \vec{r^{\prime}}|}
+ \end{equation*}
+
+\end{itemize}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Lecture \summarizedlecture - \lecturesummarytitle (cont'd)}
+
+\begin{itemize}
+  \item
+  The electric {\bf potential energy is stored in the electric field}:
+  \begin{equation*}
+     U = \frac{\epsilon_0}{2} \int_{all\;space} |\vec{E}(\vec{r})|^2  d\tau
+  \end{equation*}
+
+  \item
+  {\bf Relationship between force and potential energy}:\\
+  \begin{equation*}
+     U = \int \vec{F} d\vec{\ell}
+  \end{equation*}
+  \begin{equation*}
+     \vec{F} = -\vec{\nabla}U
+  \end{equation*}
+
+  \item
+  {\bf Electric potential (V)}: A scalar field
+      \begin{itemize}
+          \item It is the amount of work required to bring a charge Q at position $\vec{r}$, divided by the charge Q.
+          \item SI units: Volts (V)
+            \begin{itemize}
+               \item Derived unit: One Joule per Coulomb
+            \end{itemize}
+      \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Lecture \summarizedlecture - \lecturesummarytitle (cont'd)}
+
+\begin{itemize}
+  \item We also studied the {\bf circuital law for Electrostatics}
+     \begin{itemize}
+        \item Our second set of Maxwell's equations.
+     \end{itemize}
+  \vspace{0.2cm}
+  \item Maxwell's equation we know so far:
+\end{itemize}
+
+\begin{center}
+ {
+  \begin{table}[H]
+    \begin{tabular}{|l|c|c|}
+      \hline
+          & {\it Integral form} & {\it Differential form} \\
+      \hline
+      {\bf Gauss's law} &
+        $\oint \vec{E} d\vec{S} = Q_{enclosed} / \epsilon_0$ &
+        $\vec{\nabla} \cdot \vec{E} = \rho / \epsilon_0$ \\
+
+      {\bf Circuital law} &
+        $\oint \vec{E} d\vec{\ell} = 0$ &
+        $\vec{\nabla} \times \vec{E} = 0$ \\
+      \hline
+    \end{tabular}
+  \end{table}
+ }
+\end{center}
+
+\begin{itemize}
+  \item Because (in Electrostatics) the electric field has no rotation
+        it can be expressed as the gradient of a scalar function (the electric potential):
+        \begin{equation*}
+           \vec{E} = - \vec{\nabla} V
+        \end{equation*}
+\end{itemize}
+
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Lecture \summarizedlecture - \lecturesummarytitle (cont'd)}
+
+\begin{itemize}
+
+  \item Need both the divergence and the curl of $\vec{E}$ (both Gauss' and circuital laws)
+        to determine all three components of $\vec{E}$.
+    \begin{itemize}
+    {
+      \item Gauss' and circuital laws provide a coupled system of 1$^{st}$ order p.d.e's.
+    }
+    \end{itemize}
+
+  \item I can combine the Gauss' and circuital laws into a single 2$^{nd}$ order p.d.e for the
+        electric potential V: {\bf Poisson equation}
+        \begin{equation*}
+           \vec{\nabla}^{2} V = - \frac{\rho}{\epsilon_0}
+        \end{equation*}
+
+  \item Away from sources ($\rho$=0) Poisson's equation becomes $\vec{\nabla}^{2} V = 0$
+        which is known as the {\bf Laplace equation}.
+
+  \item Using the Poisson (or Laplace) equations one can determine V (and, thus, $\vec{E}$)
+        only using the appropriate {\bf boundary conditions}.
+
+  \item {\bf A uniqueness theorem} is a proof that a given set of boundary conditions is sufficient.
+
+\end{itemize}
+
+\end{frame}

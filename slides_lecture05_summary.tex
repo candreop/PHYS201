@@ -1,0 +1,96 @@
+
+\renewcommand{\summarizedlecture}{5 }
+
+%
+%
+%
+
+\begin{frame}{Lecture \summarizedlecture - \lecturesummarytitle}
+
+\begin{itemize}
+
+\item
+An {\bf electric current is a flow of electric charge.}
+It is represented by the amount of charge passing though per unit time.
+\begin{equation*}
+  I = \frac{dQ}{dt}
+\end{equation*}
+In SI, the unit of the electric current is the {\bf Ampere (A)}.
+
+\item
+The  current density $\vec{j}$ is the {\bf current per unit area  of cross-section}:
+\begin{equation*}
+  \vec{j} = n q \vec{u}_{d}
+\end{equation*}
+where n is the charge carrier density and $\vec{u}_{d}$ their average velocity.
+
+\item
+In general:
+\begin{equation*}
+  \vec{j} = \sigma \vec{E}
+\end{equation*}
+where $\sigma$ is the {\bf conductivity} of the material (SI unit: $1/(\Omega \cdot m)$).
+The inverse quantity $\rho = 1/\sigma$ is called {\bf resistivity}.
+
+\end{itemize}
+
+\end{frame}
+
+%
+%
+%
+\begin{frame}{Lecture \summarizedlecture - \lecturesummarytitle (cont'd)}
+
+\begin{itemize}
+
+\item Magnetic and electric phenomena have a common origin.\\
+          Remember the empirical evidence:
+         \begin{itemize}
+            \item Electric currents generate magnetic fields!
+            \item Moving magnetic fields generate electric currents!
+            \item There are magnetic forces between electric currents!
+          \end{itemize}
+
+\item The magnetic field (a vector field) is the magnetic effect of electric currents and magnetic materials (SI unit:  {\bf Tesla (T)})
+
+\item The magnetic force on an electric charge q moving with velocity $\vec{u}$ in a magnetic field $\vec{B}$ is given by:
+          $\vec{F} = q \vec{u} \times \vec{B}$
+
+\item Consequently, the magnetic force on a current is
+          $\vec{F} = I \int_{L} d\vec{\ell} \times \vec{B}$
+
+\item Magnetic forces do no work on electric charges.
+
+\item In the presence of both a magnetic field $\vec{B}$ and an electric field $\vec{E}$,
+          the total (so-called Lorentz) force on charge q is:
+          $\vec{F} = q \Big( \vec{E} + \vec{u} \times \vec{B} \Big)$
+
+\end{itemize}
+
+\end{frame}
+
+%
+%
+%
+\begin{frame}{Lecture \summarizedlecture - \lecturesummarytitle (cont'd)}
+
+\begin{itemize}
+
+\item Biot-Savart law (expresses $\vec{B}$ in terms of the current I):
+     \begin{equation*}
+            \vec{B} = \int_{L} d\vec{B}
+                        = \frac{\mu_0I}{4\pi} \int_{L} \frac{d\vec{\ell} \times \vec{r}}{r^3}
+     \end{equation*}
+          where the integral is over the elements $d\vec{\ell}$ along the conductor, and $\vec{r}$
+          is the distance from $d\vec{\ell}$ to the point where we want to know the field.
+
+\vspace{0.2cm}
+
+\item Biot-Savart in action: Magnetic field around a wire with current I:
+     \begin{equation*}
+           \vec{B}(\vec{r}) = \frac{\mu_0I}{2\pi \rho} \hat\phi
+     \end{equation*}
+         where $\rho$ is the distance from the wire and $\hat\phi$ the azimuthal unit vector.
+\end{itemize}
+
+\end{frame}

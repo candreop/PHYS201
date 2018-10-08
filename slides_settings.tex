@@ -1,0 +1,200 @@
+%
+%
+
+\usepackage{pgfpages}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{dcolumn}   % line up tabular columns on the decimal place with D{.}{.}{-1}
+\usepackage{rotating}
+\usepackage{cancel}    % \cancel, \cancelto{}
+\usepackage{multirow}  % \multirow
+\usepackage{hhline}    % \hhline{~--~}
+\usepackage{extarrows} % \xlongequal{}
+%\usepackage{relsize}
+%\usepackage{accents}
+\usepackage{latexsym}
+\usepackage{soul}      % strikethrough text with \st
+\usepackage{cancel}    % diagonal strikethrough in math mode
+\usepackage{mathtools} % \xRightarrow{text} etc
+\usepackage{tikz}
+\usepackage{circuitikz}
+%\usetikzlibrary{shapes}
+%\usetikzlibrary{plotmarks}
+%\usetikzlibrary{trees}
+%\usetikzlibrary{decorations.pathmorphing}
+%\usetikzlibrary{decorations.pathreplacing}
+%\usetikzlibrary{decorations.markings}
+%\usetikzlibrary{snakes}
+
+\usetheme{Madrid}
+
+\newcommand{\prevlecture}{-1}
+\newcommand{\thislecture}{-1}
+\newcommand{\nextlecture}{-1}
+\newcommand{\summarizedlecture}{-1}
+\newcommand{\lecturesummarytitle}{Summary }
+
+\definecolor{darkpowderblue}{RGB}{0,51,153}  
+
+% Non-default colours for page with extra details or reminder sections
+\definecolor{dBG1}{RGB}{143,0,0}     % red
+\definecolor{dBG2}{RGB}{190,0,0}     % lighter red
+\definecolor{dBG3}{RGB}{236,236,236} % gray
+\definecolor{dFG3}{RGB}{143,0,0}     % red
+
+% Non-default colours for page with worked out examples
+\definecolor{eBG1}{RGB}{215,123,35}   % orange scheme
+\definecolor{eBG2}{RGB}{227,162,101}  %
+\definecolor{eBG3}{RGB}{235,189,145}  %
+\definecolor{eFG3}{RGB}{0,0,128}      %
+
+% Non-default colours for page with suggestions for homework / computing exercises
+\definecolor{pBG1}{RGB}{0,107,61}    % cadmium green
+\definecolor{pBG2}{RGB}{0,168,120}   % gren (munshell)
+\definecolor{pBG3}{RGB}{174,255,46}  % green-yellow
+\definecolor{pFG3}{RGB}{0,107,61}    %
+
+%
+% Blocks:
+%  001      - white bg with baby blue header bg, black fg
+%  minirem  - mini reminder in a main slide
+%  que      - question block in main slides
+%  ans      - answer block in main slides
+%  exmplque - question block for worked example slides
+%  exmplans - question block for worked example slides
+%
+
+% 001
+\newenvironment<>{block001}[1]{%
+\begin{actionenv}#2%
+  \definecolor{block001_header}{RGB}{204,229,255}
+  \def\insertblocktitle{#1}%
+  \par%
+  \mode<presentation>{%
+    \setbeamercolor{block title}{fg=black,bg=block001_header}
+    \setbeamercolor{block body}{fg=black,bg=white}
+    \setbeamercolor{itemize item}{fg=orange!20!black}
+    \setbeamertemplate{itemize item}[triangle]
+  }%
+  \usebeamertemplate{block begin}}
+  {\par\usebeamertemplate{block end}
+\end{actionenv}}
+
+% minirem
+\newenvironment<>{blockminirem}[1]{%
+\begin{actionenv}#2%
+  \definecolor{blockminirem_header}{RGB}{143,0,0}
+  \def\insertblocktitle{#1}%
+  \par%
+  \mode<presentation>{%
+    \setbeamercolor{block title}{fg=white,bg=blockminirem_header}
+    \setbeamercolor{block body}{fg=black,bg=white}
+    \setbeamercolor{itemize item}{fg=orange!20!black}
+    \setbeamertemplate{itemize item}[triangle]
+  }%
+  \usebeamertemplate{block begin}}
+  {\par\usebeamertemplate{block end}
+\end{actionenv}}
+
+% que
+\newenvironment<>{blockque}[1]{%
+\begin{actionenv}#2%
+  \definecolor{blockque_header}{RGB}{204,229,255}
+  \def\insertblocktitle{#1}%
+  \par%
+  \mode<presentation>{%
+    \setbeamercolor{block title}{fg=black,bg=blockque_header}
+    \setbeamercolor{block body}{fg=black,bg=white}
+    \setbeamercolor{itemize item}{fg=orange!20!black}
+    \setbeamertemplate{itemize item}[triangle]
+  }%
+  \usebeamertemplate{block begin}}
+  {\par\usebeamertemplate{block end}
+\end{actionenv}}
+
+% ans
+\newenvironment<>{blockans}[1]{%
+\begin{actionenv}#2%
+  \definecolor{blockans_header}{RGB}{204,229,255}
+  \def\insertblocktitle{#1}%
+  \par%
+  \mode<presentation>{%
+    \setbeamercolor{block title}{fg=black,bg=blockans_header}
+    \setbeamercolor{block body}{fg=black,bg=white}
+    \setbeamercolor{itemize item}{fg=orange!20!black}
+    \setbeamertemplate{itemize item}[triangle]
+  }%
+  \usebeamertemplate{block begin}}
+  {\par\usebeamertemplate{block end}
+\end{actionenv}}
+
+% exmplque
+\newenvironment<>{blockexmplque}[1]{%
+\begin{actionenv}#2%
+  \definecolor{blockexmplque_header}{RGB}{235,189,145}
+  \def\insertblocktitle{#1}%
+  \par%
+  \mode<presentation>{%
+    \setbeamercolor{block title}{fg=black,bg=blockexmplque_header}
+    \setbeamercolor{block body}{fg=black,bg=white}
+    \setbeamercolor{itemize item}{fg=orange!20!black}
+    \setbeamertemplate{itemize item}[triangle]
+  }%
+  \usebeamertemplate{block begin}}
+  {\par\usebeamertemplate{block end}
+\end{actionenv}}
+
+% exmplans
+\newenvironment<>{blockexmplans}[1]{%
+\begin{actionenv}#2%
+  \definecolor{blockexmplans_header}{RGB}{235,189,145}
+  \def\insertblocktitle{#1}%
+  \par%
+  \mode<presentation>{%
+    \setbeamercolor{block title}{fg=black,bg=blockexmplans_header}
+    \setbeamercolor{block body}{fg=black,bg=white}
+    \setbeamercolor{itemize item}{fg=orange!20!black}
+    \setbeamertemplate{itemize item}[triangle]
+  }%
+  \usebeamertemplate{block begin}}
+  {\par\usebeamertemplate{block end}
+\end{actionenv}}
+
+
+
+% short checkmark for large tables
+\newcommand{\ck}{$\checkmark$}
+
+% primed vector with more space between the prime and the arrow
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+
+% enable color scheme for slides with worked examples or quizzes
+\newcommand{\problemslide}{
+  \setbeamercolor {frametitle}          {bg=eBG1}
+  \setbeamercolor {author in head/foot} {bg=eBG1}
+  \setbeamercolor {title in head/foot}  {bg=eBG2}
+  \setbeamercolor {date in head/foot}   {bg=eBG3}
+  \setbeamercolor {date in head/foot}   {fg=eFG3}
+}
+
+% enable color scheme for reminder slides
+\newcommand{\reminderslide}{
+  \setbeamercolor {frametitle}          {bg=dBG1}
+  \setbeamercolor {author in head/foot} {bg=dBG1}
+  \setbeamercolor {title in head/foot}  {bg=dBG2}
+  \setbeamercolor {date in head/foot}   {bg=dBG3}
+  \setbeamercolor {date in head/foot}   {fg=dFG3}
+}
+
+% enable color scheme for programming slides
+\newcommand{\programmingslide}{
+  \setbeamercolor {frametitle}          {bg=pBG1}
+  \setbeamercolor {author in head/foot} {bg=pBG1}
+  \setbeamercolor {title in head/foot}  {bg=pBG2}
+  \setbeamercolor {date in head/foot}   {bg=pBG3}
+  \setbeamercolor {date in head/foot}   {fg=pFG3}
+}
+
+\pgfpagesuselayout{resize to}[a4paper,landscape,border shrink=5mm]
+
+%\tikzset{snake it/.style={decorate, decoration=snake}} % wavy line

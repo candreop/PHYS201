@@ -1,0 +1,167 @@
+
+\renewcommand{\summarizedlecture}{10 }
+
+%
+%
+%
+
+\begin{frame}{Lecture \summarizedlecture - \lecturesummarytitle}
+
+{\small
+
+We studied the most general case of Maxwell's equations:\\
+
+\setlength{\extrarowheight}{12pt}
+\setlength{\arraycolsep}{5pt}
+
+ \begin{center}
+ {
+
+  \begin{table}[H]
+    \begin{tabular}{|l|c|c|}
+      \hline
+        \multicolumn{3}{|l|} {
+          {\color{magenta}
+           {\bf Dynamic case in matter}
+          }
+        }\\
+      \hline
+      {\bf Gauss's law} &
+        $\displaystyle \oint \vec{D} d\vec{S} = \int \rho_f d\tau = Q_f$   &
+        $\displaystyle \vec{\nabla} \cdot \vec{D} = \rho_f$ \\
+
+      {\bf Faraday's law} &
+        $\displaystyle \oint \vec{E} d\vec{\ell} = -\frac{\partial}{\partial t} \int \vec{B} d\vec{S} \Rightarrow$ &
+        $\displaystyle \vec{\nabla} \times \vec{E} = -  \frac{\partial \vec{B}}{\partial t}$ \\
+      &
+        $\displaystyle \oint \vec{E} d\vec{\ell} = -\frac{d\Phi_B}{dt}$ & \\
+
+      no magn. monopoles &
+        $\displaystyle  \oint \vec{B} d\vec{S} = 0$ &
+        $\displaystyle  \vec{\nabla} \cdot \vec{B} = 0$ \\
+
+      {\bf Ampere's law} &
+        $\displaystyle \oint \vec{H} d\vec{\ell} = \int_{S} \Big( \vec{j} + \frac{\partial \vec{D}}{\partial t}\Big) d\vec{S} \Rightarrow$ &
+        $\displaystyle \vec{\nabla} \times \vec{H} = \vec{j}_f + \frac{\partial \vec{D}}{\partial t}$ \\
+      &
+        $\displaystyle \oint \vec{H} d\vec{\ell} = I_f + \frac{d\Phi_D}{dt}$ & \\
+      \hline
+    \end{tabular}
+  \end{table}
+
+ }
+ \end{center}
+}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Lecture \summarizedlecture - \lecturesummarytitle (cont'd)}
+
+\begin{itemize}
+
+\item As we did in vacuum, we studied Maxwell's equations in matter (for time-dependent fields)
+          and in the absence of sources and we saw that they give rise to EM waves:
+          \begin{equation*}
+             \vec{\nabla}^{2} \vec{E} = \mu \epsilon \frac{\partial^{2} \vec{E}}{\partial t^{2}} \;\;\;\; and \;\;\;\;
+             \vec{\nabla}^{2} \vec{B} = \mu \epsilon \frac{\partial^{2} \vec{B}}{\partial t^{2}}
+         \end{equation*}
+
+\item Speed of EM waves in matter: $\displaystyle u = \frac{1}{\sqrt{\epsilon \mu}}$
+         \begin{itemize}
+         {\small
+               \item EM waves in matter propagate slower than EM waves in vacuum
+               \item $\displaystyle u = \frac{c}{n}$ where
+                         $\displaystyle n = \frac{\sqrt{\epsilon \mu}}{\sqrt{\epsilon_0 \mu_0}}$
+                         is the index of refraction of the material.
+         }
+         \end{itemize}
+
+\item We introduced a complex representation of EM waves starting from de Moivre's theorem
+          and embedding the known EM wave properties (EM waves are always {\bf transverse} and
+          {\bf mutually perpendicular}):
+          \begin{equation*}
+                \vec{E}(\vec{r},t) = E_0  e^{i (\vec{k} \vec{r} -\omega t)} \hat{n}
+                 \;\;\; and \;\;\;
+                \vec{B}(\vec{r},t) =
+                  \frac{E_0}{c}  e^{i ( \vec{k} \vec{r} -\omega t)} \Big( \hat{k} \times \hat{n} \Big) =
+                  \frac{1}{c}  \Big( \hat{k} \times \vec{E} \Big)
+          \end{equation*}
+
+\end{itemize}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Lecture \summarizedlecture - \lecturesummarytitle (cont'd)}
+
+\begin{itemize}
+
+\item We also studied EM wave polarization and practical applications.
+
+\item Finally, we studied the electrodynamic boundary conditions:\\
+          \vspace{0.2cm}
+         For the electric field:
+         \begin{equation*}
+               \epsilon_1 E_1^{\perp} = \epsilon_2 E_2^{\perp}  \;\;\;\; and \;\;\;\;
+                E_1^{\parallel} = E_2^{\parallel}
+         \end{equation*}
+         For the magnetic field:
+         \begin{equation*}
+               B_1^{\perp} = B_2^{\perp} \;\;\;\; and \;\;\;\;
+               \frac{1}{\mu_1} B_1^{\parallel} = \frac{1}{\mu_2} B_2^{\parallel}
+         \end{equation*}
+
+\item We used the above conditions to study what happens when
+          an EM wave crosses the {\bf boundary between two transparent media}\\
+          \vspace{0.2cm}
+          Two cases:
+          \begin{itemize}
+               \item Normal incidence
+               \item Oblique incidence (general case / home study)
+          \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+
+%
+%
+%
+
+\begin{frame}{Lecture \summarizedlecture - \lecturesummarytitle (cont'd)}
+
+\begin{itemize}
+{\small
+\item Maxwell's equations in most general form (time-dependent fields in matter)
+    \begin{itemize}
+     {\scriptsize
+          \item You should know both the integral and differential forms.
+          \item You should know all variations of these equations and be able to derive
+                    one from another (dynamic $\rightarrow$ static, matter $\rightarrow$ vacuum)
+          \item No marks given for writing the wrong set of equations, even if they are all
+                    similar and interconnected.\\
+    }
+    \end{itemize}
+
+\item You should be able to show that Maxwell's equations (in vacuum or in matter) in
+          absence of sources describe EM waves
+
+\item You should know how the wave equation and the EM waves are different in vacuum and in transparent media.
+
+\item You should know how to use the complex representation of waves.
+
+\item You should know (and be able to derive) the electrodynamic boundary conditions,
+          and you should be able to use them to study reflection and transmission at normal and oblique incidence.
+
+\item You should remember the fundamental laws of geometrical optics and what is Brewster's angle.
+}
+\end{itemize}
+
+\end{frame}

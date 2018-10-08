@@ -1,0 +1,1602 @@
+\renewcommand{\prevlecture}{8 }
+\renewcommand{\thislecture}{9 }
+\renewcommand{\nextlecture}{10 }
+
+%
+% Cover page
+%
+
+\title[PHYS 201 / Lecture \thislecture]
+{
+  PHYS 201 / Lecture \thislecture\\
+  {\it Electromagnetic Waves}\\
+}
+
+\input{slides_author.tex}
+
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+
+%
+% Revision of previous lecture
+%
+
+\renewcommand{\lecturesummarytitle}{Revision }
+\input{slides_lecture08_summary.tex}
+
+%
+% Plan for this lecture
+%
+
+\begin{frame}{Plan for Lecture \thislecture}
+
+\begin{itemize}
+   \item Maxwell's equations in vacuum in absence of sources
+   \item Reminder on waves
+   \item The electric and magnetic fields satisfy the wave equation
+   \item Electromagnetic waves and light
+   \item Energy carried by electromagnetic waves
+   \item The Poynting theorem
+\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+
+
+%
+%
+%
+
+\begin{frame}{Maxwell's equations in vacuum in absence of sources}
+
+\begin{columns}
+  \begin{column}{0.40\textwidth}
+   {\small
+       Let me start from the known Maxwell's equations in vacuum,
+       and consider the case where there are:
+       \begin{itemize}
+       {\small
+             \item {\bf no charges} ($\rho = 0$)
+             \item and {\bf no currents} ($\vec{j} = \vec{0}$).
+       }
+       \end{itemize}
+  }
+  \end{column}
+  \begin{column}{0.60\textwidth}
+     \begin{equation*}
+       \vec{\nabla} \vec{E} = \cancelto{0}{\frac{\rho}{\epsilon_0}} \Rightarrow
+       {\color{magenta} \vec{\nabla} \vec{E} = 0 }
+     \end{equation*}
+     \begin{equation*}
+        {\color{magenta} \vec{\nabla} \times \vec{E} = - \frac{\partial \vec{B}}{\partial t} }
+     \end{equation*}
+     \begin{equation*}
+        {\color{magenta} \vec{\nabla} \vec{B} = 0 }
+     \end{equation*}
+     \begin{equation*}
+       \vec{\nabla} \times \vec{B} = \cancelto{0}{\mu_0 j} + \epsilon_0 \mu_0 \frac{\partial \vec{E}}{\partial t} \Rightarrow
+        {\color{magenta} \vec{\nabla} \times \vec{B} = \epsilon_0 \mu_0 \frac{\partial \vec{E}}{\partial t} }
+     \end{equation*}
+  \end{column}
+\end{columns}
+
+\vspace{0.5cm}
+
+{\bf A change in one field feeds the other} (even in absence of sources):\\
+Faraday's law tells us that a changing magnetic field generates an electric field, and
+Maxwell's correction to Ampere's law tells us that a changing electric field generates a magnetic field.\\
+
+\vspace{0.2cm}
+
+{\bf Can this interplay generate waves?}
+
+\end{frame}
+
+
+
+% starting reminder
+{
+\reminderslide
+
+%
+%
+%
+
+\begin{frame}{Reminder: Waves}
+
+\begin{center}
+ A wave is a {\bf disturbance that travels through space.}
+\end{center}
+
+\begin{columns}
+  \begin{column}{0.70\textwidth}
+    \includegraphics[width=0.98\textwidth]{./images/photos/mech_wave_water_1.jpg}\\
+  \end{column}
+  \begin{column}{0.30\textwidth}
+    \begin{center}
+       As this disturbance travels it transfers energy.\\
+       \vspace{0.4cm}
+       If there is no absorption or dispersion, that disturbance
+       propagates with a constant velocity and a fixed `shape'.
+    \end{center}
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Reminder: Types of waves}
+
+There are {\bf three main types of waves}:
+
+\begin{itemize}
+
+\item {\bf Mechanical waves}\\
+    \begin{itemize}
+        \item These are the waves you are most familiar with
+           \begin{itemize}
+                \item For example, sound waves, sea waves, seismic waves.
+           \end{itemize}
+        \item Mechanical waves {\bf need a medium} to propagate into. They propagate by deforming that medium.
+           \begin{itemize}
+                 \item When I speak, I disturb the air molecules in front of my mouth.
+                 \item They collide with neighbouring molecules and bounce back.
+                 \item This disturbance propagates, and it reaches and vibrates your eardrums.
+           \end{itemize}
+%         \item For mechanical waves, no medium = no propagation.
+    \end{itemize}
+
+\item {\bf Electromagnetic waves} {\color{red} $\leftarrow$ The subject of this lecture}\\
+    \begin{itemize}
+        \item Less familiar, probably, although you interact with them constantly.
+        \item They {\bf do not require a medium to propagate.}
+    \end{itemize}
+
+\item {\bf Matter waves}  {\color{red} $\leftarrow$ Will study in future modules}\\
+    \begin{itemize}
+          \item You are probably very unfamiliar with these, but they take centre stage
+                    in quantum mechanics ({\em wave-particle duality}).
+          \item Waves associated with fundamental particles (such as the electron),
+                    composite particles (such as the proton), atoms or even molecules.
+    \end{itemize}
+
+\end{itemize}
+
+\end{frame}
+
+%
+%
+%
+%
+
+\begin{frame}{Reminder: The wave equation}
+
+A {\bf wave equation} describes how the disturbance propagates in time.\\
+
+\vspace{0.3cm}
+
+Let $\phi(\vec{r}, t)$ be a function that describes that disturbance as a function of position in space and time.
+Then it satisfies the following equation:
+\begin{equation*}
+   \vec{\nabla}^{2} \phi(\vec{r}, t) = \frac{1}{u^2} \frac{\partial^{2} \phi(\vec{r}, t)} {\partial t^{2}}
+\end{equation*}
+where {\bf u is the wave velocity}.\\
+
+%\vspace{0.3cm}
+%This equation can be derived in many different physical situations and I am sure that you have seen it already in other modules.\\
+\vspace{0.3cm}
+
+A mathematician would say that the wave equation is a
+{\bf 2$^{nd}$ order linear partial differential equation (p.d.e)}.
+\begin{itemize}
+   \item This particular type of p.d.e. is called {\em hyperbolic}.
+\end{itemize}
+
+\end{frame}
+
+%
+%
+%
+%
+
+\begin{frame}{Reminder: Waves}
+
+Look carefully at the wave equation:
+\begin{equation*}
+   \vec{\nabla}^{2} \phi(\vec{r}, t) = \frac{1}{u^2} \frac{\partial^{2} \phi(\vec{r}, t)} {\partial t^{2}}
+\end{equation*}
+
+Here, we encounter $\vec{\nabla}^{2}$ again.
+This is the so-called {\em Laplace operator} that we have already seen at a previous lecture (Poisson equation).\\
+
+\vspace{0.2cm}
+
+The Laplacian $\vec{\nabla}^{2} \phi$ is defined as
+{\bf the divergence of the gradient} of the scalar function $\phi$:
+\begin{equation*}
+   \vec{\nabla}^{2} \phi(\vec{r}, t) =
+   \vec{\nabla} \cdot \Big( \vec{\nabla} \phi(\vec{r}, t) \Big) =
+   \frac{\partial^{2} \phi(\vec{r}, t)} {\partial x^{2}} +
+   \frac{\partial^{2} \phi(\vec{r}, t)} {\partial y^{2}} +
+   \frac{\partial^{2} \phi(\vec{r}, t)} {\partial z^{2}}
+\end{equation*}
+
+Recall that it represents a quantity which is important in several physical processes:
+The Laplacian $\vec{\nabla}^{2} \phi(\vec{r})$ of a scalar function $\phi$ at a point $\vec{r}$
+tells you how much $\phi(\vec{r})$ differs from its average over a small volume around $\vec{r}$.
+
+\end{frame}
+
+
+%
+%
+%
+%
+
+\begin{frame}{Reminder: Solutions of the wave equation}
+
+In one dimension, say x, the wave equation becomes:
+\begin{equation*}
+    \frac{\partial^{2} \phi(x, t)} {\partial x^{2}} =
+    \frac{1}{u^2} \frac{\partial^{2} \phi(x, t)} {\partial t^{2}}
+\end{equation*}
+where u is the wave velocity.\\
+
+\vspace{0.2cm}
+
+{\bf What are the solutions of the wave equation?}
+
+\vspace{0.2cm}
+
+\underline{\bf Any} (any whatsoever) function $\phi$ of x and t,
+{\bf where x and t appear only in the combination of x-ut},
+is a solution.
+\begin{equation*}
+  \phi(x,t) = \psi(z) = \psi(x-ut)
+\end{equation*}
+
+\vspace{0.1cm}
+
+For example, the following function is a solution of the wave equation:
+\begin{equation*}
+  \phi = sin^3\Big( x-ut \Big) - \frac{e^{(x-ut)}}{cos^{\frac{7}{2}}\Big( x-ut\Big)} + \Big( x-ut\Big)^{1.298}
+\end{equation*}
+
+\vspace{0.1cm}
+
+We can easily see that using the chain rule.
+
+\end{frame}
+
+%
+%
+%
+%
+
+\begin{frame}{Reminder: Solutions of the wave equation}
+
+Any function of x and t, where x and t appear only in the combination of x-ut,
+is a solution of the wave equation.\\
+
+\vspace{0.1cm}
+
+Let $\psi(z)$ be a function of x-ut (z = x-ut).
+The partial derivative of  $\psi(z)$ with respect to time is:
+
+\begin{equation*}
+  \frac{\partial \psi(z)}{\partial t} =
+  \frac{\partial z}{\partial t} \cdot \frac{\partial \psi(z)}{\partial z} =
+  \bigg\{ \frac{\partial}{\partial t} \Big( x - ut \Big) \bigg\} \cdot \frac{\partial \psi(z)}{\partial z} =
+  -u \frac{\partial \psi(z)}{\partial z}
+\end{equation*}
+
+Differentiating once again, we have:
+\begin{equation*}
+  \frac{\partial^{2} \psi(z)}{\partial t^{2}} =
+  \frac{\partial}{\partial t} \Big( \frac{\partial \psi(z)}{\partial t} \Big) =
+  \frac{\partial}{\partial t} \Big(  -u \frac{\partial \psi(z)}{\partial z} \Big) =
+  \frac{\partial z}{\partial t} \frac{\partial}{\partial z} \Big(  -u \frac{\partial \psi(z)}{\partial z} \Big) =
+\end{equation*}
+
+\begin{equation*}
+ = \bigg\{ \frac{\partial}{\partial t} \Big( x - ut \Big) \bigg\}  \frac{\partial}{\partial z} \Big(  -u \frac{\partial \psi(z)}{\partial z} \Big) =
+  -u \frac{\partial}{\partial z} \Big(  -u \frac{\partial \psi(z)}{\partial z} \Big) =
+   u^2 \frac{\partial^{2} \psi(z)}{\partial z^{2}} \Rightarrow
+\end{equation*}
+
+{\color{magenta}
+\begin{equation*}
+  \frac{1}{u^2} \frac{\partial^{2} \psi(z)}{\partial t^{2}} = \frac{\partial^{2} \psi(z)}{\partial z^{2}} (*)
+\end{equation*}
+}
+
+\end{frame}
+
+%
+%
+%
+%
+
+\begin{frame}{Reminder: Solutions of the wave equation}
+
+Similarly, the partial derivative of  $\psi(z)$ with respect to x is:
+
+\begin{equation*}
+  \frac{\partial \psi(z)}{\partial x} =
+  \frac{\partial z}{\partial x} \cdot \frac{\partial \psi(z)}{\partial z} =
+  \bigg\{ \frac{\partial}{\partial x} \Big( x - ut \Big) \bigg\} \cdot \frac{\partial \psi(z)}{\partial z} =
+  \frac{\partial \psi(z)}{\partial z}
+\end{equation*}
+
+Differentiating once again, we have:
+\begin{equation*}
+  \frac{\partial^{2} \psi(z)}{\partial x^{2}} =
+  \frac{\partial}{\partial x} \Big( \frac{\partial \psi(z)}{\partial x} \Big) =
+  \frac{\partial}{\partial x} \Big( \frac{\partial \psi(z)}{\partial z} \Big) =
+  \frac{\partial z}{\partial x} \frac{\partial}{\partial z} \Big( \frac{\partial \psi(z)}{\partial z} \Big) =
+\end{equation*}
+\begin{equation*}
+  =  \bigg\{ \frac{\partial}{\partial x} \Big( x - ut \Big) \bigg\} \frac{\partial}{\partial z} \Big( \frac{\partial \psi(z)}{\partial z} \Big) =
+   \frac{\partial^{2} \psi(z)}{\partial z^{2}} \Rightarrow
+   {\color{magenta} \frac{\partial^{2} \psi(z)}{\partial x^{2}} =  \frac{\partial^{2} \psi(z)}{\partial z^{2}} } (**)
+\end{equation*}
+
+The right-hand sides of Eqs. (*) and (**) are equal, and so are the left-hand sides:
+\begin{equation*}
+   {\color{blue} \frac{\partial^{2} \psi(z)}{\partial x^{2}} =   \frac{1}{u^2} \frac{\partial^{2} \psi(z)}{\partial t^{2}} }
+\end{equation*}
+
+Therefore,  $\psi(z) =  \psi(x-ut)$ is a solution of the wave equation.
+
+\end{frame}
+
+
+%
+%
+%
+%
+
+\begin{frame}{Reminder: Solutions of the wave equation}
+
+So, any function $\phi$ of x and t,
+{\bf where x and t appear only in the combination of x-ut},
+is a solution.
+\begin{equation*}
+  \phi(x,t) = \psi(x-ut)
+\end{equation*}
+
+\vspace{0.1cm}
+
+Can you think of {\bf another family of solutions?}\\
+
+\vspace{0.1cm}
+
+Any function $\phi$ of x and t,
+{\bf where x and t appear only in the combination of x+ut},
+is also a solution.
+\begin{equation*}
+  \phi(x,t) = \chi(x+ut)
+\end{equation*}
+
+\vspace{0.1cm}
+
+The wave equation is {\bf linear}: A superimposition of solutions is a solution.\\
+
+\vspace{0.1cm}
+
+Therefore, most general solution to the wave equation can be written as:\\
+
+\begin{equation*}
+  \phi(x,t) = \psi(x-ut) + \chi(x+ut)
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+%
+
+\begin{frame}{Reminder: Direction of wave propagation}
+
+% See the following two snapshots of a wave taken by a small time interval ${\Delta}t$ apart.
+% Imagine that at t=0, the disturbance $\phi(x,0)$ is - Draw?
+% At a later fixed time t, the disturbance is $\phi(x,t)$
+% But the disturbance is still the same, just displaced in x (because the wave has moved)
+
+What does this particular combination of variables (x-ut, x+ut) tell us about
+the direction of wave propagation?
+\begin{itemize}
+       \item $\psi(x-ut)$ describes a wave moving in the positive direction of x.
+       \item $\chi(x+ut)$ describes a wave moving in the negative direction of x.
+\end{itemize}
+
+\begin{columns}
+  \begin{column}{0.60\textwidth}
+     \begin{center}
+         \includegraphics[width=0.98\textwidth]{./images/schematics/wave_direction.png}\\
+     \end{center}
+  \end{column}
+  \begin{column}{0.40\textwidth}
+  {\scriptsize
+     Convince yourselves that the guy on the left should ride a
+     $\psi(x-ut)$ wave, not a $\chi(x+ut)$ one.
+  }
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+}% ending reminder
+
+
+%
+%
+%
+%
+
+\begin{frame}{The electric field satisfies a wave equation}
+
+Now that we have refreshed our memory on waves, let me return to my
+original question. Maxwell's equation in vacuum, in the absence of
+charges ($\rho = 0$) and currents ($\vec{j} = \vec{0}$) are shown below:
+
+     \begin{equation*}
+       \vec{\nabla} \cdot \vec{E} = 0
+     \end{equation*}
+     \begin{equation*}
+       \vec{\nabla} \times \vec{E} = - \frac{\partial \vec{B}}{\partial t}
+     \end{equation*}
+     \begin{equation*}
+       \vec{\nabla} \cdot \vec{B} = 0
+      \end{equation*}
+      \begin{equation*}
+        \vec{\nabla} \times \vec{B} = \epsilon_0 \mu_0 \frac{\partial \vec{E}}{\partial t}
+      \end{equation*}
+
+\vspace{0.4cm}
+
+{\bf A change in one field feeds the other} (even in absence of sources).\\
+
+\vspace{0.2cm}
+
+{\bf Can this interplay generate waves?}
+
+\end{frame}
+
+%
+%
+%
+%
+
+\begin{frame}{The electric field satisfies a wave equation}
+
+We will start from Faraday's law in vacuum:
+\begin{equation*}
+  \vec{\nabla} \times \vec{E} = -\frac{\partial \vec{B}}{\partial t}
+\end{equation*}
+
+We will take the curl of both sides and use identity shown below.
+Then, we will use Gauss's and Ampere's law in vacuum and in absence of sources:
+\begin{equation*}
+  \vec{\nabla} \cdot \vec{E} =
+       \cancelto{0}{\frac{\rho}{\epsilon_0}} = 0
+  \;\;\; and \;\;\;
+  \vec{\nabla} \times \vec{B} =
+        \cancelto{0}{\mu_0 \vec{j}} + \mu_0 \epsilon_0 \frac{\partial \vec{E}}{\partial t} =
+        \mu_0 \epsilon_0 \frac{\partial \vec{E}}{\partial t}
+\end{equation*}
+to substitute the resulting $\vec{\nabla} \cdot \vec{E}$  and $\vec{\nabla} \times \vec{B}$.
+
+\begin{blockminirem}{\small Mini reminder from calculus}
+{\small
+For any vector field $\vec{F}$:
+$\displaystyle \vec{\nabla} \times \Big( \vec{\nabla} \times \vec{F} \Big) = \vec{\nabla} \Big( \vec{\nabla} \vec{F} \Big) - \vec{\nabla}^{2} \vec{F}$\\
+\vspace{0.1cm}
+The {\bf curl of the curl} of a vector field is
+the {\bf gradient of the divergence} of the field minus
+the {\bf divergence of the gradient} (Laplacian) of the field.\\
+}
+\end{blockminirem}
+
+\end{frame}
+
+%
+%
+%
+%
+
+\begin{frame}{The electric field satisfies a wave equation}
+
+\begin{equation*}
+  \vec{\nabla} \times \vec{E} = -\frac{\partial \vec{B}}{\partial t} \Rightarrow
+  {\color{red} \vec{\nabla} \times} \Big( \vec{\nabla} \times \vec{E} \Big) =
+  {\color{red} \vec{\nabla} \times} \Big( -\frac{\partial \vec{B}}{\partial t} \Big) \Rightarrow
+\end{equation*}
+
+\begin{equation*}
+  \vec{\nabla} \times (\vec{\nabla} \times \vec{E}) =
+  - \vec{\nabla} \times \frac{\partial \vec{B}}{\partial t}
+  \xRightarrow{ \vec{\nabla} \times \Big( \vec{\nabla} \times \vec{F} \Big) =
+                \vec{\nabla} \Big( \vec{\nabla} \vec{F} \Big) - \vec{\nabla}^{2} \vec{F} }
+\end{equation*}
+
+\begin{equation*}
+  \vec{\nabla} \Big( \vec{\nabla} \vec{E} \Big) - \vec{\nabla}^{2} \vec{E} =
+  - \frac{\partial}{\partial t} (\vec{\nabla} \times \vec{B})
+  \xRightarrow{
+      \vec{\nabla} \vec{E} = \cancelto{0}{\frac{\rho}{\epsilon_0}} = 0
+       \;\; and \;\;
+      \vec{\nabla} \times \vec{B} =
+           \cancelto{0}{\mu_0 \vec{j}} +\mu_0 \epsilon_0 \frac{\partial \vec{E}}{\partial t} =
+           \mu_0 \epsilon_0 \frac{\partial \vec{E}}{\partial t}
+  }
+\end{equation*}
+
+\begin{equation*}
+  - \vec{\nabla}^{2} \vec{E} =
+  - \frac{\partial}{\partial t} \Big( \mu_0 \epsilon_0 \frac{\partial \vec{E}}{\partial t} \Big)
+  \Rightarrow
+  {\color{magenta}
+     \vec{\nabla}^{2} \vec{E} =
+     \mu_0 \epsilon_0 \frac{\partial^{2} \vec{E}}{\partial t^{2}}
+  }
+\end{equation*}
+
+\end{frame}
+
+
+%
+%
+%
+%
+
+\begin{frame}{The magnetic field satisfies a wave equation}
+
+The calculation for $\vec{B}$ proceeds along similar lines.\\
+\vspace{0.2cm}
+
+We will start from Ampere's law in vacuum and in absence of sources:
+\begin{equation*}
+  \vec{\nabla} \times \vec{B} =
+        \cancelto{0}{\mu_0 \vec{j}} + \mu_0 \epsilon_0 \frac{\partial \vec{E}}{\partial t} =
+        \mu_0 \epsilon_0 \frac{\partial \vec{E}}{\partial t}
+\end{equation*}
+
+We will take the curl of both sides and use identity used before.
+Then, we will use the fact that there are no magnetic monopoles and Faraday's law:
+Gauss's and Ampere's law in vacuum and in absence of sources:
+\begin{equation*}
+  \vec{\nabla} \cdot \vec{B} = 0
+  \;\;\; and \;\;\;
+  \vec{\nabla} \times \vec{E} = - \frac{\partial \vec{B}}{\partial t}
+\end{equation*}
+to substitute the resulting $\vec{\nabla} \cdot \vec{B}$  and $\vec{\nabla} \times \vec{E}$.
+
+
+\end{frame}
+
+
+%
+%
+%
+%
+
+\begin{frame}{The magnetic field satisfies a wave equation}
+
+\begin{equation*}
+  \vec{\nabla} \times \vec{B} =
+  \mu_0 \epsilon_0 \frac{\partial \vec{E}}{\partial t}
+  \Rightarrow
+  {\color{red} \vec{\nabla} \times} \Big( \vec{\nabla} \times \vec{B} \Big) =
+  {\color{red} \vec{\nabla} \times} \Big( \mu_0 \epsilon_0 \frac{\partial \vec{E}}{\partial t} \Big)
+  \Rightarrow
+\end{equation*}
+
+\begin{equation*}
+  \vec{\nabla} \times \Big( \vec{\nabla} \times \vec{B} \Big) =
+  \mu_0 \epsilon_0  \vec{\nabla} \times \frac{\partial \vec{E}}{\partial t}
+  \xRightarrow{ \vec{\nabla} \times \Big( \vec{\nabla} \times \vec{F} \Big) =
+                \vec{\nabla} \Big( \vec{\nabla} \vec{F} \Big) - \vec{\nabla}^{2} \vec{F} }
+\end{equation*}
+
+\begin{equation*}
+  \vec{\nabla} \Big( \vec{\nabla} \vec{B} \Big) - \vec{\nabla}^{2} \vec{B} =
+  \mu_0 \epsilon_0  \frac{\partial}{\partial t} \Big( \vec{\nabla} \times \vec{E} \Big)
+  \xRightarrow{ \vec{\nabla} \vec{B} = 0 \;\; and \;\;
+                \vec{\nabla} \times \vec{E} = - \frac{\partial \vec{B}}{\partial t} }
+\end{equation*}
+
+\begin{equation*}
+  - \vec{\nabla}^{2} \vec{B} =
+  \mu_0 \epsilon_0  \frac{\partial}{\partial t} \Big(  - \frac{\partial \vec{B}}{\partial t} \Big)
+  \Rightarrow
+  {\color{magenta}
+    \vec{\nabla}^{2} \vec{B} = \mu_0 \epsilon_0 \frac{\partial^{2} \vec{B}}{\partial t^{2}}
+  }
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+%
+
+\begin{frame}{A most peculiar wave!}
+
+\begin{itemize}
+
+   \item The electric and magnetic fields satisfy a wave equation.
+
+   \vspace{0.2cm}
+
+   \item Electric and magnetic field ``disturbances'' can propagate in space
+             in absence of charges or currents.
+
+   \vspace{0.2cm}
+
+   \item That disturbance {\bf can not die off}!
+             \begin{itemize}
+             {\small
+               \item A time-varying electric field generates a time-varying magnetic field.
+               \item A time-varying magnetic field generates a time-varying electric  field.
+             }
+             \end{itemize}
+             {\bf The change of one field feeds the other!}
+
+   \vspace{0.2cm}
+
+   \item An electric wave can't exist without a magnetic one (and vice versa)\\
+             They are part of the same phenomenon: {\bf electromagnetic waves}.
+
+   \vspace{0.2cm}
+
+   \item Unlike mechanical waves, electromagnetic waves {\bf don't need a medium to propagate into}!
+
+\end{itemize}
+
+\end{frame}
+
+
+%
+%
+%
+%
+
+\begin{frame}{The speed of electromagnetic waves in vacuum}
+
+$\vec{E}$ and $\vec{B}$ satisfy the following wave equations:
+
+\begin{equation*}
+  \vec{\nabla}^{2} \vec{E} = \mu_0 \epsilon_0 \frac{\partial^{2} \vec{E}}{\partial t^{2}}
+\end{equation*}
+
+\begin{equation*}
+  \vec{\nabla}^{2} \vec{B} = \mu_0 \epsilon_0 \frac{\partial^{2} \vec{B}}{\partial t^{2}}
+\end{equation*}
+
+Recall that earlier we wrote the wave equation as:
+\begin{equation*}
+   \vec{\nabla}^{2} \phi(\vec{r}, t) = \frac{1}{u^2} \frac{\partial^{2} \phi(\vec{r}, t)} {\partial t^{2}}
+\end{equation*}
+where u is the wave velocity.\\
+
+\vspace{0.2cm}
+
+Therefore the electric and magnetic waves propagate in vacuum with the
+same speed which, from above, can be identified with:
+\begin{equation*}
+  u = \frac{1}{\sqrt{\mu_0 \epsilon_0}}
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+%
+
+\begin{frame}{The speed of electromagnetic waves in vacuum}
+
+Can you confirm that $\frac{1}{\sqrt{\mu_0 \epsilon_0}}$ has velocity units?\\
+
+\vspace{0.4cm}
+
+In SI:
+\begin{itemize}
+   \item the permeability $\mu_0$ is given in $\frac{N}{A^{2}}$, while
+   \item the permitivity $\epsilon_0$ is given in $\frac{C^{2}}{N \cdot m^{2}}$.
+\end{itemize}
+
+\vspace{0.2cm}
+
+The product $\mu_0 \epsilon_0$ has units of:
+\begin{equation*}
+ \frac{\cancel{N}}{A^{2}} \cdot \frac{C^{2}}{\cancel{N} \cdot m^{2}} =
+ \frac{1}{A^{2}} \cdot \frac{C^{2}}{m^{2}} =
+ \frac{1}{\Big(\frac{C}{s}\Big)^{2}} \cdot \frac{C^{2}}{m^{2}} =
+ \frac{s^{2}}{\cancel{C^{2}}} \cdot \frac{\cancel{C^{2}}}{m^{2}} =
+ \frac{s^{2}}{m^{2}}
+\end{equation*}
+
+\vspace{0.2cm}
+
+Indeed, $\frac{1}{\sqrt{\mu_0 \epsilon_0}}$ has SI units of $\frac{m}{s}$.
+
+
+\end{frame}
+
+%
+%
+%
+%
+
+\begin{frame}{The speed of electromagnetic waves in vacuum}
+
+What is the numerical value of $\displaystyle \frac{1}{\sqrt{\mu_0 \epsilon_0}}$?
+
+\begin{equation*}
+    u =
+      \frac{1}{\sqrt{\mu_0 \epsilon_0}} =
+       \frac{1}{\sqrt{ \Big( 8.854 \cdot 10^{-12} \; \frac{N}{A} \Big) \cdot
+                              \Big( 4\pi \cdot 10^{-7} \; \frac{C}{N\cdot m} \Big)
+                            }
+                   } =
+       {\bf 299,792,458 \; m/s}
+\end{equation*}
+
+\vspace{0.2cm}
+
+\begin{columns}
+  \begin{column}{0.50\textwidth}
+    \begin{center}
+       \includegraphics[width=0.65\textwidth]{./images/misc/space_sign_speed_limit.png}\\
+    \end{center}
+  \end{column}
+  \begin{column}{0.50\textwidth}
+    \begin{center}
+       Do you recognize this number?
+    \end{center}
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+
+%
+%
+%
+%
+
+\begin{frame}{Measurements of the speed of light before Maxwell's time}
+
+At the time that Maxwell was developing his theory, the speed of light was already known.
+In fact, it was known from the late 17th century.\\
+
+\vspace{0.2cm}
+
+\begin{columns}
+  \begin{column}{0.33\textwidth}
+    \includegraphics[width=0.90\textwidth]{./images/schematics/illustration_from_1676_article_on_the_speed_of_light.jpg}\\
+  \end{column}
+  \begin{column}{0.67\textwidth}
+      In 1670's, {\bf Olaf Roemer} measured the speed of light by observing the {\bf period of the moons of Jupiter.}\\
+
+      \begin{itemize}
+      {\small
+        \item The apparent period at Earth is different than true period due to the velocity of the Earth.
+        \item The variation of the apparent period was
+                  \begin{equation*}
+                        {\Delta}T = T \cdot \frac{2u}{c}
+                  \end{equation*}
+                  where T the true period, u the velocity of the earth and c the speed of light.
+        \item This allowed the speed of light to be determined to $\sim$~30\%.\\
+      }
+      \end{itemize}
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+%
+%
+%
+%
+
+\begin{frame}{Measurements of the speed of light before Maxwell's time}
+
+And in 1848-49, a few years before Maxwell published his famous treatise,
+{\bf Hippolyte Fizeau} measured the speed of light to $\sim$5\%.\\
+
+\vspace{0.2cm}
+
+Light passes between two teeth of the rotating gear and gets reflected from a mirror.
+     If the reflected light again passes between two teeth of the rotating gear,
+     the speed of light can be calculated from the gear-mirror distance and the speed of rotation.\\
+
+\vspace{0.2cm}
+
+\begin{columns}
+  \begin{column}{0.40\textwidth}
+  {\small
+     Fizeau determined the speed of light between an intense light source and a mirror about 8 km distant.
+     The light source was interrupted by a rotating cogwheel with 720 notches
+     that could be rotated at a variable speed of up to hundreds of times a second.\\
+  }
+  \end{column}
+  \begin{column}{0.60\textwidth}
+   \begin{center}
+    \includegraphics[width=0.98\textwidth]{./images/schematics/fizeau_experiment_absolute_speed_01.png}\\
+   \end{center}
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+%
+%
+%
+%
+
+\begin{frame}{Light is an electromagnetic wave!}
+
+Maxwell (with typical British understatement) said that the result
+was {\em ``somewhat of a surprise''} !!\\
+\vspace{0.1cm}
+
+\begin{columns}
+  \begin{column}{0.40\textwidth}
+   \begin{center}
+    \includegraphics[width=0.98\textwidth]{./images/people/maxwell.jpg}\\
+     {\small
+       James Clerk Maxwell\\
+       (1831 - 1879)
+     }
+   \end{center}
+  \end{column}
+  \begin{column}{0.60\textwidth}
+  {\small
+       {\em ``I made out the equations before I had any suspicion of the nearness between
+       the two values of the velocity of propagation of magnetic effects and of light, so I think
+       I have reasons to believe that the magnetic and luminiferous media are identical''.}\\
+       \vspace{0.3cm}
+       {\em `We can scarcely avoid the inference that light consists in the transverse undulations
+       of the same medium which is the cause of electric and magnetic phenomena.}
+       (Maxwell discussed his ideas in terms of a model in which the vacuum was like an elastic solid.)
+  }
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+
+%
+%
+%
+%
+
+\begin{frame}{Light is an electromagnetic wave!}
+
+Let's just think how amazing and unexpected that was!\\
+
+\vspace{0.1cm}
+
+{\bf What was $\epsilon_0$} ? \\
+It is the constant of proportionality in Coulomb's law that, connects
+charge densities and the resulting electric field $\vec{E}$:
+\begin{equation*}
+    \vec{E} (\vec{r})= \frac{1}{4 \pi {\bf \epsilon_0}}
+       \int d\tau^{\prime} \rho(\pvec{r}') \frac{\vec{r}-\pvec{r}'}{|\vec{r}-\pvec{r}'|^3}
+\end{equation*}
+
+\vspace{0.05cm}
+
+{\bf What was $\mu_0$} ? \\
+It is the constant of proportionality in the Biot-Savart law that
+connects currents and the resulting magnetic field $\vec{B}$:
+\begin{equation*}
+   \vec{B} (\vec{r}) = \frac{{\bf \mu_0}}{4\pi}
+       \int d\tau^{\prime} \vec{j}(\pvec{r}') \times \frac{\vec{r}-\pvec{r}'}{|\vec{r}-\pvec{r}'|^3}
+\end{equation*}
+
+The fact that the speed of the speed of light is determined by these two (apparently
+unrelated to light) constants must have stunned Maxwell (or, in his
+works, it was {\em ``somewhat of a surprise''}).
+
+\end{frame}
+
+
+%
+%
+%
+%
+
+
+\begin{frame}{The electromagnetic spectrum}
+
+\begin{center}
+\includegraphics[width=0.98\textwidth]{./images/schematics/emspectrum.png}\\
+\end{center}
+
+\end{frame}
+
+
+
+%
+% Worked example
+%
+
+{
+\problemslide
+
+%
+%
+%
+%
+
+\begin{frame}{Worked example}
+
+\begin{blockexmplque}{Question}
+An electric field $\vec{E}$ is given by:
+\begin{equation*}
+  \vec{E} = E_{0} \cdot sin\Big(k \cdot  (x-ct)\Big) \cdot \hat{y}
+\end{equation*}
+where k is the propagation number.\\
+\vspace{0.3cm}
+\begin{enumerate}[(a)]
+ \item Show that it fulfils the wave equation.
+ \item Find the corresponding magnetic field.
+ \item Comment on directions and amplitudes.
+\end{enumerate}
+\end{blockexmplque}
+
+\end{frame}
+
+%
+%
+%
+%
+
+\begin{frame}{Worked example}
+
+First, we will calculate the Laplacian ($\vec{\nabla} \cdot \vec{E}$)
+of the given electric field $\vec{E}$:
+\begin{equation*}
+  \vec{E} = E_{0} sin\Big(k(x-ct)\Big) \hat{y}
+\end{equation*}
+
+We have:
+\begin{equation*}
+  \vec{\nabla}^{2} \vec{E} =
+  \frac{\partial^{2} \vec{E}} {\partial x^{2}} +
+  \cancelto{0}{\frac{\partial^{2} \vec{E}} {\partial y^{2}}} +
+  \cancelto{0}{\frac{\partial^{2} \vec{E}} {\partial z^{2}}} =
+  \frac{\partial^{2}} {\partial x^{2}} \bigg\{ E_{0} sin\Big(k(x-ct)\Big) \hat{y} \bigg\} =
+\end{equation*}
+\begin{equation*}
+     = E_{0} \bigg\{ \frac{\partial^{2}} {\partial x^{2}} sin\Big(k(x-ct)\Big) \bigg\} \hat{y} =
+        E_{0} \bigg\{ k \frac{\partial} {\partial x} cos\Big(k(x-ct)\Big) \bigg\} \hat{y} =
+\end{equation*}
+\begin{equation*}
+     = E_{0} \bigg\{ - k^2 sin\Big(k(x-ct)\Big) \bigg\} \hat{y} =
+      - k^2 \bigg\{ E_{0} sin\Big(k(x-ct)\Big) \hat{y} \bigg\} \Rightarrow
+\end{equation*}
+\begin{equation*}
+  \vec{\nabla}^{2} \vec{E} = - k^2 \vec{E}
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+%
+
+\begin{frame}{Worked example}
+
+Then, we will calculate the second-order partial derivative with respect to time
+($\partial^2 / \partial t^2$) of the given electric field $\vec{E}$:
+\begin{equation*}
+  \vec{E} = E_{0} sin\Big(k(x-ct)\Big) \hat{y}
+\end{equation*}
+
+\begin{equation*}
+  \frac{\partial^{2} \vec{E}} {\partial t^{2}} =
+  \frac{\partial^{2}} {\partial t^{2}} \bigg\{ E_{0} sin\Big(k(x-ct)\Big) \hat{y} \bigg\} =
+\end{equation*}
+\begin{equation*}
+  = E_{0} \bigg\{ \frac{\partial^{2}} {\partial t^{2}} sin\Big(k(x-ct)\Big) \bigg\} \hat{y} =
+     E_{0} \bigg\{-kc \frac{\partial} {\partial t} cos\Big(k(x-ct)\Big) \bigg\} \hat{y} =
+\end{equation*}
+\begin{equation*}
+   = E_{0} \bigg\{ - k^{2} c^{2} sin\Big(k(x-ct)\Big) \bigg\} \hat{y} =
+    - k^{2} c^{2} \bigg\{ E_{0} sin\Big(k(x-ct)\Big) \hat{y} \bigg\} \Rightarrow
+\end{equation*}
+\begin{equation*}
+  \frac{\partial^{2} \vec{E}} {\partial t^{2}} = - k^2 c^2 \vec{E}
+\end{equation*}
+
+\end{frame}
+
+
+%
+%
+%
+%
+
+\begin{frame}{Worked example}
+
+So, we found that:
+\begin{equation*}
+  \vec{\nabla}^{2} \vec{E} = - k^2 \cdot \vec{E}
+\end{equation*}
+
+and:
+\begin{equation*}
+  \frac{\partial^{2} \vec{E}} {\partial t^{2}} = - k^2 \cdot c^2 \cdot \vec{E}
+\end{equation*}
+
+Hence:
+\begin{equation*}
+  \frac{\partial^{2} \vec{E}} {\partial t^{2}} = c^2 \cdot \vec{\nabla}^{2} \vec{E}
+\end{equation*}
+
+The electric field $\displaystyle \vec{E} = E_{0} \cdot sin\Big(k \cdot (x-c \cdot t)\Big) \cdot \hat{y}$
+fullfils a wave equation with velocity c.
+
+\end{frame}
+
+
+%
+%
+%
+%
+
+\begin{frame}{Worked example}
+
+To find the corresponding magnetic field $\vec{B}$, we will use Faraday's law:
+\begin{equation*}
+  \vec{\nabla} \times \vec{E} = - \frac{\partial \vec{B}}{\partial t}
+\end{equation*}
+
+First we will calculate $\vec{\nabla} \times \vec{E}$,
+and then integrate the result over time.\\
+
+\vspace{0.2cm}
+
+We have:
+\begin{equation*}
+  \vec{\nabla} \times \vec{E} =
+   \left|
+    \begin{array}{ccc}
+      \hat{x}                     & \hat{y}                     & \hat{z} \\
+      \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+       E_{x}                      &  E_{y}                      &  E_{z} \\
+    \end{array}
+   \right| =
+   \hat{x}
+   \left|
+    \begin{array}{cc}
+      \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+       E_{y}                      &  E_{z} \\
+    \end{array}
+   \right| -
+   \hat{y}
+   \left|
+    \begin{array}{cc}
+      \frac{\partial}{\partial x} & \frac{\partial}{\partial z} \\
+       E_{x}                      &  E_{z} \\
+    \end{array}
+   \right| +
+   \hat{z}
+   \left|
+    \begin{array}{cc}
+      \frac{\partial}{\partial x} & \frac{\partial}{\partial y} \\
+       E_{x}                      &  E_{y}                      \\
+    \end{array}
+   \right| \Rightarrow
+\end{equation*}
+
+\begin{equation*}
+   \vec{\nabla} \times \vec{E} =
+   \hat{x} \cdot \Big( \frac{\partial E_{z}}{\partial y} - \frac{\partial E_{y}}{\partial z} \Big) -
+   \hat{y} \cdot \Big( \frac{\partial E_{z}}{\partial x} - \frac{\partial E_{x}}{\partial z} \Big) +
+   \hat{z} \cdot \Big( \frac{\partial E_{y}}{\partial x} - \frac{\partial E_{x}}{\partial y} \Big)
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+%
+
+\begin{frame}{Worked example}
+
+Recall that $\vec{E}$ has only a y component ($E_{x} = E_{z} = 0$),
+which has only x dependence ($E_{y} = E_{y}(x)$ with no y or z dependence).
+Therefore:
+
+\begin{equation*}
+  \vec{\nabla} \times \vec{E} =
+   \hat{x} \cdot \Big( \cancelto{0}{\frac{\partial E_{z}}{\partial y}} - \cancelto{0}{\frac{\partial E_{y}}{\partial z}} \Big) -
+   \hat{y} \cdot \Big( \cancelto{0}{\frac{\partial E_{z}}{\partial x}} - \cancelto{0}{\frac{\partial E_{x}}{\partial z}} \Big) +
+   \hat{z} \cdot \Big( \frac{\partial E_{y}}{\partial x} - \cancelto{0}{\frac{\partial E_{x}}{\partial y}} \Big) \Rightarrow
+\end{equation*}
+
+\begin{equation*}
+  \vec{\nabla} \times \vec{E} = \hat{z} \cdot\frac{\partial E_{y}}{\partial x}
+\end{equation*}
+
+The first-order partial derivative of $E_{y}(x)$ with respect to x is:
+\begin{equation*}
+  \frac{\partial E_{y}}{\partial x} =
+      \frac{\partial}{\partial x} \bigg\{ E_{0} \cdot sin\Big(k \cdot (x-c \cdot t)\Big) \bigg\} =
+      E_{0} \cdot k \cdot cos\Big(k \cdot (x-c \cdot t)\Big)
+\end{equation*}
+
+Hence:
+\begin{equation*}
+  \vec{\nabla} \times \vec{E} = \bigg\{  E_{0} \cdot k \cdot cos\Big(k \cdot (x-c \cdot t)\Big) \bigg\} \cdot \hat{z}
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+%
+
+\begin{frame}{Worked example}
+
+Substituting the previous result in Faraday's law, we have:
+\begin{equation*}
+  - \frac{\partial \vec{B}}{\partial t} = \bigg\{  E_{0} \cdot k \cdot cos\Big(k \cdot (x-c \cdot t)\Big) \bigg\} \cdot \hat{z}
+\end{equation*}
+
+Integrating over time:
+\begin{equation*}
+  \vec{B} = \bigg\{ - E_{0} \cdot k \cdot \int cos\Big(k \cdot (x-c \cdot t)\Big) dt \bigg\} \cdot \hat{z} =
+\end{equation*}
+\begin{equation*}
+   = \bigg\{ - E_{0} \cdot k \cdot \frac{sin\Big(k \cdot (x-c \cdot t)\Big)}{-k \cdot c} \bigg\} \cdot \hat{z} + \vec{C} =
+       \bigg\{ \frac{E_{0}}{c} \cdot sin\Big(k \cdot (x-c \cdot t)\Big) \bigg\} \cdot \hat{z} + \vec{C}
+\end{equation*}
+
+In the absence of currents there are no time invariant components of $\vec{B}$ ($\vec{C} = \vec{0}$) hence:
+\begin{equation*}
+  \vec{B} = \bigg\{ \frac{E_{0}}{c} \cdot sin\Big(k \cdot (x-c \cdot t)\Big) \bigg\} \cdot \hat{z}
+\end{equation*}
+
+
+\end{frame}
+
+%
+%
+%
+%
+
+\begin{frame}{Worked example}
+
+Our electric and magnetic fields are given by:
+\begin{equation*}
+   \vec{E} = \bigg\{ E_{0} \cdot sin\Big(k \cdot (x-c \cdot t)\Big) \bigg\} \cdot \hat{y}
+    \;\;\;\; and \;\;\;\;
+   \vec{B} = \bigg\{ \frac{E_{0}}{c} \cdot sin\Big(k \cdot (x-c \cdot t)\Big) \bigg\} \cdot \hat{z}
+\end{equation*}
+
+Notice that the {\bf amplitude of the magnetic field is smaller to that of the electric field
+by a factor of c}.\\
+
+\vspace{0.2cm}
+
+Also notice that:
+\begin{itemize}
+   \item the wave propagates on the x-axis,
+   \item the electric field oscillates on the y-axis, and
+   \item the magnetic field oscillates on the z-axis
+\end{itemize}
+
+Therefore the {\bf electric and magnetic fields are}:
+\begin{itemize}
+    \item {\bf perpendicular to each other}, and
+    \item {\bf perpendicular to the direction of motion}.
+\end{itemize}
+
+\end{frame}
+
+%
+%
+%
+%
+
+\begin{frame}{Worked example}
+
+\begin{center}
+\includegraphics[width=0.80\textwidth]{./images/schematics/emwave_01.jpg}\\
+\end{center}
+
+\end{frame}
+
+} % Worked example
+
+
+%
+%
+%
+%
+
+\begin{frame}{Energy carried by electromagnetic waves}
+
+We know that an e/m wave carries energy.\\
+\vspace{0.1cm}
+
+How can we express the {\bf energy transported by an e/m wave?}\\
+\vspace{0.2cm}
+
+The energy stored in the electric field is:
+\begin{equation*}
+  U_{e} = \frac{\epsilon_0}{2} \int_{\tau} d\tau |\vec{E}|^2
+\end{equation*}
+while the energy stored in the magnetic field is:
+\begin{equation*}
+  U_{m} = \frac{1}{2\mu_0} \int_{\tau} d\tau |\vec{B}|^2
+\end{equation*}
+Therefore the energy stored in an electromagnetic field is:
+\begin{equation*}
+  U_{em} = \frac{1}{2} \int_{\tau} d\tau \Big( \epsilon_0 |\vec{E}|^2 + \frac{1}{\mu_0} |\vec{B}|^2 \Big)
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+%
+
+\begin{frame}{Energy carried by electromagnetic waves}
+
+Consider fields $\vec{E}$ and $\vec{B}$ within some volume $\tau$.
+A charge q moves within that volume with velocity $\vec{u}$ and it is displaced by a short distance $d\vec{\ell}$.\\
+\vspace{0.2cm}
+The rate of change of the work W done on the charge q by the
+e/m field\\ (see Optional Reading) is given by:
+\begin{equation*}
+  \frac{dW}{dt} =
+     - {\color{magenta} \oint_{S} d\vec{S} \frac{1}{\mu_0} \Big(\vec{E} \times \vec{B} \Big) }
+     - \frac{\partial}{\partial t} \int_{\tau} d\tau  \Big( \frac{1}{2\mu_0} \vec{B}^2 + \frac{\epsilon_0}{2} \vec{E}^2 \Big)
+\end{equation*}
+
+As could be anticipated, the {\bf work done on the charge q} is related with the
+{\bf decrease of the energy stored in the e/m field} (2nd term on right).\\
+\vspace{0.2cm}
+
+The additional {\color{magenta}``surface'' term} above,
+can be interpreted as the {\em energy carried away
+from the volume $\tau$, through its surface S, by the e/m field}.\\
+\vspace{0.2cm}
+
+The above expression is known as the {\bf Poynting theorem}.
+
+
+\end{frame}
+
+
+%
+%
+%
+%
+
+\begin{frame}{The Poynting vector}
+
+We define the {\bf Poynting vector} $\vec{N}$ as:
+\begin{equation*}
+  \vec{N} = \frac{1}{\mu_0} \Big( \vec{E} \times \vec{B} \Big)
+\end{equation*}
+
+\vspace{0.3cm}
+
+It represents the {\bf energy flux density (rate energy transfer per unit area)} and it has units of $W(att)/m^2$.\\
+
+\vspace{0.3cm}
+
+Recall that the cross product $\vec{A} \times \vec{B}$ of 2 vectors $\vec{A}$ and $\vec{B}$
+is perpendicular both to $\vec{A}$ and $\vec{B}$. So, in an electromagnetic wave, the energy
+flows in a direction which is perpendicular to both the electric and magnetic field.
+
+\end{frame}
+
+%
+% Worked example
+%
+
+{
+\problemslide
+
+%
+%
+%
+%
+
+\begin{frame}{Worked example}
+
+An e/m wave is given by the time-dependent fields:
+\begin{equation*}
+  \vec{E}(\vec{r},t) = E_0 sin\Big( k(z-ct) \Big) \hat{x}
+\end{equation*}
+\begin{equation*}
+  \vec{B}(\vec{r},t) = \frac{E_0}{c} sin\Big( k(z-ct) \Big) \hat{y}
+\end{equation*}
+
+This gives the Poynting vector:
+\begin{equation*}
+  \vec{N} =
+    \frac{1}{\mu_0} \Big( \vec{E} \times \vec{B} \Big) =
+    \frac{E_0^2}{\mu_0 c} sin^{2}\Big( k(z-ct) \Big) \Big( \hat{x} \times \hat{y} \Big)
+\end{equation*}
+
+One can easily see that:
+\begin{equation*}
+  \hat{x} \times \hat{y} = \hat{z}
+\end{equation*}
+
+Therefore, the Poynting vector is:
+\begin{equation*}
+  \vec{N} =
+    \frac{E_0^2}{\mu_0 c} sin^{2}\Big( k(z-ct) \Big) \hat{z}
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+%
+
+\begin{frame}{Worked example}
+
+Therefore, the Poynting vector is:
+\begin{equation*}
+  \vec{N} =
+    \frac{E_0^2}{\mu_0 c} sin^{2}\Big( k(z-ct) \Big) \hat{z}
+\end{equation*}
+
+The above vector describes the  power transmitted by the e/m wave
+per unit area perpendicular to its propagation.
+
+The average power transmitted by the e/m wave, is given by
+the {\bf average of $\vec{N}$ over a period T}:
+\begin{equation*}
+  <\vec{N}> = \frac{1}{T} \int_{0}^{T} \vec{N} dt
+\end{equation*}
+
+\begin{equation*}
+  <\vec{N}> = \frac{1}{T} \int_{0}^{T} \Big( \frac{E_0^2}{\mu_0 c} sin^{2}\Big( k(z-ct) \Big) \hat{z} \Big) dt
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+%
+
+\begin{frame}{Worked example}
+
+\begin{equation*}
+  <\vec{N}> = \frac{1}{T} \int_{0}^{T} \Big( \frac{E_0^2}{\mu_0 c} sin^{2}\Big( k(z-ct) \Big) \hat{z} \Big) dt
+\end{equation*}
+
+\begin{equation*}
+  <\vec{N}> =  \hat{z} \frac{1}{T} \frac{E_0^2}{\mu_0 c} \int_{0}^{T} sin^{2}\Big( k(z-ct) \Big) dt
+\end{equation*}
+
+\vspace{0.2cm}
+
+The average of $sin^{2}\theta$ over a period is 1/2, therefore:
+\begin{equation*}
+  <\vec{N}> =  \hat{z} \frac{E_0^2}{2 \mu_0 c}
+\end{equation*}
+
+\end{frame}
+
+} % A worked example
+
+
+%
+%
+%
+%
+
+\begin{frame}{Radiation Pressure}
+
+E/M waves {\bf carry momentum}:
+Can {\bf exert pressure} on an object when shining on it!\\
+\vspace{0.1cm}
+
+Assume that an object
+is illuminated by radiation for a time interval ${\Delta}t$ and that
+the radiation is entirely {\bf absorbed} by the object.
+If its energy gain is ${\Delta}U$, then the magnitude of its momentum
+change ${\Delta}p$ is given by:
+\begin{equation*}
+  {\Delta}p = \frac{{\Delta}U}{c}
+  \;\;\; {\color{red} (total \; absorption)}
+\end{equation*}
+where c is the speed of light.\\
+\vspace{0.1cm}
+
+If, instead of being fully absorbed, the radiation is fully reflected back
+by the object along its original path, the momentum change of the
+object is twice  the one given above:
+\begin{equation*}
+  {\Delta}p = \frac{2{\Delta}U}{c}
+  \;\;\; {\color{red} (total \; reflection \; along \; original \; path)}
+\end{equation*}
+
+In realistic situations the momentum change is between $\frac{{\Delta}U}{c}$
+and $\frac{2{\Delta}U}{c}$.
+
+\end{frame}
+
+%
+%
+%
+%
+
+\begin{frame}{Radiation Pressure}
+
+From Newton's second law, a change in momentum is related to a force
+\begin{equation*}
+   F = \frac{{\Delta}p}{{\Delta}t}
+\end{equation*}
+
+If the radiation has intensity I (power per area, or energy per time
+per area), then over a time interval ${\Delta}t$, the energy
+intercepted by an area A is:
+\begin{equation*}
+  {\Delta}U = I A {\Delta}t
+\end{equation*}
+Therefore, the force exerted by radiation on an object is given by:
+\begin{equation*}
+  F = \frac{IA}{c}
+  \;\;\; {\color{red} (total \; absorption)}
+\end{equation*}
+\begin{equation*}
+  F = \frac{2IA}{c}
+  \;\;\; {\color{red} (total \; reflection \; along \; original \; path)}
+\end{equation*}
+
+If the radiation is partially absorbed and partially reflected, the
+exerted force will be between $\frac{IA}{c}$
+and $\frac{2IA}{c}$.
+
+\end{frame}
+
+%
+%
+%
+%
+
+\begin{frame}{Radiation Pressure}
+
+The force per unit area on an object due to radiation is the {\bf radiation
+pressure} $P_{r}$.\\
+\vspace{0.2cm}
+
+From the previous expressions, we obtain:
+\begin{equation*}
+  P_r = \frac{I}{c}
+  \;\;\; {\color{red} (total \; absorption)}
+\end{equation*}
+\begin{equation*}
+  P_r = \frac{2I}{c}
+  \;\;\; {\color{red} (total \; reflection \; along \; original \; path)}
+\end{equation*}
+
+
+\end{frame}
+
+%
+%
+%
+%
+
+\begin{frame}{Radiation Pressure}
+
+{\bf Solar sail} a form of spacecraft propulsion!
+\begin{itemize}
+{\small
+  \item Using radiation pressure from sunlight (see tomorrow's
+    workshop tasks)
+  \item See {\color{blue}https://en.wikipedia.org/wiki/Solar\_sail}
+}
+\end{itemize}
+
+\vspace{0.2cm}
+
+\begin{columns}
+  \begin{column}{0.50\textwidth}
+   \begin{center}
+         \includegraphics[width=0.90\textwidth]{./images/photos/lightsail.jpg}\\
+   \end{center}
+  \end{column}
+  \begin{column}{0.50\textwidth}
+       {\bf LighSail 2}
+      \begin{itemize}
+      {\small
+        \item Area: 32 m$^2$
+        \item Launch date: March 2017!
+        \item See {\color{blue}http://sail.planetary.org}
+      }
+      \end{itemize}
+  \end{column}
+\end{columns}
+
+\vspace{0.4cm}
+
+What if we replace sunlight with powerful directed laser beams?\\
+See: ``NASA thinks there's a way to get to Mars in three days''\\
+{\color{blue}http://phys.org/news/2016-02-nasa-mars-days.html}\\
+
+\end{frame}
+
+
+%
+%
+%
+
+\begin{frame}{Radiation Pressure}
+
+Who cares about Mars!\\
+\vspace{0.2cm}
+
+Shoot for {\bf Alpha Centauri} and its recently-discovered planet Proxima b!
+\vspace{0.2cm}
+
+See {\bf Breakthrough Starshot}:
+{\color{blue}http://breakthroughinitiatives.org/Initiative/3}\\
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+
+%
+% What to remember
+%
+
+\renewcommand{\lecturesummarytitle}{Main points to remember }
+\input{slides_lecture09_summary.tex}
+
+%
+% Plan for the next lecture
+%
+
+\begin{frame}{At the next lecture (Lecture \nextlecture)}
+
+\begin{itemize}
+\item Electromagnetic waves in matter
+\end{itemize}
+
+\end{frame}
+
+%
+% Optional reading
+%
+
+\input{slides_lecture09_optional.tex}
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
