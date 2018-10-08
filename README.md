@@ -1,11 +1,23 @@
 
 # PHYS201 Lectures
 
-My PHYS201 (Electromagnetism) lectures delivered at the University of Liverpool
+This repository includes the source code for my PHYS201 (Electromagnetism) lectures delivered at the University of Liverpool.
+PHYS201 is a second-year undergraduate module attended by about 150 students from several courses, including Physics, Mathematical Physics, Astronomy, Geology, Ocean Sciences and Medical Physics. This is a diverse group of students which spans a very broad range of abilities, interests and knowledge and individual learning needs should be respected for the design of appropriate activities and an effective learning environment. 12 2-hr lectures represent 50% of scheduled contact time, with the rest devoted to workshops.
 
 # Author
 
-Costas Andreopoulos < constantinos.andreopoulos \at cern.ch >
+Dr. Costas Andreopoulos, **FHEA**  < constantinos.andreopoulos \at cern.ch >
+
+<pre>
+ University of Liverpool          |  U.K. Research & Innovation (UKRI)
+ Faculty of Science & Engineering |  Science & Technology Facilities Council (STFC)
+ School of Physical Sciences      |  Rutherford Appleton Laboratory 
+ Department of Physics            |  Particle Physics Department
+ Oliver Lodge Lab 316             |  Harwell Oxford Campus, R1 2.89
+ Liverpool L69 7ZE, UK            |  Oxfordshire OX11 0QX, UK          
+ tel: +44-(0)1517-943201          |  tel: +44-(0)1235-445091 
+</pre>
+
 
 # Aims of the course
 
@@ -21,63 +33,34 @@ magnetic materials.
 
 # Syllabus
 
-Electric charge, Coulomb’s law, Charge density
-
-Electric field, Principle of Superposition
-
-Electric flux, Gauss’ law (integral form)
-
-Mutual potential energy of point charges, electric potential
-
-Calculating the field from the potential (gradient)
-
-Circulation, charges on conductors
-
-Gauss’ law in differential form (divergence)
-
-Circulation law in differential form (curl)
-
-Poisson’s and Laplace’s laws and solutions
-
-Electric dipole
-
-Electrostatics and conductors, method of images
-
-Gauss’ and Stokes’ theorems
-
-EMF, potential difference, electric current, current density
-
-Resistance, Ohm’s law
-
-Circuits, Kirkhhoff’s rules
-
-Capacitance, calculation of capacitance for simple cases, RC circuits
-
-Dielectrics, polarization, electric displacement field
-
-Capacitance in the presence of dielectrics, force on a dielectric
-
-Magnetism, magnetic field, Biot-Savart law
-
-Lorentz force, force between currents
-
-Charged particle motion in magnetic field, velocity filter
-
-Magnetic dipole field, Ampere’s law in integral and differential forms
-
-Maxwell’s equations in vacuum for steady conditions
-
-Vector potential
-
-Magnetic materials, magnetization, magnetic field strength
-
-Maxwell’s equations in the presence of materials for steady conditions
-
-Motion of conductors inside magnetic fields, Faraday’s and Lenz’s laws
-
-Time-varying fields, Maxwell’s equations for the most general case
-
-Derivation of electromagnetic waves from Maxwell’s equations, speed of light
-
-LCR circuits
+- Electric charge, Coulomb’s law, Charge density
+- Electric field, Principle of Superposition
+- Electric flux, Gauss’ law (integral form)
+- Mutual potential energy of point charges, electric potential
+- Calculating the field from the potential (gradient)
+- Circulation, charges on conductors
+- Gauss’ law in differential form (divergence)
+- Circulation law in differential form (curl)
+- Poisson’s and Laplace’s laws and solutions
+- Electric dipole
+- Electrostatics and conductors, method of images
+- Gauss’ and Stokes’ theorems
+- EMF, potential difference, electric current, current density
+- Resistance, Ohm’s law
+- Circuits, Kirkhhoff’s rules
+- Capacitance, calculation of capacitance for simple cases, RC circuits
+- Dielectrics, polarization, electric displacement field
+- Capacitance in the presence of dielectrics, force on a dielectric
+- Magnetism, magnetic field, Biot-Savart law
+- Lorentz force, force between currents
+- Charged particle motion in magnetic field, velocity filter
+- Magnetic dipole field, Ampere’s law in integral and differential forms
+- Maxwell’s equations in vacuum for steady conditions
+- Vector potential
+- Magnetic materials, magnetization, magnetic field strength
+- Maxwell’s equations in the presence of materials for steady conditions
+- Motion of conductors inside magnetic fields, Faraday’s and Lenz’s laws
+- Time-varying fields, Maxwell’s equations for the most general case
+- Derivation of electromagnetic waves from Maxwell’s equations, speed of light
+- LCR circuits
 
