@@ -27,24 +27,30 @@ We studied the most general case of Maxwell's equations:\\
         }\\
       \hline
       {\bf Gauss's law} &
-        $\displaystyle \oint \vec{D} d\vec{S} = \int \rho_f d\tau = Q_f$   &
-        $\displaystyle \vec{\nabla} \cdot \vec{D} = \rho_f$ \\
+        $\displaystyle \oint \vec{D} \cdot d\vec{S} =
+          \int \rho_f d\tau = Q_f$   &
+        $\displaystyle \vec{\nabla} \cdot \vec{D} =
+          \rho_f$ \\
 
       {\bf Faraday's law} &
-        $\displaystyle \oint \vec{E} d\vec{\ell} = -\frac{\partial}{\partial t} \int \vec{B} d\vec{S} \Rightarrow$ &
-        $\displaystyle \vec{\nabla} \times \vec{E} = -  \frac{\partial \vec{B}}{\partial t}$ \\
+        $\displaystyle \oint \vec{E} \cdot d\vec{\ell} =
+            -\frac{\partial}{\partial t} \int \vec{B} \cdot d\vec{S} \Rightarrow$ &
+        $\displaystyle \vec{\nabla} \times \vec{E} =
+            - \frac{\partial \vec{B}}{\partial t}$ \\
       &
-        $\displaystyle \oint \vec{E} d\vec{\ell} = -\frac{d\Phi_B}{dt}$ & \\
+        $\displaystyle \oint \vec{E} \cdot d\vec{\ell} =
+            -\frac{d\Phi_B}{dt}$ & \\
 
-      no magn. monopoles &
-        $\displaystyle  \oint \vec{B} d\vec{S} = 0$ &
+      {\bf Gauss's law} (magn.) &
+        $\displaystyle  \oint \vec{B} \cdot d\vec{S} = 0$ &
         $\displaystyle  \vec{\nabla} \cdot \vec{B} = 0$ \\
 
       {\bf Ampere's law} &
-        $\displaystyle \oint \vec{H} d\vec{\ell} = \int_{S} \Big( \vec{j} + \frac{\partial \vec{D}}{\partial t}\Big) d\vec{S} \Rightarrow$ &
+        $\displaystyle \oint \vec{H} \cdot d\vec{\ell} =
+           \int_{S} \Big( \vec{j} + \frac{\partial \vec{D}}{\partial t}\Big) \cdot d\vec{S} \Rightarrow$ &
         $\displaystyle \vec{\nabla} \times \vec{H} = \vec{j}_f + \frac{\partial \vec{D}}{\partial t}$ \\
       &
-        $\displaystyle \oint \vec{H} d\vec{\ell} = I_f + \frac{d\Phi_D}{dt}$ & \\
+        $\displaystyle \oint \vec{H} \cdot d\vec{\ell} = I_f + \frac{d\Phi_D}{dt}$ & \\
       \hline
     \end{tabular}
   \end{table}
@@ -105,6 +111,37 @@ We studied the most general case of Maxwell's equations:\\
 
 \item We also studied EM wave polarization and practical applications.
 
+\item
+We can transform unpolarized visible light into polarized light by passing
+it through a {\bf polarizing sheet}.\\
+
+\item
+If $I_0$ is the intensity of the unpolarized light,
+the intensity $I$ of the transmitted light is:
+\begin{equation*}
+  I = \frac{1}{2}I_0
+\end{equation*}
+
+\item
+If the light reaching the filter is already polarized,
+the intensity $I$ of the transmitted light is:
+\begin{equation*}
+  I = I_0 cos^2\theta
+\end{equation*}
+where $\theta$ is the angle between the electric field $\vec{E}$
+and the polarizing direction of the sheet.
+\end{itemize}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Lecture \summarizedlecture - \lecturesummarytitle (cont'd)}
+
+\begin{itemize}
+
 \item Finally, we studied the electrodynamic boundary conditions:\\
           \vspace{0.2cm}
          For the electric field:
@@ -126,42 +163,43 @@ We studied the most general case of Maxwell's equations:\\
                \item Normal incidence
                \item Oblique incidence (general case / home study)
           \end{itemize}
+      We reproduced the laws of geometric optics!
 \end{itemize}
 
 \end{frame}
 
 
+% %
+% %
+% %
 %
+% \begin{frame}{Lecture \summarizedlecture - \lecturesummarytitle (cont'd)}
 %
+% \begin{itemize}
+% {\small
+% \item Maxwell's equations in most general form (time-dependent fields in matter)
+%     \begin{itemize}
+%      {\scriptsize
+%           \item You should know both the integral and differential forms.
+%           \item You should know all variations of these equations and be able to derive
+%                     one from another (dynamic $\rightarrow$ static, matter $\rightarrow$ vacuum)
+%           \item No marks given for writing the wrong set of equations, even if they are all
+%                     similar and interconnected.\\
+%     }
+%     \end{itemize}
 %
-
-\begin{frame}{Lecture \summarizedlecture - \lecturesummarytitle (cont'd)}
-
-\begin{itemize}
-{\small
-\item Maxwell's equations in most general form (time-dependent fields in matter)
-    \begin{itemize}
-     {\scriptsize
-          \item You should know both the integral and differential forms.
-          \item You should know all variations of these equations and be able to derive
-                    one from another (dynamic $\rightarrow$ static, matter $\rightarrow$ vacuum)
-          \item No marks given for writing the wrong set of equations, even if they are all
-                    similar and interconnected.\\
-    }
-    \end{itemize}
-
-\item You should be able to show that Maxwell's equations (in vacuum or in matter) in
-          absence of sources describe EM waves
-
-\item You should know how the wave equation and the EM waves are different in vacuum and in transparent media.
-
-\item You should know how to use the complex representation of waves.
-
-\item You should know (and be able to derive) the electrodynamic boundary conditions,
-          and you should be able to use them to study reflection and transmission at normal and oblique incidence.
-
-\item You should remember the fundamental laws of geometrical optics and what is Brewster's angle.
-}
-\end{itemize}
-
-\end{frame}
+% \item You should be able to show that Maxwell's equations (in vacuum or in matter) in
+%           absence of sources describe EM waves
+%
+% \item You should know how the wave equation and the EM waves are different in vacuum and in transparent media.
+%
+% \item You should know how to use the complex representation of waves.
+%
+% \item You should know (and be able to derive) the electrodynamic boundary conditions,
+%           and you should be able to use them to study reflection and transmission at normal and oblique incidence.
+%
+% \item You should remember the fundamental laws of geometrical optics and what is Brewster's angle.
+% }
+% \end{itemize}
+%
+% \end{frame}

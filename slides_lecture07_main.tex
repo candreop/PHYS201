@@ -363,12 +363,12 @@ whereas the {\bf density of the volume current} is:
          {\scriptsize magnetization} \\
       \hline
          {\scriptsize surface charge density} &
-         $\sigma_{P} = \vec{P} \hat{n}$ &
+         $\sigma_{P} = \vec{P} \cdot \hat{n}$ &
          $j_{m}^{surf} = \vec{M} \times \hat{n}$ &
          {\scriptsize surface current density} \\
       \hline
          {\scriptsize volume charge density} &
-         $\rho_{P} = - \vec{\nabla} \vec{P}$ &
+         $\rho_{P} = - \vec{\nabla} \cdot \vec{P}$ &
          $j_{m}^{vol} = \vec{\nabla} \times \vec{M}$ &
          {\scriptsize volume current density} \\
       \hline
@@ -387,7 +387,7 @@ whereas the {\bf density of the volume current} is:
 
 Recall {\bf Ampere's law in vacuum}:
 \begin{equation*}
-  \oint_{L} \vec{B} d\vec{\ell} = \mu_0 \int_{S(L)} \vec{j} d\vec{S} \;\;
+  \oint_{L} \vec{B} \cdot d\vec{\ell} = \mu_0 \int_{S(L)} \vec{j} \cdot d\vec{S} \;\;
   {\color{blue}(integral\;form)},
   \;\;\;\;\;
   \vec{\nabla} \times \vec{B} = \mu_0 \vec{j} \;\;
@@ -426,23 +426,23 @@ Recall that we did something very similar with Gauss's law in electrostatics. \\
 
 We started from Gauss’ law in vacuum:
 \begin{equation*}
-  \vec{\nabla} \vec{E} = \frac{\rho}{\epsilon_0}
+  \vec{\nabla} \cdot \vec{E} = \frac{\rho}{\epsilon_0}
 \end{equation*}
 
 and wrote the total charge density $\rho$ as the sum of the free ($\rho_{f}$)
 and polarisation ($\rho_{P}$) charge densities:
 \begin{equation*}
-  \vec{\nabla} \vec{E} = \frac{\rho_{f} + \rho_{P}}{\epsilon_0}
+  \vec{\nabla} \cdot \vec{E} = \frac{\rho_{f} + \rho_{P}}{\epsilon_0}
 \end{equation*}
 
 The polarisation charge density $\rho_{P}$ is given, in terms of the polarisation field $\vec{P}$, by:
 \begin{equation*}
-  \rho_{P} = - \vec{\nabla}\vec{P}
+  \rho_{P} = - \vec{\nabla}\cdot\vec{P}
 \end{equation*}
 
 and, therefore, Gauss' law becomes:
 \begin{equation*}
-  \vec{\nabla} \vec{E} = \frac{\rho_{f} - \vec{\nabla}\vec{P}}{\epsilon_0}
+  \vec{\nabla} \cdot \vec{E} = \frac{\rho_{f} - \vec{\nabla} \cdot \vec{P}}{\epsilon_0}
 \end{equation*}
 
 \end{frame}
@@ -455,7 +455,7 @@ and, therefore, Gauss' law becomes:
 
 We collected all the divergences together and we obtained:
 \begin{equation*}
-  \vec{\nabla} \Big( \epsilon_0 \vec{E} + \vec{P} \Big) = \rho_{f}
+  \vec{\nabla} \cdot \Big( \epsilon_0 \vec{E} + \vec{P} \Big) = \rho_{f}
 \end{equation*}
 
 This is the differential form of Gauss's law in materials.\\
@@ -468,12 +468,12 @@ We defined the electric displacement $\vec{D}$ as:
 
 and, therefore, Gauss's law in materials was written as:
 \begin{equation*}
-  \vec{\nabla} \vec{D} = \rho_{f}
+  \vec{\nabla} \cdot \vec{D} = \rho_{f}
 \end{equation*}
 
 In integral form,  Gauss's law in materials becomes:
 \begin{equation*}
-  \oint_{S} \vec{D} d\vec{S} = \int_{\tau(S)} \rho_{f} d\tau = Q_{f}
+  \oint_{S} \vec{D} \cdot d\vec{S} = \int_{\tau(S)} \rho_{f} d\tau = Q_{f}
 \end{equation*}
 
 \end{frame}
@@ -537,7 +537,7 @@ we can write the differential form of Ampere's law in materials as:
 Using Stokes' theorem, as we have done several times in past lectures,
 we can go to the integral form of Ampere's law in materials which is:
 \begin{equation*}
-  \oint_{L} \vec{H} d\vec{\ell} = \int_{S(L)} \vec{j}_{f} d\vec{S} = I_{f}
+  \oint_{L} \vec{H} \cdot d\vec{\ell} = \int_{S(L)} \vec{j}_{f} \cdot d\vec{S} = I_{f}
 \end{equation*}
 
 \end{frame}
@@ -591,7 +591,7 @@ But let's not be confused: {\bf $\vec{B}$ and $\vec{E}$ are the fundamental quan
 \begin{frame}{Reminder: Electric susceptibility}
 
 The Gauss' law in materials is:
-$\displaystyle \vec{\nabla} \Big( \epsilon_0 \vec{E} + \vec{P} \Big) = \rho_{f}$\\
+$\displaystyle \vec{\nabla} \cdot \Big( \epsilon_0 \vec{E} + \vec{P} \Big) = \rho_{f}$\\
 
 \vspace{0.2cm}
 
@@ -607,11 +607,11 @@ For {\bf linear dielectrics} (and low intensity fields) $\chi_e$ is a
 constant that does not depend on $\vec{E}$.
 Therefore, Gauss' law can be written as:
 \begin{equation*}
-  \vec{\nabla} \Big( \epsilon_0 \vec{E} + \chi_e \epsilon_0 \vec{E} \Big) = \rho_{f} \Rightarrow
-  (1+\chi_e) \epsilon_0 \vec{\nabla} \vec{E} = \rho_{f} \Rightarrow
-  \epsilon_r \epsilon_0 \vec{\nabla} \vec{E} = \rho_{f} \Rightarrow
+  \vec{\nabla} \cdot \Big( \epsilon_0 \vec{E} + \chi_e \epsilon_0 \vec{E} \Big) = \rho_{f} \Rightarrow
+  (1+\chi_e) \epsilon_0 \vec{\nabla} \cdot \vec{E} = \rho_{f} \Rightarrow
+  \epsilon_r \epsilon_0 \vec{\nabla} \cdot \vec{E} = \rho_{f} \Rightarrow
   {\color{magenta}
-     \epsilon \vec{\nabla} \vec{E} =  \rho_{f}
+     \epsilon \vec{\nabla} \cdot \vec{E} =  \rho_{f}
   }
 \end{equation*}
 where the factor $\epsilon_r = 1+\chi_e$
@@ -697,12 +697,12 @@ $\mu = \mu_r  \mu_0$ is the {\bf permeability} of the material
          {\scriptsize magnetization} \\
       \hline
          {\scriptsize surface charge density} &
-         $\sigma_{P} = \vec{P} \hat{n}$ &
+         $\sigma_{P} = \vec{P} \cdot \hat{n}$ &
          $j_{m}^{surf} = \vec{M} \times \hat{n}$ &
          {\scriptsize surface current density} \\
       \hline
          {\scriptsize volume charge density} &
-         $\rho_{P} = - \vec{\nabla} \vec{P}$ &
+         $\rho_{P} = - \vec{\nabla} \cdot \vec{P}$ &
          $j_{m}^{vol} = \vec{\nabla} \times \vec{M}$ &
          {\scriptsize volume current density} \\
       \hline
@@ -712,13 +712,13 @@ $\mu = \mu_r  \mu_0$ is the {\bf permeability} of the material
          {\scriptsize magnetizing field} \\
       \hline
          \multirow{2}{*}{\scriptsize Gauss' law in materials} &
-         $\vec{\nabla} \vec{D} = \rho_{f}$ &
+         $\vec{\nabla} \cdot \vec{D} = \rho_{f}$ &
          $\vec{\nabla} \times \vec{H} = \vec{j}_{f}$ &
          \multirow{2}{*}{\scriptsize Ampere's law in materials} \\
       \hhline{~--~}
          &
-         $\oint_{S} \vec{D} d\vec{S} = Q_{f}$ &
-         $\oint_{L} \vec{H} d\vec{\ell} = I_{f}$ &
+         $\oint_{S} \vec{D} \cdot d\vec{S} = Q_{f}$ &
+         $\oint_{L} \vec{H} \cdot d\vec{\ell} = I_{f}$ &
          \\
       \hline
     \end{tabular}
@@ -748,19 +748,19 @@ $\mu = \mu_r  \mu_0$ is the {\bf permeability} of the material
         }\\
       \hline
       {\bf Gauss's law} &
-        $\displaystyle \oint \vec{E} d\vec{S} = \frac{1}{\epsilon_0} \int \rho d\tau = \frac{Q}{\epsilon_0}$ &
+        $\displaystyle \oint \vec{E} \cdot d\vec{S} = \frac{1}{\epsilon_0} \int \rho d\tau = \frac{Q}{\epsilon_0}$ &
         $\displaystyle \vec{\nabla} \cdot \vec{E} = \frac{\rho}{\epsilon_0}$ \\
 
       {\bf Circuital law} &
-        $\displaystyle \oint \vec{E} d\vec{\ell} = 0$ &
+        $\displaystyle \oint \vec{E} \cdot d\vec{\ell} = 0$ &
         $\displaystyle \vec{\nabla} \times \vec{E} = 0$ \\
 
-      no mag. monopoles &
-        $\displaystyle \oint \vec{B} d\vec{S} = 0$ &
+      {\bf Gauss's law} (magn.) &
+        $\displaystyle \oint \vec{B} \cdot d\vec{S} = 0$ &
         $\displaystyle \vec{\nabla} \cdot \vec{B} = 0$ \\
 
       {\bf Ampere's law} &
-        $\displaystyle \oint \vec{B} d\vec{\ell} = \mu_{0} \int \vec{j} d\vec{S} = \mu_0 I$ &
+        $\displaystyle \oint \vec{B} \cdot d\vec{\ell} = \mu_{0} \int \vec{j} \cdot d\vec{S} = \mu_0 I$ &
         $\displaystyle \vec{\nabla} \times \vec{B} = \mu_{0} \vec{j}$ \\
 
       \hline
@@ -781,19 +781,19 @@ $\mu = \mu_r  \mu_0$ is the {\bf permeability} of the material
         }\\
       \hline
       {\bf Gauss's law} &
-        $\displaystyle \oint \vec{D} d\vec{S} =  \int \rho_{f} d\tau = Q_{f}$ &
+        $\displaystyle \oint \vec{D} \cdot d\vec{S} =  \int \rho_{f} d\tau = Q_{f}$ &
         $\displaystyle \vec{\nabla} \cdot \vec{D} = \rho_{f}$ \\
 
       {\bf Circuital law} &
-        $\displaystyle \oint \vec{E} d\vec{\ell} = 0$ &
+        $\displaystyle \oint \vec{E} \cdot d\vec{\ell} = 0$ &
         $\displaystyle \vec{\nabla} \times \vec{E} = 0$ \\
 
-      no mag. monopoles &
-        $\displaystyle \oint \vec{B} d\vec{S} = 0$ &
+      {\bf Gauss's law} (magn.) &
+        $\displaystyle \oint \vec{B} \cdot d\vec{S} = 0$ &
         $\displaystyle \vec{\nabla} \cdot \vec{B} = 0$ \\
 
       {\bf Ampere's law} &
-        $\displaystyle \oint \vec{H} d\vec{\ell} =  \int \vec{j}_{f} d\vec{S} = I_{f}$ &
+        $\displaystyle \oint \vec{H} \cdot d\vec{\ell} =  \int \vec{j}_{f} \cdot d\vec{S} = I_{f}$ &
         $\displaystyle \vec{\nabla} \times \vec{H} = \vec{j}_{f}$ \\
       \hline
     \end{tabular}

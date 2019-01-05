@@ -571,9 +571,9 @@ where $\vec{F}_{31}$ ($\vec{F}_{32}$) is the force exerted on $q_3$ due to $q_1$
 \vspace{0.2cm}
 Therefore, the work that I need to do against the action of the field (i.e. against $\vec{F}_{3}$) is:
 \begin{equation*}
-  W_{prof} = \int \vec{F}_{prof} d\vec{\ell}
-           = - \int \vec{F}_{3} d\vec{\ell}
-           = - \int \vec{F}_{31} d\vec{\ell} - \int \vec{F}_{32} d\vec{\ell} \Rightarrow
+  W_{prof} = \int \vec{F}_{prof} \cdot d\vec{\ell}
+           = - \int \vec{F}_{3} \cdot d\vec{\ell}
+           = - \int \vec{F}_{31} \cdot d\vec{\ell} - \int \vec{F}_{32} \cdot d\vec{\ell} \Rightarrow
 \end{equation*}
 
 \begin{equation*}
@@ -1009,7 +1009,7 @@ so that charges 1 and 3 are positive and 2 and 4 negative:
 
 Earlier, we saw that
 \begin{equation*}
-  U = \int \vec{F} d\vec{\ell}
+  U = \int \vec{F} \cdot d\vec{\ell}
 \end{equation*}
 
 So {\bf given a force} (on all points along our trajectory)
@@ -1179,13 +1179,13 @@ Try this on your own.
 
 \begin{frame}{Circuital law for Electrostatics}
 
-As we saw earlier, the work $W = \int \vec{F} d\vec{\ell}$
+As we saw earlier, the work $W = \int \vec{F} \cdot d\vec{\ell}$
 done to move a charge from point a to b is independent of the path followed between a and b.\\
 \vspace{0.2cm}
-Since $\vec{E} = \vec{F}/Q$, the quantity $\int \vec{E} d\vec{\ell}$ is also path independent.\\
+Since $\vec{E} = \vec{F}/Q$, the quantity $\int \vec{E} \cdot d\vec{\ell}$ is also path independent.\\
 \vspace{0.2cm}
 
-It is not difficult to see that, for a closed path, $\oint \vec{E} d\vec{\ell} = 0$.\\
+It is not difficult to see that, for a closed path, $\oint \vec{E} \cdot d\vec{\ell} = 0$.\\
 \vspace{0.3cm}
 
 \begin{columns}
@@ -1196,13 +1196,13 @@ It is not difficult to see that, for a closed path, $\oint \vec{E} d\vec{\ell} =
   \end{column}
   \begin{column}{0.65\textwidth}
     \begin{equation*}
-       \int_{a\;{\color{red}along\;i}}^{b} \vec{E} d\vec{\ell} = \int_{a\;{\color{red}along\;ii}}^{b} \vec{E} d\vec{\ell} \Rightarrow
+       \int_{a\;{\color{red}along\;i}}^{b} \vec{E} \cdot d\vec{\ell} = \int_{a\;{\color{red}along\;ii}}^{b} \vec{E} \cdot d\vec{\ell} \Rightarrow
     \end{equation*}
     \begin{equation*}
-       \int_{a\;{\color{red}along\;i}}^{b} \vec{E} d\vec{\ell} = - \int_{b\;{\color{red}along\;ii}}^{a} \vec{E} d\vec{\ell} \Rightarrow
+       \int_{a\;{\color{red}along\;i}}^{b} \vec{E} \cdot d\vec{\ell} = - \int_{b\;{\color{red}along\;ii}}^{a} \vec{E} \cdot d\vec{\ell} \Rightarrow
     \end{equation*}
     \begin{equation*}
-       \oint \vec{E} d\vec{\ell} = 0
+       \oint \vec{E} \cdot d\vec{\ell} = 0
     \end{equation*}
   \end{column}
 \end{columns}
@@ -1276,7 +1276,7 @@ with the flux of the curl of the vector field $\vec{F}$ through the open surface
   \begin{column}{0.45\textwidth}
   {\Large
     \begin{equation*}
-      \oint_{C} \vec{F} d\vec{\ell} = \int_{S} (\vec{\nabla} \times \vec{F}) d\vec{S}
+      \oint_{C} \vec{F} \cdot d\vec{\ell} = \int_{S} (\vec{\nabla} \times \vec{F}) \cdot d\vec{S}
     \end{equation*}
   }
   \end{column}
@@ -1294,17 +1294,17 @@ with the flux of the curl of the vector field $\vec{F}$ through the open surface
 
 Applying the Stoke's theorem for the electric field $\vec{E}$ we have
 \begin{equation*}
-    \oint \vec{E} d\vec{\ell} = \int_{S} (\vec{\nabla} \times \vec{E}) d\vec{S}
+    \oint \vec{E} \cdot d\vec{\ell} = \int_{S} (\vec{\nabla} \times \vec{E}) \cdot d\vec{S}
 \end{equation*}
 
 But we know that for any closed path
 \begin{equation*}
-    \oint \vec{E} d\vec{\ell} = 0
+    \oint \vec{E} \cdot d\vec{\ell} = 0
 \end{equation*}
 
 Therefore
 \begin{equation*}
-    \int_{S} (\vec{\nabla} \times \vec{E}) d\vec{S} = 0
+    \int_{S} (\vec{\nabla} \times \vec{E}) \cdot d\vec{S} = 0
 \end{equation*}
 
 If the above is true for any surface S, then
@@ -1331,11 +1331,11 @@ $\vec{E}$ is a {\em special} vector field: One that has {\bf no rotation} for al
           & {\it Integral form} & {\it Differential form} \\
       \hline
       {\bf Gauss's law} &
-        $\oint \vec{E} d\vec{S} = Q_{enclosed} / \epsilon_0$ &
+        $\oint \vec{E} \cdot d\vec{S} = Q_{enclosed} / \epsilon_0$ &
         $\vec{\nabla} \cdot \vec{E} = \rho / \epsilon_0$ \\
 
       {\bf Circuital law} &
-        $\oint \vec{E} d\vec{\ell} = 0$ &
+        $\oint \vec{E} \cdot d\vec{\ell} = 0$ &
         $\vec{\nabla} \times \vec{E} = 0$ \\
       \hline
     \end{tabular}

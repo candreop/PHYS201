@@ -240,19 +240,19 @@ Notice that all 4 equations are coupled in the dynamic case.\\
         }\\
       \hline
       {\bf Gauss's law} &
-        $\displaystyle \oint \vec{E} d\vec{S} = \frac{1}{\epsilon_0} \int \rho d\tau$ &
+        $\displaystyle \oint \vec{E} \cdot d\vec{S} = \frac{1}{\epsilon_0} \int \rho d\tau$ &
         $\displaystyle \vec{\nabla} \cdot \vec{E} = \frac{\rho}{\epsilon_0}$ \\
 
       {\bf Circuital law} &
-        $\displaystyle \oint \vec{E} d\vec{\ell} = 0$ &
+        $\displaystyle \oint \vec{E} \cdot d\vec{\ell} = 0$ &
         $\displaystyle \vec{\nabla} \times \vec{E} = 0$ \\
 
-      no magn. monopoles' &
-        $\displaystyle  \oint \vec{B} d\vec{S} = 0$ &
+      {\bf Gauss's law} (magn) &
+        $\displaystyle  \oint \vec{B} \cdot d\vec{S} = 0$ &
         $\displaystyle  \vec{\nabla} \cdot \vec{B} = 0$ \\
 
       {\bf Ampere's law} &
-        $\displaystyle \oint \vec{B} d\vec{\ell} = \mu_{0} \int \vec{j} d\vec{S}$ &
+        $\displaystyle \oint \vec{B} \cdot d\vec{\ell} = \mu_{0} \int \vec{j} \cdot d\vec{S}$ &
         $\displaystyle \vec{\nabla} \times \vec{B} = \mu_{0} \vec{j}$ \\
       \hline
     \end{tabular}
@@ -273,20 +273,22 @@ Notice that all 4 equations are coupled in the dynamic case.\\
         }\\
       \hline
       {\bf Gauss's law} &
-        $\displaystyle \oint \vec{E} d\vec{S} = \frac{1}{\epsilon_0} \int \rho d\tau$ &
+        $\displaystyle \oint \vec{E} \cdot d\vec{S} = \frac{1}{\epsilon_0} \int \rho d\tau$ &
         $\displaystyle \vec{\nabla} \cdot \vec{E} = \frac{\rho}{\epsilon_0}$ \\
 
-      {\bf Circuital law} &
-        $\displaystyle \oint \vec{E} d\vec{\ell} =  -\frac{\partial}{\partial t} \int \vec{B} d\vec{S}$ &
+      {\bf Faraday's law} &
+        $\displaystyle \oint \vec{E} \cdot d\vec{\ell} =  -\frac{\partial}{\partial t} \int \vec{B} \cdot d\vec{S}$ &
         $\displaystyle \vec{\nabla} \times \vec{E} = -  \frac{\partial \vec{B}}{\partial t}$ \\
 
-      no magn. monopoles &
-        $\displaystyle  \oint \vec{B} d\vec{S} = 0$ &
+      {\bf Gauss's law} (magn) &
+        $\displaystyle  \oint \vec{B} \cdot d\vec{S} = 0$ &
         $\displaystyle  \vec{\nabla} \cdot \vec{B} = 0$ \\
 
       {\bf Ampere's law} &
-        $\displaystyle \oint \vec{B} d\vec{\ell} = \mu_{0} \int \Big( \vec{j} + \epsilon_0 \frac{\partial \vec{E}}{\partial t}\Big) d\vec{S}$ &
-        $\displaystyle \vec{\nabla} \times \vec{B} = \mu_{0} \Big( \vec{j} + \epsilon_0 \frac{\partial \vec{E}}{\partial t}\Big)$ \\
+        $\displaystyle \oint \vec{B} \cdot d\vec{\ell} =
+           \mu_{0} \int \Big( \vec{j} + \epsilon_0 \frac{\partial \vec{E}}{\partial t}\Big) \cdot d\vec{S}$ &
+        $\displaystyle \vec{\nabla} \times \vec{B} =
+           \mu_{0} \Big( \vec{j} + \epsilon_0 \frac{\partial \vec{E}}{\partial t}\Big)$ \\
       \hline
     \end{tabular}
   \end{table}
@@ -332,78 +334,78 @@ all 4 equations are coupled in the dynamic case.\\
 \end{frame}
 
 
+% %
+% %
+% %
+%
+% \begin{frame}{Maxwell's equations for the static and dynamic cases}
+%
+% {\small
+%
+% \begin{center}
+% {
+%   \begin{table}[H]
+%     \begin{tabular}{|l|c|c|}
+%       \hline
+%         \multicolumn{3}{|l|} {
+%           {\color{magenta}
+%            {\bf Static case (in vacuum)}
+%           }
+%         }\\
+%       \hline
+%       {\bf Gauss's law} &
+%         $\displaystyle \oint \vec{E} d\vec{S} = \frac{1}{\epsilon_0} \int \rho d\tau$ &
+%         $\displaystyle \vec{\nabla} \cdot \vec{E} = \frac{\rho}{\epsilon_0}$ \\
+%
+%       {\bf Circuital law} &
+%         $\displaystyle \oint \vec{E} d\vec{\ell} = 0$ &
+%         $\displaystyle \vec{\nabla} \times \vec{E} = 0$ \\
+%
+%       no magn. monopoles' &
+%         $\displaystyle  \oint \vec{B} d\vec{S} = 0$ &
+%         $\displaystyle  \vec{\nabla} \cdot \vec{B} = 0$ \\
+%
+%       {\bf Ampere's law} &
+%         $\displaystyle \oint \vec{B} d\vec{\ell} = \mu_{0} \int \vec{j} d\vec{S}$ &
+%         $\displaystyle \vec{\nabla} \times \vec{B} = \mu_{0} \vec{j}$ \\
+%       \hline
+%     \end{tabular}
+%   \end{table}
+% }
+% \end{center}
 %
 %
+% \begin{center}
+% {
+%   \begin{table}[H]
+%     \begin{tabular}{|l|c|c|}
+%       \hline
+%         \multicolumn{3}{|l|} {
+%           {\color{magenta}
+%            {\bf Generalization of above for the dynamic case (in vacuum)}
+%           }
+%         }\\
+%       \hline
+%       {\bf Gauss's law} &
+%         $\displaystyle \oint \vec{E} d\vec{S} = \frac{1}{\epsilon_0} \int \rho d\tau$ &
+%         $\displaystyle \vec{\nabla} \cdot \vec{E} = \frac{\rho}{\epsilon_0}$ \\
 %
-
-\begin{frame}{Maxwell's equations for the static and dynamic cases}
-
-{\small
-
-\begin{center}
-{
-  \begin{table}[H]
-    \begin{tabular}{|l|c|c|}
-      \hline
-        \multicolumn{3}{|l|} {
-          {\color{magenta}
-           {\bf Static case (in vacuum)}
-          }
-        }\\
-      \hline
-      {\bf Gauss's law} &
-        $\displaystyle \oint \vec{E} d\vec{S} = \frac{1}{\epsilon_0} \int \rho d\tau$ &
-        $\displaystyle \vec{\nabla} \cdot \vec{E} = \frac{\rho}{\epsilon_0}$ \\
-
-      {\bf Circuital law} &
-        $\displaystyle \oint \vec{E} d\vec{\ell} = 0$ &
-        $\displaystyle \vec{\nabla} \times \vec{E} = 0$ \\
-
-      no magn. monopoles' &
-        $\displaystyle  \oint \vec{B} d\vec{S} = 0$ &
-        $\displaystyle  \vec{\nabla} \cdot \vec{B} = 0$ \\
-
-      {\bf Ampere's law} &
-        $\displaystyle \oint \vec{B} d\vec{\ell} = \mu_{0} \int \vec{j} d\vec{S}$ &
-        $\displaystyle \vec{\nabla} \times \vec{B} = \mu_{0} \vec{j}$ \\
-      \hline
-    \end{tabular}
-  \end{table}
-}
-\end{center}
-
-
-\begin{center}
-{
-  \begin{table}[H]
-    \begin{tabular}{|l|c|c|}
-      \hline
-        \multicolumn{3}{|l|} {
-          {\color{magenta}
-           {\bf Generalization of above for the dynamic case (in vacuum)}
-          }
-        }\\
-      \hline
-      {\bf Gauss's law} &
-        $\displaystyle \oint \vec{E} d\vec{S} = \frac{1}{\epsilon_0} \int \rho d\tau$ &
-        $\displaystyle \vec{\nabla} \cdot \vec{E} = \frac{\rho}{\epsilon_0}$ \\
-
-      {\bf Circuital law} &
-        $\displaystyle \oint \vec{E} d\vec{\ell} =  -\frac{\partial}{\partial t} \int \vec{B} d\vec{S}$ &
-        $\displaystyle \vec{\nabla} \times \vec{E} = -  \frac{\partial \vec{B}}{\partial t}$ \\
-
-      no magn. monopoles &
-        $\displaystyle  \oint \vec{B} d\vec{S} = 0$ &
-        $\displaystyle  \vec{\nabla} \cdot \vec{B} = 0$ \\
-
-      {\bf Ampere's law} &
-        $\displaystyle \oint \vec{B} d\vec{\ell} = \mu_{0} \int \Big( \vec{j} + \epsilon_0 \frac{\partial \vec{E}}{\partial t}\Big) d\vec{S}$ &
-        $\displaystyle \vec{\nabla} \times \vec{B} = \mu_{0} \Big( \vec{j} + \epsilon_0 \frac{\partial \vec{E}}{\partial t}\Big)$ \\
-      \hline
-    \end{tabular}
-  \end{table}
-}
-\end{center}
-
-}
-\end{frame}
+%       {\bf Circuital law} &
+%         $\displaystyle \oint \vec{E} d\vec{\ell} =  -\frac{\partial}{\partial t} \int \vec{B} d\vec{S}$ &
+%         $\displaystyle \vec{\nabla} \times \vec{E} = -  \frac{\partial \vec{B}}{\partial t}$ \\
+%
+%       no magn. monopoles &
+%         $\displaystyle  \oint \vec{B} d\vec{S} = 0$ &
+%         $\displaystyle  \vec{\nabla} \cdot \vec{B} = 0$ \\
+%
+%       {\bf Ampere's law} &
+%         $\displaystyle \oint \vec{B} d\vec{\ell} = \mu_{0} \int \Big( \vec{j} + \epsilon_0 \frac{\partial \vec{E}}{\partial t}\Big) d\vec{S}$ &
+%         $\displaystyle \vec{\nabla} \times \vec{B} = \mu_{0} \Big( \vec{j} + \epsilon_0 \frac{\partial \vec{E}}{\partial t}\Big)$ \\
+%       \hline
+%     \end{tabular}
+%   \end{table}
+% }
+% \end{center}
+%
+% }
+% \end{frame}

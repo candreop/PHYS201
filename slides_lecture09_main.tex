@@ -71,14 +71,14 @@
   \end{column}
   \begin{column}{0.60\textwidth}
      \begin{equation*}
-       \vec{\nabla} \vec{E} = \cancelto{0}{\frac{\rho}{\epsilon_0}} \Rightarrow
-       {\color{magenta} \vec{\nabla} \vec{E} = 0 }
+       \vec{\nabla} \cdot \vec{E} = \cancelto{0}{\frac{\rho}{\epsilon_0}} \Rightarrow
+       {\color{magenta} \vec{\nabla} \cdot \vec{E} = 0 }
      \end{equation*}
      \begin{equation*}
         {\color{magenta} \vec{\nabla} \times \vec{E} = - \frac{\partial \vec{B}}{\partial t} }
      \end{equation*}
      \begin{equation*}
-        {\color{magenta} \vec{\nabla} \vec{B} = 0 }
+        {\color{magenta} \vec{\nabla} \cdot \vec{B} = 0 }
      \end{equation*}
      \begin{equation*}
        \vec{\nabla} \times \vec{B} = \cancelto{0}{\mu_0 j} + \epsilon_0 \mu_0 \frac{\partial \vec{E}}{\partial t} \Rightarrow
@@ -501,7 +501,8 @@ to substitute the resulting $\vec{\nabla} \cdot \vec{E}$  and $\vec{\nabla} \tim
 \begin{blockminirem}{\small Mini reminder from calculus}
 {\small
 For any vector field $\vec{F}$:
-$\displaystyle \vec{\nabla} \times \Big( \vec{\nabla} \times \vec{F} \Big) = \vec{\nabla} \Big( \vec{\nabla} \vec{F} \Big) - \vec{\nabla}^{2} \vec{F}$\\
+$\displaystyle \vec{\nabla} \times \Big( \vec{\nabla} \times \vec{F} \Big) =
+  \vec{\nabla} \Big( \vec{\nabla} \cdot \vec{F} \Big) - \vec{\nabla}^{2} \vec{F}$\\
 \vspace{0.1cm}
 The {\bf curl of the curl} of a vector field is
 the {\bf gradient of the divergence} of the field minus
@@ -528,14 +529,14 @@ the {\bf divergence of the gradient} (Laplacian) of the field.\\
   \vec{\nabla} \times (\vec{\nabla} \times \vec{E}) =
   - \vec{\nabla} \times \frac{\partial \vec{B}}{\partial t}
   \xRightarrow{ \vec{\nabla} \times \Big( \vec{\nabla} \times \vec{F} \Big) =
-                \vec{\nabla} \Big( \vec{\nabla} \vec{F} \Big) - \vec{\nabla}^{2} \vec{F} }
+                \vec{\nabla} \Big( \vec{\nabla} \cdot \vec{F} \Big) - \vec{\nabla}^{2} \vec{F} }
 \end{equation*}
 
 \begin{equation*}
-  \vec{\nabla} \Big( \vec{\nabla} \vec{E} \Big) - \vec{\nabla}^{2} \vec{E} =
+  \vec{\nabla} \Big( \vec{\nabla} \cdot \vec{E} \Big) - \vec{\nabla}^{2} \vec{E} =
   - \frac{\partial}{\partial t} (\vec{\nabla} \times \vec{B})
   \xRightarrow{
-      \vec{\nabla} \vec{E} = \cancelto{0}{\frac{\rho}{\epsilon_0}} = 0
+      \vec{\nabla} \cdot \vec{E} = \cancelto{0}{\frac{\rho}{\epsilon_0}} = 0
        \;\; and \;\;
       \vec{\nabla} \times \vec{B} =
            \cancelto{0}{\mu_0 \vec{j}} +\mu_0 \epsilon_0 \frac{\partial \vec{E}}{\partial t} =
@@ -607,13 +608,13 @@ to substitute the resulting $\vec{\nabla} \cdot \vec{B}$  and $\vec{\nabla} \tim
   \vec{\nabla} \times \Big( \vec{\nabla} \times \vec{B} \Big) =
   \mu_0 \epsilon_0  \vec{\nabla} \times \frac{\partial \vec{E}}{\partial t}
   \xRightarrow{ \vec{\nabla} \times \Big( \vec{\nabla} \times \vec{F} \Big) =
-                \vec{\nabla} \Big( \vec{\nabla} \vec{F} \Big) - \vec{\nabla}^{2} \vec{F} }
+                \vec{\nabla} \Big( \vec{\nabla} \cdot \vec{F} \Big) - \vec{\nabla}^{2} \vec{F} }
 \end{equation*}
 
 \begin{equation*}
-  \vec{\nabla} \Big( \vec{\nabla} \vec{B} \Big) - \vec{\nabla}^{2} \vec{B} =
+  \vec{\nabla} \Big( \vec{\nabla} \cdot \vec{B} \Big) - \vec{\nabla}^{2} \vec{B} =
   \mu_0 \epsilon_0  \frac{\partial}{\partial t} \Big( \vec{\nabla} \times \vec{E} \Big)
-  \xRightarrow{ \vec{\nabla} \vec{B} = 0 \;\; and \;\;
+  \xRightarrow{ \vec{\nabla} \cdot \vec{B} = 0 \;\; and \;\;
                 \vec{\nabla} \times \vec{E} = - \frac{\partial \vec{B}}{\partial t} }
 \end{equation*}
 
@@ -1274,7 +1275,7 @@ The rate of change of the work W done on the charge q by the
 e/m field\\ (see Optional Reading) is given by:
 \begin{equation*}
   \frac{dW}{dt} =
-     - {\color{magenta} \oint_{S} d\vec{S} \frac{1}{\mu_0} \Big(\vec{E} \times \vec{B} \Big) }
+     - {\color{magenta} \oint_{S} d\vec{S} \cdot \frac{1}{\mu_0} \Big(\vec{E} \times \vec{B} \Big) }
      - \frac{\partial}{\partial t} \int_{\tau} d\tau  \Big( \frac{1}{2\mu_0} \vec{B}^2 + \frac{\epsilon_0}{2} \vec{E}^2 \Big)
 \end{equation*}
 

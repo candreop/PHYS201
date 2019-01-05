@@ -67,11 +67,11 @@
          {\small
               \item Use Gauss' law to calculate the electric field $\vec{E}$
                         in terms of the charge Q stored in one of the conductors:
-                       $\oint_{S} \vec{E} d\vec{S} = Q/\epsilon_0$
+                       $\oint_{S} \vec{E} \cdot d\vec{S} = Q/\epsilon_0$
 
               \item Once $\vec{E}$ is known, calculate the potential
                         difference V between the two conductors as:
-                        $V := {\Delta}V = V_{+} - V_{-} = - \int_{-}^{+} \vec{E} d\vec{\ell}$
+                        $V := {\Delta}V = V_{+} - V_{-} = - \int_{-}^{+} \vec{E} \cdot d\vec{\ell}$
 
                \item From the known charge Q in the positive conductor and
                          the potential difference V between the conductors,
@@ -174,16 +174,16 @@
 
    \item  The polarisation induces surface and volume polarisation charges.
           The corresponding densities are
-          $\sigma_P = \vec{P} \cdot \hat{n}$ and $\rho_P = - \vec{\nabla} \vec{P}$
+          $\sigma_P = \vec{P} \cdot \hat{n}$ and $\rho_P = - \vec{\nabla} \cdot \vec{P}$
 
           \vspace{0.1cm}
 
     \item In the presence of dielectrics,  Gauss's law need to be generalised
           to include both free charges we also have induced polarisation charges:
           \begin{equation*}
-             \vec{\nabla} \Big( \epsilon_0 \vec{E} + \vec{P} \Big) = \rho_f
+             \vec{\nabla} \cdot \Big( \epsilon_0 \vec{E} + \vec{P} \Big) = \rho_f
               \;\;\;\; and \;\;\;\;
-              \oint  \Big( \epsilon_0 \vec{E} + \vec{P} \Big) d\vec{S} = Q_f
+              \oint  \Big( \epsilon_0 \vec{E} + \vec{P} \Big) \cdot d\vec{S} = Q_f
           \end{equation*}
           where $\rho_f$ is the free charge density and $Q_f$ the amount of free charge.
 
@@ -228,11 +228,11 @@ In vacuum (static case):
           & {\it Integral form} & {\it Differential form} \\
       \hline
       {\bf Gauss's law} &
-        $\oint \vec{E} d\vec{S} = Q_{enclosed} / \epsilon_0$ &
+        $\oint \vec{E} \cdot d\vec{S} = Q_{enclosed} / \epsilon_0$ &
         $\vec{\nabla} \cdot \vec{E} = \rho / \epsilon_0$ \\
 
       {\bf Circuital law} &
-        $\oint \vec{E} d\vec{\ell} = 0$ &
+        $\oint \vec{E} \cdot d\vec{\ell} = 0$ &
         $\vec{\nabla} \times \vec{E} = 0$ \\
       \hline
     \end{tabular}

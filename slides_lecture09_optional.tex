@@ -15,7 +15,7 @@
 We will see that the  {\em energy carried away from the volume $\tau$ by an e/m wave
 through the surface S} is given by:
 \begin{equation*}
-     \oint_{S} d\vec{S} \frac{1}{\mu_0} \Big( \vec{E} \times \vec{B} \Big)
+     \oint_{S} d\vec{S} \cdot \frac{1}{\mu_0} \Big( \vec{E} \times \vec{B} \Big)
 \end{equation*}
 
 \vspace{0.3cm}
@@ -118,7 +118,7 @@ Therefore:
 The cross-product term can be written as:
 \begin{equation*}
  \vec{E} \cdot \Big( \vec{\nabla} \times \vec{B} \Big) =
- - \vec{\nabla} \Big( \vec{E} \times \vec{B} \Big) - \vec{B} \cdot \frac{\partial \vec{B}}{\partial t}
+ - \vec{\nabla} \cdot \Big( \vec{E} \times \vec{B} \Big) - \vec{B} \cdot \frac{\partial \vec{B}}{\partial t}
 \end{equation*}
 Try to prove it at home! (Details on the next slide.)
 
@@ -131,14 +131,19 @@ Try to prove it at home! (Details on the next slide.)
 
 \begin{frame}{Further details (skip on a first read)}
 
-Starting from $\vec{\nabla} \Big( \vec{E} \times \vec{B} \Big)$, we can write using the {\em CAB-BAC} identity:
+Starting from $\vec{\nabla} \cdot \Big( \vec{E} \times \vec{B} \Big)$,
+we can write using the {\em CAB-BAC} identity:
 \begin{equation*}
- \vec{\nabla} \Big( \vec{E} \times \vec{B} \Big) = \vec{B} \Big( \vec{\nabla} \times \vec{E} \Big) - \vec{E}  \Big( \vec{\nabla} \times \vec{B} \Big)
+ \vec{\nabla} \cdot \Big( \vec{E} \times \vec{B} \Big) =
+   \vec{B} \cdot \Big( \vec{\nabla} \times \vec{E} \Big) - \vec{E} \cdot \Big( \vec{\nabla} \times \vec{B} \Big)
 \end{equation*}
 
-The $\vec{E}  \Big( \vec{\nabla} \times \vec{B} \Big)$ term is what appears in the $\vec{E} \vec{j}$ dot product. Solving for it:
+The $\vec{E} \cdot \Big( \vec{\nabla} \times \vec{B} \Big)$ term
+is what appears in the $\vec{E} \cdot \vec{j}$ dot product.\\
+Solving for it:
 \begin{equation*}
- \vec{E}  \Big( \vec{\nabla} \times \vec{B} \Big) = - \vec{\nabla} \Big( \vec{E} \times \vec{B} \Big) + \vec{B} \Big( \vec{\nabla} \times \vec{E} \Big)
+ \vec{E} \cdot \Big( \vec{\nabla} \times \vec{B} \Big) =
+   - \vec{\nabla} \cdot \Big( \vec{E} \times \vec{B} \Big) + \vec{B} \cdot \Big( \vec{\nabla} \times \vec{E} \Big)
 \end{equation*}
 
 From Faraday's law:
@@ -148,7 +153,8 @@ From Faraday's law:
 
 Therefore:
 \begin{equation*}
- \vec{E}  \Big( \vec{\nabla} \times \vec{B} \Big) = - \vec{\nabla} \Big( \vec{E} \times \vec{B} \Big) - \vec{B} \frac{\partial \vec{B}}{\partial t}
+ \vec{E} \cdot \Big( \vec{\nabla} \times \vec{B} \Big) =
+  - \vec{\nabla} \cdot \Big( \vec{E} \times \vec{B} \Big) - \vec{B} \cdot \frac{\partial \vec{B}}{\partial t}
 \end{equation*}
 
 \end{frame}
@@ -163,26 +169,26 @@ Therefore:
 
 \begin{equation*}
  \vec{E} \cdot \vec{j} =
-    - \frac{1}{\mu_0} \vec{\nabla} \Big( \vec{E} \times \vec{B} \Big)
+    - \frac{1}{\mu_0} \vec{\nabla} \cdot \Big( \vec{E} \times \vec{B} \Big)
     - \frac{1}{\mu_0} \vec{B} \cdot \frac{\partial \vec{B}}{\partial t} - \epsilon_0 \vec{E} \cdot \frac{\partial \vec{E}}{\partial t}
 \end{equation*}
 
 For a vector field $\vec{F}$, we can easily see that:
 \begin{equation*}
-  \vec{F} \cdot \frac{\partial \vec{F}}{\partial t} = \frac{1}{2} \frac{\partial \vec{F}^2}{\partial t}
+  \vec{F} \cdot \frac{\partial \vec{F}}{\partial t} = \frac{1}{2} \frac{\partial |\vec{F}|^2}{\partial t}
 \end{equation*}
 
 and, therefore:
 \begin{equation*}
  \vec{E} \cdot \vec{j} =
-    - \frac{1}{\mu_0} \vec{\nabla} \Big( \vec{E} \times \vec{B} \Big)
-    - \frac{1}{2\mu_0} \frac{\partial \vec{B}^2}{\partial t} - \frac{\epsilon_0}{2} \frac{\partial \vec{E}^2}{\partial t} \Rightarrow
+    - \frac{1}{\mu_0} \vec{\nabla} \cdot \Big( \vec{E} \times \vec{B} \Big)
+    - \frac{1}{2\mu_0} \frac{\partial |\vec{B}|^2}{\partial t} - \frac{\epsilon_0}{2} \frac{\partial |\vec{E}|^2}{\partial t} \Rightarrow
 \end{equation*}
 
 \begin{equation*}
  \vec{E} \cdot \vec{j} =
-    - \frac{1}{\mu_0} \vec{\nabla} \Big( \vec{E} \times \vec{B} \Big)
-    - \frac{\partial}{\partial t} \Big( \frac{1}{2\mu_0} \vec{B}^2 + \frac{\epsilon_0}{2} \vec{E}^2 \Big)
+    - \frac{1}{\mu_0} \vec{\nabla} \cdot \Big( \vec{E} \times \vec{B} \Big)
+    - \frac{\partial}{\partial t} \Big( \frac{1}{2\mu_0} |\vec{B}|^2 + \frac{\epsilon_0}{2} |\vec{E}|^2 \Big)
 \end{equation*}
 
 \end{frame}
@@ -199,8 +205,8 @@ The total work done per unit time is given, as we have seen, by integrating
 $\vec{E} \cdot \vec{j}$ over the whole volume $\tau$:
 \begin{equation*}
   \frac{dW}{dt} =  \int_{\tau} d\tau \vec{E} \cdot \vec{j} =
-     - \int_{\tau} d\tau \frac{1}{\mu_0} \vec{\nabla} \Big( \vec{E} \times \vec{B} \Big)
-     - \frac{\partial}{\partial t} \int_{\tau} d\tau  \Big( \frac{1}{2\mu_0} \vec{B}^2 + \frac{\epsilon_0}{2} \vec{E}^2 \Big)
+     - \int_{\tau} d\tau \frac{1}{\mu_0} \vec{\nabla} \cdot \Big( \vec{E} \times \vec{B} \Big)
+     - \frac{\partial}{\partial t} \int_{\tau} d\tau  \Big( \frac{1}{2\mu_0} |\vec{B}|^2 + \frac{\epsilon_0}{2} |\vec{E}|^2 \Big)
 \end{equation*}
 
 \vspace{0.2cm}
@@ -209,8 +215,8 @@ Using Gauss' theorem, the volume integral of the divergence of a vector field ca
 surface integral of that field:
 \begin{equation*}
   \frac{dW}{dt} =
-     - \oint_{S} d\vec{S} \frac{1}{\mu_0} \Big( \vec{E} \times \vec{B} \Big)
-     - \frac{\partial}{\partial t} \int_{\tau} d\tau  \Big( \frac{1}{2\mu_0} \vec{B}^2 + \frac{\epsilon_0}{2} \vec{E}^2 \Big)
+     - \oint_{S} d\vec{S} \cdot \frac{1}{\mu_0} \Big( \vec{E} \times \vec{B} \Big)
+     - \frac{\partial}{\partial t} \int_{\tau} d\tau  \Big( \frac{1}{2\mu_0} |\vec{B}|^2 + \frac{\epsilon_0}{2} |\vec{E}|^2 \Big)
 \end{equation*}
 
 As anticipated, the above tells you that the {\bf work done on the charge q} is, indeed, related with the
@@ -229,13 +235,13 @@ As anticipated, the above tells you that the {\bf work done on the charge q} is,
 But there is another term on the right-hand side of:
 \begin{equation*}
   \frac{dW}{dt} =
-     - \oint_{S} d\vec{S} \frac{1}{\mu_0} \Big( \vec{E} \times \vec{B} \Big)
-     - \frac{\partial}{\partial t} \int_{\tau} d\tau  \Big( \frac{1}{2\mu_0} \vec{B}^2 + \frac{\epsilon_0}{2} \vec{E}^2 \Big)
+     - \oint_{S} d\vec{S} \cdot \frac{1}{\mu_0} \Big( \vec{E} \times \vec{B} \Big)
+     - \frac{\partial}{\partial t} \int_{\tau} d\tau  \Big( \frac{1}{2\mu_0} |\vec{B}|^2 + \frac{\epsilon_0}{2} |\vec{E}|^2 \Big)
 \end{equation*}
 
 It is the surface term:
 \begin{equation*}
-     \oint_{S} d\vec{S} \frac{1}{\mu_0} \Big( \vec{E} \times \vec{B} \Big)
+     \oint_{S} d\vec{S} \cdot \frac{1}{\mu_0} \Big( \vec{E} \times \vec{B} \Big)
 \end{equation*}
 What does that term correspond to?\\
 

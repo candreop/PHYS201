@@ -191,12 +191,12 @@ $\mu = \mu_r  \mu_0$ is the {\bf permeability} of the material
          {\scriptsize magnetization} \\
       \hline
          {\scriptsize surface charge density} &
-         $\sigma_{P} = \vec{P} \hat{n}$ &
+         $\sigma_{P} = \vec{P} \cdot \hat{n}$ &
          $j_{m}^{surf} = \vec{M} \times \hat{n}$ &
          {\scriptsize surface current density} \\
       \hline
          {\scriptsize volume charge density} &
-         $\rho_{P} = - \vec{\nabla} \vec{P}$ &
+         $\rho_{P} = - \vec{\nabla} \cdot \vec{P}$ &
          $j_{m}^{vol} = \vec{\nabla} \times \vec{M}$ &
          {\scriptsize volume current density} \\
       \hline
@@ -206,13 +206,13 @@ $\mu = \mu_r  \mu_0$ is the {\bf permeability} of the material
          {\scriptsize magnetizing field} \\
       \hline
          \multirow{2}{*}{\scriptsize Gauss' law in materials} &
-         $\vec{\nabla} \vec{D} = \rho_{f}$ &
+         $\vec{\nabla} \cdot \vec{D} = \rho_{f}$ &
          $\vec{\nabla} \times \vec{H} = \vec{j}_{f}$ &
          \multirow{2}{*}{\scriptsize Ampere's law in materials} \\
       \hhline{~--~}
          &
-         $\oint_{S} \vec{D} d\vec{S} = Q_{f}$ &
-         $\oint_{L} \vec{H} d\vec{\ell} = I_{f}$ &
+         $\oint_{S} \vec{D} \cdot d\vec{S} = Q_{f}$ &
+         $\oint_{L} \vec{H} \cdot d\vec{\ell} = I_{f}$ &
          \\
       \hline
     \end{tabular}
@@ -279,19 +279,19 @@ $\mu = \mu_r  \mu_0$ is the {\bf permeability} of the material
         }\\
       \hline
       {\bf Gauss's law} &
-        $\displaystyle \oint \vec{E} d\vec{S} = \frac{1}{\epsilon_0} \int \rho d\tau$ &
+        $\displaystyle \oint \vec{E} \cdot d\vec{S} = \frac{1}{\epsilon_0} \int \rho d\tau$ &
         $\displaystyle \vec{\nabla} \cdot \vec{E} = \frac{\rho}{\epsilon_0}$ \\
 
       {\bf Circuital law} &
-        $\displaystyle \oint \vec{E} d\vec{\ell} = 0$ &
+        $\displaystyle \oint \vec{E} \cdot d\vec{\ell} = 0$ &
         $\displaystyle \vec{\nabla} \times \vec{E} = 0$ \\
 
-      no mag. monopoles &
-        $\displaystyle \oint \vec{B} d\vec{S} = 0$ &
+      {\bf Gauss's law} (magn.) &
+        $\displaystyle \oint \vec{B} \cdot d\vec{S} = 0$ &
         $\displaystyle \vec{\nabla} \cdot \vec{B} = 0$ \\
 
       {\bf Ampere's law} &
-        $\displaystyle \oint \vec{B} d\vec{\ell} = \mu_{0} \int \vec{j} d\vec{S}$ &
+        $\displaystyle \oint \vec{B} \cdot d\vec{\ell} = \mu_{0} \int \vec{j} \cdot d\vec{S}$ &
         $\displaystyle \vec{\nabla} \times \vec{B} = \mu_{0} \vec{j}$ \\
 
       \hline
@@ -312,19 +312,19 @@ $\mu = \mu_r  \mu_0$ is the {\bf permeability} of the material
         }\\
       \hline
       {\bf Gauss's law} &
-        $\displaystyle \oint \vec{D} d\vec{S} =  \int \rho_{f} d\tau$ &
+        $\displaystyle \oint \vec{D} \cdot d\vec{S} =  \int \rho_{f} d\tau$ &
         $\displaystyle \vec{\nabla} \cdot \vec{D} = \rho_{f}$ \\
 
       {\bf Circuital law} &
-        $\displaystyle \oint \vec{E} d\vec{\ell} = 0$ &
+        $\displaystyle \oint \vec{E} \cdot d\vec{\ell} = 0$ &
         $\displaystyle \vec{\nabla} \times \vec{E} = 0$ \\
 
-      no mag. monopoles &
-        $\displaystyle \oint \vec{B} d\vec{S} = 0$ &
+      {\bf Gauss's law} (magn.) &
+        $\displaystyle \oint \vec{B} \cdot d\vec{S} = 0$ &
         $\displaystyle \vec{\nabla} \cdot \vec{B} = 0$ \\
 
       {\bf Ampere's law} &
-        $\displaystyle \oint \vec{H} d\vec{\ell} =  \int \vec{j}_{f} d\vec{S}$ &
+        $\displaystyle \oint \vec{H} \cdot d\vec{\ell} =  \int \vec{j}_{f} \cdot d\vec{S}$ &
         $\displaystyle \vec{\nabla} \times \vec{H} = \vec{j}_{f}$ \\
       \hline
     \end{tabular}

@@ -155,7 +155,7 @@ is given by integrating the above result over S:
 
 We can define a {\bf current density} $\vec{j}$ as follows:
 \begin{equation*}
-  I = \int_{S} \vec{j} d\vec{S}
+  I = \int_{S} \vec{j} \cdot d\vec{S}
 \end{equation*}
 The  current density is the {\bf current per unit area  of cross-section}.\\
 
@@ -235,9 +235,9 @@ Therefore
    I = - \frac{d}{dt} \int_{\tau} \rho d\tau = - \int_{\tau} \frac{d\rho}{dt} d\tau
 \end{equation*}
 \begin{equation*}
-   I = \oint_{S} \vec{j} d\vec{S}
-     \xRightarrow{\oint_{S} \vec{F} d\vec{S} = \int_{\tau} \vec{\nabla} \vec{F} d\tau}
-   I = \int_{\tau} \vec{\nabla} \vec{j} d\tau
+   I = \oint_{S} \vec{j} \cdot d\vec{S}
+     \xRightarrow{\oint_{S} \vec{F} \cdot d\vec{S} = \int_{\tau} \vec{\nabla} \cdot \vec{F} d\tau}
+   I = \int_{\tau} \vec{\nabla} \cdot \vec{j} d\tau
 \end{equation*}
 
 \noindent\rule{2cm}{0.4pt}\\
@@ -255,12 +255,12 @@ Therefore
 
 Equating the right-hand sides of the previous two equations, we have:
 \begin{equation*}
-  \int_{\tau} \vec{\nabla} \vec{j} d\tau = - \int_{\tau} \frac{d\rho}{dt} d\tau \Rightarrow
-  \int_{\tau} \Big( \vec{\nabla} \vec{j} +\frac{d\rho}{dt} \Big) d\tau = 0
+  \int_{\tau} \vec{\nabla} \cdot \vec{j} d\tau = - \int_{\tau} \frac{d\rho}{dt} d\tau \Rightarrow
+  \int_{\tau} \Big( \vec{\nabla} \cdot \vec{j} +\frac{d\rho}{dt} \Big) d\tau = 0
 \end{equation*}
 
 \begin{equation*}
-    \vec{\nabla} \vec{j} +\frac{d\rho}{dt} = 0
+    \vec{\nabla} \cdot \vec{j} +\frac{d\rho}{dt} = 0
 \end{equation*}
 
 \vspace{0.2cm}
@@ -776,97 +776,6 @@ unless the particle is moving at a velocity that is a significant fraction of th
 
 \end{frame}
 
-
-%
-% Worked example
-%
-
-{
-\setbeamercolor {frametitle} {bg=eBG1}
-\setbeamercolor {author in head/foot} {bg=eBG1}
-\setbeamercolor {title in head/foot} {bg=eBG2}
-\setbeamercolor {date in head/foot} {bg=eBG3}
-\setbeamercolor {date in head/foot} {fg=eFG3}
-
-%
-%
-%
-
-\begin{frame}{Worked example}
-
-\begin{blockexmplque}{Question}
-
-\begin{columns}
-  \begin{column}{0.38\textwidth}
-    \begin{center}
-      \includegraphics[width=0.98\textwidth]{./images/problems/lect4_crossed_E_B_fields.png}\\
-    \end{center}
-  \end{column}
-  \begin{column}{0.62\textwidth}
-A beam of particles with charge q enters
-a region where there is a uniform electric field $\vec{E}$, of
-magnitude 80 kV/m, directed downwards.
-In the same region, perpendicular
-  \end{column}
-\end{columns}
-to  $\vec{E}$ and directed into the page is a magnetic
-field  $|\vec{B}|$ = 0.4T.
-As the particles enter that region their
-velocity is perpendicular to $\vec{E}$ and $\vec{B}$.\\
-\begin{enumerate}
-\item
- If the speed of the particles is properly chosen, the particles will
-not be deflected by these crossed electric and magnetic fields.
-What speed is selected in this case?
-\item
-If the electric field is cut off and the same magnetic field is maintained, the charged
-particles move in the magnetic field in a circular path of radius 1.14 cm. Determine the
-ratio of the electric charge to the mass of the particles.
-\end{enumerate}
-\end{blockexmplque}
-\vspace{0.4cm}
-
-\end{frame}
-
-%
-%
-%
-
-\begin{frame}{Worked example}
-
-The magnetic force is: $\displaystyle   F_m = q u B $,
-and the electric force is:  $\displaystyle  F_e = q E $\\
-\vspace{0.2cm}
-
-For no deflection:
-\begin{equation*}
-   F_m = F_e  \Rightarrow
-   quB = qE  \Rightarrow
-    u = \frac{E}{B} =
-      \frac{80 \times 10^3 \; V/m}{0.4 \; T} = 2 \times 10^5 m/s
-\end{equation*}
-
-Once the electric field is cut off,
-the particle moves in a circular path with
-the magnetic force acting as the centripetal force.
-\begin{equation*}
-   \frac{mu^2}{r} = quB  \Rightarrow
-    \frac{q}{m} = \frac{u}{Br} = \frac{E}{B^2 r}  \Rightarrow
-\end{equation*}
-
-\begin{equation*}
-   \frac{q}{m} =
-       \frac{80 \times 10^3 \; V/m}{\Big( 0.4 \; T\Big)^2 \Big( 1.14 \times 10^{-2} m\Big)} =
-       4.38 \times 10^{7} C/kg
-\end{equation*}
-
-\end{frame}
-
-
-} % Worked example
-
-
-
 %
 %
 %
@@ -1026,6 +935,97 @@ If the charged particle was entering the magnetic field at an angle with the fie
 The combination of the two motions causes a {\bf helical trajectory}.\\
 
 \end{frame}
+
+
+%
+% Worked example
+%
+
+{
+\setbeamercolor {frametitle} {bg=eBG1}
+\setbeamercolor {author in head/foot} {bg=eBG1}
+\setbeamercolor {title in head/foot} {bg=eBG2}
+\setbeamercolor {date in head/foot} {bg=eBG3}
+\setbeamercolor {date in head/foot} {fg=eFG3}
+
+%
+%
+%
+
+\begin{frame}{Worked example}
+
+\begin{blockexmplque}{Question}
+
+\begin{columns}
+  \begin{column}{0.38\textwidth}
+    \begin{center}
+      \includegraphics[width=0.98\textwidth]{./images/problems/lect4_crossed_E_B_fields.png}\\
+    \end{center}
+  \end{column}
+  \begin{column}{0.62\textwidth}
+A beam of particles with charge q enters
+a region where there is a uniform electric field $\vec{E}$, of
+magnitude 80 kV/m, directed downwards.
+In the same region, perpendicular
+  \end{column}
+\end{columns}
+to  $\vec{E}$ and directed into the page is a magnetic
+field  $|\vec{B}|$ = 0.4T.
+As the particles enter that region their
+velocity is perpendicular to $\vec{E}$ and $\vec{B}$.\\
+\begin{enumerate}
+\item
+ If the speed of the particles is properly chosen, the particles will
+not be deflected by these crossed electric and magnetic fields.
+What speed is selected in this case?
+\item
+If the electric field is cut off and the same magnetic field is maintained, the charged
+particles move in the magnetic field in a circular path of radius 1.14 cm. Determine the
+ratio of the electric charge to the mass of the particles.
+\end{enumerate}
+\end{blockexmplque}
+\vspace{0.4cm}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example}
+
+The magnetic force is: $\displaystyle   F_m = q u B $,
+and the electric force is:  $\displaystyle  F_e = q E $\\
+\vspace{0.2cm}
+
+For no deflection:
+\begin{equation*}
+   F_m = F_e  \Rightarrow
+   quB = qE  \Rightarrow
+    u = \frac{E}{B} =
+      \frac{80 \times 10^3 \; V/m}{0.4 \; T} = 2 \times 10^5 m/s
+\end{equation*}
+
+Once the electric field is cut off,
+the particle moves in a circular path with
+the magnetic force acting as the centripetal force.
+\begin{equation*}
+   \frac{mu^2}{r} = quB  \Rightarrow
+    \frac{q}{m} = \frac{u}{Br} = \frac{E}{B^2 r}  \Rightarrow
+\end{equation*}
+
+\begin{equation*}
+   \frac{q}{m} =
+       \frac{80 \times 10^3 \; V/m}{\Big( 0.4 \; T\Big)^2 \Big( 1.14 \times 10^{-2} m\Big)} =
+       4.38 \times 10^{7} C/kg
+\end{equation*}
+
+\end{frame}
+
+
+} % Worked example
+
+
 
 %
 % Worked example

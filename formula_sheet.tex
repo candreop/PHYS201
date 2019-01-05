@@ -1,0 +1,1089 @@
+\documentclass[english,11pt]{article}
+
+\usepackage{abstract}
+\renewcommand{\abstractname}{}    % clear the title
+\renewcommand{\absnamepos}{empty} % originally center
+
+\usepackage[affil-it]{authblk}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{mathtools} % \xRightarrow{text} etc
+\usepackage{cancel}    % \cancel, \cancelto{}
+\usepackage{float}     % option H in tables etc
+\usepackage{dcolumn}   % line up tabular columns on the decimal place with D{.}{.}{-1}
+\usepackage{rotating}
+\usepackage{multirow}  % \multirow
+\usepackage{hhline}    % \hhline{~--~}
+\usepackage{extarrows} % \xlongequal{}
+
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+
+% primed vector with more space between the prime and the arrow
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+
+\setlength{\oddsidemargin}{-6mm}
+\setlength{\evensidemargin}{-6mm}
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{9.0in}
+\setlength{\voffset}{-0.75in}
+
+\begin{document}
+
+\title{
+  {\bf PHYS201 (Electromagnetism)}\\
+  Formula Sheet
+}
+
+\author{
+  Professor Costas Andreopoulos
+  \thanks {
+    Electronic address: \texttt{constantinos.andreopoulos@cern.ch}
+  }
+}
+
+\affil
+{
+  University of Liverpool \& U.K. Research and Innovation, \\
+  Science and Technology Facilities Council, Rutherford Appleton Laboratory
+}
+
+\date{}
+
+\maketitle
+
+\begin{abstract}
+ % Solve the following problems during the workshop ({\bf Thursday 4 October 2018}). \\
+ % \input{instructions.tex}
+\end{abstract}
+
+\subsubsection*{\bf Coulomb's law - Force between two discrete charges $q_1$, $q_2$}
+
+  \begin{itemize}
+  {\small
+     \item The force $\vec{F}_{12}$ exerted on test charge $q_1$
+           (placed in $\vec{r}_{1}$) by charge $q_2$ (placed in $\vec{r}_{2}$) is:
+     \begin{equation*}
+       \vec{F}_{12} = \frac{1}{4\pi\epsilon_0} \frac{q_1 q_2}{|\vec{r}_{1}-\vec{r}_{2}|^{2}} \hat{r}_{12}
+       \;\;\;
+       or
+       \;\;\;
+       \vec{F}_{12} = \frac{1}{4\pi\epsilon_0} \frac{q_1 q_2}{|\vec{r}_{1}-\vec{r}_{2}|^{3}} (\vec{r}_{1}-\vec{r}_{2})
+     \end{equation*}
+     \item Note that the force $\vec{F}_{21}$ exerted on test charge $q_2$ by charge $q_1$ is:
+     \begin{equation*}
+       \vec{F}_{21} =
+          \frac{1}{4\pi\epsilon_0} \frac{q_2 q_1}{|\vec{r}_{2}-\vec{r}_{1}|^{3}} (\vec{r}_{2}-\vec{r}_{1}) =
+          \frac{1}{4\pi\epsilon_0} \frac{q_1 q_2}{|\vec{r}_{1}-\vec{r}_{2}|^{3}} (-\vec{r}_{1}+\vec{r}_{2}) =
+        - \frac{1}{4\pi\epsilon_0} \frac{q_1 q_2}{|\vec{r}_{1}-\vec{r}_{2}|^{3}} (\vec{r}_{1}-\vec{r}_{2}) =
+        - \vec{F}_{12}
+    \end{equation*}
+  }
+  \end{itemize}
+
+\subsubsection*{\bf Superposition principle - Force on charge Q due to an array of discrete charges}
+    \begin{itemize}
+    {\small
+       \item Allows the calculation of the total force on a charge Q
+             from an array of other charges $q_1$, $q_2$, ..., $q_n$
+        \begin{equation*}
+         \vec{F}_{Q} = \sum_{i=1}^{n} \frac{1}{4\pi\epsilon_0}
+            \frac{Q q_i}{|\vec{r}_{Q}-\vec{r}_{q_{i}}|^{3}} (\vec{r}_{Q}-\vec{r}_{q_{i}})
+         \end{equation*}
+       \item Total force is the vector sum of forces.
+    }
+    \end{itemize}
+
+\subsubsection*{\bf Generalization of Coulomb's law - Force on Q due to a continuous distribution of charge}
+      {\small
+         \begin{equation*}
+            \vec{F}_{Q} = \frac{Q}{4\pi\epsilon_0} \int_{\tau}
+               d\tau^{\prime} \frac{\rho({\pvec{r}'})}{|\vec{r}-\pvec{r}'|^{3}} (\vec{r}-\pvec{r}')
+         \end{equation*}
+      }
+
+\subsubsection*{\bf Electric field}
+        \begin{itemize}
+        {\small
+           \item A more fundamental way to think about electric forces in terms of a field that permeates space.
+           \item Defined the electric field $\vec{E}$
+                 as the force exerted on a test charge Q, placed in position $\vec{r}$, per unit charge.
+            \begin{equation*}
+              \vec{E}(\vec{r}) = \frac{\vec{F}_Q(\vec{r})}{Q}
+            \end{equation*}
+        }
+        \end{itemize}
+
+\subsubsection*{\bf Electric flux}
+          \begin{itemize}
+          {\small
+             \item The electric flux $\Phi_E$ is the number of field lines of the electric field $\vec{E}$
+                   flowing through a surface S
+                \begin{equation*}
+                  \Phi_E = \int_{S} \vec{E} \cdot d\vec{S}
+                \end{equation*}
+            \item On many occassions in this lecture series, we study the flux through a closed surface S
+                \begin{equation*}
+                  \Phi_E = \oint_{S} \vec{E} \cdot d\vec{S}
+                \end{equation*}
+            \item The distinction is always clear from context. When I want to empasize the difference
+                  (see section on Maxwell's equations below) I will denote the former as $\Phi^{open}_{E}$
+          }
+          \end{itemize}
+
+
+\subsubsection*{\bf Work}
+
+        \begin{itemize}
+        {\small
+          \item
+          A force is said to {\bf do work} (denoted with W) if, when it is acting on a body,
+          there is a {\bf displacement of the point of application in the direction of the force}.
+          \item
+          The work dW done by a force $\vec{F}$ displacing the point of application by $d\vec{\ell}$,
+          is given by the dot product:
+              \begin{equation*}
+                dW = \vec{F} \cdot d\vec{\ell}
+              \end{equation*}
+          \item
+          Notice that work is a {\bf scalar}.
+          \item
+          Note that {\bf a force perpendicular to the direction of motion does no work}.
+          \item
+          The {\bf work can be positive or negative}.
+          By convention, we take work to be negative if it opposes the motion, i.e. $\theta > 90^{o}$.
+          \item
+          The total work along a trajectory is given by integrating (summing up) the work done for
+          each infinitesimal displacement $d\vec{\ell}$:
+             \begin{equation*}
+                W = \int dW = \int \vec{F} \cdot d\vec{\ell}
+             \end{equation*}
+       }
+       \end{itemize}
+
+\subsubsection*{\bf Work done to assemble a system of charges
+  (equivently, electrostatic potential energy stored in the field produced by the charges)}
+
+          \begin{itemize}
+          \item System of 2 charges:
+           \begin{equation*}
+                U = \frac{q_1 q_2}{4\pi\epsilon_0} \frac{1}{|\vec{r}_{12}|}
+           \end{equation*}
+
+          \item System of 3 charges:
+           \begin{equation*}
+             U = \frac{q_1 q_2}{4\pi\epsilon_0} \frac{1}{|\vec{r}_{12}|} +
+                 \frac{q_1 q_3}{4\pi\epsilon_0} \frac{1}{|\vec{r}_{13}|} +
+                 \frac{q_2 q_3}{4\pi\epsilon_0} \frac{1}{|\vec{r}_{23}|}
+           \end{equation*}
+
+          \item System of N charges:
+           \begin{equation*}
+             U = \frac{1}{2} \sum_{i,j=1;i{\ne}j}^{N} \frac{q_i q_j}{4\pi\epsilon_0|\vec{r}_{ij}|}
+           \end{equation*}
+
+          \item Continuous charge distribution (with density $\rho$ over a volume $\tau$):
+           \begin{equation*}
+              U = \frac{1}{2} \int_{\tau} d\tau \int_{\tau^{\prime}} d\tau^{\prime}
+                  \frac{\rho(\vec{r}) \rho(\vec{r^{\prime}})}{4\pi\epsilon_0|\vec{r} - \vec{r^{\prime}}|}
+           \end{equation*}
+
+          \end{itemize}
+
+\subsubsection*{\bf Definition of electric current}
+
+An {\bf electric current is a flow of electric charge.}
+It is represented by the amount of charge passing though per unit time.
+\begin{equation*}
+  I = \frac{dQ}{dt}
+\end{equation*}
+
+\subsubsection*{\bf Current density $\vec{j}$}
+
+$\vec{j}$ represents the amount of current per unit area {\bf perpendicular} to the direction of the current.
+\begin{equation*}
+  I = \int_{S} \vec{j} \cdot d\vec{S}
+\end{equation*}
+
+\subsubsection*{\bf Microscopic view of electric current}
+
+The current density $\vec{j}$ is given by
+\begin{equation*}
+  \vec{j} = n q \vec{u}_{d}
+\end{equation*}
+where n is the density of the carriers of charge q, and $\vec{u}_{d}$ their average (drift) velocity.
+
+In general:
+\begin{equation*}
+  \vec{j} = \sigma \vec{E}
+\end{equation*}
+where $\sigma$ is the {\bf conductivity} of the material (SI unit: $1/(\Omega \cdot m)$).
+The inverse quantity $\rho = 1/\sigma$ is called {\bf resistivity}.
+
+\subsubsection*{\bf Continuity equation}
+
+Expresses local conservation of charge:
+\begin{equation*}
+    \vec{\nabla} \cdot \vec{j} +\frac{d\rho}{dt} = 0
+\end{equation*}
+
+
+\subsubsection*{\bf Electric force on a charge}
+\begin{equation*}
+  \vec{F}_{E} = q \vec{E}
+\end{equation*}
+
+\subsubsection*{\bf Magnetic force on a (moving) charge}
+\begin{equation*}
+  \vec{F}_{M} = q \vec{u} \times \vec{B}
+\end{equation*}
+
+\subsubsection*{\bf Lorentz force on a charge}
+The total force felt by a charged body in the presence of
+both electric and magnetic fields is called the {\bf Lorentz force}.
+\begin{equation*}
+  \vec{F} = q \Big( \vec{E} + \vec{u} \times \vec{B} \Big)
+\end{equation*}
+
+\subsubsection*{\bf Magnetic force on a steady current}
+\begin{equation*}
+  \vec{F}_{M} = I \int_{L} d\vec{\ell} \times \vec{B}
+\end{equation*}
+
+\subsubsection*{\bf Generalization of magnetic force on a current}
+\begin{equation*}
+  \vec{F}_{M} =  \int_{\tau} \vec{j} \times \vec{B} d\tau
+\end{equation*}
+
+
+\subsubsection*{\bf Magnetic force between two steady currents}
+At distance $\rho$, the force between two parallel straight
+conductors of length L carrying current $I_1$ and $I_2$,
+respectively, is:
+\begin{equation*}
+  F = \frac{\mu_0 I_{1} I_{2} L}{2\pi \rho}
+\end{equation*}
+The force is attractive if both currents flow in the same direction, and
+repulsive if the two currents flow in opposite directions.
+
+\subsubsection*{\bf Cyclotron motion}
+
+The equation
+\begin{equation*}
+  m u = q B r \Rightarrow
+  {\bf p = qBr}
+\end{equation*}
+where p is the particle momentum
+is known as the {\bf cyclotron formula} and describes the motion of a particle with charge q
+perpendicularly to a uniform magnetic field B.
+The particle moves in a circle of radius r.\\
+
+The period of rotation is given by:
+\begin{equation*}
+  T = \frac{2\pi r}{u} \xRightarrow{m u = q B r}
+  T = \frac{2\pi m}{q B}
+\end{equation*}
+
+\subsubsection*{\bf Biot-Savart law}
+
+Expresses $\vec{B}$ in terms of a steady current I:
+\begin{equation*}
+  \vec{B} = \int_{L} d\vec{B}
+      = \frac{\mu_0I}{4\pi} \int_{L} \frac{d\vec{\ell} \times \vec{r}}{r^3}
+\end{equation*}
+where the integral is over the elements $d\vec{\ell}$ along the conductor, and $\vec{r}$
+is the distance from $d\vec{\ell}$ to the point where we want to know the field.
+
+\subsubsection*{\bf Generalization of Biot-Savart law}
+
+\begin{equation*}
+    \vec{B} =
+      \frac{\mu_0}{4\pi} \int_{\tau^{\prime}}
+         \frac{\vec{j}(\pvec{r}') \times \vec{r}}{r^{3}} d\tau^{\prime}
+\end{equation*}
+
+
+\subsubsection*{\bf Magnetic field around an infinitely-long straight wire with current I}
+\begin{equation*}
+      |\vec{B}| = \frac{\mu_0I}{2\pi \rho}
+\end{equation*}
+where $\rho$ is the distance from the wire.
+The field is azimuthal.
+
+\subsubsection*{\bf Magnetic field inside a solenoid with n windings per unit length, each carrying current I}
+\begin{equation*}
+      |\vec{B}| = \mu_0 n I
+\end{equation*}
+The field is in the direction of the axis of the solenoid.
+
+\subsubsection*{\bf Magnetic field of a toroidal coil with N windings, each carrying current I}
+
+\begin{equation*}
+  |\vec{B}| = \left\{ \begin{array}{l}
+         0, \text{for $r < a$,} \\
+         \frac{\mu_0 N I}{2\pi r}, \text{for $a < r < b$, and} \\
+         0, \text{for $r > b$} \\
+    \end{array} \right.
+\end{equation*}
+where a (b) is the inner (outer) radius.
+
+
+\subsubsection*{\bf Wave equation}
+
+A {\bf wave equation} describes how a {\em disturbance} propagates in time.\\
+
+Let $\phi(\vec{r}, t)$ be a function that describes that disturbance as a function of position in space and time.
+Then it satisfies the following equation:
+\begin{equation*}
+   \vec{\nabla}^{2} \phi(\vec{r}, t) = \frac{1}{u^2} \frac{\partial^{2} \phi(\vec{r}, t)} {\partial t^{2}}
+\end{equation*}
+where {\bf u is the wave velocity}.\\
+
+
+\subsubsection*{\bf The electric and magnetic fields (in vacuum) satisfy a wave equation}
+
+\begin{equation*}
+  \vec{\nabla}^{2} \vec{E} = \mu_0 \epsilon_0 \frac{\partial^{2} \vec{E}}{\partial t^{2}}
+\end{equation*}
+
+\begin{equation*}
+  \vec{\nabla}^{2} \vec{B} = \mu_0 \epsilon_0 \frac{\partial^{2} \vec{B}}{\partial t^{2}}
+\end{equation*}
+
+\subsubsection*{\bf Speed of electromagnetic waves in vacuum}
+\begin{equation*}
+  c = \frac{1}{\sqrt{\mu_0 \epsilon_0}}
+\end{equation*}
+
+
+\subsubsection*{\bf The electric and magnetic fields (in matter) satisfy a wave equation}
+
+\begin{equation*}
+  \vec{\nabla}^{2} \vec{E} = \mu \epsilon \frac{\partial^{2} \vec{E}}{\partial t^{2}}
+\end{equation*}
+
+\begin{equation*}
+  \vec{\nabla}^{2} \vec{B} = \mu \epsilon \frac{\partial^{2} \vec{B}}{\partial t^{2}}
+\end{equation*}
+
+\subsubsection*{\bf Speed of electromagnetic waves in matter}
+\begin{equation*}
+  u = \frac{1}{\sqrt{\mu \epsilon}} < c
+\end{equation*}
+
+
+\subsubsection*{\bf Index of refraction of a material}
+\begin{equation*}
+  n = \frac{c}{u} =
+    \frac{\sqrt{\mu \epsilon}}{\sqrt{\mu_{0} \epsilon_{0}}} =
+    \frac{\sqrt{\epsilon_r \epsilon_0 \mu_r
+        \mu_0}}{\sqrt{\epsilon_0 \mu_0}} = \sqrt{\epsilon_r \mu_r}
+\end{equation*}
+
+
+\subsubsection*{\bf Energy stored in the electric field}
+
+\begin{equation*}
+   U_{E} = \frac{\epsilon_0}{2} \int_{all\;space} |\vec{E}(\vec{r})|^2  d\tau
+\end{equation*}
+
+The energy density (energy per unit volume) is:
+\begin{equation*}
+  u_{E} = \frac{\epsilon_0}{2} |\vec{E}(\vec{r})|^2
+\end{equation*}
+
+\subsubsection*{\bf Energy stored in the magnetic field}
+
+\begin{equation*}
+   U_{M} = \frac{1}{2\mu_{0}} \int_{all\;space} |\vec{B}(\vec{r})|^2  d\tau
+\end{equation*}
+The energy density (energy per unit volume) is:
+\begin{equation*}
+  u_{M} = \frac{1}{2\mu_{0}} |\vec{B}(\vec{r})|^2
+\end{equation*}
+
+
+\subsubsection*{\bf Energy stored in the electromagnetic field}
+
+\begin{equation*}
+   U_{EM} = U_{E} + U_{M} = \int_{all\;space} \Big(
+     \frac{\epsilon_0}{2} |\vec{E}(\vec{r})|^2 + \frac{1}{2\mu_{0}} |\vec{B}(\vec{r})|^2
+     \Big) d\tau
+\end{equation*}
+
+
+\subsubsection*{\bf Poynting theorem}
+
+\begin{equation*}
+  \frac{dW}{dt} =
+     - \oint_{S} d\vec{S} \cdot \frac{1}{\mu_0} \Big(\vec{E} \times \vec{B} \Big)
+     - \frac{\partial}{\partial t} \int_{\tau} d\tau  \Big( \frac{\epsilon_0}{2} |\vec{E}|^2 + \frac{1}{2\mu_0} |\vec{B}|^2 \Big)
+\end{equation*}
+
+
+\subsubsection*{\bf Poynting vector $\vec{N}$}
+
+\begin{equation*}
+  \vec{N} = \frac{1}{\mu_0} \Big( \vec{E} \times \vec{B} \Big)
+\end{equation*}
+It represents the {\bf energy flux density (rate energy transfer per unit area)} and it has units of $W(att)/m^2$.\\
+
+The average power transmitted by an electromagnetic wave, is given by
+the {\bf average of $\vec{N}$ over a period T}:
+\begin{equation*}
+  <\vec{N}> = \frac{1}{T} \int_{0}^{T} \vec{N} dt
+\end{equation*}
+
+
+\subsubsection*{\bf Radiation pressure}
+
+If an object is illuminated by radiation for a time interval ${\Delta}t$,
+during which it absorbs energy
+\begin{equation*}
+  {\Delta}U = IA{\Delta}t
+\end{equation*}
+where I is the intensity I (power per area, or energy per time
+per area) of the radiation, and A is the area of the object.
+\begin{itemize}
+\item
+The momentum change ${\Delta}p$ of the object is given by:
+\begin{equation*}
+    {\Delta}p = \frac{{\Delta}U}{c}
+    \;\;\; {\color{red} \small (total \; absorption)}
+    \;\;\;
+    {\Delta}p = \frac{2{\Delta}U}{c}
+    \;\;\; {\color{red} \small (total \; reflection)}
+\end{equation*}
+\item
+The radiation pressure $P_r$ exterted on the object is given by:
+\begin{equation*}
+  P_r = \frac{I}{c}
+  \;\;\; {\color{red} \small (total \; absorption)}
+  \;\;\;
+  P_r = \frac{2I}{c}
+  \;\;\; {\color{red} \small (total \; reflection)}
+\end{equation*}
+\end{itemize}
+
+\subsubsection*{\bf Boundary conditions for the electric field}
+
+\begin{equation*}
+    \epsilon_1 E_1^{\perp} = \epsilon_2 E_2^{\perp} \Rightarrow
+    D_1^{\perp} = D_2^{\perp}
+\end{equation*}
+
+\begin{equation*}
+    E_1^{\parallel} = E_2^{\parallel}
+\end{equation*}
+
+\subsubsection*{\bf Boundary conditions for the magnetic field}
+
+\begin{equation*}
+    B_1^{\perp} = B_2^{\perp}
+\end{equation*}
+
+\begin{equation*}
+    \frac{1}{\mu_1} B_1^{\parallel} = \frac{1}{\mu_2} B_2^{\parallel} \Rightarrow
+    H_1^{\parallel} = H_2^{\parallel}
+\end{equation*}
+
+
+\subsubsection*{\bf Intensity of unpolarized light passing through a polarizing sheet}
+If $I_0$ is the intensity of the unpolarized light,
+the intensity $I$ of the transmitted light is:
+\begin{equation*}
+  I = \frac{1}{2}I_0
+\end{equation*}
+
+
+\subsubsection*{\bf Intensity of polarized light passing through a polarizing sheet}
+If the light reaching the filter is already polarized,
+the intensity $I$ of the transmitted light is:
+\begin{equation*}
+  I = I_0 cos^2\theta
+\end{equation*}
+where $\theta$ is the angle between the electric field $\vec{E}$
+and the polarizing direction of the sheet.
+
+\subsubsection*{\bf Laws of geometrical optics}
+\begin{itemize}
+  \item {\bf 1$^{st}$ Law}:\\
+     The incident, reflected, and transmitted wave vectors form a plane (plane of incidence),
+     which also includes the normal to the surface.
+     \begin{equation*}
+          k_I sin\theta_I = k_R sin\theta_R = k_T sin\theta_T
+      \end{equation*}
+  \item {\bf 2$^{nd}$ Law} ({\bf Law of reflection}):\\
+     The angle of incidence is equal to the angle of reflection.
+     \begin{equation*}
+          \theta_I = \theta_R
+      \end{equation*}
+  \item {\bf 3$^{rd}$ Law} ({\bf Law of refraction} or {\bf Snell's law}):\\
+     \begin{equation*}
+          \frac{sin\theta_T}{sin\theta_I} = \frac{n_1}{n_2}
+      \end{equation*}
+\end{itemize}
+
+\subsubsection*{\bf Total internal reflection}
+As the angle of incidence increases, the angle of refraction increases.
+For some critical value $\theta_c$, the angle of refraction becomes 90$^o$.\\
+\vspace{0.1cm}
+For angles of incidence larger than $\theta_c$, such as for rays f and
+g below, there is no refracted ray and all the light is reflected;
+this effect is called {\bf total internal reflection}.\\
+\begin{equation*}
+       n_1 sin\theta_c = n_2 sin90^o \Rightarrow
+       \theta_c = sin^{-1} \frac{n_2}{n_1} \;\;\;\;\;(n_2 < n_1)
+\end{equation*}
+
+\subsubsection*{\bf Polarization by reflection / Brewster angle}
+When the light is incident at a particular incident angle, called {\bf Brewster angle}
+given by:
+\begin{equation*}
+     tan\theta_B \approx \frac{n_2}{n_1}
+ \end{equation*}
+the reflected light has only perpendicular components: It is
+{\bf fully polarized} perpendicular to the plane of incidence.
+For light incident at that angle, the reflected and refracted rays are perpendicular to each other.
+
+\subsubsection*{\bf Maxwell's equations - Static case (time-independent fields) in vacuum}
+
+{\small
+\begin{center}
+{
+  \begin{table}[H]
+    \begin{tabular}{|l|c|c|}
+      \hline
+      %   \multicolumn{3}{|l|} {
+      %     {\color{magenta}
+      %      {\bf Static case (time-independent fields) in vacuum}
+      %     }
+      %   }\\
+      % \hline
+      {\bf Gauss's law} &
+        $\Phi_{E} = \displaystyle \oint_{S} \vec{E} \cdot d\vec{S} = \frac{1}{\epsilon_0} \int_{\tau(S)} \rho d\tau = \frac{Q}{\epsilon_0}$ &
+        $\displaystyle \vec{\nabla} \cdot \vec{E} = \frac{\rho}{\epsilon_0}$ \\
+
+      {\bf Circuital law} &
+        $\displaystyle \oint_{L} \vec{E} \cdot d\vec{\ell} = 0$ &
+        $\displaystyle \vec{\nabla} \times \vec{E} = 0$ \\
+
+      {\bf Gauss's law} (magn) &
+        $\Phi_{B} = \displaystyle  \oint_{S} \vec{B} \cdot d\vec{S} = 0$ &
+        $\displaystyle  \vec{\nabla} \cdot \vec{B} = 0$ \\
+
+      {\bf Ampere's law} &
+        $\displaystyle \oint_{L} \vec{B} \cdot d\vec{\ell} = \mu_{0} \int_{S(L)} \vec{j} \cdot d\vec{S} = \mu_{0} I$ &
+        $\displaystyle \vec{\nabla} \times \vec{B} = \mu_{0} \vec{j}$ \\
+      \hline
+    \end{tabular}
+  \end{table}
+}
+\end{center}
+}%small
+
+\subsubsection*{\bf Static fields in matter -
+ Polarization (magnetization) and induced charges (currents)}
+
+In materials, macroscopic polarization induces surface and volume charges that
+contribute to the total electic field and need to be taken into account.
+Similarly, macroscopic magnetization induces surface and volume currents that
+contribute to the total magnetic field and need to be taken into account.
+The relevant expressions for the induced charges and currents are given below.
+
+{
+% \setlength{\extrarowheight}{8pt}
+% \setlength{\arraycolsep}{5pt}
+
+\begin{center}
+  \begin{table}[H]
+    \begin{tabular}{c|c||c|c}
+      \hline
+      \multicolumn{2}{c||}{\bf Electrostatics} &
+      \multicolumn{2}{c}  {\bf Magnetostatics} \\
+      \hline
+         {\scriptsize electric dipole moment} &
+         $\vec{p} = q \vec{d}$ &
+         $\vec{m} = I \vec{S}$ &
+         {\scriptsize magnetic dipole moment} \\
+      \hline
+         {\scriptsize torque within $\vec{E}$ field} &
+         $\vec{T} = \vec{p} \times \vec{E}$ &
+         $\vec{T} = \vec{m} \times \vec{B}$ &
+         {\scriptsize torque within a $\vec{B}$ field} \\
+      \hline
+         {\scriptsize polarization} &
+         $\vec{P}  = \frac{(e.d.m)}{volume}$ &
+         $\vec{M} = \frac{(m.d.m)}{volume}$ &
+         {\scriptsize magnetization} \\
+      \hline
+         {\scriptsize surface charge density} &
+         $\sigma_{P} = \vec{P} \cdot \hat{n}$ &
+         $j_{m}^{surf} = \vec{M} \times \hat{n}$ &
+         {\scriptsize surface current density} \\
+      \hline
+         {\scriptsize volume charge density} &
+         $\rho_{P} = - \vec{\nabla} \cdot \vec{P}$ &
+         $j_{m}^{vol} = \vec{\nabla} \times \vec{M}$ &
+         {\scriptsize volume current density} \\
+      % \hline
+      %    {\scriptsize electric displacement} &
+      %    $\vec{D} = \epsilon_0 \vec{E} + \vec{P}$ &
+      %    $\vec{H} = \frac{\vec{B}}{\mu_0} - \vec{M}$ &
+      %    {\scriptsize magnetizing field} \\
+      % \hline
+      %    \multirow{2}{*}{\scriptsize Gauss' law in materials} &
+      %    $\vec{\nabla} \cdot \vec{D} = \rho_{f}$ &
+      %    $\vec{\nabla} \times \vec{H} = \vec{j}_{f}$ &
+      %    \multirow{2}{*}{\scriptsize Ampere's law in materials} \\
+      % \hhline{~--~}
+      %    &
+      %    $\oint_{S} \vec{D} \cdot d\vec{S} = Q_{f}$ &
+      %    $\oint_{L} \vec{H} \cdot d\vec{\ell} = I_{f}$ &
+      %    \\
+      \hline
+    \end{tabular}
+  \end{table}
+\end{center}
+}
+
+\subsubsection*{\bf Auxiliary fields $\vec{D}$ and $\vec{H}$}
+
+The introduction of auxiliary fields $\vec{D}$ (electric displacement)
+and $\vec{H}$ (H field, or magnetizing field), given below, simplifies then
+description of electric and magnetic phenomena in materials, since they allow
+one to write Maxwell's equation only in terms of free charges and currents.
+
+Electric displacement $\vec{D}$:
+\begin{equation*}
+   \vec{D} = \epsilon_0 \vec{E} + \vec{P}
+ \end{equation*}
+
+Magnetizing field $\vec{H}$:
+\begin{equation*}
+   \vec{H} = \frac{\vec{B}}{\mu_0} - \vec{M}
+\end{equation*}
+
+
+\subsubsection*{\bf Relationship between polarization (magnetization)
+  and the electric (magnetic) field}
+
+The polarisation vector $\vec{P}$ can be expressed in terms of $\vec{E}$:
+\begin{equation*}
+  \vec{P} = \chi_e \epsilon_0 \vec{E}
+\end{equation*}
+where $\chi_e$ is the so-called {\bf electric susceptibility} (dimensionless).\\
+
+
+If the analogy between electrostatics and magnetostatics was exact,
+we would write $\vec{M}$ in terms of $\vec{B}$.
+However, this is where the analogy breaks.
+Instead we express $\vec{M}$ in terms of $\vec{H}$:
+\begin{equation*}
+  \vec{M} = \chi_{m} \vec{H}
+\end{equation*}
+where  $\chi_m$ is the {\bf magnetic susceptibility}.
+
+\subsubsection*{\bf Polarization and magnetization for linear materials}
+
+For linear dielectrics (and low intensity fields) $\chi_e$ is a
+constant that does not depend on $\vec{E}$.
+Therefore, the displacement vector $\vec{D}$ can be written as:
+\begin{equation*}
+  \vec{D} = \epsilon_0 \vec{E} + \vec{P} =
+  \epsilon_0 \vec{E} + \chi_e \epsilon_0 \vec{E} =
+  (1+\chi_e) \epsilon_0 \vec{E} = \rho_{f} =
+  \epsilon_r \epsilon_0 \vec{E} = \rho_{f} =
+  \epsilon \vec{E}
+\end{equation*}
+where the factor $\epsilon_r = 1+\chi_e$
+is the {\bf relative permittivity} or {\bf dielectric constant} (dimensionless) and
+$\epsilon = \epsilon_r  \epsilon_0$ is the {\bf permittivity} of the dielectric\\
+
+
+Similarly, for linear materials,
+$\chi_m$ is a constant independent of the value of $\vec{H}$.
+Expressing $\vec{B}$ in terms of $\vec{H}$:
+\begin{equation*}
+  \vec{H} = \frac{\vec{B}}{\mu_0} - \vec{M} \Rightarrow
+  \vec{B} = \mu_0 \Big( \vec{H} + \vec{M} \Big) \xRightarrow{\vec{M} = \chi_{m} \vec{H}}
+  \vec{B} = \Big(1 + \chi_{m} \Big) \mu_0  \vec{H} \Rightarrow
+\end{equation*}
+\begin{equation*}
+  \vec{B} = \mu_r \mu_0 \vec{H} \Rightarrow
+  \vec{B} = \mu \vec{H}
+\end{equation*}
+where $\mu_r = 1+\chi_{\mu}$
+is the {\bf relative permeability} (dimensionless) and
+$\mu = \mu_r  \mu_0$ is the {\bf permeability} of the material
+
+
+\subsubsection*{\bf Maxwell's equations - Static case (time-independent fields) in matter}
+
+{\small
+\begin{center}
+  \begin{table}[H]
+    \begin{tabular}{|l|c|c|}
+      % \hline
+      %   \multicolumn{3}{|l|} {
+      %     {\color{magenta}
+      %      {\bf Static case (time-independent fields) in matter}
+      %     }
+      %   }\\
+      \hline
+      {\bf Gauss's law} &
+        $\Phi_{D} = \displaystyle \oint_{S} \vec{D} \cdot d\vec{S} =  \int_{\tau(S)} \rho_{free} d\tau = Q_{free}$ &
+        $\displaystyle \vec{\nabla} \cdot \vec{D} = \rho_{free}$ \\
+
+      {\bf Circuital law} &
+        $\displaystyle \oint_{L} \vec{E} \cdot d\vec{\ell} = 0$ &
+        $\displaystyle \vec{\nabla} \times \vec{E} = 0$ \\
+
+      {\bf Gauss's law} (magn.) &
+        $\Phi_{B} = \displaystyle \oint_{S} \vec{B} \cdot d\vec{S} = 0$ &
+        $\displaystyle \vec{\nabla} \cdot \vec{B} = 0$ \\
+
+      {\bf Ampere's law} &
+        $\displaystyle \oint_{L} \vec{H} \cdot d\vec{\ell} =  \int_{S(L)} \vec{j}_{free} \cdot d\vec{S} = I_{free}$ &
+        $\displaystyle \vec{\nabla} \times \vec{H} = \vec{j}_{free}$ \\
+      \hline
+    \end{tabular}
+  \end{table}
+\end{center}
+}
+
+\subsubsection*{\bf Maxwell's equations - Static case (time-dependent fields) in vacuum}
+
+{\small
+\begin{center}
+{
+  \begin{table}[H]
+    \begin{tabular}{|l|c|c|}
+      % \hline
+      %   \multicolumn{3}{|l|} {
+      %     {\color{magenta}
+      %      {\bf Dynamic case (time-dependent fields) in vacuum}
+      %     }
+      %   }\\
+      \hline
+      {\bf Gauss's law} &
+        $\Phi_{E} = \displaystyle \oint_{S} \vec{E} \cdot d\vec{S} = \frac{1}{\epsilon_0} \int_{\tau(S)} \rho d\tau = \frac{Q}{\epsilon_0}$ &
+        $\displaystyle \vec{\nabla} \cdot \vec{E} = \frac{\rho}{\epsilon_0}$ \\
+
+      {\bf Faraday's law} &
+        $\displaystyle \oint_{L} \vec{E} \cdot d\vec{\ell} =
+           -\frac{\partial}{\partial t} \int_{S(L)} \vec{B} \cdot d\vec{S} = -\frac{\partial\Phi^{open}_{B}}{\partial t}$ &
+        $\displaystyle \vec{\nabla} \times \vec{E} = -  \frac{\partial \vec{B}}{\partial t}$ \\
+
+      {\bf Gauss's law} (magn) &
+        $\Phi_{B} = \displaystyle \oint_{S} \vec{B} \cdot d\vec{S} = 0$ &
+        $\displaystyle \vec{\nabla} \cdot \vec{B} = 0$ \\
+
+      {\bf Ampere's law} &
+        $\displaystyle \oint_{L} \vec{B} \cdot d\vec{\ell} =
+           \mu_{0} \int_{S(L)} \Big( \vec{j} + \epsilon_0 \frac{\partial \vec{E}}{\partial t}\Big) \cdot d\vec{S}$ &
+        $\displaystyle \vec{\nabla} \times \vec{B} =
+           \mu_{0} \Big( \vec{j} + \epsilon_0 \frac{\partial \vec{E}}{\partial t}\Big)$ \\
+      \hline
+    \end{tabular}
+  \end{table}
+}
+\end{center}
+} %small
+
+
+\subsubsection*{\bf Maxwell's equations - Static case (time-dependent fields) in matter}
+
+{\small
+ \begin{center}
+ {
+  \begin{table}[H]
+    \begin{tabular}{|l|c|c|}
+      % \hline
+      %   \multicolumn{3}{|l|} {
+      %     {\color{magenta}
+      %      {\bf Dynamic case (time-dependent fields) in matter}
+      %     }
+      %   }\\
+      \hline
+      {\bf Gauss's law} &
+        $\Phi_{D} = \displaystyle \oint_{S} \vec{D} \cdot d\vec{S} =
+          \int_{\tau(S)} \rho_{free} d\tau = Q_{free}$   &
+        $\displaystyle \vec{\nabla} \cdot \vec{D} =
+          \rho_{free}$ \\
+
+      {\bf Faraday's law} &
+        $\displaystyle \oint_{L} \vec{E} \cdot d\vec{\ell} =
+            -\frac{\partial}{\partial t} \int_{S(L)} \vec{B} \cdot d\vec{S} = -\frac{d\Phi^{open}_{B}}{dt}$ &
+        $\displaystyle \vec{\nabla} \times \vec{E} =
+            - \frac{\partial \vec{B}}{\partial t}$ \\
+
+      {\bf Gauss's law} (magn.) &
+        $\displaystyle  \Phi_{B} = \oint_{S} \vec{B} \cdot d\vec{S} = 0$ &
+        $\displaystyle  \vec{\nabla} \cdot \vec{B} = 0$ \\
+
+      {\bf Ampere's law} &
+        $\displaystyle \oint_{L} \vec{H} \cdot d\vec{\ell} =
+           \int_{S(L)} \Big( \vec{j_{free}} + \frac{\partial \vec{D}}{\partial t}\Big) \cdot d\vec{S} = I_{free} + \frac{d\Phi^{open}_{D}}{dt}$ &
+        $\displaystyle \vec{\nabla} \times \vec{H} = \vec{j}_{free} + \frac{\partial \vec{D}}{\partial t}$ \\
+      \hline
+    \end{tabular}
+  \end{table}
+
+ }
+ \end{center}
+} %small
+
+
+\subsubsection*{\bf The scalar potential V - The Poisson and Laplace equations}
+
+In electrostatics, the circuital law:
+\begin{equation*}
+      \vec{\nabla} \times \vec{E} = 0
+\end{equation*}
+allowed us to write the electric field $\vec{E}$ as the gradient of a scalar field
+(recall that $\vec{\nabla} \times \Big( \vec{\nabla} \phi \Big) =0$
+for {\em any} scalar function $\phi$).
+That scalar field was the potential V:
+\begin{equation*}
+      \vec{E} = - \vec{\nabla} V
+\end{equation*}
+By substituting the above into Gauss's law,
+we found that the scalar potential V satisfies the so-called {\em Poisson} equation:
+\begin{equation*}
+      \vec{\nabla}^{2} V = - \frac{\rho}{\epsilon_0}
+\end{equation*}
+
+In absence of sources ($\rho$=0), the above equation is known as the {\em Laplace} equation:
+\begin{equation*}
+      \vec{\nabla}^{2} V = 0
+\end{equation*}
+
+
+\subsubsection*{\bf The vector potential $\vec{A}$}
+
+The relation
+\begin{equation*}
+      \vec{\nabla} \cdot \vec{B} = 0
+\end{equation*}
+allows us to express the magnetic field $\vec{B}$ as the rotation of a
+vector field (recall that $\vec{\nabla} \cdot \Big( \vec{\nabla} \times \vec{A} \Big) =0$
+for {\em any} vector field $\vec{A}$):
+
+\begin{equation*}
+      \vec{B} = \vec{\nabla} \times \vec{A}
+\end{equation*}
+We call $\vec{A}$ the {\bf vector potential}.
+
+Substituting the above definition into Ampere's law:
+\begin{equation*}
+     \vec{\nabla} \times \vec{B} = \mu_{0} \vec{j} \Rightarrow
+     \vec{\nabla} \times \Big( \vec{\nabla} \times \vec{A}  \Big) =  \mu_{0} \vec{j} \Rightarrow
+\end{equation*}
+\begin{equation*}
+     \vec{\nabla} \Big( \vec{\nabla} \cdot \vec{A}  \Big) - \vec{\nabla}^2 \vec{A}   =  \mu_{0} \vec{j}
+\end{equation*}
+
+We can add to $\vec{A}$  {\em any function} $\vec{\Lambda}$
+whose curl vanishes ($\vec{\nabla} \times \vec{\Lambda} = 0$):
+\begin{equation*}
+   \vec{A} \rightarrow \pvec{A}' = \vec{A} + \vec{\Lambda}
+\end{equation*}
+and the physics would remain unchanged!
+We can use this freedom to eliminate the divergence of
+$\vec{A}$ ($\vec{\nabla} \vec{A} = 0$).
+With this condition, $\vec{A}$ satisfies the following p.d.e.:
+\begin{equation*}
+   \vec{\nabla}^2 \vec{A}   =  - \mu_{0} \vec{j}
+\end{equation*}
+
+This expression is very similar to our known {\em Poisson} equation.
+
+
+\subsubsection*{\bf Capacitance}
+Capacitance (C) denotes the ability of a body to store electric charge.
+For a system of two conductors, one with charge +Q held at
+potential $V_{+}$ and one with charge -Q held at potential $V_{-}$,
+the capacitance is a positive quantity defined as:
+\begin{equation*}
+       C = \frac{Q}{V_{+} - V_{-}}
+\end{equation*}
+
+\subsubsection*{\bf Calculating the capacitance for simple systems}
+
+\begin{itemize}
+{\small
+       \item Use Gauss' law to calculate the electric field $\vec{E}$
+                 in terms of the charge Q stored in one of the conductors:
+                $\oint_{S} \vec{E} \cdot d\vec{S} = Q/\epsilon_0$
+
+       \item Once $\vec{E}$ is known, calculate the potential
+                 difference V between the two conductors as:
+                 $V := {\Delta}V = V_{+} - V_{-} = - \int_{-}^{+} \vec{E} \cdot d\vec{\ell}$
+
+        \item From the known charge Q in the positive conductor and
+                  the potential difference V between the conductors,
+                  calculate $C = Q/V$
+}
+\end{itemize}
+
+\subsubsection*{\bf The parallel plate capacitor}
+\begin{itemize}
+{\small
+\item The electric field between the plates was found to be:
+   \begin{equation*}
+     E = \frac{\sigma}{\epsilon_0}
+   \end{equation*}
+
+\item The parallel plate capacitor has capacitance:
+   \begin{equation*}
+       C = \epsilon_0 \frac{A}{d}
+   \end{equation*}
+   It depends only on the geometrical characteristics of the capacitor.
+
+\item Energy stored in the parallel plate capacitor:
+   \begin{equation*}
+       U = \frac{Q^2}{2C} \;\;\;\; or \;\;\;\;
+       U = \frac{1}{2} C V^2 \;\;\;\; or \;\;\;\;
+       U = \frac{1}{2} Q V
+   \end{equation*}
+}
+\end{itemize}
+
+\subsubsection*{\bf Mutual and self inductance / Back-EMF}
+
+Consider two closed loops 1 and 2.
+The magnetic flux $\Phi_2$ through the surface of loop 2, of the magnetic field $\vec{B}_1$ produced by a steady current $I_1$ in loop 1 is
+\begin{equation*}
+   \Phi_2 = M  I_1
+\end{equation*}
+where M is the mutual inductance of the two loops.
+Similarly,
+the magnetic flux $\Phi_1$ through the surface of loop 1, of the magnetic field $\vec{B}_2$ produced by a steady current $I_2$ in loop 2 is
+\begin{equation*}
+   \Phi_1 = M  I_2
+\end{equation*}
+Note: The constant M is the same (mutual inductuance)
+
+
+If there is a change in the flow of current in one of the conductors,
+then a voltage (EMF) is induced both
+\begin{itemize}
+  { \scriptsize
+   \item in itself (self-inductance): \\
+             $\displaystyle \mathcal{E} = - L \frac{dI}{dt}$
+   \item and the neighbouring conductor (mutual inductance):\\
+            $\displaystyle \mathcal{E}_{neighbouring\;loop} = - M \frac{dI}{dt}$
+  }
+\end{itemize}
+
+
+\subsubsection*{\bf The $\vec\nabla$ ({\em nabla}) operator}
+  \begin{equation*}
+     \vec{\nabla} = (\frac{\partial}{\partial x}, \frac{\partial}{\partial y}, \frac{\partial}{\partial z})
+  \end{equation*}
+   Just as we have 3 kinds of vector multiplications (with scalar, dot product, cross product),
+   we have 3 ways the nabla operator can act
+    \begin{itemize}
+       \item $\vec\nabla$ (a scalar field) $\rightarrow$ {\bf gradient}
+       \item $\vec\nabla$ $\cdot$ (a vector field) $\rightarrow$ {\bf divergence}
+       \item $\vec\nabla$ $\times$ (a vector field) $\rightarrow$ {\bf curl}
+    \end{itemize}
+
+\subsubsection*{\bf Gradient}
+Let $f(x,y,z)$ be a scalar field in a 3-dimensional space. Its gradient is:
+\begin{equation*}
+   \vec\nabla f(x,y,z) =
+     \Big(
+       \frac{\partial f(x,y,z)}{\partial x},
+       \frac{\partial f(x,y,z)}{\partial y},
+       \frac{\partial f(x,y,z)}{\partial z}
+     \Big)
+\end{equation*}
+Notice that $\vec\nabla f(x,y,z)$ is a vector.
+It tells us how fast $f(x,y,z)$ changes as we move in space and it has the {\bf direction of the steepest ascent}.\\
+
+\subsubsection*{\bf Divergence}
+Let $\vec{F}(x,y,z)=\Big(F_{x}(x,y,z), \; F_{y}(x,y,z), \; F_{z}(x,y,z) \Big)$
+be a vector field in a 3-dimensional space. Its divergence is given by:
+\begin{equation*}
+   \vec\nabla \cdot \vec{F}(x,y,z) =
+       \frac{\partial F_{x}(x,y,z)}{\partial x} +
+       \frac{\partial F_{y}(x,y,z)}{\partial y} +
+       \frac{\partial F_{z}(x,y,z)}{\partial z}
+\end{equation*}
+Notice that the divergence of a vector field is a scalar.\\
+Its value for a particular point expresses the magnitude of the vector field's source (or sink) at that point.
+
+\subsubsection*{\bf Curl}
+The curl ($\vec{\nabla} \times \vec{A}$) of a vector
+field $\vec{A}$ = $\Big(A_x, A_y, A_z \Big)$ is defined as:
+\begin{equation*}
+     \vec{\nabla} \times \vec{A} =
+       \left|
+          \begin{array}{ccc}
+             \hat{x} & \hat{y} & \hat{z} \\
+             \frac{\partial}{\partial x}  & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+             A_x     & A_y     & A_z     \\
+          \end{array}
+       \right| =
+       \Big( \frac{\partial A_z}{\partial y} - \frac{\partial A_y}{\partial z} \Big) \hat{x} -
+       \Big( \frac{\partial A_z}{\partial x} - \frac{\partial A_x}{\partial z} \Big) \hat{y} +
+       \Big( \frac{\partial A_y}{\partial x} - \frac{\partial A_x}{\partial y} \Big) \hat{z}
+\end{equation*}
+Notice that the curl of a vector field is a vector.\\
+Its value for a particular point expresses the rotation of the vector field
+around that point.
+
+\subsubsection*{\bf The Laplace operator}
+
+The Laplace operator is a 2$^{nd}$ order differential operator defined as follows:
+\begin{equation*}
+  \vec{\nabla}^{2} = \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} + \frac{\partial^2}{\partial z^2}
+\end{equation*}
+
+\subsubsection*{\bf Laplacian}
+
+So the Laplacian of a scalar function f is:
+\begin{equation*}
+  \vec{\nabla}^{2}f = \frac{\partial^2 f}{\partial x^2} + \frac{\partial^2 f}{\partial y^2} + \frac{\partial^2 f}{\partial z^2}
+\end{equation*}
+
+The Laplacian {\bf is the divergence of the gradient} of the scalar function f:
+\begin{equation*}
+  \vec{\nabla}^{2} f =  \vec{\nabla} \cdot \Big( \vec{\nabla} f \Big)
+\end{equation*}
+
+It represents a quantity which is important in several physical processes:\\
+The Laplacian $\vec{\nabla}^{2} f(\vec{r})$ of a scalar function f at a point $\vec{r}$
+tells you {\bf how much $f(\vec{r})$ differs from its average over a small volume around $\vec{r}$.}
+
+\subsubsection*{\bf Difference between total and partial derivatives}
+\begin{equation*}
+   \frac{df(x,y,z,...)}{dx} =
+     \frac{\partial f(x,y,z,...)}{\partial x} +
+     \frac{\partial f(x,y,z,...)}{\partial y} \cdot \frac{\partial y}{\partial x} +
+     \frac{\partial f(x,y,z,...)}{\partial z} \cdot \frac{\partial z}{\partial x} + ...
+\end{equation*}
+
+\subsubsection*{\bf Gauss's theorem (Divergence theorem)}
+Let $\tau$ be a volume of space whose boundary is the closed surface S,
+and let $\vec{F}$ be a vector field which is defined anywhere in $\tau$
+and it is continuous / differentiable anywhere in $\tau$.\\
+The integral of the flux of the field $\vec{F}$ over the closed surface S is
+equal to the integral of the divergence of $\vec{F}$ in the volume $\tau$\\
+\begin{equation*}
+  \oint_{S} \vec{F} \cdot d\vec{S} = \int_{\tau(S)} \vec{\nabla} \cdot \vec{F} d\tau
+\end{equation*}
+
+\subsubsection*{\bf Stokes's theorem}
+Stokes' theorem {\bf relates
+the circulation of a vector field $\vec{F}$ around a closed line C
+with the flux of the curl of the vector field $\vec{F}$ through the open surface S} defined by the closed line C.\\
+\begin{equation*}
+  \oint_{L} \vec{F} \cdot d\vec{\ell} = \int_{S(L)} (\vec{\nabla} \times \vec{F}) \cdot d\vec{S}
+\end{equation*}
+
+\end{document}

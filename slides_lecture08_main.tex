@@ -171,7 +171,7 @@ Conventions:
     \vspace{0.1cm}
     \begin{itemize}
        \item Side `12':
-             $\mathcal{E} = \int \Big( \vec{u} \times \vec{B} \Big) d\vec{\ell} = uBb$
+             $\mathcal{E} = \int \Big( \vec{u} \times \vec{B} \Big) \cdot d\vec{\ell} = uBb$
        \item Side `34' ($\vec{B}=0$):
              $\mathcal{E} = 0$
        \item Side `23' and `14' ($\vec{u} \times \vec{B}$ $\perp$ $d\vec{\ell}$):
@@ -179,7 +179,7 @@ Conventions:
        \item Summing-up the EMFs for all 4 sides:
             {\color{magenta}
               \begin{equation*}
-               \mathcal{E} = \oint \vec{E} d\vec{\ell} = uBb
+               \mathcal{E} = \oint \vec{E} \cdot d\vec{\ell} = uBb
               \end{equation*}
             }
     \end{itemize}
@@ -190,11 +190,11 @@ Conventions:
     \underline{Change in flux}:\\
     \begin{equation*}
       \frac{d\Phi_{M}}{dt} =
-        \frac{d}{dt} \Big( \int \vec{B} d\vec{S} \Big) =
-        \frac{d}{dt} \Big( \vec{B} \int d\vec{S} \Big) =
+        \frac{d}{dt} \Big( \int \vec{B} \cdot d\vec{S} \Big) =
+        \frac{d}{dt} \Big( \vec{B} \cdot \int d\vec{S} \Big) =
     \end{equation*}
     \begin{equation*}
-          \frac{d}{dt} \Big( \vec{B} \vec{S} \Big) \xlongequal{\angle(\vec{B}, \vec{S}) = \pi}
+          \frac{d}{dt} \Big( \vec{B} \cdot \vec{S} \Big) \xlongequal{\angle(\vec{B}, \vec{S}) = \pi}
           \frac{d}{dt} \Big( -BS \Big) \xlongequal{S=bx}
     \end{equation*}
     \begin{equation*}
@@ -236,9 +236,9 @@ Conventions:
     \vspace{0.2cm}
     \begin{itemize}
        \item Side `12':
-             $\mathcal{E} = \int \Big( \vec{u} \times \vec{B} \Big) d\vec{\ell} = uBb$
+             $\mathcal{E} = \int \Big( \vec{u} \times \vec{B} \Big) \cdot d\vec{\ell} = uBb$
        \item Side `34':
-             $\mathcal{E} = \int \Big( \vec{u} \times \vec{B} \Big) d\vec{\ell} = -uBb$\\
+             $\mathcal{E} = \int \Big( \vec{u} \times \vec{B} \Big) \cdot d\vec{\ell} = -uBb$\\
              (since $\vec{u} \times \vec{B}$ is same as for side `12',
              but $d\vec{\ell}$ has opposite direction).
        \item Side `23' and `14' ($\vec{u} \times \vec{B}$ $\perp$ $d\vec{\ell}$):
@@ -246,7 +246,7 @@ Conventions:
        \item Summing-up the EMFs for all 4 sides:
             {\color{magenta}
               \begin{equation*}
-               \mathcal{E} = \oint \vec{E} d\vec{\ell} = 0
+               \mathcal{E} = \oint \vec{E} \cdot d\vec{\ell} = 0
               \end{equation*}
             }
     \end{itemize}
@@ -296,13 +296,13 @@ Conventions:
        \item Side `12' ($\vec{B}=0$):
              $\mathcal{E} = 0$
        \item Side `34':
-             $\mathcal{E} = \int \Big( \vec{u} \times \vec{B} \Big) d\vec{\ell} = -uBb$
+             $\mathcal{E} = \int \Big( \vec{u} \times \vec{B} \Big) \cdot d\vec{\ell} = -uBb$
        \item Side `23' and `14' ($\vec{u} \times \vec{B}$ $\perp$ $d\vec{\ell}$):
              $\mathcal{E} = 0$
        \item Summing-up the EMFs for all 4 sides:
             {\color{magenta}
               \begin{equation*}
-               \mathcal{E} = \oint \vec{E} d\vec{\ell} = -uBb
+               \mathcal{E} = \oint \vec{E} \cdot d\vec{\ell} = -uBb
               \end{equation*}
             }
     \end{itemize}
@@ -313,11 +313,11 @@ Conventions:
     \underline{Change in flux}:\\
     \begin{equation*}
       \frac{d\Phi_{M}}{dt} =
-        \frac{d}{dt} \Big( \int \vec{B} d\vec{S} \Big) =
-        \frac{d}{dt} \Big( \vec{B} \int d\vec{S} \Big) =
+        \frac{d}{dt} \Big( \int \vec{B} \cdot d\vec{S} \Big) =
+        \frac{d}{dt} \Big( \vec{B} \cdot \int d\vec{S} \Big) =
     \end{equation*}
     \begin{equation*}
-          \frac{d}{dt} \Big( \vec{B} \vec{S} \Big) \xlongequal{\angle(\vec{B}, \vec{S}) = \pi}
+          \frac{d}{dt} \Big( \vec{B} \cdot \vec{S} \Big) \xlongequal{\angle(\vec{B}, \vec{S}) = \pi}
           \frac{d}{dt} \Big( -BS \Big) \xlongequal{S=bx}
     \end{equation*}
     \begin{equation*}
@@ -486,16 +486,17 @@ to the {\bf change of the magnetic flux $\Phi_{M}$ though the circuit}:\\
 
 The integral form of Faraday's law is:
 \begin{equation*}
-   \oint_{L} \vec{E} \cdot d\vec{\ell} = - \frac{d}{dt} \int_{S} \vec{B} d\vec{S}
+   \oint_{L} \vec{E} \cdot d\vec{\ell} = - \frac{d}{dt} \int_{S} \vec{B} \cdot d\vec{S}
 \end{equation*}
 
 Using Stoke's theorem, we obtain its differential form:
 \begin{equation*}
-   \oint_{L} \vec{E} \cdot d\vec{\ell} = - \frac{d}{dt} \int_{S(L)} \vec{B} d\vec{S} \Rightarrow
-   \int_{S(L)} \Big( \vec{\nabla} \times \vec{E} \Big) d\vec{S} = - \int_{S(L)} \frac{\partial \vec{B}}{\partial t} d\vec{S} \Rightarrow
+   \oint_{L} \vec{E} \cdot d\vec{\ell} = - \frac{d}{dt} \int_{S(L)} \vec{B} \cdot d\vec{S} \Rightarrow
+   \int_{S(L)} \Big( \vec{\nabla} \times \vec{E} \Big) \cdot d\vec{S} =
+     - \int_{S(L)} \frac{\partial \vec{B}}{\partial t} \cdot d\vec{S} \Rightarrow
 \end{equation*}
 \begin{equation*}
-   \int_{S(L)} \Big( \vec{\nabla} \times \vec{E} + \frac{\partial \vec{B}}{\partial t} \Big) d\vec{S} = 0  \Rightarrow
+   \int_{S(L)} \Big( \vec{\nabla} \times \vec{E} + \frac{\partial \vec{B}}{\partial t} \Big) \cdot d\vec{S} = 0  \Rightarrow
    \vec{\nabla} \times \vec{E} + \frac{\partial \vec{B}}{\partial t} = 0 \Rightarrow
 \end{equation*}
 \begin{equation*}
@@ -535,7 +536,7 @@ A homogeneous magnetic field of $3 \times 10^{-3}$ T in the positive z direction
 \vspace{0.1cm}
 
 
-The flux through the loop is given by  $\displaystyle \Phi = \int \vec{B} d\vec{S}$.
+The flux through the loop is given by  $\displaystyle \Phi = \int \vec{B} \cdot d\vec{S}$.
 
 The loop is lying on the x-y plane, hence the surface vector
 $d\vec{S}$ that is normal to the loop surface is along the z axis.
@@ -648,7 +649,7 @@ Consider a current I charging a parallel plate capacitor.\\
   {\small
       Apply Ampere's law for the flat (light blue) surface at the top:
       \begin{equation*}
-          \oint_{L} \vec{B} d\vec{\ell} = \mu_{0} I
+          \oint_{L} \vec{B} \cdot d\vec{\ell} = \mu_{0} I
      \end{equation*}
      So {\bf there is a magnetic field along L}.\\
      \vspace{0.2cm}
@@ -656,7 +657,7 @@ Consider a current I charging a parallel plate capacitor.\\
       made of the cylindrical part (no current flowing through it) and the
       circle between the two conducting plates (also no current):
       \begin{equation*}
-          \oint_{L} \vec{B} d\vec{\ell} = 0
+          \oint_{L} \vec{B} \cdot d\vec{\ell} = 0
      \end{equation*}
      So {\bf there is NO magnetic field along L}.\\
    }
@@ -709,7 +710,7 @@ Let's start from the differential form of Ampere's law:
 
 We can calculate the divergence of both sides:
 \begin{equation*}
-  \vec{\nabla} \Big( \vec{\nabla} \times \vec{B} \Big) = \mu_0 \vec{\nabla} \vec{j}
+  \vec{\nabla} \cdot \Big( \vec{\nabla} \times \vec{B} \Big) = \mu_0 \vec{\nabla} \cdot \vec{j}
 \end{equation*}
 
 The left-hand side is 0 (the divergence of the curl of a vector field is always 0).
@@ -721,7 +722,7 @@ So the right-hand side has to be 0 as well.
 But this is generally not true!
 Recall the continuity equation that expresses the local conservation of charge:
 \begin{equation*}
-  \vec{\nabla} \vec{j} = -\frac{\partial \rho}{\partial t}
+  \vec{\nabla} \cdot \vec{j} = -\frac{\partial \rho}{\partial t}
 \end{equation*}
 
 \end{frame}
@@ -737,24 +738,26 @@ the local conservation of charge. Can we reconcile the two?
 
 The charge density is given by Gauss' law
 \begin{equation*}
-  \vec{\nabla}\vec{E} = \frac{\rho}{\epsilon_0} \Rightarrow \rho = \epsilon_0 \vec{\nabla}\vec{E}
+  \vec{\nabla} \cdot \vec{E} = \frac{\rho}{\epsilon_0} \Rightarrow \rho =
+   \epsilon_0 \vec{\nabla} \cdot \vec{E}
 \end{equation*}
 
 Taking the partial derivative of $\rho$ with respect to time:
 \begin{equation*}
   \frac{\partial \rho}{\partial t} =
-   \frac{\partial}{\partial t} \Big( \epsilon_0 \vec{\nabla}\vec{E} \Big) =
-   \vec{\nabla} \Big( \epsilon_0 \frac{\partial \vec{E}}{\partial t} \Big)
+   \frac{\partial}{\partial t} \Big( \epsilon_0 \vec{\nabla} \cdot \vec{E} \Big) =
+   \vec{\nabla} \cdot \Big( \epsilon_0 \frac{\partial \vec{E}}{\partial t} \Big)
 \end{equation*}
 
 Then, the continuity equation:
 \begin{equation*}
-  \vec{\nabla} \vec{j} = -\frac{\partial \rho}{\partial t}
+  \vec{\nabla} \cdot \vec{j} = -\frac{\partial \rho}{\partial t}
 \end{equation*}
 
 becomes:
 \begin{equation*}
-  \vec{\nabla} \vec{j} = - \vec{\nabla} \Big( \epsilon_0 \frac{\partial \vec{E}}{\partial t} \Big)
+  \vec{\nabla} \cdot \vec{j} =
+    - \vec{\nabla} \cdot \Big( \epsilon_0 \frac{\partial \vec{E}}{\partial t} \Big)
 \end{equation*}
 
 \end{frame}
@@ -768,11 +771,11 @@ becomes:
 
 We have written the continuity equation as:
 \begin{equation*}
-  \vec{\nabla} \vec{j} = - \vec{\nabla} \Big( \epsilon_0 \frac{\partial \vec{E}}{\partial t} \Big)
+  \vec{\nabla} \cdot \vec{j} = - \vec{\nabla} \cdot \Big( \epsilon_0 \frac{\partial \vec{E}}{\partial t} \Big)
 \end{equation*}
 which suggests that:
 \begin{equation*}
-  \vec{\nabla} \Big( \vec{j} + \epsilon_0 \frac{\partial \vec{E}}{\partial t} \Big) = 0
+  \vec{\nabla} \cdot \Big( \vec{j} + \epsilon_0 \frac{\partial \vec{E}}{\partial t} \Big) = 0
 \end{equation*}
 
 {\bf This is interesting hint!}\\
@@ -813,7 +816,7 @@ local conservation of charge, as expressed with the continuity equation. Indeed:
 \begin{equation*}
   0 =
     \vec{\nabla} \cdot \vec{j} + \cancel{\epsilon_0} \frac{\partial}{\partial t}
-      \Big( \frac{\rho}{\cancel{\epsilon_0}})  \Rightarrow
+      \Big( \frac{\rho}{\cancel{\epsilon_0}} \Big)  \Rightarrow
 \end{equation*}
 
 \begin{equation*}

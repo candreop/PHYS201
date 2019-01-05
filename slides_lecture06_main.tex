@@ -1408,15 +1408,15 @@ $\vec{B}$ along a closed circular trajectory.\\
 
 Therefore:
 \begin{equation*}
-   \oint \vec{B}  d\vec{\ell} =
-      \oint \Big(  \frac{\mu_0I}{2\pi \rho} \hat{\phi} \Big) \Big( \rho d\phi \hat{\phi} \Big) =
+   \oint \vec{B} \cdot d\vec{\ell} =
+      \oint \Big(  \frac{\mu_0I}{2\pi \rho} \hat{\phi} \Big) \cdot \Big( \rho d\phi \hat{\phi} \Big) =
       \frac{\mu_0I}{2\pi \cancel{\rho}} \cancel{\rho}  \oint \Big( \hat{\phi} \cdot \hat{\phi} \Big) d\phi =
       \frac{\mu_0I}{2\pi} \oint d\phi =
       \frac{\mu_0I}{\cancel{2\pi}} \cancel{2\pi} \Rightarrow
 \end{equation*}
 
 \begin{equation*}
-   \oint \vec{B}  d\vec{\ell} = \mu_0 I
+   \oint \vec{B} \cdot d\vec{\ell} = \mu_0 I
 \end{equation*}
 
 \end{frame}
@@ -1435,12 +1435,12 @@ The previous result can be {\bf generalised for any closed path} around an infin
   \end{column}
   \begin{column}{0.80\textwidth}
       \begin{equation*}
-         \oint \vec{B}  d\vec{\ell} = \oint |\vec{B}| |d\vec{\ell}| cos\phi \Rightarrow
-         \oint \vec{B}  d\vec{\ell} = \oint \Big( \frac{\mu_0 I}{2\pi \cancel{r}} \Big) \Big( \cancel{r} \; d\theta \Big) \Rightarrow
+         \oint \vec{B} \cdot d\vec{\ell} = \oint |\vec{B}| |d\vec{\ell}| cos\phi \Rightarrow
+         \oint \vec{B} \cdot d\vec{\ell} = \oint \Big( \frac{\mu_0 I}{2\pi \cancel{r}} \Big) \Big( \cancel{r} \; d\theta \Big) \Rightarrow
       \end{equation*}
       \begin{equation*}
-         \oint \vec{B}  d\vec{\ell} =  \frac{\mu_0 I}{2\pi} \oint d\theta =   \frac{\mu_0 I}{\cancel{2\pi}} \cancel{2\pi}  \Rightarrow
-         \oint \vec{B}  d\vec{\ell} =  \mu_0 I
+         \oint \vec{B} \cdot d\vec{\ell} =  \frac{\mu_0 I}{2\pi} \oint d\theta =   \frac{\mu_0 I}{\cancel{2\pi}} \cancel{2\pi}  \Rightarrow
+         \oint \vec{B} \cdot d\vec{\ell} =  \mu_0 I
       \end{equation*}
   \end{column}
 \end{columns}
@@ -1450,11 +1450,11 @@ The previous result can be {\bf generalised for any closed path} around an infin
 It can also be {\bf generalised for any number of conductors (currents)} passing through the loop.
 In general:
 \begin{equation*}
-    \oint \vec{B}  d\vec{\ell} = \mu_0 I_{encl}
+    \oint \vec{B} \cdot d\vec{\ell} = \mu_0 I_{encl}
 \end{equation*}
 where:
 \begin{equation*}
-     I_{encl} = \int_{S} \vec{j} d\vec{S}
+     I_{encl} = \int_{S} \vec{j} \cdot d\vec{S}
 \end{equation*}
 
 \end{frame}
@@ -1478,7 +1478,7 @@ where:
   \begin{column}{0.78\textwidth}
      The general result we just saw is known as {\bf Ampere's law}:
      \begin{equation*}
-        \oint_{L} \vec{B} d\vec{\ell} = \mu_0 I_{encl} = \mu_0 \int_{S} \vec{j} d\vec{S}
+        \oint_{L} \vec{B} \cdot d\vec{\ell} = \mu_0 I_{encl} = \mu_0 \int_{S} \vec{j} \cdot d\vec{S}
      \end{equation*}
      The line integral of the magnetic field $\vec{B}$ along a closed path L is proportional to the
      current passing though any surface S defined by L.
@@ -1490,7 +1490,7 @@ where:
 {\small
      We can draw some illuminating parallels with Gauss's law in electrostatics:
      \begin{equation*}
-        \oint_{S} \vec{E} d\vec{S} = \frac{1}{\epsilon_0} Q_{encl} = \frac{1}{\epsilon_0} \int_{\tau} \rho d\tau
+        \oint_{S} \vec{E} \cdot d\vec{S} = \frac{1}{\epsilon_0} Q_{encl} = \frac{1}{\epsilon_0} \int_{\tau} \rho d\tau
      \end{equation*}
      The surface integral of the electric field $\vec{E}$  through a closed surface S
      is proportional to the net charge contained in the volume $\tau$ defined by S.
@@ -1506,7 +1506,7 @@ where:
 
 Ampere's law in integral form is:
 \begin{equation*}
-    \oint_{L} \vec{B} d\vec{\ell} = \mu_0 I_{encl} = \mu_0 \int_{S} \vec{j} d\vec{S}
+    \oint_{L} \vec{B} \cdot d\vec{\ell} = \mu_0 I_{encl} = \mu_0 \int_{S} \vec{j} \cdot d\vec{S}
 \end{equation*}
 
 \begin{columns}
@@ -1519,7 +1519,7 @@ Ampere's law in integral form is:
      Stoke's theorem relates the line integral of a vector field with the surface integral
      of the curl of the field:
      \begin{equation*}
-        \oint_{L} \vec{B} d\vec{\ell} = \int_{S} \vec{\nabla} \times \vec{B} \; d\vec{S}
+        \oint_{L} \vec{B} \cdot d\vec{\ell} = \int_{S} (\vec{\nabla} \times \vec{B}) \cdot d\vec{S}
      \end{equation*}
   \end{column}
 \end{columns}
@@ -1528,8 +1528,8 @@ Ampere's law in integral form is:
 
 Applying Stoke's theorem Ampere's law becomes:
 \begin{equation*}
-    \int_{S} \vec{\nabla} \times \vec{B} d\vec{S} = \mu_0 \int_{S} \vec{j} d\vec{S} \Rightarrow
-    \int_{S} \Big( \vec{\nabla} \times \vec{B} - \mu_0 \vec{j} \Big)  d\vec{S} = 0
+    \int_{S} (\vec{\nabla} \times \vec{B}) \cdot d\vec{S} = \mu_0 \int_{S} \vec{j} \cdot d\vec{S} \Rightarrow
+    \int_{S} \Big( \vec{\nabla} \times \vec{B} - \mu_0 \vec{j} \Big) \cdot d\vec{S} = 0
 \end{equation*}
 The above integral to be 0 for every surface S, hence:
 \begin{equation*}
@@ -1546,7 +1546,7 @@ The above integral to be 0 for every surface S, hence:
 
 \begin{frame}{Application of Ampere's Law: Field of toroidal coil}
 
-Consider a toroidal (*) coil with n equally spaced circular windings carying current I.\\
+Consider a toroidal (*) coil with N equally spaced circular windings carying current I.\\
 \vspace{0.1cm}
 
 \begin{center}
@@ -1582,12 +1582,12 @@ Inside the torus, the field is directed tangentially, as shown below, and it dep
       The magnitude of the magnetic field $|\vec{B}|$ is constant along the chosen path, and
       $\vec{B}$ is collinear with $ d\vec{\ell}$. Therefore:
      \begin{equation*}
-        \oint_{L} \vec{B} d\vec{\ell} = |\vec{B}| 2\pi r
+        \oint_{L} \vec{B} \cdot d\vec{\ell} = |\vec{B}| 2\pi r
      \end{equation*}
-     Since there are n windings, each carrying current I, the total current enclosed
+     Since there are N windings, each carrying current I, the total current enclosed
      by the chosen path is:
      \begin{equation*}
-        I_{encl} = n I
+        I_{encl} = N I
      \end{equation*}
   \end{column}
 \end{columns}
@@ -1609,11 +1609,11 @@ Inside the torus, the field is directed tangentially, as shown below, and it dep
   \begin{column}{0.67\textwidth}
      Ampere's law in integral form is:
      \begin{equation*}
-        \oint_{L} \vec{B} d\vec{\ell} = \mu_0 I_{encl}
+        \oint_{L} \vec{B} \cdot d\vec{\ell} = \mu_0 I_{encl}
      \end{equation*}
      So inside the torus:
      \begin{equation*}
-         |\vec{B}| 2\pi r = \mu_0 n I \Rightarrow  |\vec{B}| = \frac{\mu_0 n I}{2\pi r}
+         |\vec{B}| 2\pi r = \mu_0 N I \Rightarrow  |\vec{B}| = \frac{\mu_0 N I}{2\pi r}
      \end{equation*}
 
   \end{column}
@@ -1622,7 +1622,7 @@ Inside the torus, the field is directed tangentially, as shown below, and it dep
 Hence the results of the magnetic field $\vec{B}$
 can be summarised as follows:
     \begin{equation*}
-      \vec{B} = \left\{ \begin{array}{l}
+      |\vec{B}| = \left\{ \begin{array}{l}
              0, \text{for $r < a$,} \\
              \frac{\mu_0 n I}{2\pi r}, \text{for $a < r < b$, and} \\
              0, \text{for $r > b$} \\
@@ -1727,7 +1727,7 @@ we will calculate the divergence of $\vec{B}$.
 The operator $\vec{\nabla}$ commutes with the integral and is applied to the integrant.
 The BAC-CAB rules gives:
 \begin{equation*}
-         \vec{\nabla} \Big( \vec{j}(\pvec{r}') \times \frac{\vec{r}}{r^{3}} \Big) =
+         \vec{\nabla} \cdot \Big( \vec{j}(\pvec{r}') \times \frac{\vec{r}}{r^{3}} \Big) =
          \frac{\vec{r}}{r^{3}} \Big( \vec{\nabla} \times \vec{j}(\pvec{r}') \Big) -
          \vec{j}(\pvec{r}') \Big( \vec{\nabla} \times \frac{\vec{r}}{r^{3}} \Big)
 \end{equation*}
@@ -1766,12 +1766,12 @@ The field lines that from a closed surface eventually re-enter as they loop back
 
 Gauss' theorem tells us that:
 \begin{equation*}
-         \oint_{S} \vec{B} d\vec{S} = \int_{\tau} \vec{\nabla} \cdot \vec{B} d\tau
+         \oint_{S} \vec{B} \cdot d\vec{S} = \int_{\tau} \vec{\nabla} \cdot \vec{B} d\tau
 \end{equation*}
 
 But $\vec{\nabla} \cdot \vec{B} =  0$, hence:
 \begin{equation*}
-         \oint_{S} \vec{B} d\vec{S} = 0
+         \oint_{S} \vec{B} \cdot d\vec{S} = 0
 \end{equation*}
 
 \end{frame}
@@ -1889,19 +1889,19 @@ In vacuum (static case):
           & {\it Integral form} & {\it Differential form} \\
       \hline
       {\bf Gauss's law} &
-        $\oint \vec{E} d\vec{S} = Q_{enclosed} / \epsilon_0$ &
+        $\oint \vec{E} \cdot d\vec{S} = Q_{enclosed} / \epsilon_0$ &
         $\vec{\nabla} \cdot \vec{E} = \rho / \epsilon_0$ \\
 
       {\bf Circuital law} &
-        $\oint \vec{E} d\vec{\ell} = 0$ &
+        $\oint \vec{E} \cdot d\vec{\ell} = 0$ &
         $\vec{\nabla} \times \vec{E} = 0$ \\
 
-      {\bf "no magnetic monopoles''} &
-        $\oint \vec{B} d\vec{S} = 0$ &
+      {\bf Gauss's law} (magn.) &
+        $\oint \vec{B} \cdot d\vec{S} = 0$ &
         $\vec{\nabla} \cdot \vec{B} = 0$ \\
 
       {\bf Ampere's law} &
-        $\oint \vec{B} d\vec{\ell} = \mu_{0} I $ &
+        $\oint \vec{B} \cdot d\vec{\ell} = \mu_{0} I $ &
         $\vec{\nabla} \times \vec{B} = \mu_{0} \vec{j}$ \\
 
       \hline

@@ -5,7 +5,7 @@
 #
 
 ACYEAR  = 201819
-VERSION = v03
+VERSION = v05
 
 00   : NAME = PHYS201_${ACYEAR}-Slides-${VERSION}\ \(Intro\)
 0001 : NAME = PHYS201_${ACYEAR}-Slides-${VERSION}\ \(Intro\ +\ Lecture\ 01\)
@@ -79,6 +79,10 @@ add_tex12: FORCE
 pdf: FORCE
 	pdflatex main_tmp.tex
 	mv main_tmp.pdf ${NAME}.pdf
+
+frms: FORCE
+	pdflatex formula_sheet.tex
+	mv formula_sheet.pdf PHYS201_${ACYEAR}-Formula_Sheet-${VERSION}.pdf
 
 clean: FORCE
 	rm *nav

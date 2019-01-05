@@ -514,10 +514,10 @@ We will derive Gauss' law for a very simple case: A single charge Q in the centr
   \end{column}
   \begin{column}{0.66\textwidth}
     \begin{equation*}
-        \Phi_E = \oint_{sphere} \vec{E} d\vec{S} \Rightarrow
+        \Phi_E = \oint_{sphere} \vec{E} \cdot d\vec{S} \Rightarrow
     \end{equation*}
     \begin{equation*}
-        \Phi_E = \oint_{sphere} \big( \frac{Q}{4\pi\epsilon_0 R^{2}} \hat{r} \big) \big( dS \hat{r} \big) \xRightarrow {\hat{r}\cdot\hat{r}=1}
+        \Phi_E = \oint_{sphere} \big( \frac{Q}{4\pi\epsilon_0 R^{2}} \hat{r} \big) \cdot \big( dS \hat{r} \big) \xRightarrow {\hat{r}\cdot\hat{r}=1}
     \end{equation*}
     \begin{equation*}
         \Phi_E = \frac{Q}{4\pi\epsilon_0 R^{2}} \oint_{sphere} dS \Rightarrow
@@ -591,7 +591,7 @@ Only one thing matters for the calculation of $\Phi_E$: The {\bf net charge with
      \end{equation*}
      So, the flux $\Phi_E$ through the general surface $S$ is
      \begin{equation*}
-       \Phi_E = \int_{S} \vec{E} d\vec{S} = \int_{S} E dS cos\theta
+       \Phi_E = \int_{S} \vec{E} \cdot d\vec{S} = \int_{S} E dS cos\theta
           = \int_{\Omega} E \frac{r^{2} d\Omega}{\cancel{cos\theta}} \cancel{cos\theta} =
      \end{equation*}
      \begin{equation*}
@@ -612,7 +612,7 @@ Only one thing matters for the calculation of $\Phi_E$: The {\bf net charge with
 
 Our result for a {\em single charge} enclosed by an arbitrary closed surface S is:
 \begin{equation*}
-   \oint_{S} \vec{E} d\vec{S} = \frac{Q}{\epsilon_0}
+   \oint_{S} \vec{E} \cdot d\vec{S} = \frac{Q}{\epsilon_0}
 \end{equation*}
 
 What is the {\bf form of Gauss' law if the surface S encloses an array of charges} (or a continuous charge distribution)?
@@ -621,18 +621,18 @@ The result can be obtained via a straightforward application of the superpositio
 \begin{equation*}
   \left.
      \begin{array}{l}
-      \oint_{S} \vec{E_{1}} d\vec{S} = \frac{Q_{1}}{\epsilon_0}\\
+      \oint_{S} \vec{E_{1}} \cdot d\vec{S} = \frac{Q_{1}}{\epsilon_0}\\
       \\
-      \oint_{S} \vec{E_{2}} d\vec{S} = \frac{Q_{2}}{\epsilon_0}\\
+      \oint_{S} \vec{E_{2}} \cdot d\vec{S} = \frac{Q_{2}}{\epsilon_0}\\
       \\
       ...                                                      \\
       \\
-      \oint_{S} \vec{E_{n}} d\vec{S} = \frac{Q_{n}}{\epsilon_0}
+      \oint_{S} \vec{E_{n}} \cdot d\vec{S} = \frac{Q_{n}}{\epsilon_0}
      \end{array}
   \right\}
 %  \oint_{S} (\vec{E_{1}}+\vec{E_{2}}+...+\vec{E_{n}}) d\vec{S} = \frac{Q_{1}+Q_{2}+...+Q_{n}}{\epsilon_0} \Rightarrow
-  \oint_{S} (\sum_{i=1}^{n}\vec{E_{i}}) d\vec{S} = \frac{\sum_{i=1}^{n}Q_{i}}{\epsilon_0} \Rightarrow
-  \oint_{S} \vec{E} d\vec{S} = \frac{Q_{enc}}{\epsilon_0}
+  \oint_{S} (\sum_{i=1}^{n}\vec{E_{i}}) \cdot d\vec{S} = \frac{\sum_{i=1}^{n}Q_{i}}{\epsilon_0} \Rightarrow
+  \oint_{S} \vec{E} \cdot d\vec{S} = \frac{Q_{enc}}{\epsilon_0}
 \end{equation*}
 
 \end{frame}
@@ -647,7 +647,7 @@ The result can be obtained via a straightforward application of the superpositio
 Our result for any array of charges (or continuous charge distribution), with net charge $Q_{enc}$,
 enclosed by an arbitrary closed surface S is:
 \begin{equation*}
-  \oint \vec{E} d\vec{S} = \frac{Q_{enc}}{\epsilon_0}
+  \oint \vec{E} \cdot d\vec{S} = \frac{Q_{enc}}{\epsilon_0}
 \end{equation*}
 
 This is known as the {\bf \underline{integral form} of Gauss' law}.\\
@@ -729,7 +729,7 @@ The symmetry can be exploited to simplify the calculation of the integral.\\
   \vspace{0.2cm}
   Therefore, applying Gauss' law, we get:
   \begin{equation*}
-    \oint \vec{E} d\vec{S} = \frac{Q_{enc}}{\epsilon_0} \Rightarrow
+    \oint \vec{E} \cdot d\vec{S} = \frac{Q_{enc}}{\epsilon_0} \Rightarrow
     EA + EA = \frac{\sigma A}{\epsilon_0} \Rightarrow
     {\color{red}
       E = \frac{\sigma}{2\epsilon_0}
@@ -1042,7 +1042,7 @@ What is the value of $Q_{tot}$?\\
 Calculate the electric flux through the surface of a sphere with radius r = 5$r_0$
 and confirm that:
 \begin{equation*}
-  \epsilon_0 \oint \vec{E} d\vec{S} = Q_{tot}
+  \epsilon_0 \oint \vec{E} \cdot d\vec{S} = Q_{tot}
 \end{equation*}
 }
 
@@ -1064,7 +1064,7 @@ and confirm that:
 Our result for any array of charges (or continuous charge distribution), with net charge $Q_{enc}$,
 enclosed by an arbitrary closed surface S is:
 \begin{equation*}
-  \oint \vec{E} d\vec{S} = \frac{Q_{enc}}{\epsilon_0}
+  \oint \vec{E} \cdot d\vec{S} = \frac{Q_{enc}}{\epsilon_0}
 \end{equation*}
 
 This is known as the {\bf \underline{integral form} of Gauss' law}.\\
@@ -1205,7 +1205,7 @@ but also {\bf adds in all the changes due to the indirect dependencies}:
 Let $\vec{F}(x,y)=\Big(F_{x}(x,y), \; F_{y}(x,y) \Big)$
 be a vector field in a 2-dimensional space. Its divergence is given by:
 \begin{equation*}
-   \vec\nabla \vec{F}(x,y) =
+   \vec\nabla \cdot \vec{F}(x,y) =
        \frac{\partial F_{x}(x,y)}{\partial x} +
        \frac{\partial F_{y}(x,y)}{\partial y}
 \end{equation*}
@@ -1258,7 +1258,7 @@ Similarly for 3 or more dimensions.\\
       \item But it takes a while to get used to compact notations and be sure that we truly understand what they mean
       \item If you find that $\vec{\nabla} \vec{E}$ confuses you, write it out as
         \begin{equation*}
-         \vec{\nabla} \vec{E} = \frac{\partial E_{x}}{\partial x} + \frac{\partial E_{y}}{\partial y} + \frac{\partial E_{z}}{\partial z}
+         \vec{\nabla} \cdot \vec{E} = \frac{\partial E_{x}}{\partial x} + \frac{\partial E_{y}}{\partial y} + \frac{\partial E_{z}}{\partial z}
         \end{equation*}
       \item There is {\bf no shame at writing the components and not using the fancy compact notation}
     }
@@ -1266,7 +1266,7 @@ Similarly for 3 or more dimensions.\\
 
     \begin{center}
     {\scriptsize
-     Marking your scripts, I may excuse you for being confused by $\vec{\nabla} \vec{E}$.\\
+     Marking your scripts, I may excuse you for being confused by $\vec{\nabla} \cdot \vec{E}$.\\
      But not for ignoring Feynman's advice!
     }
     \end{center}
@@ -1309,7 +1309,7 @@ Similarly for 3 or more dimensions.\\
  The integral of the flux of the field $\vec{F}$ over the closed surface S is
  equal to the integral of the divergence of $\vec{F}$ in the volume $\tau$\\
  \begin{equation*}
-   \oint_{S} \vec{F} d\vec{S} = \int_{\tau} \vec{\nabla}\vec{F} d\tau
+   \oint_{S} \vec{F} \cdot d\vec{S} = \int_{\tau} \vec{\nabla} \cdot \vec{F} d\tau
  \end{equation*}
 %\end{block}
 
@@ -1327,19 +1327,19 @@ Similarly for 3 or more dimensions.\\
 Expressing $Q_{enc}$ in terms of the density $\rho$,
 the integral form of Gauss' law is:
 \begin{equation*}
-   \oint_{S} \vec{E} d\vec{S} = \frac{1}{\epsilon_0} Q_{enc} =  \frac{1}{\epsilon_0} \int \rho d\tau
+   \oint_{S} \vec{E} \cdot d\vec{S} = \frac{1}{\epsilon_0} Q_{enc} =  \frac{1}{\epsilon_0} \int \rho d\tau
 \end{equation*}
 
 Applying Gauss' theorem to the electric field:
 \begin{equation*}
-   \oint_{S} \vec{E} d\vec{S} = \int_{\tau} \vec{\nabla} \vec{E} d\tau
+   \oint_{S} \vec{E} \cdot d\vec{S} = \int_{\tau} \vec{\nabla} \cdot \vec{E} d\tau
 \end{equation*}
 
 Therefore:
 \begin{equation*}
-  \int_{\tau} \vec{\nabla} \vec{E} d\tau = \frac{1}{\epsilon_0} \int \rho d\tau \Rightarrow
-  \int_{\tau} \Big( \vec{\nabla} \vec{E} - \frac{\rho}{\epsilon_0} \Big) d\tau = 0 \Rightarrow
-  {\color{magenta} \vec{\nabla} \vec{E} = \frac{\rho}{\epsilon_0}}
+  \int_{\tau} \vec{\nabla} \cdot \vec{E} d\tau = \frac{1}{\epsilon_0} \int \rho d\tau \Rightarrow
+  \int_{\tau} \Big( \vec{\nabla} \cdot \vec{E} - \frac{\rho}{\epsilon_0} \Big) d\tau = 0 \Rightarrow
+  {\color{magenta} \vec{\nabla} \cdot \vec{E} = \frac{\rho}{\epsilon_0}}
 \end{equation*}
 
 The above is the {\bf \underline{differential form} of Gauss' law}.\\
@@ -1358,7 +1358,7 @@ It tells us that the divergence of the electric field at each point is proportio
 The divergence of the electric field at each point is proportional to the local charge density.
 
 \begin{equation*}
-  \vec{\nabla} \vec{E}(\vec{r}) = \frac{\rho(\vec{r})}{\epsilon_0}
+  \vec{\nabla} \cdot \vec{E}(\vec{r}) = \frac{\rho(\vec{r})}{\epsilon_0}
 \end{equation*}
 
 Recall the geometrical interpretation of the divergence of a vector field.\\

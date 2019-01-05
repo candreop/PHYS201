@@ -317,9 +317,9 @@ As we have seen, charges are free to move. Where to?\\
 \begin{itemize}
   \item It follows from Gauss's law:
     \begin{equation*}
-       \vec{\nabla} \vec{E} = {\rho}/\epsilon_0
+       \vec{\nabla} \cdot \vec{E} = {\rho}/\epsilon_0
     \end{equation*}
-  \item If $\vec{E}=0$ inside a conductor, then $\rho(r)$=0 too.
+  \item If $|\vec{E}|=0$ inside a conductor, then $\rho(r)$=0 too.
   \item The induced charges can not live in the volume of the conductor, so they have to be on its surface.
 \end{itemize}
 
@@ -398,12 +398,13 @@ is by a straightforward application of the circuital law.\\
   \begin{column}{0.70\textwidth}
      We know that the circulation of the electric field $\vec{E}$ along a closed trajectory is 0:
      \begin{equation*}
-       \oint \vec{E} d\vec{\ell} = 0.
+       \oint \vec{E} \cdot d\vec{\ell} = 0.
      \end{equation*}
      Applying the circuital law for the closed trajectory shown on the left, we have:
      \begin{equation*}
-       \oint \vec{E} d\vec{\ell} =
-        \int_{a} \vec{E} d\vec{\ell} + \int_{b} \vec{E} d\vec{\ell} + \int_{c} \vec{E} d\vec{\ell} + \int_{d} \vec{E} d\vec{\ell} = 0.
+       \oint \vec{E} \cdot d\vec{\ell} =
+        \int_{a} \vec{E} \cdot d\vec{\ell} + \int_{b} \vec{E} \cdot d\vec{\ell}
+        + \int_{c} \vec{E} \cdot d\vec{\ell} + \int_{d} \vec{E} \cdot d\vec{\ell} = 0.
      \end{equation*}
   \end{column}
 \end{columns}
@@ -425,11 +426,11 @@ is by a straightforward application of the circuital law.\\
   \begin{column}{0.70\textwidth}
      \begin{itemize}
        \item $\vec{E}=0$ in the conductor so the segment `a' does not contribute
-             to the integral ($\int_{a} \vec{E} d\vec{\ell} = 0$).
+             to the integral ($\int_{a} \vec{E} \cdot d\vec{\ell} = 0$).
        \item The segments exiting the conductor (`b' and `d') can be made infinitesimally small,
              so they do not contribute to the integral either\\
-             ($\int_{b} \vec{E} d\vec{\ell} = \int_{d} \vec{E} d\vec{\ell} = 0$).
-       \item Therefore $\oint \vec{E} d\vec{\ell} = 0$ implies that $\int_{c} \vec{E} d\vec{\ell} = 0$
+             ($\int_{b} \vec{E} \cdot d\vec{\ell} = \int_{d} \vec{E} \cdot d\vec{\ell} = 0$).
+       \item Therefore $\oint \vec{E} \cdot d\vec{\ell} = 0$ implies that $\int_{c} \vec{E} \cdot d\vec{\ell} = 0$
      \end{itemize}
   \end{column}
 \end{columns}
@@ -437,7 +438,7 @@ is by a straightforward application of the circuital law.\\
 \begin{itemize}
   \item The segment `c' can be anywhere just outside the surface of the conductor and, since the segments `b' and `d' are
         infinitesimally small, `c' is parallel to the surface of the conductor.
-  \item Therefore, the only way that $\int_{c} \vec{E} d\vec{\ell}$ to be always 0 is for $\vec{E}$ to be
+  \item Therefore, the only way that $\int_{c} \vec{E} \cdot d\vec{\ell}$ to be always 0 is for $\vec{E}$ to be
         always perpendicular to the surface of the conductor.
 \end{itemize}
 
@@ -813,12 +814,12 @@ Gauss' law in integral form provides an easy way to calculate the electric field
 and express it in terms of the charge Q stored in one of the conductors
 (by using an appropriate Gaussian surface):
 \begin{equation*}
-  \oint_{S} \vec{E} d\vec{S} = \frac{Q}{\epsilon_0}
+  \oint_{S} \vec{E} \cdot d\vec{S} = \frac{Q}{\epsilon_0}
 \end{equation*}
 
 If $\vec{E}$ is known, one can calculate the potential difference V between the two conductors as:
 \begin{equation*}
-  V := {\Delta}V = V_{+} - V_{-} = - \int_{-}^{+} \vec{E} d\vec{\ell}
+  V := {\Delta}V = V_{+} - V_{-} = - \int_{-}^{+} \vec{E} \cdot d\vec{\ell}
 \end{equation*}
 
 Knowing the charge Q in each conductor and
@@ -912,8 +913,8 @@ Gauss's law gives us the electric field $\vec{E}$ between the two plates.\\
   \end{column}
   \begin{column}{0.70\textwidth}
      \begin{equation*}
-       \oint_{A} \vec{E} d\vec{S} = \frac{Q_{enc}}{\epsilon_0} \Rightarrow
-       \oint_{A} \big( E \hat{x} \big) \big( dS \hat{x} \big) = \frac{\sigma A}{\epsilon_0} \Rightarrow
+       \oint_{A} \vec{E} \cdot d\vec{S} = \frac{Q_{enc}}{\epsilon_0} \Rightarrow
+       \oint_{A} \big( E \hat{x} \big) \cdot \big( dS \hat{x} \big) = \frac{\sigma A}{\epsilon_0} \Rightarrow
      \end{equation*}
 
      \begin{equation*}
@@ -938,7 +939,7 @@ Gauss's law gives us the electric field $\vec{E}$ between the two plates.\\
 The potential difference V between the two plates is given by the following path
 integral of the electric field (notice the sign conventions):
 \begin{equation*}
-   V = V_{+} - V_{-} = - \int_{-}^{+} \vec{E} d\vec{\ell}
+   V = V_{+} - V_{-} = - \int_{-}^{+} \vec{E} \cdot d\vec{\ell}
 \end{equation*}
 
 Since V is path-independent, I will choose a path (from the negative to the positive plate)
@@ -952,7 +953,7 @@ that simplies the calculation (shown in blue below).
   \end{column}
   \begin{column}{0.75\textwidth}
     \begin{equation*}
-       V = - \int_{d}^{0} \big( E \hat{x} \big) \Big( dx \hat{x} \Big) \Rightarrow
+       V = - \int_{d}^{0} \big( E \hat{x} \big) \cdot \Big( dx \hat{x} \Big) \Rightarrow
     \end{equation*}
     \begin{equation*}
       V = - E (\hat{x} \cdot \hat{x}) \int_{d}^{0} dx \Rightarrow
@@ -1132,7 +1133,7 @@ from the positive (+) plate at x=0 to the negative (-) plate at x=d.\\
 
 The work I do (against the action of the field) is:
 \begin{equation*}
-  {\delta}W_{prof} = \int_{+}^{-} \vec{F}_{prof} d\vec{\ell} = - \int_{+}^{-} \vec{F} d\vec{\ell}
+  {\delta}W_{prof} = \int_{+}^{-} \vec{F}_{prof} \cdot d\vec{\ell} = - \int_{+}^{-} \vec{F} \cdot d\vec{\ell}
 \end{equation*}
 where $\vec{F}$ is the field force and $\vec{F}_{prof}$ is the force that I apply ($\vec{F}_{prof} = - \vec{F}$).\\
 
@@ -1155,8 +1156,8 @@ Note: $\vec{F}$ and $\vec{E}$ have different directions because the charge is ne
 Therefore, the work I do can be written as:
 \begin{equation*}
   {\delta}W_{prof} =
-    |{\delta}q| \int_{+}^{-} \vec{E} d\vec{\ell} =
-    |{\delta}q| \Big( - \int_{-}^{+} \vec{E} d\vec{\ell} \Big) =
+    |{\delta}q| \int_{+}^{-} \vec{E} \cdot d\vec{\ell} =
+    |{\delta}q| \Big( - \int_{-}^{+} \vec{E} \cdot d\vec{\ell} \Big) =
     |{\delta}q| \Big(V_{+} - V_{-} \Big) =
     |{\delta}q| V
 \end{equation*}
@@ -1384,7 +1385,7 @@ Will see that {\bf this is not the case.}\\
 
 Recall that the potential difference V between the two plates is given by
 \begin{equation*}
-  V = V_{+} - V_{-} = - \int_{-}^{+} \vec{E} d\vec{\ell}
+  V = V_{+} - V_{-} = - \int_{-}^{+} \vec{E} \cdot d\vec{\ell}
 \end{equation*}
 
 \vspace{0.1cm}
@@ -1699,7 +1700,7 @@ Consider a case where the polarisation field diverges:
   \begin{column}{0.65\textwidth}
      The volume density of polarisation charges can be written as
      \begin{equation*}
-       {\color{magenta} {\rho}_P = - \vec{\nabla} \vec{P}}
+       {\color{magenta} {\rho}_P = - \vec{\nabla} \cdot \vec{P}}
      \end{equation*}
      So charge can also accumulate in the volume of an insulator,
      as long as the polarisation field diverges.
@@ -1722,7 +1723,7 @@ The dielectric becomes the {\bf source of a new electric field $\vec{E}_{P}$}.\\
 \vspace{0.2cm}
 
 $\vec{E}_{P}$ is the field produced by a surface charge density
-$\sigma_P = \vec{P} \cdot \hat{n}$ and a volume charge density $\rho_P = - \vec{\nabla} \vec{P}$:
+$\sigma_P = \vec{P} \cdot \hat{n}$ and a volume charge density $\rho_P = - \vec{\nabla} \cdot \vec{P}$:
 \begin{equation*}
  V_P(\vec{r}) = \frac{1}{4\pi\epsilon_0} \oint \frac{1}{r} {\sigma}_P(\vec{r^{\prime}}) dS^{\prime} +
                 \frac{1}{4\pi\epsilon_0} \oint \frac{1}{r} {\rho}_P(\vec{r^{\prime}}) d\tau^{\prime}
@@ -1752,7 +1753,7 @@ we need to calculate the field due to induced charges $\vec{E}_P$ and add it to 
 To calculate $\vec{E}_P$, we need the surface and volume charge densities:
 \begin{equation*}
    {\sigma}_P = \vec{P} \cdot \hat{n} \;\;\;\; and \;\;\;\;
-   {\rho}_P = - \vec{\nabla} \vec{P}
+   {\rho}_P = - \vec{\nabla} \cdot \vec{P}
 \end{equation*}
 
 Both ${\sigma}_P$ and ${\rho}_P$ depend on the polarisation field $\vec{P}$.
@@ -1791,7 +1792,7 @@ We will {\bf generalise Gauss's law in the presence of dielectrics}
 
 Recall Gauss' law (in differential form) in vacuum:
 \begin{equation*}
-   \vec{\nabla} \vec{E} = \frac{\rho}{\epsilon_0}
+   \vec{\nabla} \cdot \vec{E} = \frac{\rho}{\epsilon_0}
 \end{equation*}
 where $\rho$ is the total charge density and, now, includes both free ($\rho_f$) and polarisation charges ($\rho_P$):
 \begin{equation*}
@@ -1800,7 +1801,7 @@ where $\rho$ is the total charge density and, now, includes both free ($\rho_f$)
 
 The density of polarisation charges can be expressed in terms of the polarisation vector, therefore:
 \begin{equation*}
-   \vec{\nabla} \vec{E} = \frac{\rho_f - \vec{\nabla}\vec{P}}{\epsilon_0}
+   \vec{\nabla} \cdot \vec{E} = \frac{\rho_f - \vec{\nabla} \cdot \vec{P}}{\epsilon_0}
 \end{equation*}
 
 \end{frame}
@@ -1815,13 +1816,13 @@ The density of polarisation charges can be expressed in terms of the polarisatio
 Collecting the divergences together:
 
 \begin{equation*}
-   \vec{\nabla} \vec{E} = \frac{\rho_f - \vec{\nabla}\vec{P}}{\epsilon_0} \Rightarrow
-   \epsilon_0 \vec{\nabla} \vec{E} = \rho_f - \vec{\nabla}\vec{P} \Rightarrow
-   \epsilon_0 \vec{\nabla} \vec{E} + \vec{\nabla}\vec{P} = \rho_f \Rightarrow
+   \vec{\nabla} \cdot \vec{E} = \frac{\rho_f - \vec{\nabla} \cdot \vec{P}}{\epsilon_0} \Rightarrow
+   \epsilon_0 \vec{\nabla} \cdot \vec{E} = \rho_f - \vec{\nabla} \cdot \vec{P} \Rightarrow
+   \epsilon_0 \vec{\nabla} \cdot \vec{E} + \vec{\nabla} \cdot \vec{P} = \rho_f \Rightarrow
 \end{equation*}
 
 \begin{equation*}
-   \vec{\nabla} \Big( \epsilon_0 \vec{E} + \vec{P} \Big) = \rho_f
+   \vec{\nabla} \cdot \Big( \epsilon_0 \vec{E} + \vec{P} \Big) = \rho_f
 \end{equation*}
 
 We define the {\bf electric displacement $\vec{D}$} as:
@@ -1841,7 +1842,7 @@ In SI, the electric displacement $\vec{D}$ has {\bf units of $C/m^2$}.
 
 The electric displacement vector $\vec{D}$ satisfies the differential equation:
 \begin{equation*}
-   \vec{\nabla} \vec{D} = \rho_f
+   \vec{\nabla} \cdot \vec{D} = \rho_f
 \end{equation*}
 Notice that $\rho_f$ is the density of {\bf free charges}.\\
 
@@ -1857,7 +1858,7 @@ We have generalised Gauss's law, taking into account {\bf both free and polarisa
 
 The equivalent integral form can be obtained using Gauss's theorem:
 \begin{equation*}
-   \oint \vec{D} d\vec{S} = Q_f
+   \oint \vec{D} \cdot d\vec{S} = Q_f
 \end{equation*}
 
 Notice that $Q_f$ is the {\bf free charge}.
@@ -1972,7 +1973,7 @@ Let's consider again the parallel plate capacitor we studied before.\\
     We will follow the exact same procedure we followed earlier in this lecture,
     but now we will {\bf use Gauss's law in the presence of dielectrics}.\\
     \begin{equation*}
-       \oint \vec{D} d\vec{S} = Q_f
+       \oint \vec{D} \cdot d\vec{S} = Q_f
     \end{equation*}
   \end{column}
 \end{columns}
@@ -1990,7 +1991,7 @@ Both $\vec{D}$ and $d\vec{S}$ point along $\hat{x}$,
 and there is flux only through the right side of the Gaussian surface.
 
 \begin{equation*}
-   \oint \vec{D} d\vec{S} = Q_{f} \Rightarrow D A = Q_{f} \Rightarrow \vec{D} = \frac{Q_{f}}{A} \hat{x}
+   \oint \vec{D} \cdot d\vec{S} = Q_{f} \Rightarrow D A = Q_{f} \Rightarrow \vec{D} = \frac{Q_{f}}{A} \hat{x}
 \end{equation*}
 
 As we have seen the electric displacement $\vec{D}$ is:
@@ -2013,8 +2014,8 @@ Therefore the total electric field $\vec{E}$ is:
 
 The potential difference between the two charged plates is
 \begin{equation*}
-    V = - \int_{-}^{+} \vec{E} d\vec{\ell} =  - \int_{d}^{0} \vec{E} d\vec{\ell}
-      = - \int_{d}^{0} \Big( \frac{Q_{f}}{\epsilon_{r} \epsilon_{0} A} \hat{x} \Big) dl \hat{x} \Rightarrow
+    V = - \int_{-}^{+} \vec{E} \cdot d\vec{\ell} =  - \int_{d}^{0} \vec{E} \cdot d\vec{\ell}
+      = - \int_{d}^{0} \Big( \frac{Q_{f}}{\epsilon_{r} \epsilon_{0} A} \hat{x} \Big) \cdot dl \hat{x} \Rightarrow
       = - \frac{Q_{f}}{\epsilon_{r} \epsilon_{0} A} \int_{d}^{0} dl \Rightarrow
 \end{equation*}
 \begin{equation*}
