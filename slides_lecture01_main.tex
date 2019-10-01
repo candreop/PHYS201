@@ -837,7 +837,7 @@ We wrote the force exerted on test charge 1 by a test charge 2 ($\vec{F}_{12}$) 
    \vec{F}_{12} =
       \frac{1}{4\pi\epsilon_0}
       \frac{q_1 q_2}{|\vec{r}_{1}-\vec{r}_{2}|^{\color{red}2}}
-      {\color{red} \hat{r}_{12} }
+      {\color{red} \hat{(r_{1}-r_{2})}}
 \end{equation*}
 }
 \vspace{0.2cm}
@@ -848,7 +848,7 @@ Sometimes, we will also be writing it as:\\
    \vec{F}_{12} =
       \frac{1}{4\pi\epsilon_0}
       \frac{q_1 q_2}{|\vec{r}_{1}-\vec{r}_{2}|^{\color{red}3}}
-      {\color{red} \vec{r}_{12} }
+      {\color{red} (\vec{r}_{1}-\vec{r}_{2})}
 \end{equation*}
 }
 \vspace{0.2cm}
@@ -1780,6 +1780,39 @@ on the sign of charge q:\\
 
 
 %
+% Field lines example
+%
+
+\begin{frame}{Electric field lines: 2 equal charges}
+
+\begin{center}
+ \includegraphics[width=0.90\textwidth]{./images/schematics/electric_field_lines_2_equal_charges_pp_and_np.jpg}
+\end{center}
+
+{\small
+Field lines start from positive charges and end up in negative charges.\\
+The force is tangential to the field lines.
+}
+
+\end{frame}
+
+%
+% Field lines example
+%
+
+\begin{frame}{Electric field lines: 2 unequal charges}
+
+\begin{center}
+ \includegraphics[width=0.75\textwidth]{./images/schematics/electric_field_lines_2_unequal_charges.png}
+\end{center}
+
+{\small
+Question: Do you understand which of the two charges in each pair is the largest?
+}
+
+\end{frame}
+
+%
 % Quiz
 %
 
@@ -1813,39 +1846,6 @@ on the sign of charge q:\\
 
 } % Quiz
 
-%
-% Field lines example
-%
-
-\begin{frame}{Electric field lines: 2 equal charges}
-
-\begin{center}
- \includegraphics[width=0.90\textwidth]{./images/schematics/electric_field_lines_2_equal_charges_pp_and_np.jpg}
-\end{center}
-
-{\small
-Field lines start from positive charges and end up in negative charges.\\
-The force is tangential to the field lines.
-}
-
-\end{frame}
-
-%
-% Field lines example
-%
-
-\begin{frame}{Electric field lines: 2 unequal charges}
-
-\begin{center}
- \includegraphics[width=0.75\textwidth]{./images/schematics/electric_field_lines_2_unequal_charges.png}
-\end{center}
-
-{\small
-Question: Do you understand which of the two charges in each pair is the largest?
-}
-
-\end{frame}
-
 
 %
 % Quiz
@@ -1858,7 +1858,7 @@ Question: Do you understand which of the two charges in each pair is the largest
 
 \begin{blockexmplque}{Question}
    Now that you understand the basics, can you draw the electric field map for the following configuration
-   (light red: nehative charges, light blue: positive charges, amount of charge proportional to the circle area)?
+   (light red: negative charges, light blue: positive charges, amount of charge proportional to the circle area)?
    \vspace{0.3cm}
    \begin{center}
      \includegraphics[width=0.45\textwidth]{./images/problems/lect01_n_charges.png}\\
@@ -1898,7 +1898,7 @@ Question: Do you understand which of the two charges in each pair is the largest
 
 {\small
 
-Write a Python program that:
+Write a program that:
 \begin{itemize}
 {\scriptsize
   \item {\bf Can read an arbitrary distribution of N discrete charges (in 2-D)},\\
@@ -1907,7 +1907,7 @@ Write a Python program that:
   \item {\bf Allows you to visualise the input charge distribution},\\
         e.g using appropriately-positioned circles whose color or size represents amount of charge.
   \item {\bf Allows you to visualise the electric field lines}
-        in the viscinity of the charge distrubution.\\
+        in the vicinity of the charge distrubution.\\
 }
 \end{itemize}
 
@@ -1915,17 +1915,19 @@ Write a Python program that:
 Test you program, reproducing some of the simpler field maps shown before.\\
 
 \vspace{0.2cm}
-Document your program and submit it to the PHYS201 GitHub repository!\\
+Document your program, upload it to a GitHub repository, and send me a link!\\
 
 \vspace{0.2cm}
 Upload images of the most interesting field map you are able to generate!\\
 
-\vspace{0.2cm}
-You can use any external Python module that helps you do the job!\\
-\begin{itemize}
-  \item {\tt \color{red}matplotlib.pyplot} seems like a suitable tool allowing you to draw vector fields. Google it!
-\end{itemize}
+%\vspace{0.2cm}
+%You can use any external Python module that helps you do the job!\\
+%\begin{itemize}
+%  \item {\tt \color{red}matplotlib.pyplot} seems like a suitable tool allowing you to draw vector fields. Google it!
+%\end{itemize}
+
 }
+
 \end{frame}
 
 
