@@ -5,7 +5,7 @@ This repository includes the source code for my PHYS201 (Electromagnetism) lectu
 
 # Author
 
-Dr. Costas Andreopoulos, **FHEA**  < constantinos.andreopoulos \at cern.ch >
+Prof. Costas Andreopoulos, **FHEA**  < constantinos.andreopoulos \at cern.ch >
 
 <pre>
  University of Liverpool          |  U.K. Research & Innovation (UKRI)
