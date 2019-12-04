@@ -5,7 +5,7 @@
 #
 
 ACYEAR  = 201920
-VERSION = v01
+VERSION = v03
 
 00   : NAME = PHYS201_${ACYEAR}-Slides-${VERSION}\ \(Intro\)
 0001 : NAME = PHYS201_${ACYEAR}-Slides-${VERSION}\ \(Intro\ +\ Lecture\ 01\)

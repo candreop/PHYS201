@@ -13,6 +13,7 @@
 %\usepackage{relsize}
 %\usepackage{accents}
 \usepackage{latexsym}
+\usepackage{amsmath, amssymb}
 \usepackage{soul}      % strikethrough text with \st
 \usepackage{cancel}    % diagonal strikethrough in math mode
 \usepackage{mathtools} % \xRightarrow{text} etc
@@ -161,7 +162,8 @@
   {\par\usebeamertemplate{block end}
 \end{actionenv}}
 
-
+% imaginary i - curly
+\newcommand{\iu}{{i\mkern1mu}}
 
 % short checkmark for large tables
 \newcommand{\ck}{$\checkmark$}

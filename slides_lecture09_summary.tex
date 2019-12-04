@@ -10,8 +10,24 @@
 \begin{itemize}
 
 \item
-We looked at Maxwell's equation in vacuum in absence of sources, and we
-saw that {\bf the electric and magnetic fields satisfy a wave equation}:
+We looked at Maxwell's equation in vacuum in the \underline{absence of sources}:
+\begin{equation*}
+  \vec{\nabla} \cdot \vec{E} = \cancelto{0}{\frac{\rho}{\epsilon_0}} \Rightarrow
+  {\color{magenta} \vec{\nabla} \cdot \vec{E} = 0 }
+\end{equation*}
+\begin{equation*}
+   {\color{magenta} \vec{\nabla} \times \vec{E} = - \frac{\partial \vec{B}}{\partial t} }
+\end{equation*}
+\begin{equation*}
+   {\color{magenta} \vec{\nabla} \cdot \vec{B} = 0 }
+\end{equation*}
+\begin{equation*}
+  \vec{\nabla} \times \vec{B} = \cancelto{0}{\mu_0 j} + \epsilon_0 \mu_0 \frac{\partial \vec{E}}{\partial t} \Rightarrow
+   {\color{magenta} \vec{\nabla} \times \vec{B} = \epsilon_0 \mu_0 \frac{\partial \vec{E}}{\partial t} }
+\end{equation*}
+
+\item
+We saw that $\vec{E}$ and $\vec{B}$ {\bf satisfy a wave equation}:
 \begin{equation*}
   \vec{\nabla}^{2} \vec{E} = \mu_0 \epsilon_0 \frac{\partial^{2} \vec{E}}{\partial t^{2}}
   \;\;\;\; and \;\;\;\;
@@ -19,13 +35,8 @@ saw that {\bf the electric and magnetic fields satisfy a wave equation}:
 \end{equation*}
 
 \item
-The velocity of an electromagnetic wave is given by:
-\begin{equation*}
-    \frac{1}{\sqrt{\mu_0 \epsilon_0}} = {\bf 299,792,458 \; m/s}  \;\;\;(the \; speed \; of \; light)
-\end{equation*}
-
-\item
-This led Maxwell to realize that {\bf light is an electromagnetic wave}.
+EM waves have a velocity of
+$\frac{1}{\sqrt{\mu_0 \epsilon_0}} = {\bf 299,792,458 \; m/s}$
 
 \end{itemize}
 
@@ -38,6 +49,16 @@ This led Maxwell to realize that {\bf light is an electromagnetic wave}.
 \begin{frame}{Lecture \summarizedlecture - \lecturesummarytitle (cont'd)}
 
 \begin{itemize}
+
+\item
+The conclusion that {\bf light is an electromagnetic} wave is astounding!
+
+\begin{itemize}
+{\small
+   \item Recall the "humble" and unrelated origin of $\epsilon_0$ and $\mu_0$.
+}
+\end{itemize}
+
 
 \item
 An electromagnetic wave is a {\bf most peculiar wave}!
@@ -69,12 +90,39 @@ An electromagnetic wave is a {\bf most peculiar wave}!
    }
    \end{itemize}
 
+\end{itemize}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Lecture \summarizedlecture - \lecturesummarytitle (cont'd)}
+
+\begin{itemize}
+
 \item
-The {\bf Poynting vector} $\vec{N}$ as:
+{\bf Poynting theorem}:
+\begin{equation*}
+  \frac{dW}{dt} =
+     - {\color{magenta} \oint_{S} d\vec{S} \cdot \frac{1}{\mu_0} \Big(\vec{E} \times \vec{B} \Big) }
+     - \frac{\partial}{\partial t} \int_{\tau} d\tau  \Big( \frac{1}{2\mu_0} \vec{B}^2 + \frac{\epsilon_0}{2} \vec{E}^2 \Big)
+\end{equation*}
+
+\item
+The {\bf Poynting vector} $\vec{N}$ was defined as:
 \begin{equation*}
   \vec{N} = \frac{1}{\mu_0} \Big( \vec{E} \times \vec{B} \Big)
 \end{equation*}
 It represents the {\bf energy flux density (rate energy transfer per unit area)} and it has units of $W(att)/m^2$.\\
+
+\item
+The average power transmitted by the e/m wave, is given by
+the {\bf average of $\vec{N}$ over a period T}:
+\begin{equation*}
+  <\vec{N}> = \frac{1}{T} \int_{0}^{T} \vec{N} dt
+\end{equation*}
 
 \end{itemize}
 

@@ -59,79 +59,339 @@
 % ------------------------------------------------------------------------------
 
 %
+% Reminder of complex numbers
+%
+
+% starting reminder
+{
+\reminderslide
+
+%
+%
+%
+
+\begin{frame}{Reminder: Imaginary numbers}
+
+\begin{center}
+{\bf Imaginary number that when squared gives a negative result}.\\
+\end{center}
+
+\vspace{0.2cm}
+
+\begin{columns}
+  \begin{column}{0.75\textwidth}
+   {\small
+      The concept appeared in the work of Gerolamo Cardano\\
+      \begin{itemize}
+        \item Ars Magna (1545) gave solutions for cubic (Targaglia)
+              and quartic (Ferrari) equations.
+      \end{itemize}
+   }
+  \end{column}
+  \begin{column}{0.25\textwidth}
+    \begin{center}
+      \includegraphics[width=0.50\textwidth]{./images/people/cardano.jpg}
+    \end{center}
+  \end{column}
+\end{columns}
+
+
+\begin{columns}
+  \begin{column}{0.75\textwidth}
+   {\small
+      The term {\em imaginary} originates from Rene Descartes who considered these
+      numbers fictitious and useless!\\
+   }
+  \end{column}
+  \begin{column}{0.25\textwidth}
+    \begin{center}
+      \includegraphics[width=0.50\textwidth]{./images/people/descartes.jpg}
+    \end{center}
+  \end{column}
+\end{columns}
+
+
+\begin{columns}
+  \begin{column}{0.75\textwidth}
+   {\small
+      {\em Imaginary} numbers became widely accepted through the work of Cauchy, Euler and Gauss.\\
+   }
+  \end{column}
+  \begin{column}{0.25\textwidth}
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+
+%
+%
+%
+
+\begin{frame}{Reminder: Complex numbers}
+
+We define a {\bf complex} number as
+\begin{equation*}
+  z = x + i y
+\end{equation*}
+where x, y are real numbers and $i=\sqrt{-1}$.\\
+
+\vspace{0.3cm}
+The real part of z, written as $\operatorname{Re}(z)$ (or $\Re(z)$), is x.\\
+
+\vspace{0.3cm}
+The imaginary part of z, written as $\operatorname{Re}(z)$ (or $\Im(z)$), is y.\\
+\begin{itemize}
+  \item Note: The imaginary part is a real number.
+\end{itemize}
+
+\vspace{0.3cm}
+Therefore, z can be written as
+\begin{equation*}
+  z = \Re(z) + i \Im(z)
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Reminder: Complex plane}
+
+\begin{center}
+  \includegraphics[width=0.50\textwidth]{./images/schematics/complex_plane}
+\end{center}
+
+\begin{equation*}
+  z = x + i y = r cos\theta + i r sin\theta = r e^{i \theta}
+\end{equation*}
+
+\end{frame}
+
+
+%
+%
+%
+
+\begin{frame}{Reminder: Complex numbers in polar coordinates}
+
+A complex number z can be represented in polar coordinates as
+\begin{equation*}
+  z = r e^{i \theta}
+\end{equation*}
+where r is the magnitude of z and $\theta$ is the angle of z
+with respect to the real axis.\\
+
+\vspace{0.3cm}
+Using polar coordinates simplifies multiplication
+and division:
+
+\begin{equation*}
+  z_1 z_2 = r_1 r_2 e^{i (\theta_1 + \theta_2)}
+\end{equation*}
+
+\begin{equation*}
+  \frac{z_1}{z_2} = \frac{r_1}{r_2} e^{i (\theta_1 - \theta_2)}
+\end{equation*}
+
+\end{frame}
+
+
+} % ending reminder
+
+
+%
 %
 %
 
 \begin{frame}{Complex representation of EM waves}
 
-Using de Moivre's theorem:
-\begin{equation*}
-   e^{i\phi} = cos\phi + i sin\phi
-\end{equation*}
-
-we can write any complex number as:
-\begin{equation*}
-    z =  |z|  e^{i \phi} = |z| \Big( cos\phi + i sin\phi \Big)
-\end{equation*}
-
-A monochromatic (single frequency) EM wave propagating in the +z
-direction can be written as:
+Previously, we studied monochromatic
+(single frequency = single "colour") EM waves propagating in the +z
+direction, that had no x or y dependence:
 \begin{equation*}
     \vec{E}(\vec{r},t) = E_0 cos\Big(kz-\omega t \Big) \hat{x} \;\;\; and \;\;\;
     \vec{B}(\vec{r},t) = B_0 cos\Big(kz-\omega t \Big) \hat{y}
 \end{equation*}
 
-The above are the real parts of:
+\begin{center}
+  \includegraphics[width=0.20\textwidth]{./images/schematics/emwave_01.jpg}\\
+\end{center}
+
+In the above expressions, $E_0$ and $B_0$ are the wave amplitudes,
+$\omega$ is the wave's angular frequency, and k is the wave number.\\
+\begin{itemize}
+  \item k is related to the wavelength $\lambda$ via $k = 2\pi/\lambda$\\
+  \item $\omega$ and k are related to the wave velocity c via $c = \omega/k$
+\end{itemize}
+
+\vspace{0.3cm}
+These are called {\bf plane waves}:
+Have no dependence on the position on the plane perpendicular to the direction of travel.
+
+\end{frame}
+
+
+%
+%
+%
+
+\begin{frame}{Complex representation of EM waves}
+
+Previously, we studied monochromatic
+(single frequency = single "colour") EM waves propagating in the +z
+direction, that had no x or y dependence:
+\begin{equation*}
+    \vec{E}(\vec{r},t) = E_0 cos\Big(kz-\omega t \Big) \hat{x} \;\;\; and \;\;\;
+    \vec{B}(\vec{r},t) = B_0 cos\Big(kz-\omega t \Big) \hat{y}
+\end{equation*}
+
+
+The above are the {\bf real parts} of:
 \begin{equation*}
     {\color{magenta} \vec{E}(\vec{r},t) = \vec{E}_0  e^{i (kz-\omega t)}  }
     \;\;\; and \;\;\;
     {\color{magenta} \vec{B}(\vec{r},t) = \vec{B}_0  e^{i (kz-\omega t)}  }
 \end{equation*}
 
+\noindent\rule{2cm}{0.4pt}\\
+{
+Recall that
+\begin{equation*}
+  z = x + i y = r cos\theta + i r sin\theta = r e^{i \theta}
+\end{equation*}
+}
+
 \end{frame}
 
-
-
 %
 %
 %
 
+\begin{frame}{EM waves are transverse}
 
-%
-%
-%
+In vacuum and away from sources ($\rho$ = 0)
+\begin{equation*}
+    \vec{\nabla} \cdot \vec{E} = 0
+    \xRightarrow{{\color{magenta} \vec{E}(\vec{r},t) = \vec{E}_0  e^{i (kz-\omega t)}  }}
+\end{equation*}
 
-\begin{frame}{Complex representation of EM waves}
+therefore
+\begin{equation*}
+  \Big(
+   E_{0x} \frac{\partial }{\partial x} +
+   E_{0y} \frac{\partial }{\partial y} +
+   E_{0z} \frac{\partial }{\partial z}
+  \Big) e^{i (kz-\omega t)} = 0
+  \Rightarrow
+  i k E_{0z} e^{i (kz-\omega t)} = 0
+  \Rightarrow
+  {\color{magenta} E_{0z} = 0}
+\end{equation*}
 
-\begin{itemize}
-\item
-  Because $\displaystyle \vec{\nabla} \cdot \vec{E} = 0$ and
-  $\displaystyle \vec{\nabla} \cdot \vec{B} = 0$,
-  the electromagnetic waves are always {\bf transverse}
-  (i.e. perpendicular to the direction of propagation).\\
-  \vspace{0.2cm}
-  For a wave propagating in the +z direction:
-  \begin{equation*}
+\vspace{0.3cm}
+
+Similarly, because $\displaystyle \vec{\nabla} \cdot \vec{B} = 0$,
+${\color{magenta} B_{0z} = 0}$.\\
+
+\vspace{0.3cm}
+
+Therefore,
+the electromagnetic waves are {\bf transverse}
+(i.e. perpendicular to the direction of propagation).\\
+\vspace{0.2cm}
+For a wave propagating in the +z direction:
+\begin{equation*}
     \vec{E}_0 = \Big( E_{0x}, E_{0y}, 0 \Big)   \;\;\; and \;\;\;
     \vec{B}_0 = \Big( B_{0x}, B_{0y}, 0 \Big)
-  \end{equation*}
-
-\item
-  Because $\displaystyle \vec{\nabla} \times \vec{E} = - \partial \vec{B} / \partial t$
-  we get
-  \begin{equation*}
-     -k E_{0y} = \omega B_{0x} \;\;\; and \;\;\;
-      k E_{0x} = \omega B_{0y}
-  \end{equation*}
-  which can be written as:
-  \begin{equation*}
-       \vec{B}_{0} = \frac{k}{\omega} \Big( \hat{z} \times \vec{E}_0 \Big)
-  \end{equation*}
-  So $\vec{E}$ and $\vec{B}$ are {\bf mutually perpendicular}.
-
-\end{itemize}
+\end{equation*}
 
 \end{frame}
+
+%
+%
+%
+
+\begin{frame}{EM waves are in phase and mutually perpendicular}
+
+Faraday's law:
+\begin{equation*}
+   \vec{\nabla} \times \vec{E} = - \partial \vec{B} / \partial t
+   \xRightarrow{
+     {\color{magenta} \vec{E}(\vec{r},t) = \vec{E}_0  e^{i (kz-\omega t)}  }
+     \;\;\; and \;\;\;
+     {\color{magenta} \vec{B}(\vec{r},t) = \vec{B}_0  e^{i (kz-\omega t)}  }
+   }
+\end{equation*}
+
+\begin{equation*}
+   \vec{\nabla} \times \Big( \vec{E}_0  e^{i (kz-\omega t)} \Big)
+   = - \frac{\partial}{\partial t} \Big( \vec{B}_0  e^{i (kz-\omega t)} \Big)
+   \xRightarrow{
+     {\color{magenta}
+      \vec{\nabla} \times (\lambda \vec{A}) = \lambda \vec{\nabla} \times \vec{A} + (\vec{\nabla}\lambda) \times \vec{A}}}
+\end{equation*}
+
+\begin{equation*}
+   \Big(\vec{\nabla} e^{i (kz-\omega t)} \Big) \times \vec{E_0} =
+    - \vec{B}_0 \frac{\partial}{\partial t} \Big( e^{i (kz-\omega t)} \Big) \Rightarrow
+\end{equation*}
+
+\begin{equation*}
+   \Big(ik \hat{z} \times \vec{E_0} \Big) e^{i (kz-\omega t)} =
+    \Big( i\omega \vec{B}_0 \Big) e^{i (kz-\omega t)} \Rightarrow
+\end{equation*}
+
+\begin{equation*}
+     k \hat{z} \times \vec{E_0} = \omega \vec{B}_0 \Rightarrow
+     {\color{magenta} \vec{B}_0 = \frac{k}{\omega} \hat{z} \times \vec{E_0}}
+\end{equation*}
+
+Therefore, $\vec{E}$ and $\vec{B}$ are {\bf mutually perpendicular}.
+
+\end{frame}
+
+%
+%
+%
+
+%\begin{frame}{EM waves are in phase and mutually perpendicular}
+%
+%\begin{equation*}
+%     {\color{magenta} k \hat{z} \times \vec{E_0} = \omega \vec{B}_0} \Rightarrow
+%\end{equation*}
+%
+%\begin{equation*}
+%       \left|
+%          \begin{array}{ccc}
+%             \hat{x} & \hat{y} & \hat{z} \\
+%                   0 &       0 &       k \\
+%              E_{0x} &  E_{0y} &       0 \\
+%          \end{array}
+%       \right| = \omega \Big( B_{0x}, B_{0y}, 0 \Big) \Rightarrow
+%\end{equation*}
+%
+%\begin{equation*}
+%  k \Big( -E_{0y}, E_{0x}, 0 \Big) =
+%  \omega \Big( B_{0x}, B_{0y}, 0 \Big)
+%\end{equation*}
+%
+%Therefore
+%\begin{equation*}
+%     -k E_{0y} = \omega B_{0x} \;\;\; and \;\;\;
+%      k E_{0x} = \omega B_{0y}
+%\end{equation*}
+%
+%which can be written as:
+%\begin{equation*}
+%       \vec{B}_{0} = \frac{k}{\omega} \Big( \hat{z} \times \vec{E}_0 \Big)
+%\end{equation*}
+%
+%So $\vec{E}$ and $\vec{B}$ are {\bf mutually perpendicular}.
+%
+%\end{frame}
+%
 
 %
 %
@@ -173,14 +433,15 @@ Embedding the above constraints, the fields can be written as:
 %
 %
 
-\begin{frame}{Polarization}
+\begin{frame}{Generalization for waves travelling in arbitrary direction}
 
-We can generalise our description.
-\begin{itemize}
-     \item There is nothing special about the z-axis.
-\end{itemize}
+There is nothing special about the z-axis.\\
 
 \vspace{0.2cm}
+
+We can generalise the previous description:\\
+
+\vspace{0.1cm}
 
 Assume a monochromatic plane EM wave traveling along the
 propagation vector $\vec{k}$.
@@ -188,26 +449,21 @@ Then $\vec{k} \vec{r}$ is the generalisation of $kz$ and we can write the electr
 and magnetic waves as:
 \begin{equation*}
      {\color{magenta} \vec{E}(\vec{r},t) = E_0  e^{i (\vec{k} \vec{r} -\omega t)} \hat{n} }
-     \;\;\; and \;\;\;
+\end{equation*}
+
+and
+\begin{equation*}
      {\color{magenta}
            \vec{B}(\vec{r},t) =
-                \frac{E_0}{c}  e^{i ( \vec{k} \vec{r} -\omega t)} \Big( \hat{k} \times \hat{n} \Big) =
-                \frac{1}{c}  \Big( \hat{k} \times \vec{E} \Big)
+                \frac{1}{c}  \Big( \hat{k} \times \vec{E} \Big) =
+                \frac{E_0}{c}  e^{i ( \vec{k} \vec{r} -\omega t)} \Big( \hat{k} \times \hat{n} \Big)
      }
 \end{equation*}
 
+\vspace{0.3cm}
 where $\hat{n}$ is the {\bf polarization vector}, which determines the direction of oscillation of
 the electric field.
 
-\noindent\rule{2cm}{0.4pt}\\
-{
-\begin{itemize}
-{\small
-    \item {\bf Monochromatic} wave: single frequency.
-    \item {\bf Plane} wave: no dependence on the position on the plane perpendicular to the direction of travel.
-}
-\end{itemize}
-}
 
 \end{frame}
 
@@ -217,26 +473,101 @@ the electric field.
 
 \begin{frame}{Polarization}
 
-$\hat{n}$ is the polarization vector.\\
+The expression
+\begin{equation*}
+     {\color{magenta} \vec{E}(\vec{r},t) = E_0  e^{i (\vec{k} \vec{r} -\omega t)} \hat{n} }
+\end{equation*}
+
+describes wave with its electric field vector always along the direction
+of $\hat{n}_a = \hat{n}$: This is a {\bf linearly polarised} wave.\\
+
+\vspace{0.3cm}
+Evidently, there exists another electric wave, with direction $\hat{n}_b \ne \hat{n}_a$
+that is \underline{linearly independent}.\\
+
+\vspace{0.3cm}
+Therefore, the most general plane wave can be written as
+\begin{equation*}
+     {\color{magenta} \vec{E}(\vec{r},t) =
+        \Big( E_{0a}(\vec{r},t) \hat{n}_a + E_{0b}(\vec{r},t) \hat{n}_b \Big)  e^{i (\vec{k} \vec{r} -\omega t)}  }
+\end{equation*}
+
+\vspace{0.3cm}
+In principle, the amplitudes $E_{0a}$ and $E_{0b}$ are complex numbers,
+allowing the possibility of a phase difference between the 2 linearly independent waves.
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Polarization}
+
+The most general plane wave can be written as
+\begin{equation*}
+     {\color{magenta} \vec{E}(\vec{r},t) =
+        \Big( E_{0a}(\vec{r},t) \hat{n}_a + E_{0b}(\vec{r},t) \hat{n}_b \Big)  e^{i (\vec{k} \vec{r} -\omega t)}  }
+\end{equation*}
+
+If $E_{0a}$ and $E_{0b}$ have the {\bf same phase},
+they yield a {\bf linearly polarised} wave.
+
+The wave has a polarization vector forming an
+angle $\theta$ with respect to $\hat{n}_a$
+\begin{equation*}
+  tan\theta = E_{0b} / E_{0a}
+\end{equation*}
+
+The magnitude of that wave is given by
+\begin{equation*}
+  E_0 = \sqrt{E_{0b}^2 + E_{0a}^2}
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Polarization}
+
+The most general plane wave can be written as
+\begin{equation*}
+     {\color{magenta} \vec{E}(\vec{r},t) =
+        \Big( E_{0a}(\vec{r},t) \hat{n}_a + E_{0b}(\vec{r},t) \hat{n}_b \Big)  e^{i (\vec{k} \vec{r} -\omega t)}  }
+\end{equation*}
+
+If the coplex amplitudes $E_{0a}$ and $E_{0b}$ have a {\bf phase difference},
+they yield an {\bf elliptically polarised} wave.\\
+
 \vspace{0.2cm}
-\begin{itemize}
-{\small
-\item
-If it is constant we have a {\bf linearly polarized} EM  wave.
-\item
-If it is random in time we have an {\bf unpolarized} EM wave.
-\item
-We can also have more complex situations
-  \begin{itemize}
-        \item e.g. the sum of two waves with polarisation vectors at $\pi/2$ and phase
-                  difference of $\pi/2$ is a {\bf circularly polarised} EM wave.
-  \end{itemize}
-}
-\end{itemize}
+
+In the special case where the phase difference is 90$^o$,
+and $E_{0a}$ = $E_{0b}$, we have a {\bf circularly polarised} wave.
+
+\begin{equation*}
+     {\color{magenta} \vec{E}(\vec{r},t) =
+        E_{0a}(\vec{r},t) \Big(  \hat{n}_a + i \hat{n}_b \Big)  e^{i (\vec{k} \vec{r} -\omega t)}  }
+\end{equation*}
 
 \begin{center}
-    \includegraphics[width=0.60\textwidth]{./images/schematics/wave_circular_polarization.png}
-    \includegraphics[width=0.40\textwidth]{./images/schematics/unpolarised_light_heading_towards_you.png}
+    \includegraphics[width=0.40\textwidth]{./images/schematics/wave_circular_polarization.png}
+\end{center}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Polarization}
+
+If it also possible that the direction of the polarization vector is
+{\bf random in time}: In this case we have an {\bf unpolarized} EM wave.
+
+\begin{center}
+    \includegraphics[width=0.60\textwidth]{./images/schematics/unpolarised_light_heading_towards_you.png}
 \end{center}
 
 \end{frame}
