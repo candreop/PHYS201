@@ -4,8 +4,8 @@
 # Costas Andreopoulos <costas.andreopoulos@stfc.ac.uk>
 #
 
-ACYEAR  = 201920
-VERSION = v03
+ACYEAR  = 202021
+VERSION = v01
 
 00   : NAME = PHYS201_${ACYEAR}-Slides-${VERSION}\ \(Intro\)
 0001 : NAME = PHYS201_${ACYEAR}-Slides-${VERSION}\ \(Intro\ +\ Lecture\ 01\)
