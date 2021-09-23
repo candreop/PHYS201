@@ -17,6 +17,81 @@
 {
 \problemslide
 
+\begin{frame}{Worked example: Exploiting the superposition principle}
+
+  \begin{blockexmplque}{Question}
+    A nonconductive solid sphere has a uniform volume charge density $\rho$.\\
+    \vspace{0.1cm}
+    Let $\vec{r}$ be the vector from the centre of the sphere to a general point
+    $P$ within the sphere. As you should be able to easily confirm,
+    the electric field $\vec{E}$ at a point $\vec{r}$  within the sphere is
+    given by $\vec{E}(\vec{r}) = \rho \vec{r}/(3\epsilon_0)$.\\
+    \vspace{0.1cm}
+    If a spherical cavity is hollowed out of the sphere, as shown below,
+    using superposition concepts, show that the electric field at all points
+    within the cavity is uniform and equal to
+    $\vec{E}(\vec{r})=\rho \vec{a}/(3\epsilon_0)$
+    where $\vec{a}$ is the position vector
+    from the centre of the sphere to the centre of the cavity.\\
+    \begin{center}
+      \includegraphics[width=0.20\textwidth]{./images/problems/lect02_spherical_charge_distribution_with_hole}
+    \end{center}
+  \end{blockexmplque}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Exploiting the superposition principle}
+
+  The charge distribution in case of a uniformly charged solid sphere
+  with a cavity is equivalent to that of
+  a whole uniformly charged solid sphere of charge density $\rho$
+  plus a smaller uniformly charged solid sphere
+  of charge density -$\rho$ that fills the void.\\
+  \vspace{0.2cm}
+
+  \begin{columns}
+    \begin{column}{0.38\textwidth}
+      \begin{center}
+        \includegraphics[width=0.95\textwidth]{./images/problems/lect02_sphere_with_cavity_distances_2}
+      \end{center}
+    \end{column}
+    \begin{column}{0.62\textwidth}
+      The field produced by each uniformly charged sphere is given.\\
+      By superposition, the field at a point $P$ within the cavity
+      (at distance $\vec{r}$ from the centre of the larger sphere)
+      is given by
+      \begin{equation*}
+        \vec{E}(\vec{r}) =
+        \frac{\rho \vec{r}}{3 \epsilon_0} +
+        \frac{(-\rho) \vec{r}^\prime}{3 \epsilon_0} =
+           \frac{\rho \vec{r}}{3 \epsilon_0} +
+           \frac{(-\rho) (\vec{r} - \vec{a})}{3 \epsilon_0} \Rightarrow
+      \end{equation*}
+      \begin{equation*}
+        \vec{E}(\vec{r}) =
+           \frac{\rho \vec{a}}{3 \epsilon_0}
+      \end{equation*}
+    \end{column}
+  \end{columns}
+
+\end{frame}
+
+} %\problemslide
+
+
+% ------------------------------------------------------------------------------
+
+%
+% Worked example :
+%
+
+{
+\problemslide
+
 \begin{frame}{Worked example: Spherical shell with non-uniform density}
 
   \begin{blockexmplque}{Question}
