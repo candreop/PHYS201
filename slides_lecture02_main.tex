@@ -965,96 +965,6 @@ At the given distance away from the rod (10 cm), the magnitude of the electric f
 
 } % Example
 
-
-{
-\programmingslide
-
-%
-%
-%
-
-\begin{frame}{PHYS201 scientific programming task for Lecture \thislecture}
-
-{\small
-
-If you did the previous task, you already have a program to calculate the
-electric field (in 2-D) for an arbitrary distribution of discrete charges.\\
-\vspace{0.2cm}
-
-Generalize your previous program:
-\begin{itemize}
-{
-  \item Move from a 2-D to a {\bf 3-D calculation}.
-  \item Add an option to {\bf specify a continuous distribution of charge}
-        (i.e. work with a user-defined charge density function $\rho(\vec{r})$)
-}
-\end{itemize}
-
-\vspace{0.2cm}
-What you will be doing, is to perform the following numerical integration:
-\begin{equation*}
-   \vec{E}(\vec{r}) = \frac{1}{4\pi\epsilon_0} \int_{\tau}
-      d\tau^{\prime} \frac{\rho({\pvec{r}'})}{|\vec{r}-\pvec{r}'|^{3}} (\vec{r}-\pvec{r}')
-\end{equation*}
-
-\vspace{0.3cm}
-
-Can you test Gauss' law numerically?
-
-}
-\end{frame}
-
-%
-%
-%
-
-\begin{frame}{PHYS201 scientific programming task for Lecture \thislecture}
-
-{\small
-
-As an example, use the following charge density in spherical coordinates:
-\begin{equation*}
-   \rho =
-     \begin{cases}
-       \frac{\rho_0}{(r/r_0)^2} e^{-r/r_0} cos^2\phi, & \text{if $r < 5 r_0$} \\
-       & \\
-       0, \text{otherwise}
-     \end{cases}
-\end{equation*}
-where $\rho_0$ = 0.16 C/m$^{3}$ and r$_0$ = 10 cm.\\
-%
-% at r = 5 *r0, the charge contained is 6.24 * \rho_0 * ro^3
-% 0.16 is 1/6.24
-%
-
-\vspace{0.2cm}
-Calculate numerically the amount of charge Q enclosed in a sphere of radius r, as a function or r:\\
-\begin{equation*}
-  Q(r) = \int_{0}^{r} \int_{4\pi} d\tau \rho(\vec{r^\prime})
-\end{equation*}
-
-\vspace{0.2cm}
-Confirm that your distribution plateaus to a value of $Q_{tot}$ for
-r $>5r_0$, as the sphere encloses all regions of non-zero charge density.
-What is the value of $Q_{tot}$?\\
-
-\vspace{0.2cm}
-Calculate the electric flux through the surface of a sphere with radius r = 5$r_0$
-and confirm that:
-\begin{equation*}
-  \epsilon_0 \oint \vec{E} \cdot d\vec{S} = Q_{tot}
-\end{equation*}
-}
-
-\end{frame}
-
-} % programming
-
-
-
-
-
-
 %
 %
 %
@@ -1405,3 +1315,9 @@ the {\bf electric charge is the source of the electric field}.
 \end{itemize}
 
 \end{frame}
+
+%
+% Optional reading
+%
+
+\input{slides_lecture02_optional.tex}
