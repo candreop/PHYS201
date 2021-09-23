@@ -1408,31 +1408,199 @@ We shall see that special property expressed in the {\em circuital law} in just 
 %
 %
 
-\begin{frame}{Electric potential}
+\begin{frame}{Electric potential of a point charge}
 
-Assume that charge q is at the origin and charge Q is brought at position $\vec{r}$.
-As we saw earlier, the work W done to bring Q at $\vec{r}$ is:
+Assume that charge $q$ is at the origin and charge
+$Q$ is brought at position $\vec{r}$.
+As we saw earlier, the work $W$ done to bring $Q$ at $\vec{r}$ is:
 \begin{equation*}
    W = \frac{q Q}{4\pi\epsilon_0 |\vec{r}|}
 \end{equation*}
 
-Therefore, the potential at position $\vec{r}$ due to charge q is:
+Therefore, the potential at position $\vec{r}$ due to charge $q$ is:
 \begin{equation*}
    V = \frac{W}{Q} = \frac{q}{4\pi\epsilon_0 |\vec{r}|}
+\end{equation*}
+
+We can generalise the above, relaxing the requirement that the point charge
+$q$ is at the origin. If, instead, $q$ is placed at position $\vec{r}^{\;\prime}$,
+then the electric potential at $\vec{r}$ can be written as:
+\begin{equation*}
+   V = \frac{q}{4\pi\epsilon_0 |\vec{r}-\vec{r}^{\;\prime}|}
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Potential of group of charges / continuous distribution}
+
+The potential at position $\vec{r}$
+due to a point charge $q$ placed at $\vec{r}^{\;\prime}$ is:
+\begin{equation*}
+   V = \frac{q}{4\pi\epsilon_0 |\vec{r}-\vec{r}^{\;\prime}|}
 \end{equation*}
 
 \vspace{0.2cm}
 
 Note that the {\bf potential obeys the superposition principle}.\\
-Therefore, the potential at position $\vec{r}$ due to charges $q_1$, $q_2$,..., $q_N$ placed at
+\vspace{0.2cm}
+
+Therefore, the potential at position $\vec{r}$
+due to charges $q_1$, $q_2$,..., $q_N$ placed at
 positions $\vec{r}_1$, $\vec{r}_2$,..., $\vec{r}_N$ is given by:
 \begin{equation*}
-   V = \sum_{i=1}^{N} \frac{q_i}{4\pi\epsilon_0 |\vec{r}-\vec{r}_{i}|}
+   V = \frac{1}{4\pi\epsilon_0}
+   \sum_{i=1}^{N} \frac{q_i}{|\vec{r}-\vec{r}_{i}|}
+\end{equation*}
+
+Similarly, the potential at position $\vec{r}$
+due to a continuous charge distribution $\rho$ is given by:
+\begin{equation*}
+   V = \frac{1}{4\pi\epsilon_0}
+     \int_{\tau^\prime} \frac{\rho(\vec{r}^{\;\prime})d\tau^\prime}{|\vec{r}-\vec{r}^{\;\prime}|}
 \end{equation*}
 
 \end{frame}
 
 
+%-------------------------------------------------------------------------------
+%
+% Worked example
+%
+
+{
+\problemslide
+
+%
+%
+%
+
+\begin{frame}{Worked example: Electric potential of circular arc of charge}
+
+\begin{blockexmplque}{Question}
+A plastic rod having a uniformly distributed charge $Q$ pC has been bent
+into a circular arc of radius $R$ and central angle $\phi$.
+With $V$=0 at infinity, what is the electric potential at $P$, the centre of
+curvature of the rod?
+\end{blockexmplque}
+
+\vspace{0.2cm}
+
+\begin{columns}
+  \begin{column}{0.25\textwidth}
+   \begin{center}
+     \includegraphics[width=0.99\textwidth]{./images/problems/lect03_potential_arc}
+   \end{center}
+  \end{column}
+  \begin{column}{0.70\textwidth}
+    Placing, for convenience but without loss of generality, the origin of the
+    coordinate system at $P$, the potential at $\vec{r}=\vec{0}$ can be written as:
+    \begin{equation*}
+       V = \frac{1}{4\pi\epsilon_0}
+         \int_{rod} \frac{dq(\vec{r}^{\;\prime})}{|\vec{r}^{\;\prime}|}
+    \end{equation*}
+    But $|\vec{r}^{\;\prime}|=R$ is a constant. Therefore:
+    \begin{equation*}
+       V = \frac{1}{4\pi\epsilon_0 R}
+         \int_{rod} dq(\vec{r}^{\;\prime}) =
+         \frac{-Q}{4\pi\epsilon_0 R}
+    \end{equation*}
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+} % worked example
+
+%-------------------------------------------------------------------------------
+%
+% Worked example
+%
+
+{
+\problemslide
+
+%
+%
+%
+
+\begin{frame}{Worked example: Electric potential of non-conducting rod}
+
+\begin{blockexmplque}{Question}
+Thin non-conducting rod of length $L$ has a positive charge of uniform linear
+density $\lambda$. Determine the electric potential $V$ due to the rod at point
+$P$, at perpendicular distance $d$ from the left end of the rod.
+\end{blockexmplque}
+
+\begin{center}
+  \includegraphics[width=0.60\textwidth]{./images/problems/lect03_potential_rod}
+\end{center}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Electric potential of non-conducting rod}
+
+Placing, for convenience but without loss of generality, the origin of the
+coordinate system at $P$, the potential at $\vec{r}=\vec{0}$ can be written as:
+
+\begin{equation*}
+    V = \frac{1}{4\pi\epsilon_0} \int_{rod} \frac{dq(\vec{r}^{\;\prime})}{r^\prime}
+\end{equation*}
+
+\vspace{0.2cm}
+
+The amount of charge $dq$ at position $\vec{r}^{\;\prime}$ is given by
+$dq = \lambda dx$, therefore the potential becomes:
+\begin{equation*}
+    V = \frac{\lambda}{4\pi\epsilon_0} \int_{0}^{L} \frac{dx}{r^\prime}
+\end{equation*}
+
+To carry out the integration, we need to relate $r^\prime$ and $x$.
+From the previous schematic, we find:
+\begin{equation*}
+    x^2 + d^2 = r^2 \Rightarrow r = \sqrt{x^2 + d^2}
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Electric potential of non-conducting rod}
+
+Therefore the potential can be written as:
+
+\begin{equation*}
+    V = \frac{\lambda}{4\pi\epsilon_0} \int_{0}^{L} \frac{dx}{\sqrt{x^2 + d^2}} =
+        \frac{\lambda}{4\pi\epsilon_0} ln\Big(x + \sqrt{x^2+d^2}\Big)\Bigg\rvert_{0}^{L}
+\end{equation*}
+
+Evaluating the integral, we have:
+\begin{equation*}
+    V = \frac{\lambda}{4\pi\epsilon_0} ln\Big(x + \sqrt{x^2+d^2}\Big)\Bigg\rvert_{0}^{L} \Rightarrow
+\end{equation*}
+\begin{equation*}
+    V = \frac{\lambda}{4\pi\epsilon_0} \Bigg\{ ln\Big(L + \sqrt{L^2+d^2}\Big) - ln\Big(d\Big) \Bigg\} \Rightarrow
+\end{equation*}
+\begin{equation*}
+    V = \frac{\lambda}{4\pi\epsilon_0} ln\Big(\frac{L + \sqrt{L^2+d^2}}{d}\Big)
+\end{equation*}
+
+
+\end{frame}
+
+
+} % worked example
+
+%-------------------------------------------------------------------------------
 
 
 %
@@ -1917,120 +2085,6 @@ then that is {\em the only} solution.\\
 }
 
 \end{frame}
-
-%
-%
-%
-
-{
-\programmingslide
-
-%
-%
-%
-
-\begin{frame}{PHYS201 scientific programming task for Lecture \thislecture}
-
-{\small
-
-We will attempt to {\bf solve numerically the Laplace equation in 2-D},
-for some given boundary conditions, and determine the potential V!\\
-\vspace{0.2cm}
-The Laplace equation in 2-D takes the form
-\begin{equation*}
-  \frac{\partial^2 V(x,y)}{\partial x^2} +
-  \frac{\partial^2 V(x,y)}{\partial y^2} = 0
-\end{equation*}
-\vspace{0.2cm}
-We will solve this equation for all x, y in the square area defined by:
-\begin{equation*}
-    0 < x < L \;\;\; \text{and} \;\;\; 0 < y < L
-\end{equation*}
-\vspace{0.2cm}
-Our boundary conditions are:
-\begin{equation*}
-    V(x,0) = V_0, \;\;\; V(x,L) = 0,  \;\;\; V(0,y) = 0,  \;\;\; V(L,y) = 0
-\end{equation*}
-Take L = 1 m and V$_0$ = 1 V.
-}
-\end{frame}
-
-%
-%
-%
-
-\begin{frame}{PHYS201 scientific programming task for Lecture \thislecture}
-
-{\small
-
-{\bf \color{red}Hint:} Solve the Laplace equation numerically,
-using the {\em finite difference method}.
-
-Consider the Taylor expansions of a function f(x) around x:
-\begin{equation*}
-   f(x+h) = f(x) + h f^{\prime}(x) + \frac{h^2}{2} f^{\prime \prime}(x) + O(h^3)
-\end{equation*}
-\begin{equation*}
-   f(x-h) = f(x) - h f^{\prime}(x) + \frac{h^2}{2} f^{\prime \prime}(x) - O(h^3)
-\end{equation*}
-where h is a small distance.\\
-\vspace{0.2cm}
-Adding the two equations, we obtain the
-{\em first central difference approximation} for the second derivative of f(x):
-\begin{equation*}
-   f(x+h) + f(x-h) = 2f(x) + h^2 f^{\prime \prime}(x) + O(h^4) \Rightarrow
-\end{equation*}
-\begin{equation*}
-   f^{\prime \prime}(x) = \frac{f(x+h) - 2f(x) + f(x-h)}{h^2} + O(h^2)
-\end{equation*}
-}
-\end{frame}
-
-%
-%
-%
-
-\begin{frame}{PHYS201 scientific programming task for Lecture \thislecture}
-
-{\small
-
-\begin{columns}
-  \begin{column}{0.25\textwidth}
-   \begin{center}
-     \includegraphics[width=0.90\textwidth]{./images/problems/lect03_computing_grid2d.png}
-   \end{center}
-  \end{column}
-  \begin{column}{0.75\textwidth}
-    Now, consider a uniform mesh (grid), as shown on the left,
-    where the spacing between neighbouring points along x is h$_x$
-    and the spacing between neighbouring points along y is h$_y$.\\
-    \vspace{0.2cm}
-    Using the {\em first central difference approximation},
-    the Laplace equation for any point on the 2-D grid can be written as:
-  \end{column}
-\end{columns}
-
-\begin{equation*}
-   \frac{V(x+h_x,y) - 2V(x,y) + V(x-h_x, y)}{h_x^2} +
-   \frac{V(x,y+h_y) - 2V(x,y) + V(x, y-h_y)}{h_y^2} = 0
-\end{equation*}
-
-If the grid is uniform (h$_x$ = h$_y$ = h), then the above equation becomes:
-\begin{equation*}
-   V(x+h,y) + V(x-h, y) +
-   V(x,y+h) + V(x, y-h) - 4V(x,y) = 0
-\end{equation*}
-
-You have a set of such equations, one for each grid point, which you need
-to {\bf solve simultaneously} in order to determine V(x,y) for each grid point.
-}
-\end{frame}
-
-
-} % programming
-
-% ------------------------------------------------------------------------------
-% ------------------------------------------------------------------------------
 
 
 %

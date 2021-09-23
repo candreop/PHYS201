@@ -165,3 +165,117 @@ This can be understood as follows:\\
 \end{itemize}
 
 \end{frame}
+
+%
+%
+%
+
+{
+\programmingslide
+
+%
+%
+%
+
+\begin{frame}{PHYS201 scientific programming task for Lecture \thislecture}
+
+{\small
+
+We will attempt to {\bf solve numerically the Laplace equation in 2-D},
+for some given boundary conditions, and determine the potential V!\\
+\vspace{0.2cm}
+The Laplace equation in 2-D takes the form
+\begin{equation*}
+  \frac{\partial^2 V(x,y)}{\partial x^2} +
+  \frac{\partial^2 V(x,y)}{\partial y^2} = 0
+\end{equation*}
+\vspace{0.2cm}
+We will solve this equation for all x, y in the square area defined by:
+\begin{equation*}
+    0 < x < L \;\;\; \text{and} \;\;\; 0 < y < L
+\end{equation*}
+\vspace{0.2cm}
+Our boundary conditions are:
+\begin{equation*}
+    V(x,0) = V_0, \;\;\; V(x,L) = 0,  \;\;\; V(0,y) = 0,  \;\;\; V(L,y) = 0
+\end{equation*}
+Take L = 1 m and V$_0$ = 1 V.
+}
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{PHYS201 scientific programming task for Lecture \thislecture}
+
+{\small
+
+{\bf \color{red}Hint:} Solve the Laplace equation numerically,
+using the {\em finite difference method}.
+
+Consider the Taylor expansions of a function f(x) around x:
+\begin{equation*}
+   f(x+h) = f(x) + h f^{\prime}(x) + \frac{h^2}{2} f^{\prime \prime}(x) + O(h^3)
+\end{equation*}
+\begin{equation*}
+   f(x-h) = f(x) - h f^{\prime}(x) + \frac{h^2}{2} f^{\prime \prime}(x) - O(h^3)
+\end{equation*}
+where h is a small distance.\\
+\vspace{0.2cm}
+Adding the two equations, we obtain the
+{\em first central difference approximation} for the second derivative of f(x):
+\begin{equation*}
+   f(x+h) + f(x-h) = 2f(x) + h^2 f^{\prime \prime}(x) + O(h^4) \Rightarrow
+\end{equation*}
+\begin{equation*}
+   f^{\prime \prime}(x) = \frac{f(x+h) - 2f(x) + f(x-h)}{h^2} + O(h^2)
+\end{equation*}
+}
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{PHYS201 scientific programming task for Lecture \thislecture}
+
+{\small
+
+\begin{columns}
+  \begin{column}{0.25\textwidth}
+   \begin{center}
+     \includegraphics[width=0.90\textwidth]{./images/problems/lect03_computing_grid2d.png}
+   \end{center}
+  \end{column}
+  \begin{column}{0.75\textwidth}
+    Now, consider a uniform mesh (grid), as shown on the left,
+    where the spacing between neighbouring points along x is h$_x$
+    and the spacing between neighbouring points along y is h$_y$.\\
+    \vspace{0.2cm}
+    Using the {\em first central difference approximation},
+    the Laplace equation for any point on the 2-D grid can be written as:
+  \end{column}
+\end{columns}
+
+\begin{equation*}
+   \frac{V(x+h_x,y) - 2V(x,y) + V(x-h_x, y)}{h_x^2} +
+   \frac{V(x,y+h_y) - 2V(x,y) + V(x, y-h_y)}{h_y^2} = 0
+\end{equation*}
+
+If the grid is uniform (h$_x$ = h$_y$ = h), then the above equation becomes:
+\begin{equation*}
+   V(x+h,y) + V(x-h, y) +
+   V(x,y+h) + V(x, y-h) - 4V(x,y) = 0
+\end{equation*}
+
+You have a set of such equations, one for each grid point, which you need
+to {\bf solve simultaneously} in order to determine V(x,y) for each grid point.
+}
+\end{frame}
+
+
+} % programming
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
