@@ -8,6 +8,164 @@
 \end{center}
 \end{frame}
 
+% ------------------------------------------------------------------------------
+
+%
+% Worked example :
+%
+
+{
+\problemslide
+
+\begin{frame}{Worked example: Spherical shell with non-uniform density}
+
+  \begin{blockexmplque}{Question}
+    A spherical shell of inner radius $a$ and outer radius $b$ has volume charge
+    density $\rho = kr^2$ ($a \le r \le b$), where $k$ is a constant and $r$ is
+    the radial distance from the centre of the shell.\\
+    Find the magnitude of the electric field $\vec{E}$
+    produced by this charge distribution
+    at radial distances i) $r<a$, ii) $a \le r < b$, and iii) $b \le r$.
+  \end{blockexmplque}
+
+  \vspace{0.2cm}
+
+  Due to the obvious spherical symmetry, the electric field $\vec{E}$
+  is a radial vector, and it is
+  is going to be a function of only the radial distance $r$.\\
+
+  \vspace{0.2cm}
+
+  We have 3 distinct regions:
+  i) $r<a$, ii) $a \le r < b$, and iii) $b \le r$.
+  \vspace{0.2cm}
+
+  For the calculation of $\vec{E}$ we will be applying Gauss's theorem:
+  \begin{equation*}
+    \int_{S} \vec{E} \cdot d\vec{S} =
+      \frac{Q_{encl}}{\epsilon_0} =
+        \frac{1}{\epsilon_0} \int_{\tau(S)} \rho d\tau
+  \end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Spherical shell with non-uniform density}
+
+  For $r<a$, for {\em any possible} closed surface $S$
+  that stays within that region of no charge, Gauss's theorem gives
+  \begin{equation*}
+    \int_{S} \vec{E} \cdot d\vec{S} = 0
+  \end{equation*}
+  Since this happens for all surfaces, it can not be the result of an
+  accidental cancellation and it has to be that the integrand itself is 0.
+  Therefore:
+  \begin{equation}
+    E (r<a) = 0
+  \end{equation}
+
+  \vspace{0.2cm}
+
+  For $a \le r < b$, exploiting the spherical symmetry,
+  we will be applying Gauss's theorem
+  for a concentric spherical surface $S(r)$ of radius $r$.\\
+
+  \vspace{0.2cm}
+
+  Because both $\vec{E}$ and the surface vector $d\vec{S}$ are collinear,
+  and the norm of $\vec{E}$ is constant, everywhere on $S(r)$,
+  the flux calculation is simplified:
+  \begin{equation*}
+    \int_{S(r)} \vec{E} \cdot d\vec{S} =
+    \int_{S(r)} E dS =
+    E \int_{S(r)} dS =
+    E 4\pi r^2
+  \end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Spherical shell with non-uniform density}
+
+  The charge $Q_{enc}$, in the volume $\tau(S)$,
+  enclosed by a spherical surface $S(r)$ of radius $r$
+  is given by:
+  \begin{equation*}
+    Q_{enc} =
+      \int_{\tau(S)} \rho d\tau =
+      \int_{a}^{r} \Big( k u^2 \Big) 4\pi u^2 du =
+      4\pi k \int_{a}^{r} u^4 du =
+      \frac{4\pi k}{5} u^5 \Big\rvert_{a}^{r} \Rightarrow
+  \end{equation*}
+  \begin{equation*}
+      Q_{enc} =
+      \frac{4\pi k}{5} \Big(r^5 - a^5\Big)
+  \end{equation*}
+
+  Therefore, Gauss's law can be expressed as:
+  \begin{equation*}
+    E \cancel{4\pi} r^2 =
+     \frac{\cancel{4\pi} k}{5 \epsilon_0} \Big(r^5 - a^5\Big)
+  \end{equation*}
+
+  This yields:
+  \begin{equation*}
+    E (a \le r < b)= \frac{k}{5 \epsilon_0} \Big(r^3 - \frac{a^5}{r^2}\Big)
+  \end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Spherical shell with non-uniform density}
+
+  For $b \le r$, one can apply a similar analysis. In this case,
+  $Q_{enc}$ is no longer a function of $r$
+  since all spherical surfaces $S(r)$ include all charge.
+  From the previous expression for $Q_{enc}$,
+  setting $r$ equal to $b$, we have:
+  \begin{equation*}
+    Q_{enc} =
+      \frac{4\pi k}{5} \Big(b^5 - a^5\Big)
+  \end{equation*}
+
+  Gauss's law can be expressed as:
+  \begin{equation*}
+    E \cancel{4\pi} r^2 =
+     \frac{\cancel{4\pi} k}{5 \epsilon_0} \Big(b^5 - a^5\Big)
+  \end{equation*}
+
+  This yields:
+  \begin{equation*}
+    E (b \le r)= \frac{k}{5 \epsilon_0} \Big(\frac{b^5 - a^5}{r^2}\Big)
+  \end{equation*}
+
+  Summarizing, we found that:
+  \begin{equation*}
+    \displaystyle
+    E =
+      \begin{cases}
+        0 & \text{ for } r < a\\
+        \frac{k}{5 \epsilon_0} \Big(r^3 - \frac{a^5}{r^2}\Big) & \text{ for } a \le r < b\\
+        \frac{k}{5 \epsilon_0} \Big(\frac{b^5 - a^5}{r^2}\Big) & \text{ for } b \le r
+      \end{cases}
+  \end{equation*}
+
+\end{frame}
+
+} %\problemslide
+
+
+% ------------------------------------------------------------------------------
+
 {
 \programmingslide
 
