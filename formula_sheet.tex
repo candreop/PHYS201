@@ -72,6 +72,10 @@
        \;\;\;
        \vec{F}_{12} = \frac{1}{4\pi\epsilon_0} \frac{q_1 q_2}{|\vec{r}_{1}-\vec{r}_{2}|^{3}} (\vec{r}_{1}-\vec{r}_{2})
      \end{equation*}
+     In the above expression, $\hat{r}_{12}$ is a unit vector in the direction of $\vec{r}_{1}-\vec{r}_{2}$:
+     \begin{equation*}
+        \hat{r}_{12} = \frac{\vec{r}_{1}-\vec{r}_{2}}{|\vec{r}_{1}-\vec{r}_{2}|}
+     \end{equation*}
      \item Note that the force $\vec{F}_{21}$ exerted on test charge $q_2$ by charge $q_1$ is:
      \begin{equation*}
        \vec{F}_{21} =
@@ -86,7 +90,7 @@
 \subsubsection*{\bf Superposition principle - Force on charge Q due to an array of discrete charges}
     \begin{itemize}
     {\small
-       \item Allows the calculation of the total force on a charge Q
+       \item Allows the calculation of the total force on a charge $Q$
              from an array of other charges $q_1$, $q_2$, ..., $q_n$
         \begin{equation*}
          \vec{F}_{Q} = \sum_{i=1}^{n} \frac{1}{4\pi\epsilon_0}
@@ -97,12 +101,39 @@
     \end{itemize}
 
 \subsubsection*{\bf Generalization of Coulomb's law - Force on Q due to a continuous distribution of charge}
+
+In general,the force on a charge $Q$, placed at position $\vec{r}$,
+due to a continuous distribution of charge, is given by:
+      {\small
+         \begin{equation*}
+            \vec{F}_{Q} = \frac{Q}{4\pi\epsilon_0} \int_{\tau}
+               \frac{dq({\pvec{r}'})}{|\vec{r}-\pvec{r}'|^{3}} (\vec{r}-\pvec{r}')
+         \end{equation*}
+      }
+where $dq$ is the infinitesimal amount of charge in the viscinity of point $\pvec{r}'$.
+
+The continuous distribution of charge can be described by a volume charge density $\rho(\pvec{r}')$
+(charge per unit volume), in which case the above expression becomes:
       {\small
          \begin{equation*}
             \vec{F}_{Q} = \frac{Q}{4\pi\epsilon_0} \int_{\tau}
                d\tau^{\prime} \frac{\rho({\pvec{r}'})}{|\vec{r}-\pvec{r}'|^{3}} (\vec{r}-\pvec{r}')
          \end{equation*}
       }
+If one or two spatial dimensions of a problem can be ignored, the distribution of charge
+can be described with a surface charge density $\sigma(\pvec{r}')$ (charge per unit area)
+or a linear charge density $\lambda(\pvec{r}')$ (charge per unit length) respectively.
+In these cases, $\vec{F}_{Q}$ is determined from the following integral over the
+corresponding surface $S$ or line $L$:
+{\small
+   \begin{equation*}
+      \vec{F}_{Q} = \frac{Q}{4\pi\epsilon_0} \int_{S}
+         dS^{\prime} \frac{\sigma({\pvec{r}'})}{|\vec{r}-\pvec{r}'|^{3}} (\vec{r}-\pvec{r}')
+      \;\;\;\;\; or \;\;\;\;\;
+      \vec{F}_{Q} = \frac{Q}{4\pi\epsilon_0} \int_{L}
+        d\ell^{\prime} \frac{\lambda({\pvec{r}'})}{|\vec{r}-\pvec{r}'|^{3}} (\vec{r}-\pvec{r}')
+   \end{equation*}
+}
 
 \subsubsection*{\bf Electric field}
         \begin{itemize}

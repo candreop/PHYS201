@@ -140,9 +140,53 @@ flowing through S.
 
 \end{frame}
 
+% ------------------------------------------------------------------------------
+%
+% Worked example
+%
+
+{
+\problemslide
+
+%
+% Halliday-Resnick, Question 1, page 621
+%
+
+\begin{frame}{Worked example: Calculation of electric flux (Easy)}
+
+  \begin{blockexmplque}{Question}
+    A surface has the area vector $\vec{A}$ = (2$\hat{x}$+3$\hat{y}$) m$^2$.
+    What is the flux of a uniform electric field through the area if the field is
+    \begin{itemize}
+       \item $\vec{E}$ = 4$\hat{x}$ N/C, and
+    	 \item $\vec{E}$ = 4$\hat{z}$ N/C?
+    \end{itemize}
+  \end{blockexmplque}
+  \vspace{0.1cm}
+
+  The flux of a uniform electric field $\vec{E}$ through a planar surface
+  $\vec{A}$ is given by
+  \begin{equation*}
+  	\Phi = \vec{E} \cdot \vec{A}
+  \end{equation*}
+
+  Therefore, for the 2 cases:
+  \begin{itemize}
+    \item $\Phi = \Big\{ 4\hat{x} \cdot (2\hat{x} + 3\hat{y}) \Big\} \; \frac{N\cdot m^2}{C}
+  	            = \Big\{ 8 (\hat{x} \cdot \hat{x}) + 12 (\hat{x} \cdot \hat{y}) \Big\} \; \frac{N\cdot m^2}{C}
+  	            = 8 \; \frac{N\cdot m^2}{C}$
+  	\item $\Phi = \Big\{ 4\hat{z} \cdot (2\hat{x} + 3\hat{y}) \Big\} \; \frac{N\cdot m^2}{C}
+               	= \Big\{ 8 (\hat{z} \cdot \hat{x}) + 12 (\hat{z} \cdot \hat{y}) \Big\} \; \frac{N\cdot m^2}{C}
+  	            = 0 \; \frac{N\cdot m^2}{C}$
+  \end{itemize}
+
+\end{frame}
 
 
+} % Example
+% ------------------------------------------------------------------------------
 
+% ------------------------------------------------------------------------------
 %
 % Worked example
 %
@@ -154,7 +198,7 @@ flowing through S.
 %
 %
 
-\begin{frame}{Worked example}
+\begin{frame}{Worked example: Calculation of electric flux}
 
   \begin{blockexmplque}{Question}
     An electric field $\vec{E}$ is given by:
@@ -189,7 +233,7 @@ flowing through S.
 %
 %
 
-\begin{frame}{Worked example}
+\begin{frame}{Worked example: Calculation of electric flux}
 
   At the point P:
   \begin{equation*}
@@ -222,7 +266,7 @@ flowing through S.
 %
 %
 
-\begin{frame}{Worked example}
+\begin{frame}{Worked example: Calculation of electric flux}
 
 Now, I need to express the area $d\vec{S}$ in vector form.\\
 \vspace{0.2cm}
@@ -254,7 +298,7 @@ Putting everything together:
 %
 %
 
-\begin{frame}{Worked example}
+\begin{frame}{Worked example: Calculation of electric flux}
 
 We're now ready to calculate the flux d$\Phi$ of the electric field $\vec{E}$
 through the small patch $d\vec{S}$:\\
@@ -283,8 +327,8 @@ through the small patch $d\vec{S}$:\\
 Q: What is the significance of the minus sign?
 \end{frame}
 
-
 } % Example
+% ------------------------------------------------------------------------------
 
 
 %
@@ -444,7 +488,7 @@ In the previous few slides, the {\em essence} of {\bf Gauss' law} was illustrate
 \end{columns}
 \end{frame}
 
-
+% ------------------------------------------------------------------------------
 %
 % Worked example
 %
@@ -456,7 +500,7 @@ In the previous few slides, the {\em essence} of {\bf Gauss' law} was illustrate
 %
 %
 
-\begin{frame}{Worked example}
+\begin{frame}{Worked example: Finding $\Phi$ from $Q_{enc}$ (Easy)}
 
   \begin{blockexmplque}{Question}
     \begin{columns}
@@ -467,12 +511,12 @@ In the previous few slides, the {\em essence} of {\bf Gauss' law} was illustrate
       \end{column}
       \begin{column}{0.60\textwidth}
         The figure on the left shows 5 charged lumps of a material.
-        The cross-section of the surface S is indicated.\\
+        The cross-section of the surface $S$ is indicated.\\
         What is the {\em net electric flux} through the surface if:\\
         \begin{itemize}
-         \item q$_1$ = q$_4$ = 3.1 nC,
-         \item q$_2$ = q$_5$ = -5.9 nC, and
-         \item q$_3$ = -3.1 nC?
+         \item $q_1$ = $q_4$ = 3.1 nC,
+         \item $q_2$ = $q_5$ = -5.9 nC, and
+         \item $q_3$ = -3.1 nC?
         \end{itemize}
      \end{column}
    \end{columns}
@@ -489,6 +533,174 @@ In the previous few slides, the {\em essence} of {\bf Gauss' law} was illustrate
 \end{frame}
 
 } % Example
+% ------------------------------------------------------------------------------
+
+% ------------------------------------------------------------------------------
+%
+% Worked example
+% Halliday-Resnick, Sec. 23.4, Problem 5, page 622
+%
+
+%
+
+{
+\problemslide
+
+%
+%
+%
+
+\begin{frame}{Worked example: Finding $\Phi$ from $Q_{enc}$}
+
+  \begin{blockexmplque}{Question}
+       A proton is a distance $d$/2 directly above the center of a square of side $d$.
+    	 What is the magnitude of the electric flux through the square?
+       \begin{center}
+           \includegraphics[width=0.70\textwidth]{./images/problems/lect02_charge_above_surface.png}
+       \end{center}
+  \end{blockexmplque}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Finding $\Phi$ from $Q_{enc}$}
+
+  Consider a closed Gaussian surface in the shape of a cube of edge length $d$,
+  with the proton (of charge $q$) positioned in the centre of the cube.
+  Gauss's law tells us that the flux $\Phi$ through that surface is given by:
+  \begin{equation*}
+  	\Phi = \frac{q}{\epsilon_0}
+  \end{equation*}
+
+  Because of the symmetry of the configuration, the same electric flux
+  $\Phi_{face}$ passes through each of the 6 faces of the cube, so:
+  \begin{equation*}
+  	\Phi = 6 \Phi_{face}
+  \end{equation*}
+
+  Therefore:
+  \begin{equation*}
+  	\Phi_{face} = \frac{q}{6 \epsilon_0} \Rightarrow
+  \end{equation*}
+  \begin{equation*}
+  	\Phi_{face} =
+  	 \frac{1.6 \times 10^{-19} \; C}
+  	      {6 (8.85 \times 10^{-12} \; \frac{C^2}{N \cdot m^2})} =
+          3 \times 10^{-9} \; \frac{N \cdot m^2}{C}
+  \end{equation*}
+
+\end{frame}
+
+} % Example
+% ------------------------------------------------------------------------------
+
+% ------------------------------------------------------------------------------
+%
+% Worked example
+% Halliday-Resnick, Sec. 23.4, Problem 10, page 622
+%
+
+{
+\problemslide
+
+%
+%
+%
+
+\begin{frame}{Worked example: Finding $Q_{enc}$ from $\Phi$}
+
+  \begin{blockexmplque}{Question}
+    The figure below shows a closed surface in the shape of a cube of
+    edge length 2 m. It lies in a region where the non-uniform electric field
+    $\vec{E}$ is given by the following:
+    \begin{equation*}
+      \vec{E} = (3x+4)\hat{x} + 6\hat{y} + 7\hat{z}.
+    \end{equation*}
+    In the above expression, $|\vec{E}|$ has units of N/C if $x$ is given in m.
+    What is the net charge contained by the cube?
+    \begin{center}
+        \includegraphics[width=0.30\textwidth]{./images/problems/lect02_cube.png}
+    \end{center}
+  \end{blockexmplque}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Finding $Q_{enc}$ from $\Phi$}
+
+  It is easy to see that the constant terms of $\vec{E}$ make no contribution
+  to the total flux, therefore we can consider only the non-constant component.\\
+  \vspace{0.3cm}
+
+  Let $\vec{E}_{nc}$ be that non-constant component of the field,
+  which is given by:
+  \begin{equation*}
+  	\vec{E}_{nc} = (3x \frac{N \cdot m}{C}) \hat{x}
+  \end{equation*}
+
+  Let $\vec{S}_{x+}$ ($\vec{S}_{x-}$) be the area vector of the front (back)
+  face of the cube lying on the $yz$ plane. That vector points towards
+  positive (negative) $x$.\\
+  \vspace{0.3cm}
+
+  For a given $x$, $\vec{E}_{nc}$ is constant along the $yz$ plane.
+  Since the field is uniform and the surfaces are planar,
+  the flux through the 2 cube faces lying on $yz$ planes can be written as:
+  \begin{equation*}
+  	\Phi_{x} =
+  	     \vec{S}_{x+} \cdot \vec{E}_{nc}(x = 0 \; m)
+  		 + \vec{S}_{x-} \cdot \vec{E}_{nc}(x = -2 \; m)
+  \end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Finding $Q_{enc}$ from $\Phi$}
+
+  Because the magnitude of $\vec{E}_{nc}$ is proportional
+  to $x$ and the first term is evaluated at $x$=0, the first term is zero.
+  What remains is:
+  \begin{equation*}
+  	\Phi_{x} = \vec{S}_{x-} \cdot \vec{E}_{nc}(x = -2 \; m)
+      	     = (4 \; m^2) (-\hat{x}) \cdot (-6 \; N/C) \hat{x}
+  					 = 24 \; N \cdot m^2/C
+  \end{equation*}
+
+  Since $\vec{E}_{nc}$ points along $\hat{x}$,
+  the flux $\Phi_{y}$ ($\Phi_{z}$) through the cube faces lying on $xz$ ($xy$)
+  planes is zero.
+  Therefore, the total flux through all 6 faces of the cube is:
+  \begin{equation*}
+  	\Phi =  24 \; N \cdot m^2/C
+  \end{equation*}
+
+  Finally, from Gauss's law:
+  \begin{equation*}
+  	\Phi = \frac{q_{enc}}{\epsilon_0} \Rightarrow
+  	q_{enc} = \Phi \epsilon_0 \Rightarrow
+  \end{equation*}
+  \begin{equation*}
+  	q_{enc} = (24 \; N \cdot m^2/C) (8.85 \times 10^{-12}
+     \; \frac{C^2}{N \cdot m^2}) \Rightarrow
+  \end{equation*}
+  \begin{equation*}
+  	q_{enc} = 2.124  \times 10^{-10} \; C
+  \end{equation*}
+
+\end{frame}
+
+} % Example
+% ------------------------------------------------------------------------------
+
 
 %
 %

@@ -575,7 +575,7 @@ Therefore
 %
 %
 
-\begin{frame}{Worked example: }
+\begin{frame}{Worked example: Pulling a dielectric out of a capacitor}
 
   The magnitude of my force $F^\prime=F$
   \begin{equation*}
@@ -600,3 +600,518 @@ Therefore
 \end{frame}
 
 } % Worked example
+
+% ------------------------------------------------------------------------------
+
+%
+% Worked example : Spherical capacitor with inhomogeneous dielectric
+%
+
+{
+\problemslide
+
+\begin{frame}{Worked example: Cylindrical and spherical capacitors}
+
+  \begin{blockexmplque}{Question}
+  Calculate the capacitance of a cylindrical and a spherical capacitor.\\
+  \begin{columns}
+    \begin{column}{0.60\textwidth}
+     \begin{center}
+       \includegraphics[width=0.75\textwidth]{./images/schematics/capacitors_cylindrical_1.png}\\
+       \begin{equation*}
+           C = \frac{2 \pi \epsilon L}{ln(R_2/R_1)}
+       \end{equation*}
+     \end{center}
+    \end{column}
+    \begin{column}{0.40\textwidth}
+     \begin{center}
+       \includegraphics[width=0.75\textwidth]{./images/schematics/capacitors_spherical_1.png}\\
+       \begin{equation*}
+           C = \frac{4 \pi \epsilon}{\frac{1}{R_1}-\frac{1}{R_2}}
+       \end{equation*}
+     \end{center}
+    \end{column}
+  \end{columns}
+  \end{blockexmplque}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Cylindrical and spherical capacitors}
+
+  %-----------
+  % cylindrical
+  %-----------
+
+  As a Gaussian surface, for the calculation for a cylindrical capacitor,
+  we choose a cylinder of length $L$
+  and radius $\rho$ ($R_1$ $\le$ $\rho$ $\le$ $R_2$), closed by end caps.
+  It is coaxial with the cylinders of radii $R_1$ and $R_2$ and
+  encloses the central cylinder and
+  thus also the charge $Q$ on that cylinder.
+  Let's assume, without loss of generality, that the inner conductor is
+  positively charged and the outer conductor is negatively charged.
+
+  From Gauss' law:
+  \begin{equation*}
+    \Phi_E = Q/\epsilon_0 \Rightarrow
+    \oint_{S} \vec{E} \cdot d\vec{S} = Q/\epsilon_0
+  \end{equation*}
+
+  The electric field $\vec{E}$
+  is collinear with the normal to the Gaussian surface and, due to
+  cylindrical symmetry, it has the same magnitude everywhere on that
+  surface. There is no electric flux through the end caps.\\
+  The overall flux through the closed Gaussian surface is:
+  \begin{equation*}
+    \oint_{S} \vec{E} \cdot d\vec{S} =
+    \oint_{S} E \cdot dS =
+    E \oint_{S} dS =
+    E S = E (2\pi \rho L)
+  \end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Cylindrical and spherical capacitors}
+
+  Therefore:
+  \begin{equation*}
+    E (2\pi \rho L) = Q/\epsilon_0 \Rightarrow
+    E = \frac{Q}{2\pi \epsilon_0 L \rho}
+  \end{equation*}
+
+  In vector form the electric field is written as:
+  \begin{equation*}
+    \vec{E} = \frac{Q}{2\pi \epsilon_0 L \rho} \cdot \hat{\rho}
+  \end{equation*}
+  where $\hat{\rho}$ is the axial radial unit vector of the cylindrical
+  coordinate system used (it is perpendicular to the axis of the
+  two cylindrical conductors and it points outwards).\\
+
+  The potential difference $V$ between the positively and negatively
+  charged conductors is:
+  \begin{equation*}
+      V := V_{+} - V_{-} = - \int_{-}^{+} \vec{E} \cdot d\vec{\ell}
+  \end{equation*}
+
+  This integral is path-independent.
+  The integral is simplified if $\vec{E}$ and $d\vec{\ell}$ are colinear.
+  Since the electric field points along  $\hat{\rho}$, we chose
+  $d\vec{\ell} = d\rho \cdot \hat{\rho}$.\\
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Cylindrical and spherical capacitors}
+
+  Therefore:
+  \begin{equation*}
+      V = - \frac{Q}{2\pi \epsilon_0 L} \int_{R_2}^{R_1} \frac{d\rho}{\rho}
+  \end{equation*}
+
+  \begin{equation*}
+        = -  \frac{Q}{2\pi \epsilon_0 L} ln(\rho) \rvert_{R_2}^{R_1} =
+          - \frac{Q}{2\pi \epsilon_0 L}  (ln R_1 - ln R_2) =
+            \frac{Q}{2\pi \epsilon_0 L}  (ln R_2 - ln R_1) \Rightarrow
+  \end{equation*}
+
+  \begin{equation*}
+        V = \frac{Q}{2\pi \epsilon_0 L}  ln(R_2/R_1)
+  \end{equation*}
+
+  Therefore, the capacitance of a cylindrical capacitor is given by:
+  \begin{equation*}
+      C = \frac{Q}{V} = \frac{Q}{\frac{Q}{2\pi \epsilon_0 L}  ln(R_2/R_1)} =
+             2\pi \epsilon_0 \frac{L}{ln(R_2/R_1)}
+  \end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Cylindrical and spherical capacitors}
+
+  %-----------
+  % spherical
+  %-----------
+
+  As a Gaussian surface, for the calculation for a spherical capacitor,
+  we choose a sphere of radius $r$ ($R_1$ $\le$ $r$ $\le$ $R_2$)
+  which is concentric with the spherical shells of radii $R_1$ and $R_2$.
+  Let's assume, without loss of generality, that the inner conductor is
+  positively charged and the outer conductor is negatively charged.
+
+  From Gauss' law:
+  \begin{equation*}
+    \Phi_E = Q/\epsilon_0 \Rightarrow
+    \oint_{S} \vec{E} \cdot d\vec{S} = Q/\epsilon_0
+  \end{equation*}
+
+  The electric field $\vec{E}$
+  is collinear with the normal to the chosen Gaussian surface and, due to
+  spherical symmetry, it has the same magnitude everywhere on that
+  surface:
+  \begin{equation*}
+    \oint_{S} \vec{E} \cdot d\vec{S} =
+    \oint_{S} E \cdot dS =
+    E \oint_{S} dS =
+    E S =
+    E (4\pi r^2)
+  \end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Cylindrical and spherical capacitors}
+
+  Therefore:
+  \begin{equation*}
+    E (4\pi r^2) = Q/\epsilon_0 \Rightarrow
+    E = \frac{Q}{4\pi \epsilon_0 r^2}
+  \end{equation*}
+
+  In vector form the electric field is written as:
+  \begin{equation*}
+    E = \frac{Q}{4\pi \epsilon_0 r^2} \hat{r}
+  \end{equation*}
+  where $\hat{r}$ is the radial unit vector of the spherical coordinate
+  system used.
+
+  The potential difference $V$ between the positively and negatively
+  charged conductors is:
+  \begin{equation*}
+      V := V_{+} - V_{-} = - \int_{-}^{+} \vec{E} d\vec{\ell}
+  \end{equation*}
+
+  The above path-independent integral is
+  simplified if $\vec{E}$ and $d\vec{\ell}$ are collinear
+  ($d\vec{\ell} = dr \cdot \hat{r}$).
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Cylindrical and spherical capacitors}
+
+  Therefore:
+  \begin{equation*}
+      V = - \frac{Q}{4\pi} \int_{R_2}^{R_1}  \frac{dr}{r^2}
+  \end{equation*}
+
+  \begin{equation*}
+        =   - \frac{Q}{4\pi \epsilon_0}  (-\frac{1}{r}) \rvert_{R_2}^{R_1} =
+            - \frac{Q}{4\pi \epsilon_0}  (-\frac{1}{R_1} + \frac{1}{R_2}) =
+            \frac{Q}{4\pi \epsilon_0}   (\frac{1}{R_1} - \frac{1}{R_2}) \Rightarrow
+            \frac{Q}{4\pi \epsilon_0} \frac{R_2-R_1}{R_1 R_2}
+  \end{equation*}
+
+  \begin{equation*}
+        V = \frac{Q}{4\pi \epsilon_0} \frac{R_2-R_1}{R_1 R_2}
+  \end{equation*}
+
+  Therefore, the capacitance of a spherical capacitor is given by:
+  \begin{equation*}
+      C = \frac{Q}{V} = \frac{Q}{\frac{Q}{4\pi \epsilon_0} \frac{R_2-R_1}{R_1 R_2}} =
+             4\pi \epsilon_0 \frac{R_1 R_2}{R_2-R_1}
+  \end{equation*}
+
+\end{frame}
+
+} % Worked example
+
+% ------------------------------------------------------------------------------
+
+%
+% Worked example : Spherical capacitor with inhomogeneous dielectric
+%
+
+{
+\problemslide
+
+%
+%
+%
+
+\begin{frame}{Worked example: Capacitor with inhomogeneous dielectric}
+
+  \begin{blockexmplque}{Question}
+    The volume between two concentric conducting spherical surfaces of
+    radii $a$ and $b$ $(a < b)$, is filled with an inhomogeneous dielectric
+    with permittivity
+    \begin{equation*}
+       \epsilon = \frac{\epsilon_0}{1+Kr}
+    \end{equation*}
+    where $K$ is a constant and $r$ is the radial coordinate.
+    The displacement field $\vec{D}$ is related to the electric
+    field $\vec{E}$ by the usual formula $\vec{D} = \epsilon \vec{E}$.\\
+    A charge $Q$ is placed on the inner surface,
+    while the outer one is grounded.\\
+    Find:
+    \begin{itemize}
+      \item The magnitude and direction of the electric displacement
+       in the region $a < r < b$.
+      \item The capacitance of the device.
+      \item The volume polarization charge density in $a < r < b$.
+      \item The surface polarization charge density at $r = a$ and $r = b$.
+    \end{itemize}
+  \end{blockexmplque}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Capacitor with inhomogeneous dielectric}
+
+  The integral form of Gauss's law for the electric displacement field
+  $\vec{D}$ is
+  \begin{equation*}
+    \oint \vec{D} \cdot d\vec{S} = Q_{free}
+  \end{equation*}
+
+  Due to spherical symmetry of the problem, if we choose as integration
+  surface the surface of a sphere of radius r (a < r < b),
+  the vectors $\vec{D}$ and $d\vec{S}$ are both radial,
+  and $|\vec{D}|=D$ is constant over the integration surface.
+  Therefore:
+  \begin{equation*}
+    \oint D dS = Q_{free}  \Rightarrow
+     D \oint dS = Q_{free} \Rightarrow
+     D 4 \pi r^2 = Q_{free} \Rightarrow
+  \end{equation*}
+
+  \begin{equation*}
+     D(r) = \frac{Q_{free}}{4\pi r^2}
+  \end{equation*}
+
+  The radial vector $\vec{D}$ can be written in vector form as:
+  \begin{equation*}
+     \vec{D}(\vec{r}) = \frac{Q_{free}}{4\pi r^2} \hat{r}
+  \end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Capacitor with inhomogeneous dielectric}
+
+  The displacement and electric field vectors are related by:
+  \begin{equation*}
+     \vec{D}(\vec{r}) = \epsilon \vec{E}(\vec{r})
+  \end{equation*}
+
+  Therefore:
+  \begin{equation*}
+     \vec{E}(\vec{r}) = \frac{Q_{free}}{4\pi \epsilon r^2} \hat{r}
+%     \label{eq:p2b_Evec1}
+  \end{equation*}
+
+  The expression given for the permittivity of the inhomogeneous
+  dielectric is
+  \begin{equation*}
+     \epsilon = \frac{\epsilon_0}{1+Kr}
+%     \label{eq:p2_epsilon}
+  \end{equation*}
+
+  Substituting the above expression for $\epsilon$
+  into the earlier expression for $\vec{E}$, we have:
+  \begin{equation*}
+     \vec{E}(\vec{r}) = \frac{Q_{free}}{4\pi \epsilon_0} \frac{1+Kr}{r^2} \hat{r}
+%     \label{eq:p2b_Evec2}
+  \end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Capacitor with inhomogeneous dielectric}
+
+  The potential difference $V$ between the two concentric spherical
+  surfaces of radii a and b is given by:
+  \begin{equation*}
+     V = \int_{a}^{b} \vec{E}(\vec{r}) \cdot d\vec{\ell}
+%     \label{eq:p2b_V1}
+  \end{equation*}
+
+  Choosing a radial integration path:
+  \begin{equation*}
+    d\vec{\ell}=d\vec{r}
+  \end{equation*}
+
+  and carrying out the integration from a to b, we find:
+  \begin{equation*}
+     V =
+     \frac{Q_{free}}{4\pi \epsilon_0} \int_{a}^{b} \frac{1+Kr}{r^2} \hat{r} \cdot d\vec{r} =
+     \frac{Q_{free}}{4\pi \epsilon_0} \int_{a}^{b} \frac{1+Kr}{r^2} dr =
+     \frac{Q_{free}}{4\pi \epsilon_0}
+       \Big( \int_{a}^{b} \frac{dr}{r^2} + K \int_{a}^{b} \frac{dr}{r} \Big)
+  \end{equation*}
+
+  \begin{equation*}
+       = \frac{Q_{free}}{4\pi \epsilon_0}
+       \Big( -\frac{1}{r} + K ln(r) \Big) \Bigg\rvert_{a}^{b} =
+         \frac{Q_{free}}{4\pi \epsilon_0}
+       \Big( -\frac{1}{b} + K ln(b) + \frac{1}{a} - K ln(a) \Big) \Rightarrow
+  \end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Capacitor with inhomogeneous dielectric}
+
+  \begin{equation*}
+     V = \frac{Q_{free}}{4\pi \epsilon_0}
+       \Big( \frac{1}{a} - \frac{1}{b} + K ln(\frac{b}{a}) \Big)
+%       \label{eq:p2b_V2}
+  \end{equation*}
+
+  The capacitance of the device is given by:
+  \begin{equation*}
+     C = \frac{Q_{free}}{V}
+  \end{equation*}
+
+  Substituting V, we find:
+  \begin{equation*}
+     \displaystyle
+     C = \frac{\cancel{Q_{free}}}{
+       \frac{\cancel{Q_{free}}}{4\pi \epsilon_0}
+          \Big( \frac{1}{a} - \frac{1}{b} + K ln(\frac{b}{a}) \Big) }
+       = \frac{4\pi\epsilon_0}
+              {\frac{1}{a} - \frac{1}{b} + K ln(\frac{b}{a})} \Rightarrow
+  \end{equation*}
+
+  \begin{equation*}
+     \displaystyle
+     C = \frac{4\pi\epsilon_0 a b}{b - a + K a b ln(\frac{b}{a})}
+  \end{equation*}
+
+\end{frame}
+%
+%
+%
+
+\begin{frame}{Worked example: Capacitor with inhomogeneous dielectric}
+
+  The polarization vector $\vec{P}$ is given by:
+  \begin{equation*}
+     \vec{P} = \chi_{e} \epsilon_0 \vec{E}
+%     \label{eq:p2c_P1}
+  \end{equation*}
+
+  The factor $\chi_{e} \epsilon_0$ can be expressed in terms of
+  the given $\epsilon$ as follows:
+  \begin{equation*}
+     1+\chi_{e} = \epsilon_{r} = \frac{\epsilon}{\epsilon_0} \Rightarrow
+     (1+\chi_{e})\epsilon_0 = \epsilon \Rightarrow
+     \chi_{e} \epsilon_0 = \epsilon - \epsilon_0
+  \end{equation*}
+
+  Using the above, the earlier expression for $\vec{P}$ can be written as:
+  \begin{equation*}
+     \vec{P} = (\epsilon - \epsilon_0) \vec{E}
+%     \label{eq:p2c_P2}
+  \end{equation*}
+
+  Substituting the given expression of $\epsilon$, we have:
+  \begin{equation*}
+     \vec{P} =
+        (\frac{\cancel{\epsilon_0}}{1+Kr} - \cancel{\epsilon_0})
+        \frac{Q_{free}}{4\pi\cancel{\epsilon_0}} \frac{1+Kr}{r^2} \hat{r} =
+        \frac{Q_{free}}{4\pi}
+        \Big(\frac{1}{1+Kr} - 1\Big)
+        \frac{1+Kr}{r^2} \hat{r}
+  \end{equation*}
+
+  \begin{equation*}
+    = \frac{Q_{free}}{4\pi}
+      \frac{\cancel{1}-\cancel{1}-K\cancel{r}}{\cancel{1+Kr}}
+      \frac{\cancel{1+Kr}}{r^{\cancel{2}}} \hat{r} \Rightarrow
+     \vec{P} = - \frac{Q_{free}K}{4\pi r} \hat{r}
+  \end{equation*}
+
+\end{frame}
+%
+%
+%
+
+\begin{frame}{Worked example: Capacitor with inhomogeneous dielectric}
+
+  The volume polarization charge density $\rho_{P}$ is given by:
+
+  \begin{equation*}
+     \rho_{P} = - \vec{\nabla} \cdot \vec{P}
+  \end{equation*}
+
+  Substituting in the above equation the expression for $\vec{P}$, we have:
+  \begin{equation*}
+     \rho_{P} = - \vec{\nabla} \cdot \Big( - \frac{Q_{free}K}{4\pi r} \hat{r} \Big)
+  \end{equation*}
+
+  As $\vec{P}$ is radial vector, it is easier to evaluate its divergence
+  expressing the divergence operator in spherical coordinates.
+  Doing so, we find the volume polarization charge density $\rho_{P}$ to be
+  \begin{equation*}
+     \rho_{P} = - \frac{1}{r^2} \frac{\partial}{\partial r}
+                  \Bigg(r^2
+                    \Big( - \frac{Q_{free}K}{4\pi r} \Big)
+                  \Bigg) \Rightarrow
+  \end{equation*}
+
+  \begin{equation*}
+     \rho_{P} = \frac{Q_{free}K}{4\pi r^2}
+  \end{equation*}
+
+\end{frame}
+%
+%
+%
+
+\begin{frame}{Worked example: Capacitor with inhomogeneous dielectric}
+
+  The surface polarization charge densities $\sigma_{P}$
+  ar $r=a,b$ are given by the projection of $\vec{P}$
+  along the corresponding surface vectors.
+
+  Using the expression of $\vec{P}$ we found earlier, we get:
+
+  \begin{equation*}
+     \sigma_{P}(r=a) = \vec{P} \cdot (-\hat{r}) = \frac{Q_{free}K}{4\pi a}
+  \end{equation*}
+
+  and
+
+  \begin{equation*}
+     \sigma_{P}(r=b) = \vec{P} \cdot (+\hat{r}) = - \frac{Q_{free}K}{4\pi b}
+  \end{equation*}
+
+\end{frame}
+
+
+} % Worked example
+
+% ------------------------------------------------------------------------------

@@ -166,6 +166,239 @@ This can be understood as follows:\\
 
 \end{frame}
 
+% ------------------------------------------------------------------------------
+
+%
+% Worked example :
+%
+
+{
+\problemslide
+
+%
+%
+%
+
+\begin{frame}{Worked example: Hypothetical form of electric force}
+
+  \begin{blockexmplque}{Question}
+    Suppose that instead of the Coulomb force law, one found experimentally
+    that the force between two charges $q_1$ and $q_2$ was
+    \begin{equation*}
+        \vec{F}_{12} = \frac{q_1 q_2}{4\pi \epsilon_0}
+         \frac{1 - \sqrt{C|\vec{r}_1-\vec{r}_2|}}{|\vec{r}_1-\vec{r}_2|^3}
+          (\vec{r}_1-\vec{r}_2)
+    \end{equation*}
+    where $C$ is a constant.
+    \begin{itemize}
+      \item
+      Find an expression for the electric field $\vec{E}$
+      surrounding a point charge $q$ at the origin of the coordinate system.
+      \item
+      Choose an arbitrary closed path around a point charge $q$ and calculate
+      the line integral $\oint \vec{E} \cdot d\vec{\ell}$.
+      Compare with the Coulomb result.
+      \item
+      Find $\oint \vec{E} \cdot d\vec{S}$ over a spherical surface of radius
+      $R$ with a point charge $q$ at its centre.
+      Compare with the Coulomb result.
+      \item
+      Calculate $\vec{\nabla} \cdot \vec{E}$ and compare with the Coulomb result.
+    \end{itemize}
+  \end{blockexmplque}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Hypothetical form of electric force}
+
+  Assuming, without loss of generality, that the
+  point charge $q$ is at the origin of the coordinate system
+  and that a positive test charge $Q$
+  is brought at distance $\vec{r}$ from $q$,
+  the electric field at $\vec{r}$ is given by:
+  \begin{equation*}
+    \vec{E}(\vec{r}) = \frac{\vec{F}_{Qq}}{Q}
+  \end{equation*}
+  where $\vec{F}_{Qq}$ is the force exerted on $Q$ because of $q$.
+
+  Using the given expression of the electric force,
+  and using $r=|\vec{r}|$,
+  $\vec{F}_{Qq}$ can be written as:
+  \begin{equation*}
+    \displaystyle
+    \vec{F}_{Qq} =
+      \frac{Qq}{4\pi \epsilon_0}
+      \frac{1-\sqrt{Cr}}{r^3} \vec{r}
+      \xRightarrow{\;\; \vec{r} = r \hat{r} \;\;}
+      \vec{F}_{Qq} =
+        \frac{Qq}{4\pi \epsilon_0}
+        \frac{1-\sqrt{Cr}}{r^2} \hat{r}
+  \end{equation*}
+
+  Therefore, the electric field at point $\vec{r}$ can be written as:
+  \begin{equation*}
+    \displaystyle
+    \vec{E}(\vec{r}) =
+        \frac{q}{4\pi \epsilon_0}
+        \frac{1-\sqrt{Cr}}{r^2} \hat{r}
+  \end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Hypothetical form of electric force}
+
+  The path integral of the electric field along a closed path L
+  can be written as:
+  \begin{equation*}
+    \oint_{L} \vec{E} \cdot d\vec{\ell} =
+       \frac{q}{4\pi \epsilon_0}
+         \oint_{L} \frac{1-\sqrt{Cr}}{r^2} \hat{r} \cdot d\vec{\ell}
+  \end{equation*}
+
+  Using:
+  \begin{equation*}
+    \hat{r} \cdot d\vec{\ell} = d\ell cos\theta = dr
+  \end{equation*}
+
+  we find:
+  \begin{equation*}
+    \oint_{L} \vec{E} \cdot d\vec{\ell} =
+       \frac{q}{4\pi \epsilon_0}
+         \oint_{L} \frac{1-\sqrt{Cr}}{r^2} dr =
+        \frac{q}{4\pi \epsilon_0}
+           \oint_{L} \Big(r^{-2} - \sqrt{C} r^{-3/2}\Big) dr
+  \end{equation*}
+
+  \begin{equation*}
+      = \frac{q}{4\pi \epsilon_0}
+          \Big(-\frac{1}{r^\prime}+2\sqrt{C}\frac{1}{\sqrt{r^\prime}}\Big)
+            \Bigg\rvert_{r}^{r} = 0
+  \end{equation*}
+
+  This is the same as the corresponding Coulomb result.
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Hypothetical form of electric force}
+
+  The flux of the electric field through the
+  closed surface $S$ or a sphere with radius $R$ can be written as:
+  \begin{equation*}
+    \oint_{S(R)} \vec{E} \cdot d\vec{S} =
+       \frac{q}{4\pi \epsilon_0}
+         \oint_{S(R)} \frac{1-\sqrt{Cr}}{r^2} \hat{r} \cdot d\vec{S}
+  \end{equation*}
+
+  Since the integration surface is a sphere centred at the origin
+  of the coordinate system, $d\vec{S}$ is a radial vector:
+  \begin{equation*}
+    d\vec{S} = dS \hat{r}
+  \end{equation*}
+
+  and, therefore, the surface integral can be written as:
+  \begin{equation*}
+    \oint_{S(R)} \vec{E} \cdot d\vec{S} =
+       \frac{q}{4\pi \epsilon_0}
+         \oint_{S(R)} \frac{1-\sqrt{Cr}}{r^2} dS
+  \end{equation*}
+
+  Over the integration surface, at $r=R$ the integrand has a
+  constant value of:
+  $\displaystyle \frac{q}{4\pi \epsilon_0} \frac{1-\sqrt{CR}}{R^2}$.
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Hypothetical form of electric force}
+
+  Therefore, the expression for electric flux through $S$ becomes:
+  \begin{equation*}
+    \oint_{S(R)} \vec{E} \cdot d\vec{S} =
+       \frac{q}{4\pi \epsilon_0}
+         \frac{1-\sqrt{CR}}{R^2}
+           \oint_{S(R)} dS =
+        \frac{q}{4\pi \epsilon_0}
+          \frac{1-\sqrt{CR}}{\cancel{R^2}} 4\pi\cancel{R^2} \Rightarrow
+  \end{equation*}
+  \begin{equation*}
+    \oint_{S(R)} \vec{E} \cdot d\vec{S} =
+        \frac{q}{\epsilon_0} \Big(1-\sqrt{CR}\Big)
+  \end{equation*}
+
+  This differs by corresponding Coulomb result:
+  Therefore, the expression for electric flux through $S$ becomes:
+  \begin{equation*}
+    \oint_{S(R)} \vec{E} \cdot d\vec{S} = \frac{q}{\epsilon_0}
+  \end{equation*}
+
+  by a term equal to
+  $\displaystyle -\sqrt{CR} \frac{q}{\epsilon_0}$.
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Hypothetical form of electric force}
+
+  The given electric field is a radial one and,
+  therefore, it is easier to compute its divergence by expressing
+  the divergence operator in spherical coordinates:
+  \begin{equation*}
+    \vec{\nabla} \cdot \vec{E} =
+     \frac{1}{r^2} \frac{\partial}{\partial r}
+      \Bigg( r^2
+        \Big(
+          \frac{q}{4\pi \epsilon_0}
+          \frac{1-\sqrt{Cr}}{r^2}
+        \Big)
+      \Bigg)
+  \end{equation*}
+
+  Therefore:
+  \begin{equation*}
+    \vec{\nabla} \cdot \vec{E} =
+      \frac{q}{4\pi \epsilon_0}
+      \frac{1}{r^2}
+      \frac{\partial}{\partial r}
+      \Big( 1-\sqrt{Cr} \Big) =
+      \frac{q}{4\pi \epsilon_0}
+      \frac{1}{r^2}
+      \Big(-\frac{1}{2}\sqrt{\frac{C}{r}} \Big) =
+      - \frac{q \sqrt{C}}{8\pi \epsilon_0 r^{5/2}}
+  \end{equation*}
+
+  This differs from the Coulomb result:
+  \begin{equation*}
+    \vec{\nabla} \cdot \vec{E} = \frac{\rho}{\epsilon_0}
+  \end{equation*}
+  which, for a point charge q at the origin, can be written as
+  \begin{equation*}
+    \vec{\nabla} \cdot \vec{E} = \frac{q}{\epsilon_0} \delta(r)
+  \end{equation*}
+
+\end{frame}
+
+} %\problemslide
+
+% ------------------------------------------------------------------------------
+
 %
 %
 %

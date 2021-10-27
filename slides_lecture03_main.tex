@@ -950,6 +950,7 @@ Potential energy stored in a:
 \end{frame}
 
 
+% ------------------------------------------------------------------------------
 
 %
 % Worked example
@@ -962,7 +963,7 @@ Potential energy stored in a:
 %
 %
 
-\begin{frame}{Worked example: 4 charges at corners of a square }
+\begin{frame}{Worked example: Potential of 4 charges on square }
 
 \begin{blockexmplque}{Question}
 \begin{columns}
@@ -1000,6 +1001,62 @@ so that charges 1 and 3 are positive and 2 and 4 negative:
 
 } % Example
 
+% ------------------------------------------------------------------------------
+
+%
+% Worked example
+%
+
+{
+\problemslide
+
+\begin{frame}{Worked example: Potential of 3 charges on a line }
+
+\begin{blockexmplque}{Question}
+    Two particles of charges $q_1$ and $q_2$ are fixed to an x axis,
+  	as shown below.
+    If a third particle, of charge +6.0 $\mu$C, is brought from an infinite
+  	distance to point P, the three-particle system has the same electric
+  	potential energy as the original two-particle system.
+  	What is the charge ratio $q_2$/$q_1$?
+    \begin{center}
+      \includegraphics[width=0.50\textwidth]{./images/problems/lect03_2_point_charges}
+    \end{center}
+\end{blockexmplque}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Potential of 3 charges in line }
+
+By adding a particle with charge q at point P,
+at a distance $r_1$ from $q_1$ and at distance $r_2$ from $q_2$,
+the change in the electrostatic potential
+energy of the system is given by:
+\begin{equation*}
+  	{\Delta}U = \frac{q_1 q}{4\pi\epsilon_0 r_1} + \frac{q_2 q}{4\pi\epsilon_0 r_2}
+\end{equation*}
+
+Since ${\Delta}U$ = 0, we have:
+\begin{equation*}
+	\frac{q_1 q}{4\pi\epsilon_0 r_1} + \frac{q_2 q}{4\pi\epsilon_0 r_2} = 0 \Rightarrow
+\end{equation*}
+\begin{equation*}
+	\frac{q_1}{r_1} + \frac{q_2}{r_2} = 0 \xRightarrow{r_1=2.5d,\;r_2=1.5d}
+	\frac{q_1}{2.5} + \frac{q_2}{1.5} = 0 \Rightarrow
+\end{equation*}
+\begin{equation*}
+	\frac{q_2}{q_1} = -\frac{1.5}{2.5} = -\frac{3}{5} = -0.6
+\end{equation*}
+
+\end{frame}
+
+} % Example
+
+% ------------------------------------------------------------------------------
 
 %
 %
@@ -1481,7 +1538,7 @@ due to a continuous charge distribution $\rho$ is given by:
 \begin{frame}{Worked example: Electric potential of circular arc of charge}
 
 \begin{blockexmplque}{Question}
-A plastic rod having a uniformly distributed charge $Q$ pC has been bent
+A plastic rod having a uniformly distributed charge $Q$ has been bent
 into a circular arc of radius $R$ and central angle $\phi$.
 With $V$=0 at infinity, what is the electric potential at $P$, the centre of
 curvature of the rod?
@@ -1506,7 +1563,7 @@ curvature of the rod?
     \begin{equation*}
        V = \frac{1}{4\pi\epsilon_0 R}
          \int_{rod} dq(\vec{r}^{\;\prime}) =
-         \frac{-Q}{4\pi\epsilon_0 R}
+         \frac{Q}{4\pi\epsilon_0 R}
     \end{equation*}
   \end{column}
 \end{columns}
