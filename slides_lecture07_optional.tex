@@ -108,3 +108,179 @@ The change $ {\Delta}\vec{m}$ is given by:
 \end{equation*}
 
 \end{frame}
+
+% ------------------------------------------------------------------------------
+
+%
+% Worked example :
+%
+
+{
+\problemslide
+
+%
+%
+%
+
+\begin{frame}{Worked example: Free current on circular wire}
+
+  \begin{blockexmplque}{Question}
+    An infinite straight wire with a circular cross-section
+    of radius $R$ is lying along the $z$ axis
+    and it has an internal $\vec{H}$ field given by
+    \begin{equation*}
+      \vec{H} = \frac{J_0}{r} \Big(\frac{1}{a^2} sin(ar) - \frac{r}{a} cos(ar) \Big) \hat{\phi}
+    \end{equation*}
+    where
+    $r$ is the radial distance from the centre of the circular conductor,
+    $\hat{\phi}$ is the azimuthal unit vector,
+    $J_0$ is a constant current density,
+    and $a$=$\pi/(2R)$.
+    Find an expression for the total free current in the conductor,
+    and give its direction.
+  \end{blockexmplque}
+
+  The free current $I$ can be computed from Ampere's law:
+  \begin{equation*}
+    I = \oint_{L} \vec{H} \cdot d\vec{\ell}
+  \end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Free current on circular wire}
+
+  Using the given $\vec{H}$ field, and using $a=\pi/2R$, as given,
+  the previous expression for $I$ becomes:
+  \begin{equation*}
+    I = \oint_{L} \frac{J_0}{r}
+     \Big(\frac{2R}{\pi^2} sin(\frac{\pi r}{2R}) - \frac{2Rr}{\pi} cos(\frac{\pi r}{2R}) \Big) \hat{\phi}
+     \cdot d\vec{\ell}
+  \end{equation*}
+
+  To calculate the total free current in the circular conductor, we choose
+  a closed circular path with radius equal to the radius of the conductor.
+  The element $d\vec{\ell}$ can be written as:
+  \begin{equation*}
+     d\vec{\ell} = R d\phi \; \hat{\phi}
+  \end{equation*}
+
+  Using the above expression for $d\vec{\ell}$, and substituting $r = R$,
+  into the our last expression for $I$, we find:
+  \begin{equation*}
+    I = \int_{0}^{2\pi} \frac{10^4}{R}
+     \Big(\frac{4R^2}{\pi^2} sin(\frac{\pi R}{2R}) - \frac{2R^2}{\pi} cos(\frac{\pi R}{2R}) \Big) \hat{\phi}
+      \cdot \Big( R d\phi \; \hat{\phi} \Big) \xRightarrow{\hat{\phi} \cdot \hat{\phi} = 1}
+  \end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Free current on circular wire}
+
+  \begin{equation*}
+    I = \frac{J_0}{R}
+     \Big(\frac{4R^2}{\pi^2} \cancelto{1}{sin(\frac{\pi}{2})} - \frac{2R^2}{\pi} \cancelto{0}{cos(\frac{\pi}{2})} \Big)
+      R \int_{0}^{2\pi} d\phi \Rightarrow
+  \end{equation*}
+
+  \begin{equation*}
+    I = \frac{J_0}{\cancel{R}} \frac{4R^2}{\pi^{\cancel{2}}} \cancel{R} 2\cancel{\pi} \Rightarrow
+  \end{equation*}
+
+  \begin{equation*}
+    I = \frac{8 J_0}{\pi} R^2
+  \end{equation*}
+
+  Since $\vec{H}$ is an azimuthal vector,
+  the free current flows in the positive $z$ axis.
+
+\end{frame}
+
+} % Worked example
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+
+%
+% Worked example :
+%
+
+{
+\problemslide
+
+%
+%
+%
+
+\begin{frame}{Worked example: Toroid with square iron core}
+
+  \begin{blockexmplque}{Question}
+    \begin{minipage}[r]{0.82\textwidth}
+      A toroid having an iron core of square cross-section and permeability $\mu$
+      is wound with $N$ closely spaced turns of wire carrying a current $I$.
+      Find an expression for the magnitude of the magnetisation $M$ everywhere
+      inside the iron core.
+    \end{minipage}
+    \begin{minipage}[l]{0.15\textwidth}
+     \begin{center}
+       \includegraphics[width=0.94\textwidth]{./images/problems/lect07_toroid_with_square_iron_core}
+     \end{center}
+    \end{minipage}
+  \end{blockexmplque}
+
+  The magnetisation $M$ inside the iron core is:
+  \begin{equation*}
+    M = \frac{B}{\mu_0} - H
+  \end{equation*}
+
+  According to Ampere's circuital law:
+  \begin{equation*}
+    \oint_{L} \vec{H} \cdot d\vec{\ell} = I_{free} = N I
+  \end{equation*}
+  where $I_{free}$ is the free current through an open area $S(L)$
+  whose boundary is the closed path $L$, and $I$ is the current on
+  each of the $N$ windings.
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Toroid with square iron core}
+
+  Considering the cylindrical symmetry of the problem, $\vec{H}$ is azimuthal.
+  Therefore, for a closed path $L$ which is concentric to the iron core,
+  perpendicular to the symmetry axis of the toroid,
+  and lies within the core:
+  \begin{equation*}
+    \oint_{L} \vec{H} \cdot d\vec{\ell} = H 2\pi r
+  \end{equation*}
+
+  Therefore, Ampere's circuital law yields:
+  \begin{equation*}
+    H 2\pi r = N I \Rightarrow H = \frac{NI}{2\pi r}
+  \end{equation*}
+
+  The magnetic field $B$ can be computed from $H$ as follows:
+  \begin{equation*}
+     B = \mu H
+  \end{equation*}
+
+  Substituting the above into our initial expession for $M$, we find:
+  \begin{equation*}
+    M = \frac{\mu H}{\mu_0} - H
+      = \Big( \frac{\mu}{\mu_0} - 1 \Big) H
+      = \Big( \frac{\mu}{\mu_0} - 1 \Big) \frac{NI}{2\pi r}
+  \end{equation*}
+
+\end{frame}
+
+} % Worked example

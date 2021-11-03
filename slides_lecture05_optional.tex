@@ -118,6 +118,581 @@ Therefore:
 % ------------------------------------------------------------------------------
 
 %
+% Worked example :
+%
+
+{
+\problemslide
+
+%
+%
+%
+
+\begin{frame}{Worked example: Magnetic field of circular loop}
+
+  \begin{blockexmplque}{Question}
+    Calculate the magnetic field along the axis of a circular loop
+    carrying a steady current $I$.
+    \vspace{0.1cm}
+    \begin{center}
+      \includegraphics[width=0.35\textwidth]{./images/problems/lect05_circular_loop_b_field.png}\\
+    \end{center}
+  \end{blockexmplque}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Magnetic field of circular loop}
+
+  To calculate the magnetic field $\vec{B}$ produced
+  by the circular loop, we will use the Biot-Savart law:
+  \begin{equation*}
+     \vec{B} = \int_{L} d\vec{B} =
+      \frac{\mu_0 I}{4\pi} \int_{L} \frac{d\vec{\ell} \times \vec{r}}{r^3}
+  \end{equation*}
+
+  The loop axis is the $x$-axis.
+  For a point at distance $a$ on that axis,
+  the location vector $\vec{r}_{axis}$
+  can be written as:
+  \begin{equation*}
+     \vec{r}_{axis} = \Big(a, 0, 0\Big)
+  \end{equation*}
+
+  The circular loop is on the $y-z$ plane ($x$ = 0).
+  The location vector $\vec{r}_{loop}$
+  for any point on the loop is:
+  \begin{equation*}
+     \vec{r}_{loop} = \Big(0, R cos\phi, R sin\phi \Big)
+  \end{equation*}
+
+  The vector $\vec{r}$ connecting points on the loop
+  and the loop axis is:
+  \begin{equation*}
+      \vec{r} = \vec{r}_{axis} - \vec{r}_{loop} =
+      \Big(a, 0, 0\Big) - \Big(0, R cos\phi, R sin\phi \Big) =
+      \Big(a, -R cos\phi, -R sin\phi \Big)
+  \end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Magnetic field of circular loop}
+
+  Therefore, the magnitude of $\vec{r}$ is:
+  \begin{equation*}
+      r = |\vec{r}| = \Big(a^2 + R^2 cos^{2}\phi + R^2 sin^{2}\phi \Big)^{1/2} =  \Big(a^2 + R^2 \Big)^{1/2}
+  \end{equation*}
+
+  The element $d\vec{\ell}$ that is
+  tangential to the loop can be written as:
+  \begin{equation*}
+          d\vec{\ell} = \Big(0, - R sin\phi, R cos\phi \Big) d\phi
+  \end{equation*}
+
+  The cross-product of $d\vec{\ell}$ and  $\vec{r}$ is:
+  \begin{equation*}
+      d\vec{\ell} \times \vec{r} =
+      \Big(0, - R sin\phi, R cos\phi \Big) \times
+      \Big(a, -R cos\phi, -R sin\phi \Big)  d\phi \Rightarrow
+  \end{equation*}
+
+  \begin{equation*}
+      d\vec{\ell} \times \vec{r} =
+      \Big(R^2, a R cos\phi, a R sin\phi \Big) d\phi
+  \end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Magnetic field of circular loop}
+
+  Substituting everything into the Biot-Savart equation, we have:
+  \begin{equation*}
+     \vec{B} = \frac{\mu_0 I}{4\pi}
+        \int_{L} \frac{d\vec{\ell} \times \vec{r}}{r^3}
+             = \frac{\mu_0 I}{4\pi}
+        \int_{0}^{2\pi}
+        \frac{\Big(R^2, a R cos\phi, a R sin\phi \Big)}{\Big(a^2 + R^2 \Big)^{3/2}} d\phi
+        \Rightarrow
+  \end{equation*}
+
+  \begin{equation*}
+     \vec{B} = \frac{\mu_0 I}{4\pi \Big(a^2 + R^2 \Big)^{3/2}}
+       \int_{0}^{2\pi} \Big(R^2, a R cos\phi, a R sin\phi \Big) d\phi
+        \Rightarrow
+  \end{equation*}
+
+  \begin{equation*}
+     \vec{B} = \frac{\mu_0 I}{4\pi \Big(a^2 + R^2 \Big)^{3/2}}
+        \Big(R^2 \int_{0}^{2\pi} d\phi ,
+             a R \int_{0}^{2\pi}  cos\phi d\phi ,
+             a R \int_{0}^{2\pi}  sin\phi d\phi \Big)
+        \Rightarrow
+  \end{equation*}
+
+  % \begin{equation*}
+  %    \vec{B} = \frac{\mu_0 I}{4\pi \Big(a^2 + R^2 \Big)^{3/2}}
+  %                   \Big(R^2 2\pi, 0 , 0 \Big)
+  %       \Rightarrow
+  % \end{equation*}
+
+  \begin{equation*}
+     \vec{B} = \frac{\mu_0 I R^2}{2 \Big(a^2 + R^2 \Big)^{3/2}}
+                    \Big(1, 0 , 0 \Big)
+  \end{equation*}
+
+\end{frame}
+
+} % Worked example
+
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+
+%
+% Worked example :
+%
+
+{
+\problemslide
+
+%
+%
+%
+
+\begin{frame}{Worked example: Field of straight wire semi-circular bent}
+
+  \begin{blockexmplque}{Question}
+    An infinitely long wire carries a current $I$.
+    It is bent so as to have a semi-circular detour around the origin,
+    with radius $R$. Calculate the magnetic field $\vec{B}$ at the origin.
+  \end{blockexmplque}
+
+  \begin{center}
+    \includegraphics[width=0.70\textwidth]{./images/problems/lect05_wire_with_semicircular_bent_2}\\
+  \end{center}
+
+  The field $\vec{B}$ of a current element $Id\vec{\ell}$
+  is given by the Biot-Savart law:
+  \begin{equation*}
+    d\vec{B} = \frac{\mu_0I}{4\pi} \frac{d\vec{\ell} \times \vec{r}}{r^3}
+  \end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Field of straight wire semi-circular bent}
+
+The straight parts of the wire do not contribute to the magnetic field at the
+origin $O$ since, as it can be seen from the schematic above, for these parts
+of the wire, $d\vec{\ell}$ and $\vec{r}$ are parallel and, therefore:
+\begin{equation*}
+  d\vec{\ell} \times \vec{r} = 0
+\end{equation*}
+
+Only the semicircular bent contributes to the magnetic field at the origin.
+On that bent, $d\vec{\ell}$ and $\vec{r}$ are always perpendicular
+to each other and the law of Biot-Savart can be simplified as:
+\begin{equation*}
+  d\vec{B} = \frac{\mu_0I}{4\pi} \frac{r d\ell}{r^3} \hat{y}
+           = \frac{\mu_0I}{4\pi} \frac{d\ell}{r^2} \hat{y} \xRightarrow{r=R, d\ell=Rd\theta}
+  d\vec{B} = \frac{\mu_0I}{4\pi R} d\theta \hat{y}
+\end{equation*}
+
+Thefore, the magnetic field due to the full semi-circular bent is given by:
+\begin{equation*}
+  \vec{B} = \int_{semicircle} d\vec{B} =
+     \frac{\mu_0I}{4\pi R} \Bigg( \int_{0}^{\pi} d\theta \Bigg) \hat{y} \Rightarrow
+  \vec{B} = \frac{\mu_0I}{4 R} \hat{y}
+\end{equation*}
+
+
+\end{frame}
+
+
+} % Worked example
+
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+
+%
+% Worked example :
+%
+
+{
+\problemslide
+
+%
+%
+%
+
+\begin{frame}{Worked example: Field of rotating cylindrical shell}
+
+  \begin{blockexmplque}{Question}
+    Consider a cylindrical shell of radius $R$ and length $L$,
+    carrying charge with surface charge density $\sigma$ and rotating with
+    angular velocity $\omega$.\\
+    Find the mangnetic field $\vec{B}$ at point $P$,
+    at distance $d$ from the end of the shell, on the cylinder axis.
+  \end{blockexmplque}
+
+  The most general form of the Biot-Savart law, giving the magnetic
+  field $\vec{B}(\vec{r})$ due to an arbitrary volume current density $\vec{j}$ is:
+  \begin{equation*}
+    \vec{B}(\vec{r}) = \frac{\mu_0}{4\pi}
+      \int_{\tau} d\tau^\prime
+      \frac{\vec{j}(\pvec{r}') \times (\vec{r}-\pvec{r}')}{|(\vec{r}-\pvec{r}')|^3}
+  \end{equation*}
+  where the integration is over volume $\tau$.
+
+  For a surface current density $\vec{K}$, on surface $S$ the above simplifies to:
+  \begin{equation*}
+    \vec{B}(\vec{r}) = \frac{\mu_0}{4\pi}
+      \int_{S} dS^\prime
+      \frac{\vec{K}(\pvec{r}') \times (\vec{r}-\pvec{r}')}{|(\vec{r}-\pvec{r}')|^3}
+  \end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Field of rotating cylindrical shell}
+
+The previous expression, using the coordinate system, and the definitions
+of vectors $\vec{r}$ and $\pvec{r}'$ shown in the figure below,
+yields the following expression for the magnetic field $\vec{B}$ at point $P$.
+\begin{equation*}
+  \vec{B} = \frac{\mu_0}{4\pi}
+    \int_{cylinder} dS^\prime
+    \frac{\vec{K}(\pvec{r}') \times \hat{r}}{r^2}
+\end{equation*}
+
+\begin{center}
+  \includegraphics[width=0.80\textwidth]{./images/problems/lect05_bfield_of_rotating_cylindrical_shell_a_1}\\
+ \end{center}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Field of rotating cylindrical shell}
+
+It is useful to draw a projection of the previous schematic on the $xz$ plane.
+Angles and distances which are going to be used later, are defined here.
+\begin{center}
+  \includegraphics[width=0.70\textwidth]{./images/problems/lect05_bfield_of_rotating_cylindrical_shell_b_1}\\
+\end{center}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Field of rotating cylindrical shell}
+
+If $\vec{u}$ is the velocity of each point on the surface of the cylinder,
+the surface current density $\vec{K}$ is given by:
+\begin{equation*}
+  \vec{K} = \sigma \vec{u} = \sigma \omega R \hat{\phi}
+\end{equation*}
+where  $\hat{\phi}$ is the azimuthal unit vector.
+
+Since $\vec{K}(\pvec{r}')$ and $\hat{r}$ are perpendicular,
+the magnitude of $\vec{K}(\pvec{r}') \times \hat{r}$ is:
+\begin{equation*}
+  |\vec{K}(\pvec{r}') \times \hat{r}| =
+    |\vec{K}(\pvec{r}')| \cancelto{1}{|\hat{r}|} \cancelto{1}{sin\frac{\pi}{2}} =
+    |\vec{K}(\pvec{r}')| = \sigma \omega R
+\end{equation*}
+
+Due to symmetry, only the $z$ component of
+$\vec{K}(\pvec{r}') \times \hat{r}$ will contribute to the magnetic field,
+as the other components cancel out. The $z$ component is:
+
+\begin{equation*}
+  \vec{K}(\pvec{r}') \times \hat{r} \rvert_{z} =
+    \sigma \omega R cos\theta
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Field of rotating cylindrical shell}
+
+From the schematic shown a projection of the cylinder on the $xz$ plane,
+we can see that:
+\begin{equation*}
+  cos\theta = sin(\frac{\pi}{2}-\theta) = \frac{R}{r}
+\end{equation*}
+
+Therefore, the only non-vanishing contribution of $\vec{K}(\pvec{r}') \times \hat{r}$
+to the magnetic field at $P$ can be written as:
+\begin{equation*}
+  \vec{K}(\pvec{r}') \times \hat{r}  =
+    \frac{\sigma \omega R^2}{r} \hat{z}
+\end{equation*}
+
+Substituting the above into Biot-Savart's expression for the magnetic field
+at $P$, and using $dS^\prime = R d\phi dz$, we find:
+\begin{equation*}
+  \vec{B} =
+    % \frac{\mu_0}{4\pi}
+    % \int_{cylinder} R d\phi dz
+    % \frac{\frac{\sigma \omega R^2}{r} \hat{z}}{r^2} =
+    \hat{z} \frac{\mu_0 \sigma \omega R^3}{4\pi}
+    \int_{cylinder} d\phi dz \frac{1}{r^3}  =
+    \hat{z} \frac{\mu_0 \sigma \omega R^3}{2}
+    \int_{-L}^{0} \frac{dz}{r^3}
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Field of rotating cylindrical shell}
+
+To carry out the integration, we need to express $r$ in terms of $z$.
+Looking the previous schematic, we see that:
+\begin{equation*}
+  r^2 = R^2 + (d+z)^2
+\end{equation*}
+
+Therefore, the magnetic field $\vec{B}$ at $P$ is given by:
+\begin{equation*}
+  \vec{B} =
+    \hat{z} \frac{\mu_0 \sigma \omega R^3}{2}
+    \int_{-L}^{0} \frac{dz}{\Big( R^2 + (d+z)^2 \Big)^{3/2}} \xRightarrow{\ell = d+z}
+\end{equation*}
+\begin{equation*}
+  \vec{B} =
+  \hat{z} \frac{\mu_0 \sigma \omega R^3}{2}
+  \int_{d-L}^{d} \frac{d\ell}{\Big( R^2 + \ell^2 \Big)^{3/2}}
+\end{equation*}
+
+Earlier in this lecture (field of infinite straight conductor), we proved that:
+\begin{equation*}
+  \int_{a}^{b} \frac{dz}{({\rho}^2+z^2)^{3/2}} = \frac{z}{{\rho}^{2}(z^{2}+{\rho}^{2})^{1/2}} \biggr\rvert_{a}^{b}
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Field of rotating cylindrical shell}
+
+Using the above expression to help us evaluate the integral,
+we find for the magnetic field $\vec{B}$ at $P$:
+
+\begin{equation*}
+  \vec{B} =
+  \hat{z} \frac{\mu_0 \sigma \omega R^3}{2}
+  \frac{\ell}{R^{2}({\ell}^{2}+R^{2})^{1/2}} \biggr\rvert_{d-L}^{L} \Rightarrow
+\end{equation*}
+
+\begin{equation*}
+  \vec{B} =
+  \hat{z} \frac{\mu_0 \sigma \omega R^3}{2}
+  \Big\{
+  \frac{L}{R^{2}(L^{2}+R^{2})^{1/2}} -
+  \frac{(d-L)}{R^{2}((d-L)^{2}+R^{2})^{1/2}}
+  \Big\} \Rightarrow
+\end{equation*}
+
+\begin{equation*}
+  \vec{B} =
+  \hat{z} \frac{\mu_0 \sigma \omega R}{2}
+  \Big\{
+  \frac{L}{\sqrt{L^{2}+R^{2}}} -
+  \frac{(d-L)}{\sqrt{(d-L)^{2}+R^{2}}}
+  \Big\}
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Field of rotating hemisphere}
+
+  \begin{columns}
+    \begin{column}{0.60\textwidth}
+      \centering
+      \includegraphics[width=0.95\textwidth]{./images/problems/lect05_bfield_of_rotating_semisphere_a_1}\\
+    \end{column}
+    \begin{column}{0.38\textwidth}
+      If you have calculated the magnetic field of a rotating
+      cyclindrical shell, you can also try to calculate the field of
+      hemisphere of radius $R$ and volume charge density $\rho$,
+      rotating with angular velocity $\omega$,
+      at distance $d$ above its centre.
+    \end{column}
+  \end{columns}
+
+\end{frame}
+
+} % Worked example
+
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+
+%
+% Worked example :
+%
+
+{
+\problemslide
+
+%
+%
+%
+
+\begin{frame}{Worked example: Field of current element}
+
+  \begin{blockexmplque}{Question}
+    A current element $Id\vec{\ell}$ is located at the origin.
+    The current is in the direction of the $+z$ axis.
+    Is the $x$ component of the the field at a point $P$$(x,y,z)$:
+    \begin{itemize}
+      \item 0,
+      \item $\displaystyle \frac{\mu_0 I}{4\pi} \frac{y}{(x^2+y^2+z^2)^{3/2}} d\ell$, or
+      \item $\displaystyle \frac{\mu_0 I}{4\pi} \frac{x}{(x^2+y^2+z^2)^{3/2}} d\ell$?
+    \end{itemize}
+    Justify your answer.
+  \end{blockexmplque}
+
+  The magnetic field $\vec{B}$ of the current element $Id\vec{\ell}$
+  is given by the Biot-Savart law:
+  \begin{equation*}
+    d\vec{B} = \frac{\mu_0 I}{4\pi} \frac{d\vec{\ell} \times \vec{r}}{r^3}
+  \end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Field of current element}
+
+  \begin{columns}
+    \begin{column}{0.44\textwidth}
+       \begin{center}
+         \includegraphics[width=0.99\textwidth]{./images/problems/lect05_current_element_at_origin}\\
+        \end{center}
+    \end{column}
+    \begin{column}{0.55\textwidth}
+      \begin{equation*}
+        d\vec{B} = \frac{\mu_0I}{4\pi} \frac{d\vec{\ell} \times \vec{r}}{r^3}
+      \end{equation*}
+      \\\vspace{0.4cm}
+      where, for the given problem (see schematic on the left):\\
+      \begin{equation*}
+        d\vec{\ell} = \Big(0,0,d\ell\Big)
+      \end{equation*}
+      \begin{equation*}
+        \vec{r} = \Big(x,y,z\Big)
+      \end{equation*}
+      \begin{equation*}
+        r = |\vec{r}| = \Big(x^2 + y^2 + z^2\Big)^{1/2}
+      \end{equation*}
+    \end{column}
+  \end{columns}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Field of current element}
+
+The cross-product $d\vec{\ell} \times \vec{r}$ can be written as:
+\begin{equation*}
+  d\vec{\ell} \times \vec{r} =
+   \left|
+    \begin{array}{ccc}
+      \hat{x} & \hat{y} & \hat{z}    \\
+            0 &       0 &      d\ell \\
+            x &       y &       z    \\
+    \end{array}
+   \right|
+   =
+   \left|
+    \begin{array}{cc}
+            0 &  d\ell \\
+            y &   z    \\
+    \end{array}
+   \right|
+   \hat{x} -
+   \left|
+    \begin{array}{cc}
+            0 &  d\ell \\
+            x &   z    \\
+    \end{array}
+   \right|
+   \hat{y} +
+   \left|
+    \begin{array}{cc}
+            0 &  0 \\
+            x &  y \\
+    \end{array}
+   \right|
+   \hat{z}
+\end{equation*}
+
+\begin{equation*}
+ = \Big( -y d\ell \Big) \hat{x} - \Big( -x d\ell \Big) \hat{y} + 0 \hat{y}
+ = \Big( -y, x, 0 \Big) d\ell
+\end{equation*}
+
+Therefore, the magnetic field at $P$, due to the element $Id\vec{\ell}$, is:
+\begin{equation*}
+  d\vec{B} = \frac{\mu_0I}{4\pi}
+    \frac{\Big( -y, x, 0 \Big) d\ell}{\Big(x^2 + y^2 + z^2\Big)^{3/2}}
+\end{equation*}
+
+which has an $x$-component given by:
+\begin{equation*}
+  dB_x = - \frac{\mu_0I}{4\pi}
+    \frac{y d\ell}{\Big(x^2 + y^2 + z^2\Big)^{3/2}}
+\end{equation*}
+
+\end{frame}
+
+} % Worked example
+
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+%
 % Programming
 %
 

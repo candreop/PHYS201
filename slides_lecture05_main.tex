@@ -9,7 +9,7 @@
 \title[PHYS 201 / Lecture \thislecture]
 {
   PHYS 201 / Lecture \thislecture\\
-  {\it Electric current / connection with magnetic phenomena;\\
+  {\it Electric current / link with magnetic phenomena;\\
         Magnetic field, Lorentz force; Cyclotron motion;\\
         Biot-Savart law and applications}\\
 }
@@ -1233,7 +1233,11 @@ For example, the electric field $\vec{E}(\vec{r})$ at position $\vec{r}$,
 produced by a continuous distribution of charge, characterised by a charge density $\rho$
 was given by:
 \begin{equation*}
-  \vec{E}(\vec{r}) = \frac{1}{4\pi\epsilon_0} \int \frac{\rho(\vec{r^{\prime}})}{|\vec{r}-\pvec{r}'|^{3}} (\vec{r}-\pvec{r}') d\tau^{\prime}
+  \vec{E}(\vec{r}) =
+  \frac{1}{4\pi\epsilon_0} \int
+  \frac{dq(\vec{r^{\prime}})}{|\vec{r}-\pvec{r}'|^{3}} (\vec{r}-\pvec{r}') =
+  \frac{1}{4\pi\epsilon_0} \int d\tau^{\prime}
+  \frac{\rho(\vec{r^{\prime}})}{|\vec{r}-\pvec{r}'|^{3}} (\vec{r}-\pvec{r}')
 \end{equation*}
 This is just an appropriate generalisation of Coulomb's law.\\
 \vspace{0.2cm}
@@ -1346,11 +1350,59 @@ The magnetic field $\vec{B}$ produced by the current flowing across the {\em ent
 of the conducting wire is the vector sum of the fields due to each
 infinitesimal element $d\vec{\ell}$:
 \begin{equation*}
-       \vec{B} = \int_{L} d\vec{B} = \int_{L} \frac{\mu_0I}{4\pi} \frac{d\vec{\ell} \times \vec{r}}{r^3}
+       \vec{B} = \int_{L} d\vec{B} =
+         \frac{\mu_0I}{4\pi} \int_{L} \frac{d\vec{\ell} \times \vec{r}}{r^3}
 \end{equation*}
 
 \end{frame}
 
+%
+%
+%
+
+\begin{frame}{The Biot-Savart law - Other forms}
+
+If we want to express the distance between the element $d\vec{\ell}$
+and the point where we want to know the field ($P$) in terms of the distance
+$\pvec{r}'$($\vec{r}$) of $d\vec{\ell}$($P$) from the origin $O$, the previous
+expression becomes:
+\begin{equation*}
+       \vec{B} =
+         \frac{\mu_0I}{4\pi} \int_{L}
+         \frac{d\vec{\ell} \times (\vec{r}-\pvec{r}')}{|\vec{r}-\pvec{r}'|^3}
+\end{equation*}
+% \begin{columns}
+%   \begin{column}{0.50\textwidth}
+%      \begin{center}
+%         \includegraphics[width=0.40\textwidth]{./images/schematics/biot_savart_r_m_rprime}\\
+%       \end{center}
+%   \end{column}
+%   \begin{column}{0.50\textwidth}
+%     \begin{equation*}
+%            \vec{B} =
+%              \frac{\mu_0I}{4\pi} \int_{L}
+%              \frac{d\vec{\ell} \times (\vec{r}-\pvec{r}')}{|\vec{r}-\pvec{r}'|^3}
+%     \end{equation*}
+%   \end{column}
+% \end{columns}
+
+The most general form of the Biot-Savart law, giving the magnetic
+field $\vec{B}(\vec{r})$ due to an arbitrary volume current density $\vec{j}$
+in volume $\tau$ is:
+\begin{equation*}
+  \vec{B}(\vec{r}) = \frac{\mu_0}{4\pi}
+    \int_{\tau} d\tau^\prime
+    \frac{\vec{j}(\pvec{r}') \times (\vec{r}-\pvec{r}')}{|(\vec{r}-\pvec{r}')|^3}
+\end{equation*}
+
+For a surface current density $\vec{K}$, on surface $S$ the above simplifies to:
+\begin{equation*}
+  \vec{B}(\vec{r}) = \frac{\mu_0}{4\pi}
+    \int_{S} dS^\prime
+    \frac{\vec{K}(\pvec{r}') \times (\vec{r}-\pvec{r}')}{|(\vec{r}-\pvec{r}')|^3}
+\end{equation*}
+
+\end{frame}
 
 %
 %
