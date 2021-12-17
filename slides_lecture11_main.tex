@@ -569,6 +569,264 @@ The inductance per unit length (far from the ends of the solenoid) is:
 
 \end{frame}
 
+%...............................................................................
+
+%
+% Worked example
+%
+
+{
+\problemslide
+
+\begin{frame}{Worked example}
+
+\begin{blockexmplque}{Question}
+  Two coils are at fixed locations. When coil 1 has no current and the
+  current in coil 2 increases at the rate 15.0 A/s,
+  the emf in coil 1 is 25.0 mV.
+  \begin{itemize}
+    \item What is their mutual inductance?
+    \item When coil 2 has no current and coil 1 has a current of 3.60 A,
+          what is the flux linkage in coil 2?
+  \end{itemize}
+\end{blockexmplque}
+
+\begin{equation*}
+   M = \frac{\mathcal{E}_1}{|dI_2/dt|} \Rightarrow
+   M = \frac{25.0\; mV}{15.0\; A/s} = 1.67 \; mH
+\end{equation*}
+
+\begin{equation*}
+   N_2 \Phi_{21} = M  I_1 \Rightarrow
+   N_2 \Phi_{21} = (1.67 \; mH) (3.60 \; mWb) = 6.0 \; mWb
+\end{equation*}
+
+\end{frame}
+
+} % \problemslide
+
+%...............................................................................
+
+%
+% Worked example
+%
+
+{
+\problemslide
+
+\begin{frame}{Worked example}
+
+\begin{blockexmplque}{Question}
+  A solenoid that is 85.0 cm long has a cross-sectional area of 17.0
+  cm$^2$. There are 950 turns of wire carrying a current of 6.60 A.\\
+  \begin{itemize}
+     \item Calculate the energy density of the magnetic field inside the
+       solenoid.
+     \item Find the total energy stored in the magnetic field there.
+  \end{itemize}
+\end{blockexmplque}
+
+At any point in the solenoid the magnetic energy density is given by:
+\begin{equation*}
+  u_B = \frac{B^2}{2\mu_0}
+\end{equation*}
+where B is the magnitude of the magnetic field, given by:
+\begin{equation*}
+  B = \mu_0 n I
+\end{equation*}
+
+where n for the solenoid of this problem is:
+\begin{equation*}
+    n = (950 \; turns)/(0.850 \; m) = 1.118 \times 10^{3} m^{-1}
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+%
+
+\begin{frame}{Worked example}
+
+The magnetic energy density is:
+\begin{equation*}
+    u_B = \frac{(\mu_0 n I)^2}{2\mu_0} = \frac{1}{2} \mu_0 n^2 I^2 \Rightarrow
+\end{equation*}
+
+\begin{equation*}
+    u_B = \frac{1}{2} (4\pi \times 10^{-7} \; T \cdot m/A)(1.118 \times
+    10^3 \; m^{-1})^2 (6.60\; A)^2 = 34.2 \; J/m^3
+\end{equation*}
+
+Since the magnetic field is uniform inside an ideal solenoid, the
+total energy stored in the field is
+\begin{equation*}
+  U_B = u_B V
+\end{equation*}
+where V is the volume of the solenoid.
+V is calculated as the product of the cross-sectional area and the
+length:
+\begin{equation*}
+  V = (17.0 \times 10^{-4} \; m^2)(0.850 \; m) = 1.445 \times 10^{-3} \; m^3
+\end{equation*}
+
+Thus:
+\begin{equation*}
+  U_B = (34.2 \; J/m^3) (1.445 \times 10^{-3} \; m^3) = 4.942 \times 10^{-2} \; J
+\end{equation*}
+
+\end{frame}
+
+} % \problemslide
+
+%...............................................................................
+
+%
+% Worked example
+%
+
+{
+\problemslide
+
+\begin{frame}{Worked example}
+
+\begin{blockexmplque}{Question}
+  A 12 H inductor carries a current of 2.0 A. At what rate must the
+  current be changed to produce a 60 V emf in the inductor?
+\end{blockexmplque}
+
+\begin{equation*}
+  \mathcal{E} = -L \frac{dI}{dt} \Rightarrow
+\end{equation*}
+
+\begin{equation*}
+  \frac{dI}{dt} = -\frac{\mathcal{E}}{L} = -\frac{60\; V}{12 \; H} = -5.0 \; A/s
+\end{equation*}
+
+We might, for example, uniformly reduce the current from 2.0 A to
+zero in 40 ms.
+
+\end{frame}
+
+} % \problemslide
+
+%...............................................................................
+
+%
+% Worked example
+%
+
+{
+\problemslide
+
+\begin{frame}{Worked example}
+
+\begin{blockexmplque}{Question}
+  Two coils are fixed in place in close proximity.\\
+  Coil 1 has self-inductance L$_{1}$ = 25 mH and N$_{1}$ = 100 turns.\\
+  Coil 2 has self-inductance L$_{2}$ = 40 mH and N$_{2}$ = 200 turns.\\
+  Their mutual inductance M is 3.0 mH.
+  A 6.0 mA current in coil 1 is changing at the rate of 4.0 A/s.
+  \begin{itemize}
+   \item What magnetic flux $\Phi_{11}$ links coil 1?
+   \item What self-induced EMF appears in coil 1?
+   \item What magnetic flux $\Phi_{21}$ links coil 2?
+   \item What mutually induced EMF appears in coil2?
+  \end{itemize}
+\end{blockexmplque}
+
+\end{frame}
+
+%
+%
+%
+%
+
+\begin{frame}{Worked example}
+
+  The flux in coil 1 is:
+  \begin{equation*}
+    \frac{L_1 I_1}{N_1} = \frac{(25 \; mH)(6.0 \; mA)}{100} = 1.5  {\mu}Wb
+  \end{equation*}
+
+  The magnitude of the self-induced EMF in coil 1 is:
+  \begin{equation*}
+    L_1 \frac{dI_1}{dt} = (25 \; mH) (4.0 \; A/s) = 1.0 \times 10^2 mV
+  \end{equation*}
+
+  The flux in coil 2 is:
+  \begin{equation*}
+    \frac{M I_1}{N_2} = \frac{(3 \; mH)(6.0 \; mA)}{200} = 90 nWb
+  \end{equation*}
+
+  The mutually induced EMF in coil 2 is:
+  \begin{equation*}
+    \frac{M dI_1}{dt} = (3 \; mH)(4.0 \; A/s)= 12 mV
+  \end{equation*}
+
+\end{frame}
+
+} % \problemslide
+
+%...............................................................................
+
+%
+% Worked example
+%
+
+{
+\problemslide
+
+\begin{frame}{Worked example}
+
+\vspace{-0.2cm}
+
+\begin{blockexmplque}{Question}
+  \vspace{-0.4cm}
+  \begin{columns}
+    \begin{column}{0.24\textwidth}
+      \begin{center}
+        \includegraphics[width=0.95\textwidth]{./images/problems/lect11_wire_and_loop}\\
+       \end{center}
+    \end{column}
+    \begin{column}{0.76\textwidth}
+      A rectangular loop of $N$ closely packed turns is near a long
+      straight wire as shown below. What is the mutual inductance $M$
+      for the loop-wire system if $N$=100, $a$=1.0 cm, $b$ = 8.0 cm,
+      and $\ell$ = 30 cm?
+    \end{column}
+  \end{columns}
+\end{blockexmplque}
+
+The flux through the loop due to the field $\vec{B}$ of the current $i$ is given by:
+
+\begin{equation*}
+  \Phi = \int_{S_{loop}} \vec{B} \cdot d\vec{S}
+       = \int_{a}^{b} B \ell dr
+       = \int_{a}^{b} \frac{\mu_0 I}{2 \pi r} \ell dr
+       = \frac{\mu_0 I \ell}{2\pi} \int_{a}^{b} \frac{dr}{r}
+       = \frac{\mu_0 i \ell}{2\pi} ln(1 + \frac{b}{a})
+\end{equation*}
+
+Thus:
+\begin{equation*}
+  M = \frac{N\Phi}{i} \Rightarrow M = \frac{N \mu_0 \ell}{2\pi}
+  ln(1 + \frac{b}{a}) \Rightarrow
+\end{equation*}
+
+\begin{equation*}
+  M = \frac{(100) (4\pi \times 10^{-7} \; H/m) (0.30 \; m)}{2\pi}
+  ln(1 + \frac{8.0}{1.0}) = 1.3 \times 10^{-5} \; H
+\end{equation*}
+
+\end{frame}
+
+
+} % \problemslide
+
+%...............................................................................
+
 %
 %
 %
@@ -1680,6 +1938,12 @@ The current is given by:
 \end{itemize}
 
 \end{frame}
+
+%
+% Optional reading
+%
+
+\input{slides_lecture11_optional.tex}
 
 % ------------------------------------------------------------------------------
 % ------------------------------------------------------------------------------

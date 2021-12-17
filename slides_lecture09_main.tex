@@ -1571,6 +1571,281 @@ See {\bf Breakthrough Starshot}:
 
 \end{frame}
 
+
+%...............................................................................
+
+%
+% Worked example
+%
+
+{
+\problemslide
+
+\begin{frame}{Worked example}
+
+\begin{blockexmplque}{Question}
+  A small laser emits light at power $P$ = 5.00 mW and wavelength $\lambda$ = 633 nm.
+  The laser beam is focused (narrowed) until its diameter $d$ matches the 1266 nm
+  diameter of a sphere placed in its path. The sphere is perfectly absorbing
+  and has density $\rho$ = 5.00 $\times$ 10$^3$ kg/m$^3$.
+  What are
+  \begin{itemize}
+  \item the beam intensity $I$ at the sphere's location,
+  \item the radiation pressure $P_r$ on the sphere,
+  \item the magnitude of the corresponding force $F_r$, and
+  \item the magnitude of the acceleration $\alpha$ that force alone would give the sphere?
+  \end{itemize}
+\end{blockexmplque}
+
+We note that cross-section of the beam is $\pi d^2/4$.
+Therefore, the beam intensity is:
+\begin{equation*}
+   I = \frac{P}{\pi d^2 / 4}
+     = \frac{5 \times 10^{-3} \; W}{3.14 (1266 \times 10^{-9} \; m)^2 / 4 }
+     = 3.97 \times 10^9 \; W/m^2
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+%
+
+\begin{frame}{Worked example}
+
+The rediation pressure is:
+\begin{equation*}
+   P_r = \frac{I}{c}
+       = \frac{3.97 \times 10^9 \; W/m^2}{3.0 \times 10^8 \; m/s}
+       = 13.2 \; Pa
+\end{equation*}
+
+The corresponding force is:
+\begin{equation*}
+   F_r = P_r \Big( \pi d^2 / 4 \Big) 
+       = 13.2 \Big(3.14 (1266 \times 10^{-9} \; m)^2 / 4 \Big)
+       = 1.67 \times 10^{-11} \; N
+\end{equation*}
+
+We note that volume of the sphere is $4\pi(d/2)^3/3 = \pi d^3/6$ and,
+therefore its mass $m$, is given by $m = \rho \pi d^3/6$.
+The acceleration due to the force computed previously is
+\begin{equation*}
+   \alpha = \frac{F_r}{m} = \frac{F_r}{\rho \pi d^3/6} = \frac{6 F_r}{\rho \pi d^3} \Rightarrow
+\end{equation*}
+\begin{equation*}
+   \alpha = \frac{6 (1.67 \times 10^{-11} \; N)}{(5 \times 10^3 \; kg/m^3) 3.14 (1266 \times 10^{-9} \; m)^3}
+          = 3.14 \times 10^3 \; m/s^2
+\end{equation*}
+
+\end{frame}
+
+} % \problemslide
+
+%...............................................................................
+
+%
+% Worked example
+%
+
+{
+\problemslide
+
+%
+%
+%
+%
+
+\begin{frame}{Worked example}
+
+\begin{blockexmplque}{Question}
+  A small space shuttle with a mass of only $1.5 \times 10^3$ kg
+  (including crew) is drifting in outer space with negligible
+  gravitational forces acting on it. If the astronaut turns
+  on a 10 kW laser beam, what speed will the shuttle attain in 1.0 day
+  because of the momentum carried away by the beam?
+\end{blockexmplque}
+
+Since the total momentum of the spaceship and light is conserved,
+this is the magnitude of the momentum acquired by the spaceship
+is equal to the magnitude of the momentum carried away by the laser beam.\\
+\vspace{0.2cm}
+If P is the power of the laser, then the energy U carried away in time t is:
+\begin{equation*}
+   U = P \cdot t
+\end{equation*}
+Thus the magntitude of the momentum is given by:
+\begin{equation*}
+   p = P \cdot t/c
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+%
+
+\begin{frame}{Worked example}
+
+If m is the mass of the spaceship, its speed u is:
+\begin{equation*}
+  u = \frac{p}{m} = \frac{P \cdot t}{m \cdot c}
+\end{equation*}
+
+There are 86400 seconds in a day, therefore:
+\begin{equation*}
+  u = \frac{(10 \times 10^3 \; W)
+      \cdot (86400 \; s)}{(1.5 \times 10^3 \; kg)
+      \cdot (2.998\times 10^8 \; m/s)}
+    = 1.9 \times 10^{-3} \; m/s
+\end{equation*}
+
+%
+%
+%
+
+\begin{blockexmplque}{Question}
+  The magnetic field in a traveling EM wave has an rms
+  strength of 22.5 nT. How long does it take to deliver 335 J of
+  energy to 1 cm$^2$ of a wall that it hits perpendicularly?
+\end{blockexmplque}
+
+The energy per unit area per unit time is given by the magnitude of the
+Poynting vector $\vec{S}$.
+\begin{equation*}
+  \vec{S} = \frac{1}{\mu_0} (\vec{E} \times \vec{B}) \Rightarrow
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+%
+
+\begin{frame}{Worked example}
+
+\begin{equation*}
+  <S> = \frac{E_0 B_0}{2\mu_0} = \frac{c B_0^2}{2\mu_0} = \frac{c B_{rms}^2}{\mu_0}
+\end{equation*}
+
+Let $\Delta U$ represent the energy that crosses
+area $A$ in a time $\Delta t$. Then:
+
+\begin{equation*}
+  <S> = \frac{\Delta U}{A \Delta t}
+\end{equation*}
+
+Therefore:
+\begin{equation*}
+  \frac{\Delta U}{A \Delta t} = \frac{c B_{rms}^2}{\mu_0} \Rightarrow
+  \Delta t = \frac{\Delta U \mu_0}{A c B_{rms}^2} \Rightarrow
+\end{equation*}
+\begin{equation*}
+  \Delta t =
+  \frac
+  {
+    (335 \; \text{J})
+    (4\pi \times 10^{-7} \; \text{Tm/A})
+  }
+  {
+    (10^{-4} \; \text{m}^2)
+    (3 \times 10^{8} \; \text{m/s})
+    (22.5 \times 10^{-9} \; \text{T})^2
+  } =
+  2.66 \times 10^7 \text{s} ( \approx 321 \; \text{days})
+\end{equation*}
+
+\end{frame}
+
+} % \problemslide
+
+%...............................................................................
+
+%
+% Worked example
+%
+
+{
+\problemslide
+
+%
+%
+%
+%
+
+\begin{frame}{Worked example}
+
+\begin{blockexmplque}{Question}
+  Estimate the rms electric field in the sunlight that hits Mars,
+  knowing that the Earth receives about 1350 W/m$^2$ and that
+  Mars is 1.52 times farther from the Sun (on average) than is
+  the Earth.
+\end{blockexmplque}
+
+The radiation from the Sun is isotropic,
+so the rate $P$ at which energy passes through a sphere with radius $R$
+centered at the Sun is:
+\begin{equation*}
+    P = <S> \Big( 4\pi R^2 \Big)
+\end{equation*}
+
+This rate is the same at any distance from the Sun,
+so the above expression is valid on Earth:
+\begin{equation*}
+    P = <S_{Earth}> \Big( 4\pi R_{Earth}^2 \Big)
+\end{equation*}
+and on Mars:
+\begin{equation*}
+    P = <S_{Mars}> \Big( 4\pi R_{Mars}^2 \Big)
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+%
+
+\begin{frame}{Worked example}
+
+Therefore, from above:
+\begin{equation*}
+   <S_{Mars}> = <S_{Earth}> \frac{R_{Earth}^2}{R_{Mars}^2}
+\end{equation*}
+
+But, we know that:
+\begin{equation*}
+  <S> = \frac{E_0 B_0}{2\mu_0}
+      = \frac{c B_0^2}{2\mu_0} = \frac{c B_{rms}^2}{\mu_0}
+      = \frac{E_0^2}{2\mu_0 c} = \frac{E_{rms}^2}{\mu_0 c}
+\end{equation*}
+Therefore, on Mars:
+\begin{equation*}
+  <S_{Mars}> = \frac{E_{rms;Mars}^2}{\mu_0 c} \Rightarrow
+  E_{rms;Mars} = \sqrt{<S_{Mars}> \mu_0 c}
+\end{equation*}
+
+Using the earlier expression we found for $<S_{Mars}>$, we have:
+\begin{equation*}
+  E_{rms;Mars} = \sqrt{<S_{Earth}> \mu_0 c} \frac{R_{Earth}}{R_{Mars}} \Rightarrow
+\end{equation*}
+
+\vspace{-0.2cm}
+\begin{equation*}
+  E_{rms;Mars} =
+   \sqrt{(1350 \; \text{W/m}^2) (4\pi \times 10^{-7} \; \text{Tm/A}) (3\times 10^8 \; \text{m/s})}
+   \frac{1}{1.52} = 469 \; V/m
+\end{equation*}
+
+\end{frame}
+
+} % \problemslide
+
+%...............................................................................
+
 % ------------------------------------------------------------------------------
 % ------------------------------------------------------------------------------
 
@@ -1579,6 +1854,7 @@ See {\bf Breakthrough Starshot}:
 %
 
 \renewcommand{\lecturesummarytitle}{Main points to remember }
+
 \input{slides_lecture09_summary.tex}
 
 %

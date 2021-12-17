@@ -18,6 +18,128 @@
 %
 %
 
+\begin{frame}{Worked example: Current loop on incline}
+
+  \begin{blockexmplque}{Question}
+    \begin{minipage}[l]{0.37\textwidth}
+     \begin{center}
+         \includegraphics[width=0.80\textwidth]{./images/problems/lect06_cylinder_on_incline}
+     \end{center}
+    \end{minipage}
+    \begin{minipage}[r]{0.60\textwidth}
+    	The figure on the left shows a wood cylinder of mass M = 0.250 kg and length
+    	L = 0.100 m, with N = 10.0 turns of wire wrapped around it longitudinally,
+    	so that the plane of the wire coil contains the long central axis of the cylinder.
+    	The cylinder is released on a plane inclined at an angle $\theta$ to the horizontal,
+    	with the plane of the coil parallel to the incline plane. If there is a vertical
+    	uniform magnetic field of magnitude 0.500 T, what is the least current i through
+    	the coil that keeps the cylinder from rolling down the plane?
+    \end{minipage}
+  \end{blockexmplque}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Current loop on incline}
+
+  We take the $x$ axis to be positive down the incline.
+  Then the $x$ component of Newton's second law for the center of mass yields:
+  \begin{equation*}
+  	M g sin\theta - f = M a
+  \end{equation*}
+  where $f$ is the force of friction, acting up the incline at the point of contact
+  $a$ is the cylinder's acceleration, and $M g sin\theta$ is the force of gravity
+  in the direction of $x$.
+
+  Since the plane of the loop is parallel to the incline, the dipole moment $\vec{m}$
+  is normal to the incline and it has a maginutude of:
+  \begin{equation*}
+  	|\vec{m}| = I |\vec{S}| = N i L 2r
+  \end{equation*}
+  where $I$ = $Ni$ is the total current flowing in the loop ($N$ turns of current $i$)
+  and $|\vec{S}|$ = $L 2r$ is the area of the loop ($L$ is the length of the cylinder
+  and $r$ is its radius).
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Current loop on incline}
+
+  The magnetic field produces a torque with magnitude:
+  \begin{equation*}
+  	|\vec{T_B}| = |\vec{m} \times \vec{B}| = |\vec{m}| |\vec{B}| sin\theta
+  \end{equation*}
+
+  The force of friction produces a torque with magnitude:
+  \begin{equation*}
+  	|\vec{T_f}| = f r
+  \end{equation*}
+  $\vec{T_B}$ produces an angular acceleration in the counterclockwise direction,
+  and $\vec{T_f}$ produces an angular acceleration in the clockwise direction.\\
+
+  \vspace{0.2cm}
+
+  Newton's second law for rotation about the center of the cylinder, gives:
+  \begin{equation*}
+  	|\vec{m}| |\vec{B}| sin\theta - f r = I \alpha
+  \end{equation*}
+  where $I$ is the mass moment of inertia and
+  $\alpha$ is the angular acceleration.\\
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Current loop on incline}
+
+  Since we want the current that holds the cylinder in place,
+  we set $a$ = 0 and $\alpha$ = 0.\\
+
+  \vspace{0.2cm}
+
+  Therefore:
+  \begin{equation*}
+  	M g sin\theta - f = M a \Rightarrow f = M g sin\theta
+  \end{equation*}
+  and
+  \begin{equation*}
+  	|\vec{m}| |\vec{B}| sin\theta - f r = 0 \Rightarrow
+  \end{equation*}
+  \begin{equation*}
+  	( N i L 2r ) |\vec{B}| sin\theta - ( M g sin\theta ) r = 0 \Rightarrow
+  \end{equation*}
+  \begin{equation*}
+  	i = \frac{Mg}{2NLB} \Rightarrow
+  \end{equation*}
+  \begin{equation*}
+  	i = \frac{(0.250 \; kg)(9.8 \; m/s^2)}{2(10.0)(0.100 \; m)(0.500 \; T)} = 2.45 \; A
+  \end{equation*}
+
+\end{frame}
+
+} % Worked example
+
+% ------------------------------------------------------------------------------
+
+%
+% Worked example :
+%
+
+{
+\problemslide
+
+%
+%
+%
+
 \begin{frame}{Worked example: System of 3 wires}
 
   \begin{blockexmplque}{Question}
@@ -231,3 +353,431 @@
 } % Worked example
 
 % ------------------------------------------------------------------------------
+
+%
+% Worked example :
+%
+
+{
+\problemslide
+
+%
+%
+%
+
+\begin{frame}{Worked example: Circular coil in uniform field}
+
+\begin{blockexmplque}{Question}
+  A circular coil, 0.05 m in radius, with 30 turns of wire, lies on the horizontal plane.
+  It carries a current of 5.0 A counterclockwise (as viewed from the top).
+  The coil is in a uniform magnetic field of 1.2 T directed to the right.
+  Find the magnetic moment and the torque on the coil in vector form.
+\end{blockexmplque}
+
+The magnetic dipole moment $\vec{m}$ of a current loop is defined as:
+\begin{equation*}
+   \vec{m} = I \vec{S}
+\end{equation*}
+where I is the current flowing in the loop and $\vec{S}$ is its area.
+
+The area of a circular coil with radius r = 0.05 m is
+\begin{equation*}
+  S = \pi r^2 = \pi (0.05\; m)^2 = 0.00785 \; m^2
+\end{equation*}
+
+The current $I_{turn}$ flowing through each turn of wire is 5.0 A
+and the coil has N = 30 turns. Hence, the total current is:
+\begin{equation*}
+  I = N I_{turn} = 30 \cdot 5\; A = 150 \; A
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Circular coil in uniform field}
+
+Therefore, the magnitude of the magnetic moment $\vec{m}$ is:
+\begin{equation*}
+   |\vec{m}| = I \cdot S = \Big(  150 \; A \Big) \cdot \Big( 0.00785 \; m^2 \Big) \approx 1.18 \; A \cdot m^2
+\end{equation*}
+
+The vector $\vec{m}$ is perpendicular to the loop and points in the same
+direction as your thumb if your right-hand curls in the direction of the current.
+The given circular coil lies on the horizontal plane
+(which we assume to be the $xy$ plane, with $x$ pointing on the right)
+with $I$ flowing counterclockwisely.\\
+
+\vspace{0.1cm}
+Therefore, the direction of the magnetic moment is along $\hat{z}$:
+\begin{equation*}
+   \vec{m} \approx \Big( 1.18 \; A \cdot m^2 \Big) \hat{z}
+\end{equation*}
+
+The torque exerted by a magnetic field is:
+\begin{equation*}
+     \vec{T} = \vec{m} \times \vec{B} \Rightarrow
+\end{equation*}
+\begin{equation*}
+     \vec{T}
+     = \Big( 1.18 \; A \cdot m^2 \Big) \hat{z} \times \Big( 1.2 \; T \Big) \hat{x}
+     \approx \Big( 1.42 \; N \cdot m \Big) \Big( \hat{z} \times \hat{x} \Big)
+     = \Big( 1.42 \; N \cdot m \Big) \hat{y}
+\end{equation*}
+
+\end{frame}
+
+} % Worked example
+
+% ------------------------------------------------------------------------------
+
+%
+% Worked example :
+%
+
+{
+\problemslide
+
+%
+%
+%
+
+\begin{frame}{Worked example: Magnetic field of cylindrical conductor}
+
+  \begin{blockexmplque}{Question}
+    A long non-magnetic cylindrical conductor with inner radius $a$
+    and outer radius $b$ carries a current $I$ which flows along the
+    direction of the axis of symmetry of the cylinder.
+    Assume that the current density in the conductor is uniform.\\
+    \vspace{0.2cm}
+    The current $I$ produces a magnetic field $\vec{B}$.
+    Find the magnetic field $\vec{B}$ as a function of the radial
+    co-ordinate $r$ and express it in vector form for the following cases:\\
+    \vspace{0.2cm}
+    \begin{itemize}
+       \item inside the hollow space ($r < a$),
+       \item within the cylindrical conductor ($a < r < b$), and
+       \item outside the conductor ($r > a$).
+     \end{itemize}
+  \end{blockexmplque}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Magnetic field of cylindrical conductor}
+
+  For the calculation of the magnetic field in this cylindrically-symmetric
+  problem we will use Ampere's circuital law for a closed path $L$
+  \begin{equation*}
+     \oint_{L} \vec{B} \cdot d\vec{\ell} = \mu_0 I_{enc}
+  \end{equation*}
+
+  where $I_{enc}$ is the current that flows through the open surface $S(L)$
+  that has the closed path $L$ as its boundary:
+  \begin{equation*}
+     I_{enc} = \int_{S(L)} \vec{j} \cdot d\vec{S}
+  \end{equation*}
+
+  The uniform current density $j$, within the conductor,
+  can be written as the ratio of the
+  total current $I$ over the area of a cross-section of the cylinder
+  perpendicular to the direction of the current flow.
+  If the axis of the cylinder is the $z$ axis, and the current flows
+  in the positive direction, we can write:
+  \begin{equation*}
+     \vec{j} = \frac{I}{\pi(b^2-a^2)} \hat{z} \;\;\;\;\; (\text{for } a < r < b)
+  \end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Magnetic field of cylindrical conductor}
+
+  For {\em any} closed path $L$ in the region $r<a$,
+  $I_{enc}$ = 0. Ampere's law yields:
+  \begin{equation*}
+     \oint_{L} \vec{B} \cdot d\vec{\ell} = 0
+  \end{equation*}
+  Since this is true for any arbitrary closed path, it can not be the
+  result of an accidental cancellation and it has to be the
+  integrand itself that is zero.\\
+  Therefore, for $r<a$:
+  \begin{equation*}
+     B = 0
+  \end{equation*}
+  For $a<r<b$, in order to exploit the cylindrical symmetry of the problem
+  in the application of Ampere's law, we choose a circular integration path $L$
+  with radius $r$ whose centre is on the symmetry axis of the cylinder.\\
+  The current $I_{enc}$ that flows through the area $S$ of a circle
+  that has $L$ as its boundary and it is perpendicular to $\vec{j}$,
+  is given by:\\
+  \begin{equation*}
+     I_{enc} = \int_{S(L)} \vec{j} \cdot d\vec{S} = jS =
+       I \frac{r^2-a^2}{b^2-a^2}
+  \end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Magnetic field of cylindrical conductor}
+
+  Substituting the above in Ampere's circuital law,
+  and considering that, due to symmetry, $\vec{B}$ is an azimuthal vector
+  and, along $L$, the vectors $\vec{B}$ and $d\vec{\ell}$
+  are co-linear, we obtain:
+  \begin{equation*}
+     B 2\pi r = \mu_0 I \frac{r^2-a^2}{b^2-a^2} \Rightarrow
+     B = \frac{\mu_0 I}{2\pi r} \frac{r^2-a^2}{b^2-a^2}
+  \end{equation*}
+  Therefore, for $a<r<b$:
+  \begin{equation*}
+     \displaystyle
+     \vec{B} = \frac{\mu_0 I}{2\pi r} \frac{r^2-a^2}{b^2-a^2} \hat{\phi}
+  \end{equation*}
+
+  For $r>b$, we can use similar procedure and arguments
+  as in the case of $a<r<b$, but with:
+  \begin{equation*}
+     I_{enc} = I
+  \end{equation*}
+  since our integration path includes the full cylindrical conductor.
+  % An application of Ampere's circuital law in this case yields
+  % \begin{equation*}
+  %    B 2\pi r = \mu_0 I \Rightarrow
+  %    B = \frac{\mu_0 I}{2\pi r}
+  % \end{equation*}
+  Therefore, for $r>b$:
+  \begin{equation*}
+     \displaystyle
+     \vec{B} = \frac{\mu_0 I}{2\pi r} \hat{\phi}
+  \end{equation*}
+
+\end{frame}
+
+} %Worked example
+
+% ------------------------------------------------------------------------------
+{
+\problemslide
+
+%
+%
+%
+
+\begin{frame}{Worked example: Magnetic flux through half cylinder}
+
+  \begin{blockexmplque}{Question}
+    Two wires, parallel to a z axis and a distance 4$r$ apart,
+    carry equal currents $i$ in opposite directions, as shown below.
+    A circular cylinder of radius $r$ and length $L$ has its axis on the z axis,
+    midway between the wires. Use Gauss' law for magnetism to derive an expression
+    for the net outward magnetic flux through the half of the cylindrical
+    surface above the x axis.\\
+    \begin{center}
+        \includegraphics[width=0.50\textwidth]{./images/problems/lect06_2_wires_magnetic_flux_half_cylinder}
+    \end{center}
+  \end{blockexmplque}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Magnetic flux through half cylinder}
+
+  Let S$_1$ be the half of the cylindrical surface (above the x axis) for which
+  we are interested in calculating the magnetic flux, and
+  S$_2$ be the portion of the xz plane that lies within the cylinder.\\
+  \vspace{0.2cm}
+  Each of the wires 1 and 2 produces an azimulthal magnetic field, as shown on
+  the figure below. The total magnetic field has no z component.
+
+  \begin{center}
+      \includegraphics[width=0.50\textwidth]{./images/problems/lect06_2_wires_magnetic_flux_half_cylinder_2}
+  \end{center}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Magnetic flux through half cylinder}
+
+  From Gauss' law for magnetism, the flux through the closed surface formed by
+  S$_1$, S$_2$ and two end-cups on the $xy$ plane (through which there
+  is no flux, since the field of each wire is azimuthal) is zero. Therefore:
+  \begin{equation*}
+  	 \Phi_{S_1} + \Phi_{S_2} = 0 \Rightarrow \Phi_{S_1} = -\Phi_{S_2}
+  \end{equation*}
+
+  So we can obtain the flux through the half-cylindrical surface S$_1$, by calculating the
+  flux through the planar surface S$_2$. The latter is a much easier calculation.
+
+  The total magnetic flux through the surface S$_2$ is given by
+  \begin{equation*}
+  	\Phi_{S_2} = \int_{S_2} \vec{B} \cdot d\vec{S}
+  \end{equation*}
+
+  The total field $\vec{B}$ is the superposition of the fields $\vec{B}_1$ and
+  $\vec{B}_2$ produced by the wires 1 and 2 respectively.
+  \begin{equation*}
+  	\vec{B} = \vec{B}_1 + \vec{B}_2
+  \end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Magnetic flux through half cylinder}
+
+  The field produced by a long straight wire with current $I_k$ is given by
+  \begin{equation*}
+     \vec{B}_{k} = \frac{\mu_0 I_k}{2\pi r_k} \hat{\phi_k}
+  \end{equation*}
+  where $r_k$ is the distance from the wire and $\hat{\phi_k}$
+  is the azimuthal direction around that wire.\\
+  \vspace{0.1cm}
+  The current in wire 1 travels along $\hat{z}$ (out of the page) and therefore
+  its magnetic field, as viewed from above, rotates anticlockwisely.
+  On the surface S$_2$, the field $\vec{B}_{1}$ points along $\hat{y}$.
+  Similarly,
+  the current in wire 2 travels along -$\hat{z}$ (into the page) and therefore
+  its magnetic field, as viewed from above, rotates clockwisely.
+  On the surface S$_2$, the field $\vec{B}_{2}$ points along $\hat{y}$ too.\\
+  \vspace{0.1cm}
+  So, in summary, on the surface S$_2$:
+  \begin{equation*}
+     \vec{B}_{1} = \frac{\mu_0 i}{2\pi r_1} \hat{y} = \frac{\mu_0 i}{2\pi (2r+x)} \hat{y}
+     \;\;\;\;\; \text{and} \;\;\;\;\;
+     \vec{B}_{2} = \frac{\mu_0 i}{2\pi r_2} \hat{y} = \frac{\mu_0 i}{2\pi (2r-x)} \hat{y}
+  \end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Magnetic flux through half cylinder}
+
+  By convention, the unit vector for each element of a closed surface points outwards,
+  so the surface vector of S$_2$ points towards -$\hat{y}$.
+  Therefore, $\Phi_{S_2}$ is:
+
+  \begin{equation*}
+  	\Phi_{S_1} =
+  	- \Phi_{S_2} =
+  	- \int_{S_2} (\vec{B}_1 + \vec{B}_2) \cdot d\vec{S}
+  \end{equation*}
+
+  \begin{equation*}
+  	= \frac{\mu_0 i L}{2\pi}
+  	   \big\{
+  		   \int_{-r}^{+r} \frac{dx}{2r+x} +
+  			 \int_{-r}^{+r} \frac{dx}{2r-x}
+  	   \big\}
+    = \frac{\mu_0 i L}{2\pi}
+  	   \big\{
+  		   \int_{-r}^{+r} \frac{d(2r+x)}{2r+x} -
+  			 \int_{-r}^{+r} \frac{d(2r-x)}{2r-x}
+  	   \big\}
+  \end{equation*}
+
+  \begin{equation*}
+  	=
+  	   \frac{\mu_0 i L}{2\pi}
+  	   \big\{
+  		   ln(2r+x) \rvert_{-r}^{+r} -
+  			 ln(2r-x) \rvert_{-r}^{+r}
+  	   \big\}
+  \end{equation*}
+  \begin{equation*}
+  	=
+  		 \frac{\mu_0 i L}{2\pi}
+  		 \big\{
+  		   (ln(3r) - ln(r)) -
+  			 (ln(r) - ln(3r)
+  	   \big\}
+  	= \frac{\mu_0 i L}{2\pi}
+  		  (2ln(3r) - 2ln(r))
+    = \frac{\mu_0 i L}{2\pi} 2 ln3 \Rightarrow
+  \end{equation*}
+
+  \begin{equation*}
+  	\Phi_{S_1} =
+  	    \frac{\mu_0 i}{\pi} L ln3
+  \end{equation*}
+
+
+
+  % \begin{equation*}
+  % 	\Phi_{S_1} =
+  % 	- \Phi_{S_2} =
+  % 	- \int_{S_2} (\vec{B}_1 + \vec{B}_2) \cdot d\vec{S} \Rightarrow
+  % \end{equation*}
+  %
+  % \begin{equation*}
+  % 	\Phi_{S_1} = \frac{\mu_0 i}{2\pi} L
+  % 	   \big\{
+  % 		   \int_{-r}^{+r} \frac{dx}{2r+x} +
+  % 			 \int_{-r}^{+r} \frac{dx}{2r-x}
+  % 	   \big\} \Rightarrow
+  % \end{equation*}
+  %
+  % \begin{equation*}
+  % 	\Phi_{S_1} = \frac{\mu_0 i}{2\pi} L
+  % 	   \big\{
+  % 		   \int_{-r}^{+r} \frac{d(2r+x)}{2r+x} -
+  % 			 \int_{-r}^{+r} \frac{d(2r-x)}{2r-x}
+  % 	   \big\} \Rightarrow
+  % \end{equation*}
+  %
+  % \begin{equation*}
+  % 	\Phi_{S_1} =
+  % 	   \frac{\mu_0 i}{2\pi} L
+  % 	   \big\{
+  % 		   ln(2r+x) \rvert_{-r}^{+r} -
+  % 			 ln(2r-x) \rvert_{-r}^{+r} -
+  % 	   \big\} \Rightarrow
+  % \end{equation*}
+  % \begin{equation*}
+  % 	\Phi_{S_1} =
+  % 		 \frac{\mu_0 i}{2\pi} L
+  % 		 \big\{
+  % 		   (ln(3r) - ln(r)) -
+  % 			 (ln(r) - ln(3r)
+  % 	   \big\} \Rightarrow
+  % \end{equation*}
+  % \begin{equation*}
+  % 	\Phi_{S_1} =
+  %                  \frac{\mu_0 i}{2\pi} L
+  % 		  (2ln(3r) - 2ln(r)) \Rightarrow
+  % \end{equation*}
+  % \begin{equation*}
+  % 	\Phi_{S_1} =
+  % 		 \frac{\mu_0 i}{2\pi} L 2 ln3 \Rightarrow
+  % \end{equation*}
+  %
+  % \begin{equation*}
+  % 	\Phi_{S_1} =
+  % 	    \frac{\mu_0 i}{\pi} L ln3
+  % \end{equation*}
+
+\end{frame}
+
+} %Worked example

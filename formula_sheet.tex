@@ -194,34 +194,73 @@ corresponding surface $S$ or line $L$:
        }
        \end{itemize}
 
-\subsubsection*{\bf Work done to assemble a system of charges
-  (equivently, electrostatic potential energy stored in the field produced by the charges)}
+\subsubsection*{\bf Electrostatic potential energy}
+
+The work $W$ done to assemble a system of charges becomes
+electrostatic potential energy $U$ ($U=W$)
+and it is stored in the field produced by the charges.
+The formulas below show how to calculate $U$ for a:
 
           \begin{itemize}
-          \item System of 2 charges:
+          \item system of 2 charges:
            \begin{equation*}
                 U = \frac{q_1 q_2}{4\pi\epsilon_0} \frac{1}{|\vec{r}_{12}|}
            \end{equation*}
 
-          \item System of 3 charges:
+          \item system of 3 charges:
            \begin{equation*}
              U = \frac{q_1 q_2}{4\pi\epsilon_0} \frac{1}{|\vec{r}_{12}|} +
                  \frac{q_1 q_3}{4\pi\epsilon_0} \frac{1}{|\vec{r}_{13}|} +
                  \frac{q_2 q_3}{4\pi\epsilon_0} \frac{1}{|\vec{r}_{23}|}
            \end{equation*}
 
-          \item System of N charges:
+          \item system of N charges:
            \begin{equation*}
              U = \frac{1}{2} \sum_{i,j=1;i{\ne}j}^{N} \frac{q_i q_j}{4\pi\epsilon_0|\vec{r}_{ij}|}
            \end{equation*}
 
-          \item Continuous charge distribution (with density $\rho$ over a volume $\tau$):
+          \item continuous charge distribution (with density $\rho$ over a volume $\tau$):
            \begin{equation*}
-              U = \frac{1}{2} \int_{\tau} d\tau \int_{\tau^{\prime}} d\tau^{\prime}
+              U = \frac{1}{2} \int_{\tau} \int_{\tau^{\prime}}
+                \frac{dq(\vec{r}) dq^{\prime}(\vec{r^{\prime}})}{4\pi\epsilon_0|\vec{r} - \vec{r^{\prime}}|}
+                = \frac{1}{2} \int_{\tau} d\tau \int_{\tau^{\prime}} d\tau^{\prime}
                   \frac{\rho(\vec{r}) \rho(\vec{r^{\prime}})}{4\pi\epsilon_0|\vec{r} - \vec{r^{\prime}}|}
            \end{equation*}
 
           \end{itemize}
+
+\subsubsection*{\bf Electrostatic potential}
+
+The electrostatic potential $V(\vec{r})$ is a scalar field,
+and it represents the amount of work $W$ required to bring a charge $Q$
+in position $\vec{r}$, divided by the charge $Q$:
+\begin{equation*}
+     V = \frac{W}{Q}
+\end{equation*}
+The expresions below show how to compute $V(\vec{r})$ due to:
+\begin{itemize}
+\item a point charge $q$ placed at $\vec{r^{\prime}}$:
+ \begin{equation*}
+      V(\vec{r}) = \frac{q}{4\pi\epsilon_0} \frac{1}{|\vec{r}-\vec{r^{\prime}}|}
+ \end{equation*}
+
+\item charges $q_1$, $q_2$,..., $q_N$ placed at positions
+      $\vec{r}_1$, $\vec{r}_2$,..., $\vec{r}_N$:
+  \begin{equation*}
+      V(\vec{r}) = \frac{1}{4\pi\epsilon_0}
+            \sum_{i=1}^{N} \frac{q_i}{|\vec{r}-\vec{r}_{i}|}
+  \end{equation*}
+
+\item a continuous charge distribution represented by $\rho(r^{\prime})$ :
+\begin{equation*}
+   V(\vec{r}) = \frac{1}{4\pi\epsilon_0}
+     \int_{\tau^\prime} \frac{dq(\vec{r}^{\;\prime})}{|\vec{r}-\vec{r}^{\;\prime}|}
+     = \frac{1}{4\pi\epsilon_0}
+     \int_{\tau^\prime} \frac{\rho(\vec{r}^{\;\prime})d\tau^\prime}{|\vec{r}-\vec{r}^{\;\prime}|}
+\end{equation*}
+
+\end{itemize}
+
 
 \subsubsection*{\bf Definition of electric current}
 
@@ -465,6 +504,24 @@ The average power transmitted by an electromagnetic wave, is given by
 the {\bf average of $\vec{N}$ over a period T}:
 \begin{equation*}
   <\vec{N}> = \frac{1}{T} \int_{0}^{T} \vec{N} dt
+\end{equation*}
+
+The magnitude of the averaged Poynting vector
+can be written in terms of the amplitudes of the electric field,
+$E_0$, and magnetic field, $B_0$, as
+\begin{equation*}
+  <N> = \frac{E_0 B_0}{2 \mu_0}
+\end{equation*}
+
+Considering that $B_0 = E_0/c$, and introducing the root mean square
+amplitudes $E_{rms}=E_0/\sqrt{2}$ and $B_{rms}=B_0/\sqrt{2}$,
+the above can be rewritten  as
+\begin{equation*}
+  <N> =
+  \frac{c B_0}{2 \mu_0} =
+  \frac{c B_{rms}^2}{\mu_0} =
+  \frac{c E_0}{2 \mu_0 c} =
+  \frac{c E_{rms}^2}{\mu_0 c}
 \end{equation*}
 
 

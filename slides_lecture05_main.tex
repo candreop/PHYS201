@@ -698,18 +698,15 @@ All the above can be summarised as:
 
 \end{frame}
 
-
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 
 %
 % Worked example
 %
 
 {
-\setbeamercolor {frametitle} {bg=eBG1}
-\setbeamercolor {author in head/foot} {bg=eBG1}
-\setbeamercolor {title in head/foot} {bg=eBG2}
-\setbeamercolor {date in head/foot} {bg=eBG3}
-\setbeamercolor {date in head/foot} {fg=eFG3}
+\problemslide
 
 %
 %
@@ -747,6 +744,68 @@ $\hat{x} \times \hat{x} = 0$ and $\hat{y} \times \hat{x} = -\hat{z}$, and theref
    \vec{F} = - \Big( 6.6836 \times 10^{-4} N \Big)  \hat{z}
 \end{equation*}
 
+\end{frame}
+
+} % Worked example
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+
+%
+% Worked example
+%
+
+{
+\problemslide
+
+%
+%
+%
+
+\begin{frame}{Worked example}
+
+  \begin{blockexmplque}{Question}
+    In a 1.25T magnetic field directed vertically upward,
+    a particle with a charge of magnitude 8.5 ${\mu}C$ which moves initially
+    northward at 4.75 km/s is deflected towards the east.
+    \begin{enumerate}
+       \item What is the sign of the charge of the particle?
+       \item Find the magnetic force on the particle.
+    \end{enumerate}
+  \end{blockexmplque}
+
+  \begin{columns}[T]
+    \begin{column}{0.25\textwidth}
+      \begin{center}
+        \begin{figure}[ht]
+            \includegraphics[width=0.90\textwidth]{./images/problems/lect05_FuB_directions}\\
+        \end{figure}
+      \end{center}
+    \end{column}
+    \begin{column}{0.75\textwidth}
+      \begin{enumerate}
+      \item
+        Curl your right-hand fingers from $\vec{u}$ to $\vec{B}$ through the
+        smallest angle. This is the direction of $\vec{u} \times \vec{B}$,
+        and it points east. $\vec{F}$ ( = $q$ $\vec{u} \times \vec{B}$)
+        is in this direction too, so the charge is positive.
+      \item
+        Let $\phi$ be the angle between $\vec{u}$ and $\vec{B}$.
+        The force exerted on the particle is:
+        % \begin{equation*}
+        %   |\vec{F}|= |q| \cdot |\vec{u}| \cdot |\vec{B}| \cdot sin\phi  \Rightarrow
+        % \end{equation*}
+      \end{enumerate}
+    \end{column}
+  \end{columns}
+  \begin{equation*}
+    F
+      = q \cdot u \cdot B \cdot sin\phi
+      =  \Big( 8.50 \times 10^{-6} \; C\Big)
+         \Big( 4.75 \times 10^{3} \; \frac{m}{s}\Big)
+         \Big( 1.25\; T \Big) sin\frac{\pi}{2}
+      = 0.0505 \; N
+  \end{equation*}
 \end{frame}
 
 } % Worked example
