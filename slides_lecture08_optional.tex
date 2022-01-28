@@ -549,3 +549,71 @@
 \end{frame}
 
 } % Worked example
+
+% ------------------------------------------------------------------------------
+
+%
+% Worked example :
+%
+
+{
+\problemslide
+
+%
+%
+%
+
+\begin{frame}{Worked example: Charging a parallel-plate capacitor 2}
+
+  \begin{blockexmplque}{Question}
+    A parallel-plate capacitor with circular plates is being charged.
+    Consider a circular loop centred on the central axis and located between
+    the plates. If the loop radius of 3 cm is greater than the plate radius,
+    what is the displacement current between the plates when the magnetic
+    field along the loop has magnitude 2 $\mu$T?
+  \end{blockexmplque}
+
+  From Ampere's law, the line integral of $\vec{B}$ along the
+  circular loop $L$ is
+  \begin{equation*}
+    \oint_{L} \vec{B} \cdot d\vec{\ell} = \mu_0 (I + I_D)
+  \end{equation*}
+  where $I$ ($I_D$) is the conduction (displacement)
+  current through a surface that has the
+  circular loop $L$ as its boundary.
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Charging a parallel-plate capacitor 2}
+
+  Between the capacitor plates, $I=0$.
+
+  Therefore:
+  \begin{equation*}
+    I_D = \frac{1}{\mu_0} \oint_{L} \vec{B} \cdot d\vec{\ell}
+  \end{equation*}
+
+  From the cylindrical symmetry of the problem ($B$ is constant along $L$,
+  and $\vec{B}$ is parallel to $d\vec{\ell}$), we find:
+  \begin{equation*}
+    \oint_{L} \vec{B} \cdot d\vec{\ell} = 2\pi r B
+  \end{equation*}
+
+  Finally:
+  \begin{equation*}
+    I_D = \frac{2\pi r B}{\mu_0} \Rightarrow
+  \end{equation*}
+  \begin{equation*}
+    I_D =
+      \frac{2\pi(0.03\;m)(2 \times 10^{-6} \; T)}{4\pi \times 10^{-7}\; Tm/A} =
+      0.3 \; A
+  \end{equation*}
+
+\end{frame}
+
+} % Worked example
+% ------------------------------------------------------------------------------

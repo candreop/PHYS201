@@ -692,6 +692,428 @@ which has an $x$-component given by:
 
 % ------------------------------------------------------------------------------
 % ------------------------------------------------------------------------------
+
+%
+% Worked example :
+%
+
+{
+\problemslide
+
+\begin{frame}{Worked example: Bainbridge's mass spectrometer}
+
+  \begin{blockexmplque}{Question}
+    Bainbridge’s mass spectrometer, shown in the figure below,
+    separates ions having the same velocity.
+    \vspace{0.3cm}
+    \begin{columns}
+      \begin{column}{0.01\textwidth}
+      \end{column}
+      \begin{column}{0.59\textwidth}
+      Positive ions, after entering through slits S$_1$ and S$_2$,
+      pass through a velocity selector composed of an electric field $\vec{E}$
+      pointing to the right, produced by the charged plates P and P$^\prime$,
+      and a magnetic field $\vec{B}$, pointing out of the page,
+      perpendicular to $\vec{E}$ and the ion path. The ions that then pass
+      without deviation through the crossed $\vec{E}$ and $\vec{B}$ fields
+      enter a region of a second magnetic field $\vec{B}^\prime$, also pointing
+      out of the page, where they are made to follow circular paths.
+      \end{column}
+      \begin{column}{0.40\textwidth}
+        \begin{center}
+          \includegraphics[width=0.99\textwidth]{./images/problems/lect05_bainbridge_1}\\
+        \end{center}
+      \end{column}
+    \end{columns}
+  \end{blockexmplque}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Bainbridge's mass spectrometer}
+
+  \begin{blockexmplque}{Question}
+    A photographic plate (or a modern detector) registers their arrival.
+    Show that, for the ions,
+    \begin{equation*}
+      \frac{q}{m} = \frac{E}{rBB'}
+    \end{equation*}
+    where $q$ ($m$) is the charge (mass) of the ion,
+    and $r$ is the radius of the circular orbit.
+  \end{blockexmplque}
+
+  After entering through slits $S_1$ and $S_2$, the ions experience
+  electric and magnetic forces.
+  The magnitudes of these forces are
+
+  \begin{equation*}
+    {F}_{E} = q |\vec{E}| = q E
+  \end{equation*}
+
+  \begin{equation*}
+    {F}_{B} = q|\vec{u} \times \vec{B}| = q u B
+  \end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Bainbridge's mass spectrometer}
+
+  Since ions pass the area of the crossed $\vec{E}$ and $\vec{B}$ fields
+  without deviation, the electric and magnetic forces must be canceling
+  each other out.
+  \begin{equation*}
+    {F}_{E} = {F}_{B}
+  \end{equation*}
+
+  The above, yields the following expression for $u$:
+  \begin{equation*}
+    q E = q u B \Rightarrow u = \frac{E}{B}
+  \end{equation*}
+
+  In the region where $\pvec{B}'$ exists, the ion follows a circular path
+  with the magnetic force providing centripetal acceleration:
+  \begin{equation*}
+    m \frac{u^2}{r} = q |\vec{u} \times \pvec{B}'| = q u B' \Rightarrow
+    m \frac{u}{r} = q B'
+  \end{equation*}
+
+  Substituting above the previous expression for $u$, we obtain
+  \begin{equation*}
+    m \frac{E}{rB} = q B' \Rightarrow
+    \frac{q}{m} = \frac{E}{rBB'}
+      \end{equation*}
+
+\end{frame}
+
+} % Worked example
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+
+%
+% Worked example :
+%
+
+{
+\problemslide
+
+\begin{frame}{Worked example: Magnetic field of two semi-circular arcs}
+
+  \begin{blockexmplque}{Question}
+   A straight conductor carrying current $I$ splits into identical
+   semi-circular arcs, as shown in the figure below.
+   \begin{center}
+     \includegraphics[width=0.50\textwidth]{./images/problems/lect05_wire_splitting_semicircular_arcs_2}\\
+   \end{center}
+   What is the magnetic field at the centre $C$ of the resulting circular loop?
+   Justify your answer.
+ \end{blockexmplque}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Magnetic field of two semi-circular arcs}
+
+ The magnetic field $\vec{B}$ of a steady current $I$ at a given point $C$
+ is given by the Biot-Savart law:
+ \begin{equation*}
+   \vec{B} = \frac{\mu_0I}{4\pi} \int_{wire} \frac{d\vec{\ell} \times \vec{r}}{r^3}
+ \end{equation*}
+ where, in the given problem at hand,
+ $\vec{r}$ is the distance between the wire element $d\vec{\ell}$ and
+ the point $C$.\\
+ \vspace{0.3cm}
+
+ In the given problem, the contribution of both straight conductor segments
+ to the magnetic field at $C$ is zero.\\
+ \vspace{0.3cm}
+
+ This can be easily deduced from Biot-Savart law since,
+ for the straight conductor segments, $d\vec{\ell}$ and $\vec{r}$
+ are either parallel or antiparallel and, therefore,
+ $d\vec{\ell} \times \vec{r}$ = 0.\\
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Magnetic field of two semi-circular arcs}
+
+ Each semi-circular segment gives a non-zero contribution to the
+ magnetic field at $C$.\\
+ \vspace{0.3cm}
+
+ However, the symmetry of the problem suggests that
+ the contributions from the two semi-circular segments have opposite
+ directions and cancel out exactly.\\
+ \vspace{0.3cm}
+
+ Again, this can be easily deduced from Biot-Savart law:
+ For any two diametrically opposite points of the circle formed by the
+ two semi-circular segments, $d\vec{\ell}$ has the same but $\vec{r}$
+ has the opposite direction. Therefore the $d\vec{\ell} \times \vec{r}$
+ products for the two diametrically opposite points differ by a sign.\\
+ \vspace{0.3cm}
+
+ Therefore the total magnetic field at $C$ is zero.
+
+\end{frame}
+
+} % Worked example
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+
+
+%
+% Worked example :
+%
+
+{
+\problemslide
+
+\begin{frame}{Worked example: Magnetic field of two wires on cylinder}
+
+  \begin{blockexmplque}{Question}
+    The figure below shows, in cross section, two long straight wires
+    held against a plastic cylinder of radius $R$.
+    Wire 1 carries current $I_1$ out of the page and is fixed in place at the
+    left side of the cylinder. Wire 2 carries current $I_2$ out of the page
+    and can be moved around the cylinder.
+    \begin{columns}
+      \begin{column}{0.45\textwidth}
+        \begin{center}
+          \includegraphics[width=0.95\textwidth]{./images/problems/lect05_wires_around_cylinder_1}\\
+        \end{center}
+      \end{column}
+      \begin{column}{0.55\textwidth}
+        When wire 2 is positioned at angle $\theta_2$, the magnetic field at the
+        origin due to the two currents has magnitude $B$.
+        Derive an expression for $\theta_2$, as a function of $B$, $I_1$ and$ I_2$.
+      \end{column}
+    \end{columns}
+  \end{blockexmplque}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Magnetic field of two wires on cylinder}
+
+  The magnetic field $\vec{B}_{1}$ at the origin due
+  to a current $I_1$ out of the page is given by:
+  \begin{equation*}
+    \vec{B}_{1} = \frac{\mu_0 I_1}{2\pi R} \hat{y}
+  \end{equation*}
+
+  The magnetic field $\vec{B}_{2}$ at the origin due
+  to a current $I_2$ out of the page is given by:
+  \begin{equation*}
+    \vec{B}_{2} = \frac{\mu_0 I_2}{2\pi R} \Big\{ sin\theta \hat{x} - cos\theta \hat{y} \Big\}
+  \end{equation*}
+
+  The total field $\vec{B}$ is given by the superposition principle:
+  \begin{equation*}
+    \vec{B} = \vec{B}_{1} + \vec{B}_{2}
+  \end{equation*}
+
+  The $x$ and $y$ components of the total field are given by:
+  \begin{equation*}
+    B_{x} = \cancelto{0}{B_{1x}} + B_{2x} =  \frac{\mu_0}{2\pi R} I_2 sin\theta
+  \end{equation*}
+  \begin{equation*}
+    B_{y} = B_{1y} + B_{2y} =  \frac{\mu_0}{2\pi R} \Big( I_1 - I_2 cos\theta \Big)
+  \end{equation*}
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Magnetic field of two wires on cylinder}
+
+  The magnitude of $\vec{B}$ is:
+  \begin{equation*}
+    B = \sqrt{B_{x}^2 + B_{y}^2}
+  \end{equation*}
+
+  Therefore:
+
+  \begin{equation*}
+    B = \sqrt{
+      \Big\{ \frac{\mu_0}{2\pi R} I_2 sin\theta \Big\}^2 +
+      \Big\{ \frac{\mu_0}{2\pi R} \Big( I_1 - I_2 cos\theta \Big) \Big\}^2 } \Rightarrow
+  \end{equation*}
+
+  \begin{equation*}
+    B = \frac{\mu_0}{2\pi R} \sqrt{I_1^2 + I_2^2 - 2 I_1 I_2 cos\theta} \Rightarrow
+  \end{equation*}
+
+  \begin{equation*}
+    cos\theta = \frac{I_1^2 + I_2^2 - 4\pi^2 R^2 B^2/\mu_0^2}{2 I_1 I_2}
+  \end{equation*}
+
+\end{frame}
+
+} % Worked example
+
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+
+%
+% Worked example :
+%
+
+{
+\problemslide
+
+\begin{frame}{Worked example: Current density of atmospheric ions}
+
+  \begin{blockexmplque}{Question}
+    At a point in the Earth’s atmosphere, He$^{++}$ ions in
+    a concentration of 2.8 $\times$ 10$^{12}$ /m$^3$ are
+    moving north at a speed of 2.0 $\times$ 10$^6$ m/s.
+    Also, a 7.0 $\times$ 10$^{11}$ /m$^3$ concentration of
+    O$_{2}^{-}$ ions is moving south at a speed of 6.2 $\times$ 10$^6$ m/s.
+    Determine the magnitude and direction of the
+    current density $\vec{j}$ at this point.
+  \end{blockexmplque}
+
+  The total current density $\vec{j}$ has two contributions:
+  $\vec{j}_{He}$ because of the $He^{++}$ ions, and
+  $\vec{j}_{O}$ because of the $O_2^{-}$ ions.\\
+
+  Both represent a conventional current in the same direction:
+  The positive $He^{++}$ ions flow to the North, creating a current with a direction
+  from South to North, whereas the negative $O_2^{-}$ ions from to the South,
+  creating a current with a direction which is again from South to North.
+  Therefore, the two compponents can be added:
+  \begin{equation*}
+    j = j_{He} + j_{O}
+  \end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Current density of atmospheric ions}
+
+  Generally, the current density $j_i$ because of charge carriers $i$ is given by:
+  \begin{equation*}
+    j_i = n_i q_i u_i
+  \end{equation*}
+  where $n_i$ is the numerical density of the charge carriers,
+  $q_i$ is their charge, and $u_i$ is their drift velocity.
+  Therefore, the total density can be written as:
+  \begin{equation*}
+    j = n_{He} q_{He} u_{He} + n_{He} q_{He} u_{He} \Rightarrow
+  \end{equation*}
+  \vspace{0.1cm}
+  \begin{equation*}
+    j = (2.8 \times 10^{12} \; /m^3) (2 x 1.6 x 10^{-19} \; C) (2.0 \times 10^{6} \; m/s) +
+        %(7.0 \times 10^{11} \; /m^3) (1.6 x 10^{-19} \; C) (6.2 \times 10^{6} \; m/s)\Rightarrow
+  \end{equation*}
+  \begin{equation*}
+  %j = (2.8 \times 10^{12} \; /m^3) (2 x 1.6 x 10^{-19} \; C) (2.0 \times 10^{6} \; m/s) +
+        (7.0 \times 10^{11} \; /m^3) (1.6 x 10^{-19} \; C) (6.2 \times 10^{6} \; m/s)\Rightarrow
+  \end{equation*}
+  \vspace{0.1cm}
+  \begin{equation*}
+    j = 2.5 \; A/m^2
+  \end{equation*}
+
+\end{frame}
+
+} % Worked example
+
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+
+%
+% Worked example :
+%
+
+{
+\problemslide
+
+\begin{frame}{Worked example: Measuring Earth's magnetic field}
+
+  \begin{blockexmplque}{Question}
+    An experiment on the Earth’s magnetic field is being carried out 1.00 m
+    from an electric cable. What is the maximum allowable current in the
+    cable if the experiment is to be accurate to $\pm$2\%?
+  \end{blockexmplque}
+
+  The total magnetic field measured by the device is:
+  \begin{equation*}
+    \vec{B} = \vec{B}_{Earth} + \vec{B}_{wire}
+  \end{equation*}
+  where $\vec{B}_{Earth}$ is the magnetic field of the Earth, and
+  $\vec{B}_{wire}$ is the magnetic field of the wire.\\
+  \vspace{0.2cm}
+
+  If we want the measurement of $B$ to represent $B_{Earth}$ to within 2\%,
+  there is an upper limit on the strength of $B_{wire}$:
+  \begin{equation*}
+    B_{wire} \le 0.02 B_{Earth}
+  \end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Measuring Earth's magnetic field}
+
+  The magnetic field of the wire, as a function of the distance $r$
+  from the wire and the current $I$ in the wire, is given by:
+  \begin{equation*}
+    B_{wire} = \frac{\mu_0 I}{2\pi r}
+  \end{equation*}
+
+  Using this expression for $B_{wire}$, the previous upper limit yields:
+  \begin{equation*}
+    \frac{\mu_0 I}{2\pi r} \le 0.02 B_{Earth} \Rightarrow
+    I \le 0.02 \frac{2\pi r B_{Earth}}{\mu_0}
+  \end{equation*}
+
+  Therefore, the maximum alloweable current has a value of $I_{max}$
+  given by:
+  \begin{equation*}
+    I_{max} = 0.02 \frac{2\pi r B_{Earth}}{\mu_0} \Rightarrow
+  \end{equation*}
+
+  \begin{equation*}
+    I_{max} = 0.02 \frac{2\pi (1\; m) (0.5\times 10^{-5}\; T)}
+                        {4\pi \times 10^{-7} \; T\cdot m/A}
+            = 5 \; A
+  \end{equation*}
+
+\end{frame}
+
+} % Worked example
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+
 %
 % Programming
 %

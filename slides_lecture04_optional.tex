@@ -1115,3 +1115,364 @@ Therefore
 } % Worked example
 
 % ------------------------------------------------------------------------------
+
+%
+% Worked example : Conducting sphere with cavities
+%
+
+{
+\problemslide
+
+%
+%
+%
+
+\begin{frame}{Worked example: Conducting sphere with cavities}
+
+  \begin{blockexmplque}{Question}
+    An uncharged solid conducting sphere of radius $r_0$
+    contains two spherical cavities of radii $r_1$ and $r_2$, respectively.
+    Point charge $Q_1$ is then placed within the cavity of radius $r_1$
+    and point charge $Q_2$ is placed within the cavity of radius $r_2$,
+    as shown in the figure below. Determine the resulting electric field
+    (magnitude and direction) at locations outside the solid sphere
+    ($r>r_0$), where $r$ is the distance from its centre.
+    \begin{center}
+      \includegraphics[width=0.30\textwidth]{./images/problems/lect04_sphere_with_2_cavities}\\
+    \end{center}
+  \end{blockexmplque}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Conducting sphere with cavities}
+
+  Since the sphere is conducting, the electric field within that sphere
+  will always be zero.\\
+  \vspace{0.2cm}
+
+  When charge $Q_1$ is brought in the first cavity, it creates an
+  electric field within that cavity. Free charge carriers from the conducting
+  sphere, with total charge of -$Q_1$, will distribute themselves on the
+  surface of the cavity and shield the cavity charge, so that the electric field
+  within the conducting sphere remains zero. The charge -$Q_1$ distrubuted
+  on the surface of the cavity, will not be symetrically distributed.\\
+  \vspace{0.2cm}
+
+  Likewise, when charge $Q_2$ is brought in the second cacity,
+  charge -$Q_2$ will be asymetrically distributed on the surface of the
+  second cavity to shield $Q_2$ and ensure that the field is zero within the
+  conductor.\\
+  \vspace{0.2cm}
+
+  Since the conducting sphere was not charged, the accumulation of charge
+  -$Q_1$-$Q_2$ on the surface of the cavities, means that charge $Q_1$+$Q_2$
+  will be accumulated on the outer surface of the sphere.\\
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Conducting sphere with cavities}
+
+  Since there is no electric field in the conductor, the influence of the
+  inner charges doesn't extend to the outer surface, and the charge
+  $Q_1$+$Q_2$ will be uniformly distributed on that surface.\\
+  \vspace{0.1cm}
+
+  The electric field outside the sphere can be found using
+  Gauss's law:
+   \begin{equation*}
+     \oint_{S} \vec{E} \cdot d\vec{S} = \frac{Q_{encl}}{\epsilon_0}
+   \end{equation*}
+  If $S$ is a spherical surface with radius $r$ ($>r_0$),
+  concentric with the conducting sphere, the symmetry of the problem
+  suggests that:
+  \begin{equation*}
+    E 4\pi r^2 = \frac{Q_1 + Q_2}{\epsilon_0} \Rightarrow
+    E = \frac{Q_1 + Q_2}{4\pi \epsilon_0 r^2}
+  \end{equation*}
+  This electric field is radial, so in vector form it can be written as:
+  \begin{equation*}
+    \vec{E} = \frac{Q_1 + Q_2}{4\pi \epsilon_0 r^2} \hat{r}
+  \end{equation*}
+
+  If $Q_1 + Q_2 > 0$ the electric field points outwards, whereas
+  if $Q_1 + Q_2 < 0$ the electric field points inwards.
+
+\end{frame}
+
+} % Worked example
+
+% ------------------------------------------------------------------------------
+
+%
+% Worked example : Water molecule
+%
+
+{
+\problemslide
+
+%
+%
+%
+
+\begin{frame}{Worked example: Dipole moment of water molecule}
+
+  \begin{blockexmplque}{Question}
+     The dipole moment, considered as a vector, points from the negative to
+     the positive charge. The water molecule, shown schematically below,
+     has a dipole moment $\vec{p}$ which can be considered as the vector sum
+     of the two dipole moments $\vec{p}_1$ and $\vec{p}_2$ as shown.
+     The distance between each  H atom and O atom is about
+     0.96 $\times$ 10$^{-10}$ m. The lines joining the centre of the O atom
+     and each H atom make an angle of 104$^o$ as shown, and the net
+     magnetic moment has been measured to be $p$ = 6.1 $\times$ 10$^{-30}$ C$\cdot$m.
+    \begin{center}
+      \includegraphics[width=0.33\textwidth]{./images/problems/lect04_water_dipole_2}\\
+    \end{center}
+  \end{blockexmplque}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Dipole moment of water molecule}
+
+  \begin{blockexmplque}{Question}
+    \begin{itemize}
+      \item
+      Determine the effective charge of each H atom.
+      \item
+      Determine the electric potential, far from the molecule,
+      due to each dipole, $\vec{p}_1$ and $\vec{p}_2$,
+      and show that
+      \begin{equation*}
+         V = \frac{1}{4\pi \epsilon_0} \frac{p cos\theta}{r^2}
+      \end{equation*}
+      where $p$ is the magnitude of the net dipole moment,
+      $\vec{p}$ = $\vec{p}_1$ + $\vec{p}_2$,
+      and $V$ is the total potential due to both $\vec{p}_1$ and $\vec{p}_2$.\\
+      Take $V$ = 0 at infinity.\\
+      Note that the potential of each dipole $\vec{p}_i$ ($i$=1,2) is given by:
+      \begin{equation*}
+         V = \frac{1}{4\pi \epsilon_0} \frac{\vec{p}_i \cdot \hat{r}}{r^2}
+      \end{equation*}
+    \end{itemize}
+  \end{blockexmplque}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Dipole moment of water molecule}
+
+  The two H-O pairs have equal electric dipole moment magnitudes:
+  \begin{equation*}
+    p_1 = p_2
+  \end{equation*}
+  given by:
+  \begin{equation*}
+    p_{1,2} = q d
+  \end{equation*}
+  Therefore, the total electric dipole moment:
+  \begin{equation*}
+    \vec{p} = \vec{p}_1 + \vec{p}_2
+  \end{equation*}
+  has a magnitude given by:
+  \begin{equation*}
+    p = p_1 cos(52^o) + p_2 cos(52^o) = 2 q d cos(52^o)
+  \end{equation*}
+  The above, yields the following expression for the effective charge $q$:
+  \begin{equation*}
+    q = \frac{p}{2 d cos(52^o)} \Rightarrow
+  \end{equation*}
+
+  \begin{equation*}
+    q = \frac{6.1 \times 10^{-30} \; C \cdot m}{2 (0.96 times 10^{-10} \; m) cos(52^o)}
+      = 5.2 \times 10^{-20} \; C
+  \end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Dipole moment of water molecule}
+
+The potential $V$ of the water molecule can be written as:
+  \begin{equation*}
+    V = V_1 + V_2
+  \end{equation*}
+
+where $V_1$, $V_2$ is potential due to each H-O pair, given by:
+  \begin{equation*}
+    V_{1,2} = \frac{1}{4\pi \epsilon_0} \frac{\vec{p}_{1,2} \cdot \hat{r}}{r^2}
+  \end{equation*}
+
+Expanding the expressions for $V_1$, $V_2$, we find:
+  \begin{equation*}
+    V_1 = \frac{1}{4\pi \epsilon_0} \frac{\vec{p}_1 \cdot \hat{r}}{r^2}
+        = \frac{1}{4\pi \epsilon_0} \frac{qd cos(52^o - \theta)}{r^2}
+  \end{equation*}
+
+  \begin{equation*}
+    V_2 = \frac{1}{4\pi \epsilon_0} \frac{\vec{p}_2 \cdot \hat{r}}{r^2}
+        = \frac{1}{4\pi \epsilon_0} \frac{qd cos(52^o + \theta)}{r^2}
+  \end{equation*}
+
+Therefore, $V$ can be written as:
+  \begin{equation*}
+    V = \frac{qd}{4\pi \epsilon_0 r^2}
+       \Big( cos(52^o - \theta) + cos(52^o + \theta) \Big) \xRightarrow{p = 2 q d cos(52^o)}
+  \end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Dipole moment of water molecule}
+
+  \begin{equation*}
+    V = \frac{p}{8\pi \epsilon_0 cos(52^o) r^2}
+       \Big( cos(52^o - \theta) + cos(52^o + \theta) \Big)
+  \end{equation*}
+
+Using the following trigonometric identity:
+  \begin{equation*}
+    cos(\alpha \pm \beta) = cos(\alpha) \; cos(\beta) \mp sin(\alpha) \; sin(\beta)
+  \end{equation*}
+
+we find:
+
+  \begin{equation*}
+    V = \frac{p}{8\pi \epsilon_0 \bcancel{cos(52^o)} r^2}
+       \Big( \bcancel{cos(52^o)} cos(\theta) + \cancel{sin(52^o) sin(\theta)} +
+             %\bcancel{cos(52^o)} cos(\theta) - \cancel{sin(52^o) sin(\theta)} \Big) \Rightarrow
+  \end{equation*}
+  \begin{equation*}
+    %V = \frac{p}{8\pi \epsilon_0 \bcancel{cos(52^o)} r^2}
+    %   \Big( \bcancel{cos(52^o)} cos(\theta) + \cancel{sin(52^o) sin(\theta)} +
+             \bcancel{cos(52^o)} cos(\theta) - \cancel{sin(52^o) sin(\theta)} \Big) \Rightarrow
+  \end{equation*}
+
+  \begin{equation*}
+    V = \frac{p cos(\theta)}{4\pi \epsilon_0 r^2}
+  \end{equation*}
+
+\end{frame}
+
+} % Worked example
+
+% ------------------------------------------------------------------------------
+%
+% Worked example :
+%
+
+{
+\problemslide
+
+%
+%
+%
+
+\begin{frame}{Worked example: System of capacitors}
+
+  \begin{blockexmplque}{Question}
+    Three conducting plates, each of area $A$, are connected as shown below.
+    \begin{center}
+      \includegraphics[width=0.43\textwidth]{./images/problems/lect04_3_plane_capacitor}\\
+    \end{center}
+    \begin{itemize}
+      \item Are the two capacitors thus formed connected in series or in parallel?
+      \item Determine the net capacitance $C$ as a function of $d_1$, $d_2$, and $A$.
+      \item The middle plate can be moved (changing the values of $d_1$, and $d_2$),
+      to vary the capacitance. What are the minimum and the maximum values of the net capacitance?
+    \end{itemize}
+  \end{blockexmplque}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: System of capacitors}
+
+  The two capacitors are connected in parallel.\\
+  \vspace{0.2cm}
+
+  Let $C_1$, $C_2$ be the capacitances of the two parallel plane capacitors.
+  They are given by:
+  \begin{equation*}
+    C_{1,2} = \epsilon_0 \frac{A}{d_{1,2}}
+  \end{equation*}
+
+  The total capacitance $C$ of the two capacitors connected in parallel is:
+  \begin{equation*}
+    C = C_1 + C_2
+  \end{equation*}
+
+  Substituting above the expression for $C_1$, $C_2$, we find:
+  \begin{equation*}
+    C = \epsilon_0 A \Big(\frac{1}{d_1} + \frac{1}{d_2}\Big)
+      = \epsilon_0 A \frac{d_1 + d_2}{d_1 d_2}
+  \end{equation*}
+
+  As the middle plane moves, $d_1$ and $d_2$ change but
+  $\ell = d_1 + d_2$ remains constant.
+  Using $\ell$ and setting $d_1 = x$,
+  the capacitance $C$ can be written as:
+  \begin{equation*}
+    C(x) = \epsilon_0 A \frac{\ell}{x (\ell-x)}
+  \end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: System of capacitors}
+
+  As $x \rightarrow 0$ and $x \rightarrow \ell$, $C = C_{max} \rightarrow \infty$.
+
+  Between these maximum values at the extreme value of $x$, the capacitance
+  reaches a minimum value which can be found by demanding that:
+  \begin{equation*}
+    \frac{dC(x)}{dx} = 0
+  \end{equation*}
+
+  Substituting the expression for $C$, the above becomes:
+  \begin{equation*}
+    \frac{d}{dx} \Big( \epsilon_0 A \frac{\ell}{x (\ell-x)} \Big) = 0 \Rightarrow
+    \frac{d}{dx} \Big( \frac{1}{x (\ell-x)} \Big) = 0 \Rightarrow
+    \frac{\ell - 2x}{(x(\ell-x))^2} = 0 \Rightarrow x = \frac{\ell}{2}
+  \end{equation*}
+
+  Therefore:
+  \begin{equation*}
+    C_{min} = C(x=\frac{\ell}{2}) =
+      \epsilon_0 A \frac{\ell}{\frac{\ell}{2}(\ell-\frac{\ell}{2})} \Rightarrow
+  \end{equation*}
+
+  \begin{equation*}
+    C_{min} = \frac{4 \epsilon_0 A}{\ell}
+  \end{equation*}
+
+\end{frame}
+
+
+} % Worked example

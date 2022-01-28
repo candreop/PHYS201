@@ -398,6 +398,144 @@ This can be understood as follows:\\
 } %\problemslide
 
 % ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+
+%
+% Worked example :
+%
+
+{
+\problemslide
+
+\begin{frame}{Worked example: Potential $V$ and field $\vec{E}$ of charged disc}
+
+  \begin{blockexmplque}{Question}
+    \begin{columns}
+      \begin{column}{0.60\textwidth}
+        The figure on the right shows a plastic disc of radius $R$,
+        charged on its top surface to a uniform surface charge density $\sigma$.
+        \begin{itemize}
+        \item
+        Find the electrostatic potential $V$ at point $P$ on the
+        central axis of the disc.
+        \item
+        Using the expression for $V$, calculate
+        the electric field $\vec{E}$ at point $P$.
+        \end{itemize}
+      \end{column}
+      \begin{column}{0.40\textwidth}
+        \begin{center}
+          \includegraphics[width=0.92\textwidth]{./images/problems/lect03_charged_disk_3}\\
+        \end{center}
+      \end{column}
+    \end{columns}
+  \end{blockexmplque}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Potential $V$ and field $\vec{E}$ of charged disc}
+
+  The electric field $V$ at the point $\vec{r}$, due to a continuous
+  distribution of charge is given by:
+  \begin{equation*}
+    V(\vec{r}) = \frac{1}{4\pi\epsilon_0}
+     \int \frac{dq(\pvec{r}')}{|\vec{r}-\pvec{r}'|}
+  \end{equation*}
+
+  Taking the point $P$ to be at the origin of the coordinate system,
+  we have $\vec{r}=\vec{0}$ and, therefore, the above expression simplifies to:
+  \begin{equation*}
+    V = \frac{1}{4\pi\epsilon_0}
+     \int \frac{dq(\pvec{r}')}{|\pvec{r}'|}
+  \end{equation*}
+
+  Integrating $dq(\pvec{r}')$ over a ring with radius $R'$ and width $dR'$,
+  concentric with the plastic disk, we obtain:
+  \begin{equation*}
+    dq(R') = \int_{R'}^{R'+dR'} dq(\pvec{r}') = \sigma 2\pi R' dR'
+  \end{equation*}
+  where:
+  \begin{equation*}
+    |\pvec{r}'| = \sqrt{R'^2+z^2}
+  \end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Potential $V$ and field $\vec{E}$ of charged disc}
+
+  Therefore, the potential $V$ can be written as:
+  \begin{equation*}
+    V =
+     \frac{1}{4\pi\epsilon_0}
+       \int_{0}^{R} \frac{\sigma 2\pi R' dR'}{\sqrt{R'^2+z^2}} =
+     \frac{\sigma}{2\epsilon_0}
+       \int_{0}^{R} \frac{R' dR'}{\sqrt{R'^2+z^2}}
+  \end{equation*}
+
+  Carrying out the integration, we find:
+  \begin{equation*}
+    V =
+     \frac{\sigma}{2\epsilon_0}
+       \frac{1}{2} \int_{0}^{R} \frac{d(R'^2+z^2)}{\sqrt{R'^2+z^2}}
+  \end{equation*}
+
+  \begin{equation*}
+    V =
+     \frac{\sigma}{2\epsilon_0}
+       \frac{1}{2} 2 \sqrt{R'^2+z^2}\Big\rvert_{0}^{R} \Rightarrow
+  \end{equation*}
+
+  \begin{equation*}
+    V =
+     \frac{\sigma}{2\epsilon_0}
+       \Big( \sqrt{R^2+z^2} - z \Big)
+  \end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Potential $V$ and field $\vec{E}$ of charged disc}
+
+  The electric field $\vec{E}$ is computed from the electric potential $V$ as:
+  \begin{equation*}
+    \vec{E} = -\vec{\nabla} V
+  \end{equation*}
+
+  The $x$ and $y$ components of $\vec{E}$ vanish at $P$
+  by symmetry and, therefore:
+  \begin{equation*}
+    \vec{E} = - \frac{\partial V}{\partial z} \hat{z}
+  \end{equation*}
+
+  \begin{equation*}
+    \frac{\partial V}{\partial z} =
+    \frac{\partial}{\partial z}
+    \Big\{ \frac{\sigma}{2\epsilon_0} \Big( \sqrt{R^2+z^2} - z \Big) \Big\} =
+    \frac{\sigma}{2\epsilon_0} \Big\{ \frac{z}{\sqrt{R^2+z^2}} - 1 \Big\}
+  \end{equation*}
+
+  \begin{equation*}
+    \vec{E} = \frac{\sigma}{2\epsilon_0}
+       \Big\{ 1 - \frac{z}{\sqrt{R^2+z^2}} \Big\} \hat{z}
+  \end{equation*}
+
+\end{frame}
+
+} %\problemslide
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 
 %
 %
