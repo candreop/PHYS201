@@ -1,45 +1,46 @@
 #
 # Makefile for PHYS201 Slides
 #
-# Costas Andreopoulos <costas.andreopoulos@stfc.ac.uk>
+# Costas Andreopoulos <constantinos.andreopoulos@cern.ch>
 #
 
 ACYEAR  = 202122
 VERSION = v02
 
-00   : NAME = PHYS201_${ACYEAR}-Slides-${VERSION}\ \(Intro\)
-0001 : NAME = PHYS201_${ACYEAR}-Slides-${VERSION}\ \(Intro\ +\ Lecture\ 01\)
-01   : NAME = PHYS201_${ACYEAR}-Slides-${VERSION}\ \(Lecture\ 01\)
-02   : NAME = PHYS201_${ACYEAR}-Slides-${VERSION}\ \(Lecture\ 02\)
-03   : NAME = PHYS201_${ACYEAR}-Slides-${VERSION}\ \(Lecture\ 03\)
-04   : NAME = PHYS201_${ACYEAR}-Slides-${VERSION}\ \(Lecture\ 04\)
-05   : NAME = PHYS201_${ACYEAR}-Slides-${VERSION}\ \(Lecture\ 05\)
-06   : NAME = PHYS201_${ACYEAR}-Slides-${VERSION}\ \(Lecture\ 06\)
-07   : NAME = PHYS201_${ACYEAR}-Slides-${VERSION}\ \(Lecture\ 07\)
-08   : NAME = PHYS201_${ACYEAR}-Slides-${VERSION}\ \(Lecture\ 08\)
-09   : NAME = PHYS201_${ACYEAR}-Slides-${VERSION}\ \(Lecture\ 09\)
-10   : NAME = PHYS201_${ACYEAR}-Slides-${VERSION}\ \(Lecture\ 10\)
-11   : NAME = PHYS201_${ACYEAR}-Slides-${VERSION}\ \(Lecture\ 11\)
-12   : NAME = PHYS201_${ACYEAR}-Slides-${VERSION}\ \(Lecture\ 12\)
-all  : NAME = PHYS201_${ACYEAR}-Slides-${VERSION}
+s00   : NAME = PHYS201_${ACYEAR}-Slides-${VERSION}\ \(Intro\)
+s0001 : NAME = PHYS201_${ACYEAR}-Slides-${VERSION}\ \(Intro\ +\ Lecture\ 01\)
+s01   : NAME = PHYS201_${ACYEAR}-Slides-${VERSION}\ \(Lecture\ 01\)
+s02   : NAME = PHYS201_${ACYEAR}-Slides-${VERSION}\ \(Lecture\ 02\)
+s03   : NAME = PHYS201_${ACYEAR}-Slides-${VERSION}\ \(Lecture\ 03\)
+s04   : NAME = PHYS201_${ACYEAR}-Slides-${VERSION}\ \(Lecture\ 04\)
+s05   : NAME = PHYS201_${ACYEAR}-Slides-${VERSION}\ \(Lecture\ 05\)
+s06   : NAME = PHYS201_${ACYEAR}-Slides-${VERSION}\ \(Lecture\ 06\)
+s07   : NAME = PHYS201_${ACYEAR}-Slides-${VERSION}\ \(Lecture\ 07\)
+s08   : NAME = PHYS201_${ACYEAR}-Slides-${VERSION}\ \(Lecture\ 08\)
+s09   : NAME = PHYS201_${ACYEAR}-Slides-${VERSION}\ \(Lecture\ 09\)
+s10   : NAME = PHYS201_${ACYEAR}-Slides-${VERSION}\ \(Lecture\ 10\)
+s11   : NAME = PHYS201_${ACYEAR}-Slides-${VERSION}\ \(Lecture\ 11\)
+s12   : NAME = PHYS201_${ACYEAR}-Slides-${VERSION}\ \(Lecture\ 12\)
+sall  : NAME = PHYS201_${ACYEAR}-Slides-${VERSION}
+frms  : NAME = PHYS201_${ACYEAR}-Formula_Sheet-${VERSION}
+all   : NAME = PHYS201_${ACYEAR}-${VERSION}
 
-00   : tex_start add_tex00 tex_end pdf
-01   : tex_start add_tex01 tex_end pdf
-0001 : tex_start add_tex00 add_tex01 tex_end pdf
-01b  : tex_start add_tex01b tex_end pdf
-02   : tex_start add_tex02 tex_end pdf
-03   : tex_start add_tex03 tex_end pdf
-04   : tex_start add_tex04 tex_end pdf
-05   : tex_start add_tex05 tex_end pdf
-06   : tex_start add_tex06 tex_end pdf
-07   : tex_start add_tex07 tex_end pdf
-08   : tex_start add_tex08 tex_end pdf
-09   : tex_start add_tex09 tex_end pdf
-10   : tex_start add_tex10 tex_end pdf
-11   : tex_start add_tex11 tex_end pdf
-12   : tex_start add_tex12 tex_end pdf
-all  : tex_start add_tex00 add_tex01 add_tex02 add_tex03 add_tex04 add_tex05 add_tex06 add_tex07 add_tex08 add_tex09 add_tex10 add_tex11 add_tex12 tex_end pdf
-each : 0001 02 03 04 05 06 07 08 09 10 11 12
+s00   : tex_start add_tex00 tex_end pdf
+s01   : tex_start add_tex01 tex_end pdf
+s0001 : tex_start add_tex00 add_tex01 tex_end pdf
+s02   : tex_start add_tex02 tex_end pdf
+s03   : tex_start add_tex03 tex_end pdf
+s04   : tex_start add_tex04 tex_end pdf
+s05   : tex_start add_tex05 tex_end pdf
+s06   : tex_start add_tex06 tex_end pdf
+s07   : tex_start add_tex07 tex_end pdf
+s08   : tex_start add_tex08 tex_end pdf
+s09   : tex_start add_tex09 tex_end pdf
+s10   : tex_start add_tex10 tex_end pdf
+s11   : tex_start add_tex11 tex_end pdf
+s12   : tex_start add_tex12 tex_end pdf
+sall  : tex_start add_tex00 add_tex01 add_tex02 add_tex03 add_tex04 add_tex05 add_tex06 add_tex07 add_tex08 add_tex09 add_tex10 add_tex11 add_tex12 tex_end pdf
+seach : s0001 s02 s03 s04 s05 s06 s07 s08 s09 s10 s11 s12
 
 tex_start:
 	echo '\documentclass{beamer}'        >  main_tmp.tex
@@ -82,7 +83,7 @@ pdf: FORCE
 
 frms: FORCE
 	pdflatex formula_sheet.tex
-	mv formula_sheet.pdf PHYS201_${ACYEAR}-Formula_Sheet-${VERSION}.pdf
+	mv formula_sheet.pdf ${NAME}.pdf
 
 clean: FORCE
 	rm *nav
