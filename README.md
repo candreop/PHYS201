@@ -1,7 +1,10 @@
 
 # PHYS201 Lectures
 
-This repository includes the source code for my PHYS201 (Electromagnetism) lectures delivered at the University of Liverpool from 2014/15 to date. PHYS201 is a second-year undergraduate module attended by about 150 students from several courses, including Physics, Mathematical Physics, Astronomy, Geology, Ocean Sciences and Medical Physics. This is a diverse group of students which spans a very broad range of abilities, interests and knowledge and individual learning needs should be respected for the design of appropriate activities and an effective learning environment. 12 2-hr lectures represent 50% of scheduled contact time, with the rest devoted to workshops. 
+This repository includes the source code for my PHYS201 (Electromagnetism I) lectures delivered at the University of Liverpool from 2014/15 to date. PHYS201 is a second-year undergraduate module attended by about 150 students from several courses, including Physics, Mathematical Physics, Astronomy, Geology, Ocean Sciences and Medical Physics. The 12 2-hr lectures represent 50% of scheduled contact time, with the rest devoted to workshops. 
+
+The PDF output of the TeX source of this repository can be found here:
+https://www.dropbox.com/s/fa10c6uf99tjxv0/PHYS201_202122.pdf?dl=0
 
 # Author
 
