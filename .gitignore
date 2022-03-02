@@ -1,0 +1,9 @@
+*.DS_Store
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+main_tmp.*
+/*.pdf
