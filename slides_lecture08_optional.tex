@@ -617,3 +617,180 @@
 
 } % Worked example
 % ------------------------------------------------------------------------------
+
+%
+% Worked example :
+%
+
+{
+\problemslide
+
+%
+%
+%
+
+\begin{frame}{Worked example: Square loop next to infinite straight wire}
+
+  \begin{blockexmplque}{Question}
+    A square loop of conducting wire, with side length $\alpha$ and total resistance $R$,
+    lies a distance $\alpha$ from an infinite straight wire that carries current $I$,\\
+    as shown in the figure below.
+    \begin{center}
+        \includegraphics[width=0.30\textwidth]{./images/problems/lect08_square_loop_next_to_straight_wire.png}
+    \end{center}
+    This current changes as a function of time as:
+    \begin{equation*}
+      I(t) =
+      \left\{
+        \begin{array}{ c l }
+          I_0 (1-bt),  & \quad \textrm{if } 0 \leq t \leq \frac{1}{b} \\
+          0            & \quad \textrm{otherwise}
+        \end{array}
+     \right.
+    \end{equation*}
+  \end{blockexmplque}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Square loop next to infinite straight wire}
+
+  \begin{blockexmplque}{Question (cont'd)}
+    \begin{itemize}
+      \item
+      Calculate the magnetic flux through the square loop.
+      \vspace{0.2cm}
+      \item
+      Calculate the total charge passing through a given point on the wire
+      that forms the loop (due to the current induced in the loop), during the time
+      that the current flows in the infinitely long straight wire.
+      \vspace{0.2cm}
+      \item
+      In what direction does the induced current in the square loop flow?
+    \end{itemize}
+  \end{blockexmplque}
+
+  \vspace{0.3cm}
+
+  The infinite straight wire that carries current $I$
+  produces an azimuthal field around it, with magnitude:
+  \begin{equation*}
+    |\vec{B}| = \frac{\mu_0 I}{2\pi r}
+  \end{equation*}
+  where $r$ is the distance from the wire.
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Square loop next to infinite straight wire}
+
+  Taking the positive $z$ axis to point out of the page,
+  the field on the plane of the square loop can be written
+  in vector form as:
+  \begin{equation*}
+    \vec{B} = \frac{\mu_0 I}{2\pi r} \hat{z}
+  \end{equation*}
+
+  The magnetic flux through the square loop is given by
+  \begin{equation*}
+    \Phi = \int_{loop} \vec{B} \cdot d\vec{S}
+  \end{equation*}
+
+  If we take $d\vec{S}$ to point in the positive $z$ direction
+  ($d\vec{S} = dS \hat{z}$), and substitute the above expression for $\vec{B}$,
+  the expression for $\Phi$ becomes:
+  \begin{equation*}
+    \Phi = \frac{\mu_0 I}{2\pi} \int_{loop} (\frac{1}{r} \hat{z}) \cdot (dS \hat{z})
+         = \frac{\mu_0 I}{2\pi} \int_{loop} \frac{dS}{r}
+  \end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Square loop next to infinite straight wire}
+
+  If $y$ is the direction perpendicular to the infinite straight wire, on
+  the plane of the square loop, and taking the origin of a cartesian
+  coordinate system to be on the straight wire, we can write $r=y$,
+  and $dS = \alpha dy$.\\
+
+  \vspace{0.2cm}
+
+  Therefore, the above expression for $\Phi$ can be written as:
+  \begin{equation*}
+    \Phi = \frac{\mu_0 I \alpha}{2\pi} \int_{\alpha}^{2\alpha} \frac{dy}{y} \Rightarrow
+  \end{equation*}
+
+  \begin{equation*}
+    \Phi = \frac{\mu_0 I \alpha}{2\pi} ln(x)\Big\rvert_{\alpha}^{2\alpha}
+         = \frac{\mu_0 I \alpha}{2\pi} \Big(ln(2\alpha) - ln(\alpha)\Big)
+         = \frac{\mu_0 I \alpha ln2}{2\pi}
+  \end{equation*}
+
+  For $t \le 1/b$, $\Phi$ is given by:
+  \begin{equation*}
+    \Phi = \frac{\mu_0 I_0 \alpha ln2}{2\pi} (1-bt)
+  \end{equation*}
+  and it is zero at other times.
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Square loop next to infinite straight wire}
+
+  The emf $\varepsilon$ on the square loop is:
+  \begin{equation*}
+    \varepsilon = -\frac{d\Phi}{dt} = \frac{\mu_0 I_0 \alpha b ln2}{2\pi}
+  \end{equation*}
+  and, therefore, the current $I_{loop}$ is given by:
+  \begin{equation*}
+    I_{loop} = \frac{\varepsilon}{R} = \frac{\mu_0 I_0 \alpha b ln2}{2\pi R}
+  \end{equation*}
+
+  The total charge passing a given point in the loop, can be calculated
+  by integrating $I_{loop}$ over the entire time it has non-zero value:
+  \begin{equation*}
+    I_{loop} = \frac{dQ}{dt} \Rightarrow
+     Q_{tot} = \int_{0}^{1/b} I_{loop} dt
+             = \frac{\mu_0 I_0 \alpha b ln2}{2\pi R} \int_{0}^{1/b} dt
+  \end{equation*}
+
+  The above yields:
+  \begin{equation*}
+     Q_{tot} = \frac{\mu_0 I_0 \alpha ln2}{2\pi R}
+  \end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Square loop next to infinite straight wire}
+
+  In the area of the square loop, the magnetic field due to the infinite
+  wire is out of the page and it is decreasing.\\
+  \vspace{0.2cm}
+
+  The field of the induced current, which resists to the change in
+  magnetic flux, will have a direction that is also out of the page.\\
+  \vspace{0.2cm}
+
+  Therefore, the induced current will have a counterclockwise direction.
+
+\end{frame}
+
+} % Worked example
+% ------------------------------------------------------------------------------

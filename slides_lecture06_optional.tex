@@ -724,60 +724,188 @@ The torque exerted by a magnetic field is:
   \end{equation*}
 
 
+\end{frame}
 
-  % \begin{equation*}
-  % 	\Phi_{S_1} =
-  % 	- \Phi_{S_2} =
-  % 	- \int_{S_2} (\vec{B}_1 + \vec{B}_2) \cdot d\vec{S} \Rightarrow
-  % \end{equation*}
-  %
-  % \begin{equation*}
-  % 	\Phi_{S_1} = \frac{\mu_0 i}{2\pi} L
-  % 	   \big\{
-  % 		   \int_{-r}^{+r} \frac{dx}{2r+x} +
-  % 			 \int_{-r}^{+r} \frac{dx}{2r-x}
-  % 	   \big\} \Rightarrow
-  % \end{equation*}
-  %
-  % \begin{equation*}
-  % 	\Phi_{S_1} = \frac{\mu_0 i}{2\pi} L
-  % 	   \big\{
-  % 		   \int_{-r}^{+r} \frac{d(2r+x)}{2r+x} -
-  % 			 \int_{-r}^{+r} \frac{d(2r-x)}{2r-x}
-  % 	   \big\} \Rightarrow
-  % \end{equation*}
-  %
-  % \begin{equation*}
-  % 	\Phi_{S_1} =
-  % 	   \frac{\mu_0 i}{2\pi} L
-  % 	   \big\{
-  % 		   ln(2r+x) \rvert_{-r}^{+r} -
-  % 			 ln(2r-x) \rvert_{-r}^{+r} -
-  % 	   \big\} \Rightarrow
-  % \end{equation*}
-  % \begin{equation*}
-  % 	\Phi_{S_1} =
-  % 		 \frac{\mu_0 i}{2\pi} L
-  % 		 \big\{
-  % 		   (ln(3r) - ln(r)) -
-  % 			 (ln(r) - ln(3r)
-  % 	   \big\} \Rightarrow
-  % \end{equation*}
-  % \begin{equation*}
-  % 	\Phi_{S_1} =
-  %                  \frac{\mu_0 i}{2\pi} L
-  % 		  (2ln(3r) - 2ln(r)) \Rightarrow
-  % \end{equation*}
-  % \begin{equation*}
-  % 	\Phi_{S_1} =
-  % 		 \frac{\mu_0 i}{2\pi} L 2 ln3 \Rightarrow
-  % \end{equation*}
-  %
-  % \begin{equation*}
-  % 	\Phi_{S_1} =
-  % 	    \frac{\mu_0 i}{\pi} L ln3
-  % \end{equation*}
+} %Worked example
+
+
+% ------------------------------------------------------------------------------
+
+%
+% Worked example :
+%
+
+{
+\problemslide
+
+%
+%
+%
+
+\begin{frame}{Worked example: Magnetic forces between 5 parallel wires}
+
+  \begin{blockexmplque}{Question}
+    In the figure below, five long parallel wires in an $xy$ plane are separated
+    by distance $d$, have lengths $L$, and carry identical currents $I$ out of the page.
+    Each wire experiences a magnetic force due to the currents in the other wires.\\
+    \begin{center}
+        \includegraphics[width=0.45\textwidth]{./images/problems/lect06_5_parallel_wires.png}
+    \end{center}
+    \vspace{0.2cm}
+    In unit vector notation, what is the net magnetic force on
+    i) wire 1, ii) wire 2, iii) wire 3, iv) wire 4 and v) wire 5?
+  \end{blockexmplque}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Magnetic forces between 5 parallel wires}
+
+  The force between 2 parallel straight wires $i$ and $j$ of length $L$,
+  carrying currents $I_i$ and $I_j$ respectively, is given by
+  \begin{equation*}
+    |\vec{F}_{ij}| = \frac{\mu_0 I_{i} I_{j} L}{2 \pi r}
+  \end{equation*}
+  The force is attractive if the currents have the same direction,
+  and repulsive if they have opposite direction. \\
+
+  \vspace{0.2cm}
+  Using the superposition principle, we can write the total magnetic force
+  $\vec{F}_{1}$ on wire 1, as:
+  \begin{equation*}
+    \vec{F}_{1} = \vec{F}_{12} + \vec{F}_{13} + \vec{F}_{14} + \vec{F}_{15}
+  \end{equation*}
+  where $\vec{F}_{1j}$ ($j$=2,3,4,5) is the force on wire 1 due to wire $j$.\\
+
+  \vspace{0.2cm}
+  Using the earlier expression for the magnetic force between wires, we find:
+  \begin{equation*}
+    \vec{F}_{1} =
+      \frac{\mu_0 I^2 L}{2 \pi}
+      \Big( \frac{1}{d} + \frac{1}{2d} + \frac{1}{3d} + \frac{1}{4d} \Big) \hat{y} =
+      \frac{25 \mu_0 I^2 L}{24 \pi d} \hat{y}
+  \end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Magnetic forces between 5 parallel wires}
+
+  Similarly, for wire 2, we have:
+  \begin{equation*}
+    \vec{F}_{2} = \vec{F}_{21} + \vec{F}_{23} + \vec{F}_{24} + \vec{F}_{25} \Rightarrow
+  \end{equation*}
+
+  \begin{equation*}
+    \vec{F}_{2} =
+      \frac{\mu_0 I^2 L}{2 \pi}
+      \Big( - \frac{1}{d} + \frac{1}{d} + \frac{1}{2d} + \frac{1}{3d} \Big) \hat{y} =
+      \frac{5 \mu_0 I^2 L}{12 \pi d} \hat{y}
+  \end{equation*}
+
+  \vspace{0.2cm}
+
+  From the symmetry of the problem, we see that
+  the magnetic force on wire 3 due to the wires 1,2
+  has the same magnitude as the  force on wire 3 due to the wires 4,5
+  but opposite direction. Therefore:
+  \begin{equation*}
+    \vec{F}_{3} = \vec{0}
+  \end{equation*}
+
+  Sumilarly, due to the symmetry of the problem, we have:
+  \begin{equation*}
+    \vec{F}_{4} = - \vec{F}_{2} = - \frac{5 \mu_0 I^2 L}{12 \pi d} \hat{y}
+  \end{equation*}
+
+  \begin{equation*}
+    \vec{F}_{5} = - \vec{F}_{1} = - \frac{25 \mu_0 I^2 L}{24 \pi d} \hat{y}
+  \end{equation*}
 
 \end{frame}
 
 } %Worked example
+
+% ------------------------------------------------------------------------------
+
+%
+% Worked example :
+%
+
+{
+\problemslide
+
+%
+%
+%
+
+\begin{frame}{Worked example: Magnetic moment of 2 concentric loops}
+
+  \begin{blockexmplque}{Question}
+    \begin{columns}
+      \begin{column}{0.65\textwidth}
+          Two concentric, circular wire loops of radii $r_1$ = 20 cm and $r_2$ = 30 cm,
+          are located in an $xy$ plane. Each wire loop carries a clockwise current $I$ = 7 A.
+          \begin{itemize}
+           \item  Find the magnitude of the net magnetic dipole moment of the system.
+           \item If the current in the inner loop is reversed, what is the new
+           magnitude of the net magnetic dipole moment of the system?
+          \end{itemize}
+      \end{column}
+      \begin{column}{0.35\textwidth}
+        \begin{center}
+            \includegraphics[width=0.95\textwidth]{./images/problems/lect06_2_concentric_wire_loops.png}
+        \end{center}
+      \end{column}
+    \end{columns}
+  \end{blockexmplque}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: Magnetic moment of 2 concentric loops}
+
+  The magnetic dipole moment $\vec{m}$ of circular loop on the $xy$
+  plane, with a current $I$ running counterclockwise (as viewed
+  from a point in the positive $z$ axis), is given by:
+  \begin{equation*}
+    \vec{m} = I \vec{S} = I \pi r^2 \hat{z}
+  \end{equation*}
+
+  The magnetic dipole moments of the two concentric circular loops
+  can be superimposed:
+  \begin{equation*}
+    \vec{m} = \vec{m}_1 + \vec{m}_2
+  \end{equation*}
+
+  Therefore, the net magnetic dipole of the system
+  is given by:
+  \begin{equation*}
+    \vec{m} = \vec{m}_1 + \vec{m}_2
+            = \Big(-I \pi r^2_1 - I \pi r^2_2 \Big) \hat{z}
+            = (-2.86 \; A m^2) \hat{z}
+  \end{equation*}
+
+  If the current of the inner loop is reversed,
+  the net magnetic dipole of the system becomes:
+  \begin{equation*}
+    \vec{m} = \vec{m}_1 + \vec{m}_2
+            = \Big(+I \pi r^2_1 - I \pi r^2_2 \Big) \hat{z}
+            = (-1.10 \; A m^2) \hat{z}
+  \end{equation*}
+
+\end{frame}
+
+
+} %Worked example
+
+% ------------------------------------------------------------------------------

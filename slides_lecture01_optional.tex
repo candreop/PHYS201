@@ -319,6 +319,235 @@ have components that cannot cancel.
 % ------------------------------------------------------------------------------
 
 %
+% Worked example :
+%
+
+{
+\problemslide
+
+\begin{frame}{Worked example: $\vec{E}$ at centre of curvature of bent rod}
+
+\begin{blockexmplque}{Question}
+
+  \begin{columns}
+    \begin{column}{0.60\textwidth}
+      The figure on the right shows a plastic rod with total charge -$Q$ uniformly
+      distributed along the rod. It is bent in a 120$^o$ circular arc of radius $R$
+      and symmetrically placed across an x axis with the origin at the
+      centre of curvature P of the rod.
+    \end{column}
+    \begin{column}{0.40\textwidth}
+      \begin{center}
+          \includegraphics[width=0.95\textwidth]{./images/problems/lect01_plastic_rod_bent_circular_arc.png}
+      \end{center}
+    \end{column}
+  \end{columns}
+  \vspace{0.2cm}
+  Show that the electric field $\vec{E}$, due to the rod, at point P is:
+  \begin{equation*}
+  		 \vec{E} = \frac{3\sqrt{3}Q}{8\pi^2 \epsilon_0 R^2} \hat{x}
+  \end{equation*}
+\end{blockexmplque}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: $\vec{E}$ at centre of curvature of bent rod}
+
+The electric field $\vec{E}$ at the point $\vec{r}$, due to a continuous
+distribution of charge, is given by:
+\begin{equation*}
+  \vec{E}(\vec{r}) = \frac{1}{4\pi\epsilon_0}
+   \int \frac{dq(\pvec{r}')}{|\vec{r}-\pvec{r}'|^3} (\vec{r}-\pvec{r}')
+\end{equation*}
+
+Taking the point $P$ to be at the origin of the coordinate system,
+we have $\vec{r}=\vec{0}$,
+while for the vector $\pvec{r}'$ pointing to charge $dq$
+at an arbitrary point on the plastic rod (circular arc of radius $R$)
+we can write $|\pvec{r}'|=R$ and $\pvec{r}'=R\hat{r}$.
+Therefore, the above expression for $\vec{E}$ becomes:
+\begin{equation*}
+  \vec{E} = - \frac{1}{4\pi\epsilon_0 R^2}
+   \int dq(\pvec{r}') \hat{r}
+\end{equation*}
+
+The infinitesimal charge $dq$ at position $\pvec{r}'$ can be expressed as:
+\begin{equation*}
+   dq(\pvec{r}') = \lambda d\ell
+\end{equation*}
+
+where $\lambda$ is the charge density.
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: $\vec{E}$ at centre of curvature of bent rod}
+
+Considering that the charge is distributed
+over a third of the circumference of a circle of radius $R$,
+$\lambda$ is given by:
+\begin{equation*}
+   \lambda = \frac{-Q}{2\pi R/3} = -\frac{3Q}{2\pi R}
+\end{equation*}
+
+The element $d\ell$ is:
+\begin{equation*}
+   d\ell = R d\theta
+\end{equation*}
+
+Therefore, $dq$ can be written as:
+\begin{equation*}
+   dq(\pvec{r}') = -\frac{3Q}{2\pi} d\theta
+\end{equation*}
+
+Substituting $dq$ into the earlier expression for $\vec{E}$, we find:
+\begin{equation*}
+  \vec{E} =
+   -\frac{1}{4\pi\epsilon_0 R^2} \Big(-\frac{3Q}{2\pi}\Big) \int_{-\pi/3}^{\pi/3} d\theta \hat{r} =
+   \frac{3Q}{8\pi^2\epsilon_0 R^2} \int_{-\pi/3}^{\pi/3} d\theta \hat{r}
+\end{equation*}
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: $\vec{E}$ at centre of curvature of bent rod}
+
+The vector $\hat{r}$ is written in cartesian coordinates as:
+\begin{equation*}
+  \hat{r} = cos\theta \hat{x} + sin\theta \hat{y}
+\end{equation*}
+
+Substituting in the previous expression for $\vec{E}$, we have:
+\begin{equation*}
+  \vec{E} =
+   \frac{3Q}{8\pi^2\epsilon_0 R^2}
+   \Big\{ \hat{x} \int_{-\pi/3}^{\pi/3} cos\theta d\theta +
+          \hat{y} \int_{-\pi/3}^{\pi/3} sin\theta d\theta
+   \Big\} \Rightarrow
+\end{equation*}
+
+\begin{equation*}
+  \vec{E} =
+   \frac{3Q}{8\pi^2\epsilon_0 R^2}
+   \Big\{ \hat{x} sin\theta \Big\rvert_{-\pi/3}^{\pi/3} -
+          \hat{y} cos\theta \Big\rvert_{-\pi/3}^{\pi/3}
+   \Big\} \Rightarrow
+\end{equation*}
+
+\begin{equation*}
+  \vec{E} =
+   \frac{3Q}{8\pi^2\epsilon_0 R^2}
+   \Big\{ \hat{x} \Big( \frac{\sqrt{3}}{2} - (-\frac{\sqrt{3}}{2}) \Big) -
+          \hat{y} \Big( \frac{1}{2} - \frac{1}{2} \Big)
+   \Big\} \Rightarrow
+\end{equation*}
+
+\begin{equation*}
+  \vec{E} =
+   \frac{3\sqrt{3}Q}{8\pi^2\epsilon_0 R^2} \hat{x}
+\end{equation*}
+
+\end{frame}
+
+} %\problemslide
+
+% ------------------------------------------------------------------------------
+
+%
+% Worked example :
+%
+
+{
+\problemslide
+
+
+\begin{frame}{Worked example: $\vec{E}$ at centre of square formed by charges}
+
+\begin{blockexmplque}{Question}
+
+  \begin{columns}
+    \begin{column}{0.65\textwidth}
+      In the figure on the right, eight particles form a square in which distance
+      $d$ is 2 cm.\\
+      The charges are:
+      $q_1$=+3$e$, $q_2$=+$e$, $q_3$=-5$e$, $q_4$=-2$e$,
+      $q_5$=+3$e$, $q_6$=+$e$, $q_7$=-5$e$, and $q_8$=+$e$.\\
+      In unit vector notation, what is the net electric field at the square's centre?
+    \end{column}
+    \begin{column}{0.35\textwidth}
+      \begin{center}
+          \includegraphics[width=0.70\textwidth]{./images/problems/lect01_8_charges_on_square.png}
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{blockexmplque}
+
+The total electric field $\vec{E}$ at the square's centre is computed,
+using the superposition principle, as:
+\begin{equation*}
+  \vec{E} = \sum_{i=1}^{8} \vec{E}_{i}
+\end{equation*}
+where $\vec{E}_{i}$ is the electric field produced by charge $q_i$ ($i$=1,...,8).
+
+\end{frame}
+
+%
+%
+%
+
+\begin{frame}{Worked example: $\vec{E}$ at centre of square formed by charges}
+
+
+We note that, for the given charges, the electric fields along the diagonals
+cancel out:
+\begin{equation*}
+  \vec{E}_{1} + \vec{E}_{5} = \vec{0}
+\end{equation*}
+
+\begin{equation*}
+  \vec{E}_{3} + \vec{E}_{7} = \vec{0}
+\end{equation*}
+
+The remaining contributions to the total electric field are:
+\begin{equation*}
+  \vec{E}_4 =
+    \frac{q_4}{4\pi\epsilon_0 d^2} \hat{x} =
+    \frac{2e}{4\pi\epsilon_0 d^2} \hat{x}
+\end{equation*}
+
+\begin{equation*}
+  \vec{E}_8 =
+    \frac{q_8}{4\pi\epsilon_0 d^2} \hat{x} =
+    \frac{e}{4\pi\epsilon_0 d^2} \hat{x}
+\end{equation*}
+
+Therefore, total electric field is given by:
+\begin{equation*}
+  \vec{E} =
+    \frac{2e}{4\pi\epsilon_0 d^2} \hat{x} +
+    \frac{e}{4\pi\epsilon_0 d^2} \hat{x} =
+    \frac{3e}{4\pi\epsilon_0 d^2} \hat{x}
+\end{equation*}
+
+
+\end{frame}
+
+
+} %\problemslide
+
+% ------------------------------------------------------------------------------
+
+%
 % Programming task
 %
 
