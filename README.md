@@ -13,7 +13,7 @@ The PDF output of the TeX source of this repository can be found [here](https://
 Prof. Costas Andreopoulos, **FHEA**  <br />
 University of Liverpool, Department of Physics <br />
 *Oliver Lodge Lab 316, Liverpool L69 7ZE, UK* <br />
-*E-Mail*: < c.andreopoulos \at cern.ch >
+*E-Mail*: < c.andreopoulos \at cern.ch > <br />
 *Tel*: +44-1517-943201 (office)
 
 
